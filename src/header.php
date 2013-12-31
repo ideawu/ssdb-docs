@@ -46,7 +46,8 @@
 	}
 	h1{
 		font-size: 180%;
-		padding-bottom: 8px;
+		margin: 15px 0;
+		padding-bottom: 6px;
 		border-bottom: 1px solid #ddd;
 	}
 	h2{

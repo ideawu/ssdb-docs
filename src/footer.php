@@ -4,7 +4,10 @@
 
 <div class="footer">
 	Copyright&copy;2013 <a href="http://www.ideawu.com/">ideawu.com</a>. All rights reserved.
-	<?php if($_SERVER['online']){ ?>
+	<?php
+	$hostname = @exec('hostname');
+	if(strpos($hostname, 'ideawu') !== false){
+	?>
 	<div style="display: none;">
 	<script type="text/javascript">
 	<!--

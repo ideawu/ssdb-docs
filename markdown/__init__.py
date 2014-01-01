@@ -285,6 +285,10 @@ class Markdown(object):
 
         # Split into lines and run the line preprocessors.
         self.lines = source.split("\n")
+        for index, line in enumerate(self.lines):
+            if line.startswith(' ' * self.tab_length):
+                line = line.replace(' ' * self.tab_length, '\t')
+            self.lines[index] = line
         for prep in self.preprocessors.values():
             self.lines = prep.run(self.lines)
 
@@ -316,7 +320,6 @@ class Markdown(object):
         for pp in self.postprocessors.values():
             output = pp.run(output)
 
-        output = output.replace(' ' * self.tab_length, '\t')
         return output.strip()
 
     def convertFile(self, input=None, output=None, encoding=None):

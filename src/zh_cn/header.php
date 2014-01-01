@@ -3,17 +3,17 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<?php
-	$title = 'A fast NoSQL database for storing big list of data';
+	$title = '一个快速的用来存储十亿级别列表数据的 NoSQL 数据库';
 	if($markdown['title']){
 		$title = $markdown['title'];
 	}
 	?>
 	<title>SSDB - <?php echo $title; ?></title>
-	<meta name="keywords" content="SSDB, LevelDB, Redis, LevelDB Server, zset" />
-	<meta name="description" content="SSDB is a NoSQL database server written in C/C++, it is fast, supports online backup and master-slave replication." />
-	<link href="css/bootstrap.min.css" rel="stylesheet" />
+	<meta name="keywords" content="SSDB, SSDB 文档, LevelDB, Redis, LevelDB Server, zset" />
+	<meta name="description" content="SSDB 是一个高性能 NoSQL 数据库, 使用 LevelDB 作为存储引擎, 支持 Redis 协议." />
+	<link href="../css/bootstrap.min.css" rel="stylesheet" />
 	<!--
-	<link href="css/bootstrap-theme.min.css" rel="stylesheet" />
+	<link href="../css/bootstrap-theme.min.css" rel="stylesheet" />
 	-->
 	<style type="text/css">
 	body{
@@ -76,7 +76,7 @@
 				<li class="divider-vertical"></li>
 				<li>
 					<a href="http://www.ideawu.com/ssdb/">
-						<i class="glyphicon glyphicon-home"></i> Home
+						<i class="glyphicon glyphicon-home"></i> 首页
 					</a>
 				</li>
 				<li class="divider-vertical"></li>
@@ -88,28 +88,30 @@
 				<li class="divider-vertical"></li>
 				<li class="dropdown active">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-						<i class="glyphicon glyphicon-list"></i> Docs <b class="caret"></b>
+						<i class="glyphicon glyphicon-list"></i> 文档 <b class="caret"></b>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a href="./index.html">Docs Home</a></li>
+						<li><a href="./index.html">文档首页</a></li>
 						<li class="divider"></li>
-						<li><a href="./config.html">Configuration</a></li>
-						<li><a href="./protocol.html">SSDB Network Protocol</a></li>
+						<li><a href="./config.html">配置</a></li>
+						<li><a href="./protocol.html">SSDB 网络协议</a></li>
 						<li class="divider"></li>
-						<li><a href="./php/index.html">PHP API Doc</a></li>
-						<li><a href="./cpp/index.html">C++ API Doc</a></li>
-						<li><a href="./java/index.html">Java API Doc</a></li>
-						<li><a href="./go/index.html">Go API Doc</a></li>
+						<li><a href="./php/index.html">PHP API 文档</a></li>
+						<li><a href="../cpp/index.html">C++ API 文档(英文)</a></li>
+						<li><a href="../java/index.html">Java API 文档(英文)</a></li>
+						<li><a href="../go/index.html">Go API 文档(英文)</a></li>
+						<li class="divider"></li>
+						<li><a href="http://vdisk.weibo.com/s/dWpk2caREXGf" target="_blank">SSDB 入门基础</a></li>
 					</ul>
 				</li>
 				<li class="divider-vertical"></li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-						<i class="glyphicon glyphicon-user"></i> Discuss <b class="caret"></b>
+						<i class="glyphicon glyphicon-user"></i> 讨论 <b class="caret"></b>
 					</a>
 					<ul class="dropdown-menu">
 						<li><a href="https://github.com/ideawu/ssdb/issues">Issue Tracker</a></li>
-						<li><a href="http://www.ideawu.com/blog/category/ssdb">Blog</a></li>
+						<li><a href="http://www.ideawu.net/blog/category/ssdb">博客</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -118,7 +120,7 @@
 			<ul class="nav navbar-nav navbar-right" style="margin-top: 14px;">
 				<div class="btn-group">
 					<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
-						Language: English
+						当前语言: 简体中文
 						<span class="caret"></span>
 					</button>
 					<ul class="dropdown-menu">

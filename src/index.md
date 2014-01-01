@@ -14,16 +14,14 @@ SSDB is stable, production-ready and is widely used by many Internet companies i
 
 ## API Docs
 
-* [PHP API Doc(English)](./php/index.html)
-* [PHP 接口文档(Chinese)](./zh_cn/php/index.html)
-* [C++ API Doc(English)](./cpp/index.html)
-* [Java API Doc(English)](./java/index.html)
-* [Go API Doc(English)](./go/index.html)
+* [PHP API Doc](./php/index.html)
+* [C++ API Doc](./cpp/index.html)
+* [Java API Doc](./java/index.html)
+* [Go API Doc](./go/index.html)
 
 ## Articles
 
 * <a href="http://www.ideawu.com/blog/category/ssdb" target="_blank">SSDB Articles</a>
-* <a href="http://www.ideawu.net/blog/category/ssdb" target="_blank">SSDB 文章(Chinese)</a>
 
 ## Presentations
 

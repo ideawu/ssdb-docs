@@ -39,11 +39,17 @@
 </head>
 <body>
 
+<p style="float: right; margin-right: 10px;">
+	<a href="https://github.com/ideawu/ssdb-docs" target="_blank"
+		style="color: #00f; background: #9d9; border: 1px solid #666;
+		text-decoration: none; padding: 6px 4px;">Improve this page on GitHub</a>
+</p>
+
 <h1>SSDB PHP Client API Documentation</h1>
 
 <dl>
 	<dd>@author: <a href="http://www.ideawu.com/">ideawu</a></dd>
-	<dd>@date: 2013-07-18</dd>
+	<dd>@updated: 2014-01-01</dd>
 </dl>
 
 <p>SSDB is a fast LevelDB server with zset data type, the official website is <a href="https://github.com/ideawu/ssdb">https://github.com/ideawu/ssdb</a>. This documentation describes the PHP client API of SSDB.</p>
@@ -483,7 +489,7 @@ $ssdb-&gt;hexists('h', 'key');
 </dl>
 
 <h4><em>Return Value</em></h4>
-<p><code>false</code> on error, otherwise an integer of the hashmap, 0 if the hashmap does not exist.</p>
+<p><code>false</code> on error, otherwise an integer, 0 if the hashmap does not exist.</p>
 
 <h4><em>Example</em></h4>
 <pre>
@@ -799,7 +805,7 @@ $ssdb-&gt;zexists('z', 'key');
 </dl>
 
 <h4><em>Return Value</em></h4>
-<p><code>false</code> on error, otherwise an integer of the zset, 0 if the zset does not exist.</p>
+<p><code>false</code> on error, otherwise an integer, 0 if the zset does not exist.</p>
 
 <h4><em>Example</em></h4>
 <pre>
@@ -1073,7 +1079,7 @@ $ssdb-&gt;multi_zdel('z', array('k1', 'k2'));
 </dl>
 
 <h4><em>Return Value</em></h4>
-<p><code>exec()</code> returns <code>false</code> on error, otherwise an of results corresponding to each of the batch commands.</p>
+<p><code>exec()</code> returns <code>false</code> on error, otherwise an array of results corresponding to each of the batch commands.</p>
 
 <h4><em>Example</em></h4>
 <pre>
@@ -1089,6 +1095,110 @@ $ssdb-&gt;exec();
 </pre>
 
 
+
+
+
+<a name="m-qsize"></a>
+<h3>qsize</h3>
+
+<h4><em>Description</em></h4>
+<p>Returns the number of items in the queue.</p>
+
+<h4><em>Parameters</em></h4>
+<dl>
+	<dd><code>name</code> - </dd>
+</dl>
+
+<h4><em>Return Value</em></h4>
+<p><code>false</code> on error, otherwise an integer, 0 if the queue does not exist.</p>
+
+<h4><em>Example</em></h4>
+<pre>
+$ssdb-&gt;qsize('q');
+</pre>
+
+
+<a name="m-qpush"></a>
+<h3>qpush</h3>
+
+<h4><em>Description</em></h4>
+<p>Adds an element to the end of the queue</p>
+
+<h4><em>Parameters</em></h4>
+<dl>
+	<dd><code>name</code> - </dd>
+	<dd><code>item</code> - </dd>
+</dl>
+
+<h4><em>Return Value</em></h4>
+<p><code>false</code> on error.</p>
+
+<h4><em>Example</em></h4>
+<pre>
+$ssdb-&gt;qpush('q', 'a');
+</pre>
+
+
+<a name="m-qpop"></a>
+<h3>qpop</h3>
+
+<h4><em>Description</em></h4>
+<p>Removes and returns the first element of a queue.</p>
+
+<h4><em>Parameters</em></h4>
+<dl>
+	<dd><code>name</code> - </dd>
+</dl>
+
+<h4><em>Return Value</em></h4>
+<p><code>false</code> on error, <code>null</code> if queue empty, otherwise the item removed.</p>
+
+<h4><em>Example</em></h4>
+<pre>
+$ssdb-&gt;qpop('q');
+</pre>
+
+
+<a name="m-qfront"></a>
+<h3>qfront</h3>
+
+<h4><em>Description</em></h4>
+<p>Returns the first element of a queue.</p>
+
+<h4><em>Parameters</em></h4>
+<dl>
+	<dd><code>name</code> - </dd>
+</dl>
+
+<h4><em>Return Value</em></h4>
+<p><code>false</code> on error, <code>null</code> if queue empty, otherwise the item returned.</p>
+
+<h4><em>Example</em></h4>
+<pre>
+$ssdb-&gt;qfront('q');
+</pre>
+
+
+<a name="m-qback"></a>
+<h3>qback</h3>
+
+<h4><em>Description</em></h4>
+<p>Returns the last element of a queue.</p>
+
+<h4><em>Parameters</em></h4>
+<dl>
+	<dd><code>name</code> - </dd>
+</dl>
+
+<h4><em>Return Value</em></h4>
+<p><code>false</code> on error, <code>null</code> if queue empty, otherwise the item returned.</p>
+
+<h4><em>Example</em></h4>
+<pre>
+$ssdb-&gt;qback('q');
+</pre>
+
+
 <!--
 <a name="m-"></a>
 <h3></h3>
@@ -1098,7 +1208,7 @@ $ssdb-&gt;exec();
 
 <h4><em>Parameters</em></h4>
 <dl>
-	<dd><code></code> - .</dd>
+	<dd><code></code> - </dd>
 </dl>
 
 <h4><em>Return Value</em></h4>
@@ -1111,8 +1221,10 @@ $ssdb-&gt;rscan('a', 'z', 10);
 -->
 
 
+
+
 <div id="footer">
-	Copyright &copy; 2013 ideawu. All rights reserved.
+	Copyright&copy;2013,2014 ideawu. All rights reserved.
 </div>
 
 

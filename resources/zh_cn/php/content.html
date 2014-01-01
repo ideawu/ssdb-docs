@@ -39,11 +39,17 @@
 </head>
 <body>
 
+<p style="float: right; margin-right: 10px;">
+	<a href="https://github.com/ideawu/ssdb-docs" target="_blank"
+		style="color: #00f; background: #9d9; border: 1px solid #666;
+		text-decoration: none; padding: 6px 4px;">帮助改进此文档</a>
+</p>
+
 <h1>SSDB PHP 客户端 API 文档</h1>
 
 <dl>
 	<dd>@作者: <a href="http://www.ideawu.net/">ideawu</a></dd>
-	<dd>@日期: 2013-07-18</dd>
+	<dd>@更新: 2014-01-01</dd>
 </dl>
 
 <p>SSDB 是一个快速的 LevelDB 服务器, 支持 zset 数据结构. 官方网站是 <a href="https://github.com/ideawu/ssdb">https://github.com/ideawu/ssdb</a>. 本文档介绍了 SSDB 的 PHP 客户端 API.</p>
@@ -1090,8 +1096,111 @@ $ssdb-&gt;exec();
 
 
 
+
+<a name="m-qsize"></a>
+<h3>qsize</h3>
+
+<h4><em>说明</em></h4>
+<p>返回队列的长度.</p>
+
+<h4><em>参数</em></h4>
+<dl>
+	<dd><code>name</code> - </dd>
+</dl>
+
+<h4><em>返回值</em></h4>
+<p>出错返回 <code>false</code>, 否则返回一个整数, 0 表示队列不存在(或者为空).</p>
+
+<h4><em>示例</em></h4>
+<pre>
+$ssdb-&gt;qsize('q');
+</pre>
+
+
+<a name="m-qpush"></a>
+<h3>qpush</h3>
+
+<h4><em>说明</em></h4>
+<p>往队列的尾部添加一个元素</p>
+
+<h4><em>参数</em></h4>
+<dl>
+	<dd><code>name</code> - </dd>
+	<dd><code>item</code> - </dd>
+</dl>
+
+<h4><em>返回值</em></h4>
+<p>出错返回 <code>false</code>.</p>
+
+<h4><em>示例</em></h4>
+<pre>
+$ssdb-&gt;qpush('q', 'a');
+</pre>
+
+
+<a name="m-qpop"></a>
+<h3>qpop</h3>
+
+<h4><em>说明</em></h4>
+<p>删除并返回队列的第一个元素.</p>
+
+<h4><em>参数</em></h4>
+<dl>
+	<dd><code>name</code> - </dd>
+</dl>
+
+<h4><em>返回值</em></h4>
+<p>出错返回 <code>false</code>, 队列不存在(或者为空)则返回 <code>null</code>, 否则删除并返回一个元素.</p>
+
+<h4><em>示例</em></h4>
+<pre>
+$ssdb-&gt;qpop('q');
+</pre>
+
+
+<a name="m-qfront"></a>
+<h3>qfront</h3>
+
+<h4><em>说明</em></h4>
+<p>返回队列的第一个元素.</p>
+
+<h4><em>参数</em></h4>
+<dl>
+	<dd><code>name</code> - </dd>
+</dl>
+
+<h4><em>返回值</em></h4>
+<p>出错返回 <code>false</code>, 队列不存在(或者为空)则返回 <code>null</code>, 否则返回一个元素.</p>
+
+<h4><em>示例</em></h4>
+<pre>
+$ssdb-&gt;qfront('q');
+</pre>
+
+
+<a name="m-qback"></a>
+<h3>qback</h3>
+
+<h4><em>说明</em></h4>
+<p>返回队列的最后一个元素.</p>
+
+<h4><em>参数</em></h4>
+<dl>
+	<dd><code>name</code> - </dd>
+</dl>
+
+<h4><em>返回值</em></h4>
+<p>出错返回 <code>false</code>, 队列不存在(或者为空)则返回 <code>null</code>, 否则返回一个元素.</p>
+
+<h4><em>示例</em></h4>
+<pre>
+$ssdb-&gt;qback('q');
+</pre>
+
+
+
 <div id="footer">
-	Copyright &copy; 2013 ideawu. All rights reserved.
+	Copyright&copy;2013,2014 ideawu. All rights reserved.
 </div>
 
 

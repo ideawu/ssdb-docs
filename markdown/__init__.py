@@ -285,10 +285,6 @@ class Markdown(object):
 
         # Split into lines and run the line preprocessors.
         self.lines = source.split("\n")
-        for index, line in enumerate(self.lines):
-            if line.startswith(' ' * self.tab_length):
-                line = line.replace(' ' * self.tab_length, '\t')
-            self.lines[index] = line
         for prep in self.preprocessors.values():
             self.lines = prep.run(self.lines)
 
@@ -319,6 +315,13 @@ class Markdown(object):
         # Run the text post-processors
         for pp in self.postprocessors.values():
             output = pp.run(output)
+
+        lines = output.split("\n")
+        for index, line in enumerate(lines):
+            if line.startswith(' ' * self.tab_length):
+                line = line.replace(' ' * self.tab_length, '\t')
+            lines[index] = line
+        output = '\n'.join(lines)
 
         return output.strip()
 

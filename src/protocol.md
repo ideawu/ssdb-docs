@@ -48,4 +48,40 @@ You will get response like this:
 ok
 3
 val
+
 ```
+
+## High performance parser for SSDB protocol
+
+	#include <stdlib.h>
+	#include <string.h>
+	
+	int len = buffer->size();
+	char *ptr = buffer->data();
+	while(len > 0){
+		char *data = (char *)memchr(ptr, '\n', len);
+		if(data == NULL){
+			break;
+		}
+		data += 1;
+		int num = data - ptr;
+		if(num == 1 || (num == 2 && ptr[0] == '\r')){
+			// Packet received.
+			return OK;
+		}
+		// Size received
+		int size = (int)strtol(ptr, NULL, 10);
+		
+		len -= num + size;
+		ptr += num + size;
+		if(len >= 1 && ptr[0] = '\n'){
+			len -= 1;
+			ptr += 1;
+		}else if(len >= 2 && ptr[0] == '\r' && ptr[1] == '\n'){
+			len -= 2;
+			ptr += 2;
+		}else{
+			break;
+		}
+		// Data received
+	}

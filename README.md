@@ -11,7 +11,7 @@ PHP cli and Python are required. Then, just run
 make
 ```
 
-The documentations in HTML format are generated under ```docs/``` directory. Open ```docs/index.html``` with you web browser(Firefox, Chrome, Safari, etc).
+The documentations in HTML format are generated under ```docs/``` directory. Open ```docs/index.html``` with your web browser(Firefox, Chrome, Safari, etc).
 
 ## How to contribute?
 

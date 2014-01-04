@@ -8,6 +8,7 @@ SSDB is stable, production-ready and is widely used by many Internet companies i
 
 * [Download and Install](./install.html)
 * [Migrate from Redis to SSDB](./redis-to-ssdb.html)
+* [Clients](./clients.html): SSDB clients for variant languages.
 
 ## Specification
 
@@ -15,10 +16,10 @@ SSDB is stable, production-ready and is widely used by many Internet companies i
 
 ## API Docs
 
-* [PHP API Doc](./php/index.html)
-* [C++ API Doc](./cpp/index.html)
-* [Java API Doc](./java/index.html)
-* [Go API Doc](./go/index.html)
+* [PHP client API Doc](./php/index.html)
+* [C++ client API Doc](./cpp/index.html)
+* [Java client API Doc](./java/index.html)
+* [Go client API Doc](./go/index.html)
 
 ## Articles
 

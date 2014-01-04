@@ -47,6 +47,10 @@ function gen_doc($file, $output_dir, $template=null){
 			'title' => '',
 			'html' => '',
 			);
+	if(file_exists($markdown['output_file']) && filemtime($file) < filemtime($markdown['output_file'])){
+		echo "[skip] {$markdown['output_file']} => {$markdown['output_file']}\n";
+		return;
+	}
 
 	$in_comment = false;
 	$lines = file($file);
@@ -74,7 +78,7 @@ function gen_doc($file, $output_dir, $template=null){
 		$html = $markdown['html'];
 	}
 
-	echo "{$markdown['output_file']} => {$markdown['output_file']}\n";
+	echo "[build] {$markdown['output_file']} => {$markdown['output_file']}\n";
 	file_put_contents($markdown['output_file'], $html);
 }
 

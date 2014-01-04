@@ -8,6 +8,7 @@ SSDB 是稳定的, 生产环境使用的, 已经在许多互联网公司如奇�
 
 * [下载和安装](./install.html)
 * [从 Redis 迁移到 SSDB](./redis-to-ssdb.html)
+* [客户端](./clients.html): 不同语言的 SSDB 客户端.
 
 ## 定义
 
@@ -15,10 +16,10 @@ SSDB 是稳定的, 生产环境使用的, 已经在许多互联网公司如奇�
 
 ## API 文档
 
-* [PHP API 文档](./php/index.html)
-* [C++ API 文档(英文)](../cpp/index.html)
-* [Java API 文档(英文)](../java/index.html)
-* [Go API 文档(英文)](../go/index.html)
+* [PHP 客户端 API 文档](./php/index.html)
+* [C++ 客户端 API 文档(英文)](../cpp/index.html)
+* [Java 客户端 API 文档(英文)](../java/index.html)
+* [Go 客户端 API 文档(英文)](../go/index.html)
 
 ## 文章
 

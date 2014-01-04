@@ -84,10 +84,14 @@
 					</a>
 				</li>
 				<li class="divider-vertical"></li>
-				<li>
-					<a href="https://github.com/ideawu/ssdb">
-						<i class="glyphicon glyphicon-share-alt"></i> GitHub
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="glyphicon glyphicon-share-alt"></i> GitHub <b class="caret"></b>
 					</a>
+					<ul class="dropdown-menu">
+						<li><a target="_blank" href="https://github.com/ideawu/ssdb">项目</a></li>
+						<li><a target="_blank" href="https://github.com/ideawu/ssdb-docs">文档</a></li>
+					</ul>
 				</li>
 				<li class="divider-vertical"></li>
 				<li class="dropdown active">

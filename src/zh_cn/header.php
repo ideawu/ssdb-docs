@@ -45,19 +45,23 @@
 		padding: 4px;
 	}
 	h1{
-		font-size: 180%;
+		font-weight: bold;
+		font-size: 170%;
 		margin: 15px 0;
 		padding-bottom: 6px;
 		border-bottom: 1px solid #ddd;
 	}
 	h2{
-		font-size: 150%;
+		font-weight: bold;
+		font-size: 140%;
 	}
 	h3{
-		font-size: 130%;
+		font-weight: bold;
+		font-size: 120%;
 	}
 	h4{
-		font-size: 110%;
+		font-weight: bold;
+		font-size: 105%;
 	}
 	</style>
 </head>

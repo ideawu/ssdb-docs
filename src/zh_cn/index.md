@@ -7,6 +7,7 @@ SSDB 是稳定的, 生产环境使用的, 已经在许多互联网公司如奇�
 ## 开始
 
 * [下载和安装](./install.html)
+* [从 Redis 迁移到 SSDB](./redis-to-ssdb.html)
 
 ## 定义
 

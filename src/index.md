@@ -7,6 +7,7 @@ SSDB is stable, production-ready and is widely used by many Internet companies i
 ## Get Started
 
 * [Download and Install](./install.html)
+* [Migrate from Redis to SSDB](./redis-to-ssdb.html)
 
 ## Specification
 

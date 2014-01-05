@@ -1,6 +1,6 @@
 # Clients
 
-There are clients for variant languages distributed along with the SSDB source code, these are __official clients__. Still, there are many clients developped by many developers, also listed here.
+There are clients for various languages distributed along with the SSDB source code, these are __official clients__. Still, there are many clients developped by many developers, also listed here.
 
 The recommended client(s) for a language are marked with a <span style="color: #cc3;">★</span>.
 

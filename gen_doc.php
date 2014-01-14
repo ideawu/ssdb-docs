@@ -1,4 +1,13 @@
 <?php
+/*****************************************************
+ * A PHP script to parse markdown files, and generate
+ * HTML files.
+ * @author ideawu
+ * @link http://www.ideawu.com/
+ *
+ * Usage:
+ *     php gen_doc.php md_dir output_dir
+ *****************************************************/
 $input_dir = isset($argv[1])? $argv[1] : '.';
 $output_dir = isset($argv[2])? $argv[2] : './output';
 

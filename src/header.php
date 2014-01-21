@@ -159,6 +159,7 @@
 				}
 				url = ps.join('/');
 				location.href = url;
+				return false;
 			}
 			</script>
 

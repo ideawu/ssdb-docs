@@ -13,10 +13,10 @@ php redis-import.php redis_host redis_port redis_db ssdb_host ssdb_port
 Parameters:
 
 * redis_host: The IP address or hostname of Redis instance
-* redis_host: The port number of Redis instance
+* redis_port: The port number of Redis instance
 * redis_db: Which Redis database(a number) you want to copy from
 * ssdb_host: The IP address or hostname of SSDB instance
-* ssdb_host: The port number of SSDB instance
+* ssdb_port: The port number of SSDB instance
 
 ## SSDB vs Redis Commands
 

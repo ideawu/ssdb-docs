@@ -13,10 +13,10 @@ php redis-import.php redis_host redis_port redis_db ssdb_host ssdb_port
 参数:
 
 * redis_host: Redis 运行所在的 IP 或者主机名
-* redis_host: Redis 监听的端口
+* redis_port: Redis 监听的端口
 * redis_db: Redis 的 DB 编号
 * ssdb_host: SSDB 运行所在的 IP 或者主机名
-* ssdb_host: SSDB 监听的端口
+* ssdb_port: SSDB 监听的端口
 
 ## SSDB 和 Redis 命令对照表
 

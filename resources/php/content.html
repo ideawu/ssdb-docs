@@ -1065,38 +1065,6 @@ $ssdb-&gt;multi_zdel('z', array('k1', 'k2'));
 
 
 
-<!-- ##############  other ############## -->
-
-<a name="m-batch"></a>
-<h3>batch, exec</h3>
-
-<h4><em>Description</em></h4>
-<p>Execute a batch of commands. Batch Commands can reduce the round trip time(rtt) between SSDB client and the server.</p>
-
-<h4><em>Parameters</em></h4>
-<dl>
-	<dd></dd>
-</dl>
-
-<h4><em>Return Value</em></h4>
-<p><code>exec()</code> returns <code>false</code> on error, otherwise an array of results corresponding to each of the batch commands.</p>
-
-<h4><em>Example</em></h4>
-<pre>
-$ssdb-&gt;batch()
-	-&gt;set('a', 1)
-	-&gt;get('a')
-	-&gt;exec();
-// or
-$ssdb-&gt;batch();
-$ssdb-&gt;set('a', 1);
-$ssdb-&gt;get('a');
-$ssdb-&gt;exec();
-</pre>
-
-
-
-
 
 <a name="m-qsize"></a>
 <h3>qsize</h3>
@@ -1118,45 +1086,6 @@ $ssdb-&gt;qsize('q');
 </pre>
 
 
-<a name="m-qpush"></a>
-<h3>qpush</h3>
-
-<h4><em>Description</em></h4>
-<p>Adds an element to the end of the queue</p>
-
-<h4><em>Parameters</em></h4>
-<dl>
-	<dd><code>name</code> - </dd>
-	<dd><code>item</code> - </dd>
-</dl>
-
-<h4><em>Return Value</em></h4>
-<p><code>false</code> on error.</p>
-
-<h4><em>Example</em></h4>
-<pre>
-$ssdb-&gt;qpush('q', 'a');
-</pre>
-
-
-<a name="m-qpop"></a>
-<h3>qpop</h3>
-
-<h4><em>Description</em></h4>
-<p>Removes and returns the first element of a queue.</p>
-
-<h4><em>Parameters</em></h4>
-<dl>
-	<dd><code>name</code> - </dd>
-</dl>
-
-<h4><em>Return Value</em></h4>
-<p><code>false</code> on error, <code>null</code> if queue empty, otherwise the item removed.</p>
-
-<h4><em>Example</em></h4>
-<pre>
-$ssdb-&gt;qpop('q');
-</pre>
 
 
 <a name="m-qfront"></a>
@@ -1196,6 +1125,137 @@ $ssdb-&gt;qfront('q');
 <h4><em>Example</em></h4>
 <pre>
 $ssdb-&gt;qback('q');
+</pre>
+
+
+
+<a name="m-qpush"></a>
+<h3>qpush</h3>
+
+<h4><em>Description</em></h4>
+<p>This function is an alias of: <code>qpush_back()</code>.</p>
+
+
+<a name="m-qpush_front"></a>
+<h3>qpush_front</h3>
+
+<h4><em>Description</em></h4>
+<p>Adds an element to the head of the queue.</p>
+
+<h4><em>Parameters</em></h4>
+<dl>
+	<dd><code>name</code> - </dd>
+	<dd><code>item</code> - </dd>
+</dl>
+
+<h4><em>Return Value</em></h4>
+<p><code>false</code> on error.</p>
+
+<h4><em>Example</em></h4>
+<pre>
+$ssdb-&gt;qpush_front('q', 'a');
+</pre>
+
+
+<a name="m-qpush_back"></a>
+<h3>qpush_back</h3>
+
+<h4><em>Description</em></h4>
+<p>Adds an element to the end of the queue.</p>
+
+<h4><em>Parameters</em></h4>
+<dl>
+	<dd><code>name</code> - </dd>
+	<dd><code>item</code> - </dd>
+</dl>
+
+<h4><em>Return Value</em></h4>
+<p><code>false</code> on error.</p>
+
+<h4><em>Example</em></h4>
+<pre>
+$ssdb-&gt;qpush_back('q', 'a');
+</pre>
+
+
+<a name="m-qpop"></a>
+<h3>qpop</h3>
+
+<h4><em>Description</em></h4>
+<p>This function is an alias of: <code>qpop_front()</code>. </p>
+
+
+<a name="m-qpop_front"></a>
+<h3>qpop_front</h3>
+
+<h4><em>Description</em></h4>
+<p>Removes and returns the first element of a queue.</p>
+
+<h4><em>Parameters</em></h4>
+<dl>
+	<dd><code>name</code> - </dd>
+</dl>
+
+<h4><em>Return Value</em></h4>
+<p><code>false</code> on error, <code>null</code> if queue empty, otherwise the item removed.</p>
+
+<h4><em>Example</em></h4>
+<pre>
+$ssdb-&gt;qpop_front('q');
+</pre>
+
+
+<a name="m-qpop_back"></a>
+<h3>qpop_back</h3>
+
+<h4><em>Description</em></h4>
+<p>Removes and returns the last element of a queue.</p>
+
+<h4><em>Parameters</em></h4>
+<dl>
+	<dd><code>name</code> - </dd>
+</dl>
+
+<h4><em>Return Value</em></h4>
+<p><code>false</code> on error, <code>null</code> if queue empty, otherwise the item removed.</p>
+
+<h4><em>Example</em></h4>
+<pre>
+$ssdb-&gt;qpop_back('q');
+</pre>
+
+
+
+
+
+
+<!-- ##############  other ############## -->
+
+<a name="m-batch"></a>
+<h3>batch, exec</h3>
+
+<h4><em>Description</em></h4>
+<p>Execute a batch of commands. Batch Commands can reduce the round trip time(rtt) between SSDB client and the server.</p>
+
+<h4><em>Parameters</em></h4>
+<dl>
+	<dd></dd>
+</dl>
+
+<h4><em>Return Value</em></h4>
+<p><code>exec()</code> returns <code>false</code> on error, otherwise an array of results corresponding to each of the batch commands.</p>
+
+<h4><em>Example</em></h4>
+<pre>
+$ssdb-&gt;batch()
+	-&gt;set('a', 1)
+	-&gt;get('a')
+	-&gt;exec();
+// or
+$ssdb-&gt;batch();
+$ssdb-&gt;set('a', 1);
+$ssdb-&gt;get('a');
+$ssdb-&gt;exec();
 </pre>
 
 

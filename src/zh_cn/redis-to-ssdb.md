@@ -88,3 +88,21 @@ SSDB 支持 Redis 协议和客户端, 所以你可以使用 Redis 的客户端�
 <tr><td>zCount</td><td></td></tr>
 <tr><td>zCard</td><td>zsize</td></tr>
 </table>
+
+
+
+<table>
+<tr>
+	<th width="80"></th>
+	<th width="200">Redis</th>
+	<th width="200">SSDB</th>
+</tr>
+<tr>
+	<td rowspan="9" style="background: #9c3;">list/queue</td>
+	<td>llen</td><td>qsize</td>
+</tr>
+<tr><td>lpush</td><td>qpush_front</td></tr>
+<tr><td>rpush</td><td>qpush_back</td></tr>
+<tr><td>lpop</td><td>qpop_front</td></tr>
+<tr><td>rpop</td><td>qpop_back</td></tr>
+</table>

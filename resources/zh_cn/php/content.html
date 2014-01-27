@@ -1065,37 +1065,6 @@ $ssdb-&gt;multi_zdel('z', array('k1', 'k2'));
 
 
 
-<!-- ##############  other ############## -->
-
-<a name="m-batch"></a>
-<h3>batch, exec</h3>
-
-<h4><em>说明</em></h4>
-<p>批量执行一批命令. 批量命令可以减少客户端和服务器之间的交互延时, 能提高性能和响应速度.</p>
-
-<h4><em>参数</em></h4>
-<dl>
-	<dd></dd>
-</dl>
-
-<h4><em>返回值</em></h4>
-<p>如果 <code>exec()</code> 出错则返回 <code>false</code>, 否则返回一个数组包含对应每一条命令的结果.</p>
-
-<h4><em>示例</em></h4>
-<pre>
-$ssdb-&gt;batch()
-	-&gt;set('a', 1)
-	-&gt;get('a')
-	-&gt;exec();
-// 或者
-$ssdb-&gt;batch();
-$ssdb-&gt;set('a', 1);
-$ssdb-&gt;get('a');
-$ssdb-&gt;exec();
-</pre>
-
-
-
 
 <a name="m-qsize"></a>
 <h3>qsize</h3>
@@ -1114,47 +1083,6 @@ $ssdb-&gt;exec();
 <h4><em>示例</em></h4>
 <pre>
 $ssdb-&gt;qsize('q');
-</pre>
-
-
-<a name="m-qpush"></a>
-<h3>qpush</h3>
-
-<h4><em>说明</em></h4>
-<p>往队列的尾部添加一个元素</p>
-
-<h4><em>参数</em></h4>
-<dl>
-	<dd><code>name</code> - </dd>
-	<dd><code>item</code> - </dd>
-</dl>
-
-<h4><em>返回值</em></h4>
-<p>出错返回 <code>false</code>.</p>
-
-<h4><em>示例</em></h4>
-<pre>
-$ssdb-&gt;qpush('q', 'a');
-</pre>
-
-
-<a name="m-qpop"></a>
-<h3>qpop</h3>
-
-<h4><em>说明</em></h4>
-<p>删除并返回队列的第一个元素.</p>
-
-<h4><em>参数</em></h4>
-<dl>
-	<dd><code>name</code> - </dd>
-</dl>
-
-<h4><em>返回值</em></h4>
-<p>出错返回 <code>false</code>, 队列不存在(或者为空)则返回 <code>null</code>, 否则删除并返回一个元素.</p>
-
-<h4><em>示例</em></h4>
-<pre>
-$ssdb-&gt;qpop('q');
 </pre>
 
 
@@ -1198,12 +1126,139 @@ $ssdb-&gt;qback('q');
 </pre>
 
 
+<a name="m-qpush"></a>
+<h3>qpush</h3>
+
+<h4><em>说明</em></h4>
+<p>本函数是 <code>qpush_back()</code> 的别名.</p>
+
+
+<a name="m-qpush_front"></a>
+<h3>qpush_front</h3>
+
+<h4><em>说明</em></h4>
+<p>往队列的首部添加一个元素</p>
+
+<h4><em>参数</em></h4>
+<dl>
+	<dd><code>name</code> - </dd>
+	<dd><code>item</code> - </dd>
+</dl>
+
+<h4><em>返回值</em></h4>
+<p>出错返回 <code>false</code>.</p>
+
+<h4><em>示例</em></h4>
+<pre>
+$ssdb-&gt;qpush_front('q', 'a');
+</pre>
+
+
+<a name="m-qpush_back"></a>
+<h3>qpush_back</h3>
+
+<h4><em>说明</em></h4>
+<p>往队列的尾部添加一个元素</p>
+
+<h4><em>参数</em></h4>
+<dl>
+	<dd><code>name</code> - </dd>
+	<dd><code>item</code> - </dd>
+</dl>
+
+<h4><em>返回值</em></h4>
+<p>出错返回 <code>false</code>.</p>
+
+<h4><em>示例</em></h4>
+<pre>
+$ssdb-&gt;qpush_back('q', 'a');
+</pre>
+
+
+<a name="m-qpop"></a>
+<h3>qpop</h3>
+
+<h4><em>说明</em></h4>
+<p>本函数是 <code>qpop_front()</code> 的别名.</p>
+
+
+<a name="m-qpop_front"></a>
+<h3>qpop_front</h3>
+
+<h4><em>说明</em></h4>
+<p>删除并返回队列的第一个元素.</p>
+
+<h4><em>参数</em></h4>
+<dl>
+	<dd><code>name</code> - </dd>
+</dl>
+
+<h4><em>返回值</em></h4>
+<p>出错返回 <code>false</code>, 队列不存在(或者为空)则返回 <code>null</code>, 否则删除并返回一个元素.</p>
+
+<h4><em>示例</em></h4>
+<pre>
+$ssdb-&gt;qpop_front('q');
+</pre>
+
+
+<a name="m-qpop_back"></a>
+<h3>qpop_back</h3>
+
+<h4><em>说明</em></h4>
+<p>删除并返回队列的最后一个元素.</p>
+
+<h4><em>参数</em></h4>
+<dl>
+	<dd><code>name</code> - </dd>
+</dl>
+
+<h4><em>返回值</em></h4>
+<p>出错返回 <code>false</code>, 队列不存在(或者为空)则返回 <code>null</code>, 否则删除并返回一个元素.</p>
+
+<h4><em>示例</em></h4>
+<pre>
+$ssdb-&gt;qpop_back('q');
+</pre>
+
+
+
+
+
+<!-- ##############  other ############## -->
+
+<a name="m-batch"></a>
+<h3>batch, exec</h3>
+
+<h4><em>说明</em></h4>
+<p>批量执行一批命令. 批量命令可以减少客户端和服务器之间的交互延时, 能提高性能和响应速度.</p>
+
+<h4><em>参数</em></h4>
+<dl>
+	<dd></dd>
+</dl>
+
+<h4><em>返回值</em></h4>
+<p>如果 <code>exec()</code> 出错则返回 <code>false</code>, 否则返回一个数组包含对应每一条命令的结果.</p>
+
+<h4><em>示例</em></h4>
+<pre>
+$ssdb-&gt;batch()
+	-&gt;set('a', 1)
+	-&gt;get('a')
+	-&gt;exec();
+// 或者
+$ssdb-&gt;batch();
+$ssdb-&gt;set('a', 1);
+$ssdb-&gt;get('a');
+$ssdb-&gt;exec();
+</pre>
+
+
 
 <div id="footer">
 	Copyright&copy;2013,2014 ideawu. All rights reserved.
 </div>
-
-
 
 </body>
 </html>

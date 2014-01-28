@@ -13,9 +13,6 @@
 	# 启动为后台进程
 	$ ./ssdb-server -d ssdb.conf
 	
-	# 启动从库
-	$ ./ssdb-server ssdb_slave.conf
-	
 	# 启动 ssdb 命令行
 	$ ./tools/ssdb-cli -p 8888
 	

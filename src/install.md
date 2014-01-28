@@ -13,9 +13,6 @@
 	# or start as daemon
 	$ ./ssdb-server -d ssdb.conf
 	
-	# start slave
-	$ ./ssdb-server ssdb_slave.conf
-	
 	# ssdb command line
 	$ ./tools/ssdb-cli -p 8888
 	

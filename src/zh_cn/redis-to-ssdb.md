@@ -10,7 +10,7 @@ __用法:__
 php redis-import.php redis_host redis_port redis_db ssdb_host ssdb_port
 ```
 
-参数:
+__参数:__
 
 * redis_host: Redis 运行所在的 IP 或者主机名
 * redis_port: Redis 监听的端口

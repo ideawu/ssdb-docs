@@ -10,7 +10,7 @@ __Usage:__
 php redis-import.php redis_host redis_port redis_db ssdb_host ssdb_port
 ```
 
-Parameters:
+__Options:__
 
 * redis_host: The IP address or hostname of Redis instance
 * redis_port: The port number of Redis instance

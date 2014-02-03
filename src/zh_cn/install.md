@@ -18,3 +18,19 @@
 	
 	# 停止 ssdb-server
 	$ kill `cat ./var/ssdb.pid`
+
+到目前为止, 你需要手动管理 ```ssdb-server``` 进程, 如果你希望在操作系统启动和停止时自动地管理, 请按下面的说明进行.
+
+## SSDB 启动脚本
+
+假设你已经安装 SSDB 在默认的 ```/usr/local/ssdb``` 目录, 把 ```tools/ssdb.sh``` 脚本放到 ```/etc/init.d``` 目录下.
+
+编辑下面的内容:
+
+	# each config file for one instance
+	configs=/data/ssdb_data/test/ssdb.conf
+
+将 ```/data/ssdb_data/test/ssdb.conf``` 修改为你的 SSDB 配置文件的路径. 如果你有多个 SSDB 实例, 那么把它们写在一行, 用空格来分隔:
+
+	# each config file for one instance
+	configs=/data/ssdb_data/test/ssdb.conf /data/ssdb_data/demo/ssdb.conf

@@ -4,16 +4,16 @@ SSDB provides the ```leveldb-import``` tool to import existing LevelDB data into
 
 <div class="alert alert-info">You can not simply copy the LevelDB binary files, this way will not work.</div>
 
-### Usage
+__Usage:__
 
 	./tools/leveldb-import ip port input_folder
 
-### Options
+__Options:__
 
 * ip - ssdb server ip address
 * port - ssdb server port number
 * input_folder - local leveldb folder
 
-### Example
+__Example:__
 
 	./tools/leveldb-import 127.0.0.1 8888 ./leveldb/

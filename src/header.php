@@ -101,6 +101,7 @@
 					<ul class="dropdown-menu">
 						<li><a href="./index.html">Docs Home</a></li>
 						<li class="divider"></li>
+						<li><a href="./install.html">Installation</a></li>
 						<li><a href="./config.html">Configuration</a></li>
 						<li><a href="./protocol.html">SSDB Network Protocol</a></li>
 						<li class="divider"></li>

@@ -1,6 +1,6 @@
 # Documentation
 
-SSDB is a fast NoSQL database for storing big list of billions of elements.
+SSDB is a fast NoSQL database for storing big list of billions of elements, an alternative to Redis.
 
 SSDB is stable, production-ready and is widely used by many Internet companies including QIHU 360.
 

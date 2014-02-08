@@ -1,5 +1,7 @@
 # 下载和安装
 
+强烈推荐你把 SSDB 部署在 __Linux 操作系统__上.
+
 	$ wget --no-check-certificate https://github.com/ideawu/ssdb/archive/master.zip
 	$ unzip master
 	$ cd ssdb-master
@@ -21,7 +23,7 @@
 
 到目前为止, 你需要手动管理 ```ssdb-server``` 进程, 如果你希望在操作系统启动和停止时自动地管理, 请按下面的说明进行.
 
-## SSDB 启动脚本
+## SSDB 启动脚本(随操作系统自启动)
 
 假设你已经安装 SSDB 在默认的 ```/usr/local/ssdb``` 目录, 把 ```tools/ssdb.sh``` 脚本放到 ```/etc/init.d``` 目录下.
 

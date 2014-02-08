@@ -1,5 +1,7 @@
 # Download and Install
 
+I suggest deploying SSDB using the __Linux operating system__.
+
 	$ wget --no-check-certificate https://github.com/ideawu/ssdb/archive/master.zip
 	$ unzip master
 	$ cd ssdb-master
@@ -21,7 +23,7 @@
 
 By now, you will have to manage the ```ssdb-server``` process(es) manually, if you want to set it to start and stop along with the system, follow the instructions below.
 
-## SSDB Init Scripts
+## SSDB Init Scripts(Auto startup along with OS)
 
 Assumming you have installed SSDB under the ```/usr/local/ssdb``` folder, put the ```tools/ssdb.sh``` script into ```/etc/init.d``` directory.
 

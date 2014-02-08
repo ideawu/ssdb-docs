@@ -2,15 +2,20 @@
 
 SSDB is a fast NoSQL database for storing big list of billions of elements, an alternative to Redis.
 
-SSDB is stable, production-ready and is widely used by many Internet companies including QIHU 360.
+SSDB is stable, production-ready and is widely used by many Internet companies including QIHU 360, TOPGAME.
 
 ## Get Started
 
 * [Download and Install](./install.html)
-* [Migrate from Redis to SSDB](./redis-to-ssdb.html)
 * [Clients](./clients.html): SSDB clients for various languages.
+* [Migrate from Redis to SSDB](./redis-to-ssdb.html)
 * [Import LevelDB](./leveldb-import.html): Import existing LevelDB data into SSDB.
+
+## Administration
+
+* [ssdb-cli](./ssdb-cli.html): The SSDB command line tool.
 * [Backup](./backup.html)
+* [Logs Analytics](./logs.html): (TO BE DONE...)
 
 ## Specification
 

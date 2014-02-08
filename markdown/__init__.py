@@ -318,8 +318,13 @@ class Markdown(object):
 
         lines = output.split("\n")
         for index, line in enumerate(lines):
-            if line.startswith(' ' * self.tab_length):
-                line = line.replace(' ' * self.tab_length, '\t')
+            tabs = 0
+            for i in range(1, 100):
+                if not line.startswith(' ' * self.tab_length * i):
+                    break
+                tabs = i
+            if tabs > 0:
+                line = '\t' * tabs + line[tabs * self.tab_length : ];
             lines[index] = line
         output = '\n'.join(lines)
 

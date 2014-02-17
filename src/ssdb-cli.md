@@ -84,3 +84,5 @@ __cmd.*__
 ### compact
 
 This command force the SSDB server to do compactaction on data, after the compaction, queries are usually much faster.
+
+You should notice that ```compact``` may slow down the service, especially when the database is big. So, you should execute this command when the server is idle.

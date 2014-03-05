@@ -151,6 +151,27 @@ $ssdb-&gt;setx('key', 'value', 60);
 </pre>
 
 
+<a name="m-setnx"></a>
+<h3>setnx</h3>
+
+<h4><em>Description</em></h4>
+<p>Set the string value in argument as value of the key if and only if the key doesn't exist.</p>
+
+<h4><em>Parameters</em></h4>
+<dl>
+	<dd><code>key</code> - </dd>
+	<dd><code>value</code> - </dd>
+</dl>
+
+<h4><em>Return Value</em></h4>
+<p><code>false</code> on error, 1: value is set, 0: key already exists.</p>
+
+<h4><em>Example</em></h4>
+<pre>
+$ssdb-&gt;setnx('key', 'value');
+</pre>
+
+
 <a name="m-get"></a>
 <h3>get</h3>
 
@@ -163,11 +184,32 @@ $ssdb-&gt;setx('key', 'value', 60);
 </dl>
 
 <h4><em>Return Value</em></h4>
-<p>Returns <code>null</code> if key not found, <code>false</code> on error, therwise, the value related to that key is returned.</p>
+<p>Returns <code>null</code> if key not found, <code>false</code> on error, otherwise, the value related to that key is returned.</p>
 
 <h4><em>Example</em></h4>
 <pre>
 $ssdb-&gt;get('key');
+</pre>
+
+
+<a name="m-getset"></a>
+<h3>getset</h3>
+
+<h4><em>Description</em></h4>
+<p>Sets a value and returns the previous entry at that key.</p>
+
+<h4><em>Parameters</em></h4>
+<dl>
+	<dd><code>key</code> - </dd>
+	<dd><code>value</code> - </dd>
+</dl>
+
+<h4><em>Return Value</em></h4>
+<p>Returns <code>null</code> if key not found, <code>false</code> on error, therwise, the value related to that key is returned.</p>
+
+<h4><em>Example</em></h4>
+<pre>
+$ssdb-&gt;getset('key', 'value');
 </pre>
 
 
@@ -405,7 +447,7 @@ $ssdb-&gt;hset('h', 'key', 'value');
 </dl>
 
 <h4><em>Return Value</em></h4>
-<p>Returns <code>null</code> if key not found, <code>false</code> on error, therwise, the value related to this key is returned.</p>
+<p>Returns <code>null</code> if key not found, <code>false</code> on error, otherwise, the value related to this key is returned.</p>
 
 <h4><em>Example</em></h4>
 <pre>
@@ -721,7 +763,7 @@ $ssdb-&gt;zset('z', 'key', 100);
 </dl>
 
 <h4><em>Return Value</em></h4>
-<p>Returns <code>null</code> if key not found, <code>false</code> on error, therwise, the score related to this key is returned.</p>
+<p>Returns <code>null</code> if key not found, <code>false</code> on error, otherwise, the score related to this key is returned.</p>
 
 <h4><em>Example</em></h4>
 <pre>
@@ -1125,6 +1167,49 @@ $ssdb-&gt;qfront('q');
 <h4><em>Example</em></h4>
 <pre>
 $ssdb-&gt;qback('q');
+</pre>
+
+
+<a name="m-qget"></a>
+<h3>qget</h3>
+
+<h4><em>Description</em></h4>
+<p>Returns the element a the specified index(position). 0 the first element, 1 the second ... -1 the last element.</p>
+
+<h4><em>Parameters</em></h4>
+<dl>
+	<dd><code>name</code> - </dd>
+	<dd><code>index</code> - </dd>
+</dl>
+
+<h4><em>Return Value</em></h4>
+<p><code>false</code> on error, <code>null</code> if no element corresponds to this index, otherwise the item returned.</p>
+
+<h4><em>Example</em></h4>
+<pre>
+$ssdb-&gt;qget('q', -2);
+</pre>
+
+
+<a name="m-qslice"></a>
+<h3>qslice</h3>
+
+<h4><em>Description</em></h4>
+<p>Returns a portion of elements from the queue at the specified range [begin, end]. begin and end could be negative.</p>
+
+<h4><em>Parameters</em></h4>
+<dl>
+	<dd><code>name</code> - </dd>
+	<dd><code>begin</code> - </dd>
+	<dd><code>end</code> - </dd>
+</dl>
+
+<h4><em>Return Value</em></h4>
+<p><code>false</code> on error, otherwise an array containing items.</p>
+
+<h4><em>Example</em></h4>
+<pre>
+$ssdb-&gt;qslice('q', 0, -1);
 </pre>
 
 

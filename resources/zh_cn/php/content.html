@@ -151,6 +151,27 @@ $ssdb-&gt;setx('key', 'value', 60);
 </pre>
 
 
+<a name="m-setnx"></a>
+<h3>setnx</h3>
+
+<h4><em>说明</em></h4>
+<p>当 key 不存在时, 设置指定 key 的值内容. 如果已存在, 则不设置.</p>
+
+<h4><em>参数</em></h4>
+<dl>
+	<dd><code>key</code> - </dd>
+	<dd><code>value</code> - </dd>
+</dl>
+
+<h4><em>返回值</em></h4>
+<p>出错则返回 <code>false</code>, 1: value 已经设置, 0: key 已经存在, 不更新.</p>
+
+<h4><em>示例</em></h4>
+<pre>
+$ssdb-&gt;setnx('key', 'value');
+</pre>
+
+
 <a name="m-get"></a>
 <h3>get</h3>
 
@@ -168,6 +189,27 @@ $ssdb-&gt;setx('key', 'value', 60);
 <h4><em>示例</em></h4>
 <pre>
 $ssdb-&gt;get('key');
+</pre>
+
+
+<a name="m-getset"></a>
+<h3>getset</h3>
+
+<h4><em>说明</em></h4>
+<p>更新 key 对应的 value, 并返回更新前的旧的 value.</p>
+
+<h4><em>参数</em></h4>
+<dl>
+	<dd><code>key</code> - </dd>
+	<dd><code>value</code> - </dd>
+</dl>
+
+<h4><em>返回值</em></h4>
+<p>如果 key 不存在则返回 <code>null</code>, 如果出错则返回 <code>false</code>, 否则返回 key 对应的值内容.</p>
+
+<h4><em>示例</em></h4>
+<pre>
+$ssdb-&gt;getset('key', 'value');
 </pre>
 
 
@@ -1124,6 +1166,50 @@ $ssdb-&gt;qfront('q');
 <pre>
 $ssdb-&gt;qback('q');
 </pre>
+
+
+<a name="m-qget"></a>
+<h3>qget</h3>
+
+<h4><em>说明</em></h4>
+<p>返回指定位置的元素. 0 表示第一个元素, 1 是第二个 ... -1 是最后一个.</p>
+
+<h4><em>参数</em></h4>
+<dl>
+	<dd><code>name</code> - </dd>
+	<dd><code>index</code> - </dd>
+</dl>
+
+<h4><em>返回值</em></h4>
+<p>出错返回 <code>false</code>, 如果指定位置不存在一个元素, 则返回 <code>null</code>, 否则返回一个元素.</p>
+
+<h4><em>示例</em></h4>
+<pre>
+$ssdb-&gt;qget('q', -2);
+</pre>
+
+
+<a name="m-qslice"></a>
+<h3>qslice</h3>
+
+<h4><em>说明</em></h4>
+<p>返回下标处于区域 [begin, end] 的元素. begin 和 end 可以是负数</p>
+
+<h4><em>参数</em></h4>
+<dl>
+	<dd><code>name</code> - </dd>
+	<dd><code>begin</code> - </dd>
+	<dd><code>end</code> - </dd>
+</dl>
+
+<h4><em>返回值</em></h4>
+<p>出错返回 <code>false</code>, 否则返回包含元素的数组.</p>
+
+<h4><em>示例</em></h4>
+<pre>
+$ssdb-&gt;qslice('q', 0, -1);
+</pre>
+
 
 
 <a name="m-qpush"></a>

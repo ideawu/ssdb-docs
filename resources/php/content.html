@@ -642,7 +642,7 @@ $ssdb-&gt;hrscan('a', 'z', 10);
 <h3>hclear</h3>
 
 <h4><em>Description</em></h4>
-<p>Delete all of the keys in a hashmap.</p>
+<p>Delete all keys in a hashmap.</p>
 
 <h4><em>Parameters</em></h4>
 <dl>
@@ -1023,7 +1023,7 @@ $ssdb-&gt;zrange('z', 0, 10);
 <h3>zclear</h3>
 
 <h4><em>Description</em></h4>
-<p>Delete all of the keys in a zset.</p>
+<p>Delete all keys in a zset.</p>
 
 <h4><em>Parameters</em></h4>
 <dl>
@@ -1125,6 +1125,27 @@ $ssdb-&gt;multi_zdel('z', array('k1', 'k2'));
 <h4><em>Example</em></h4>
 <pre>
 $ssdb-&gt;qsize('q');
+</pre>
+
+
+
+<a name="m-qclear"></a>
+<h3>qclear</h3>
+
+<h4><em>Description</em></h4>
+<p>Clear the queue.</p>
+
+<h4><em>Parameters</em></h4>
+<dl>
+	<dd><code>name</code> - </dd>
+</dl>
+
+<h4><em>Return Value</em></h4>
+<p><code>false</code> on error.</p>
+
+<h4><em>Example</em></h4>
+<pre>
+$ssdb-&gt;qclear('q');
 </pre>
 
 

@@ -30,8 +30,8 @@ But if you want to move from Redis to SSDB, you will need this Redis-To-SSDB com
 
 <table>
 	<tr>
-		<th width="200">Redis</th>
-		<th width="200">SSDB</th>
+		<th width="150">Redis</th>
+		<th width="150">SSDB</th>
 	</tr>
 	<tr><td>get</td><td>get</td></tr>
 	<tr><td>set</td><td>set</td></tr>
@@ -41,7 +41,7 @@ But if you want to move from Redis to SSDB, you will need this Redis-To-SSDB com
 	<tr><td>getMultiple</td><td>multi_get</td></tr>
 	<tr><td>setMultiple</td><td>multi_set</td></tr>
 	<tr><td>del(multiple)</td><td>multi_del</td></tr>
-	<tr><td>keys</td><td>scan(for kv type only)</td></tr>
+	<tr><td>keys</td><td>keys(for kv type only)</td></tr>
 	<tr><td>getset</td><td>getset</td></tr>
 	<tr><td>setnx</td><td>setnx</td></tr>
 </table>
@@ -50,8 +50,8 @@ But if you want to move from Redis to SSDB, you will need this Redis-To-SSDB com
 
 <table>
 	<tr>
-		<th width="200">Redis</th>
-		<th width="200">SSDB</th>
+		<th width="150">Redis</th>
+		<th width="150">SSDB</th>
 	</tr>
 	<tr><td>hget</td><td>hget</td></tr>
 	<tr><td>hset</td><td>hset</td></tr>
@@ -70,8 +70,8 @@ But if you want to move from Redis to SSDB, you will need this Redis-To-SSDB com
 
 <table>
 	<tr>
-		<th width="200">Redis</th>
-		<th width="200">SSDB</th>
+		<th width="150">Redis</th>
+		<th width="150">SSDB</th>
 	</tr>
 	<tr><td>zScore</td><td>zget</td></tr>
 	<tr><td>zAdd</td><td>zset</td></tr>
@@ -88,8 +88,8 @@ But if you want to move from Redis to SSDB, you will need this Redis-To-SSDB com
 
 <table>
 	<tr>
-		<th width="200">Redis</th>
-		<th width="200">SSDB</th>
+		<th width="150">Redis</th>
+		<th width="150">SSDB</th>
 	</tr>
 	<tr><td>llen/lsize</td><td>qsize</td></tr>
 	<tr><td>lpush</td><td>qpush_front</td></tr>

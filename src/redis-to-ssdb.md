@@ -24,7 +24,7 @@ Make sure you have the PHP Redis module [https://github.com/nicolasff/phpredis](
 
 SSDB supports Redis network protocol, you can use Redis clients to connect to a SSDB server and operate on it.
 
-But if you want to move from Redis to SSDB, you will need this Redis-To-SSDB commands transfrom table.
+But if you want to use SSDB clients, you will need this Redis-To-SSDB commands transfrom table.
 
 ### Key-Value
 

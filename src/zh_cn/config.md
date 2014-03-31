@@ -48,3 +48,11 @@ replication:
 		ip: 127.0.0.1
 		port: 8888
 ```
+
+## 内存占用
+
+一个 ssdb-server 实例占用的内存最高达到(MB):
+
+	cache_size + write_buffer_size * 66 + 32
+
+你可以调整配置参数, 限制 ssdb-server 的内存占用.

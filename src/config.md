@@ -48,3 +48,11 @@ replication:
 		ip: 127.0.0.1
 		port: 8888
 ```
+
+## Memory Usage
+
+A ssdb-server may consume up to this many memory(in MB):
+
+	cache_size + write_buffer_size * 66 + 32
+
+You can tune the configuration the limit the memory usage of a ssdb-server instance.

@@ -84,11 +84,32 @@ function gen_doc($file, $output_dir, $template=null){
 		include($template);
 		$html = ob_get_clean();
 	}else{
-		$html = $markdown['html'];
+		$html = default_template($markdown);
 	}
 
 	echo "[build] {$markdown['output_file']} => {$markdown['output_file']}\n";
 	file_put_contents($markdown['output_file'], $html);
 }
 
-
+function default_template($markdown){
+	$html = <<<HTML
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>{$markdown['title']}</title>
+	<style type="text/css">
+	body{
+		font-size: 14px;
+		font-family: arial;
+		background: #fff;
+	}
+	</style>
+</head>
+<body>
+	{$markdown['html']}
+</body>
+</html>
+HTML;
+	return $html;
+}

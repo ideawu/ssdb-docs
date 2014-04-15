@@ -99,6 +99,6 @@ SSDB 支持 Redis 协议和客户端, 所以你可以使用 Redis 的客户端�
 	<tr><td>rpush</td><td>qpush_back</td></tr>
 	<tr><td>lpop</td><td>qpop_front</td></tr>
 	<tr><td>rpop</td><td>qpop_back</td></tr>
-	<tr><td>lrange</td><td>qrange</td></tr>
+	<tr><td>lrange</td><td>qrange/qslice</td></tr>
 	<tr><td>lindex, lget</td><td>qget</td></tr>
 </table>

@@ -1040,6 +1040,73 @@ $ssdb-&gt;zclear('z');
 </pre>
 
 
+<a name="m-zcount"></a>
+<h3>zcount</h3>
+
+<h4><em>说明</em></h4>
+<p>返回处于区间 [start,end] key 数量.</p>
+
+<h4><em>参数</em></h4>
+<dl>
+	<dd><code>name</code> - zset 的名字.</dd>
+	<dd><code>score_start</code> - key 的最小权重值(包含), 空字符串表示 -inf.</dd>
+	<dd><code>score_end</code> - key 的最大权重值(包含), 空字符串表示 +inf.</dd>
+</dl>
+
+<h4><em>返回值</em></h4>
+<p>如果出错则返回 <code>false</code>, 否则返回符合条件的 key 的数量.</p>
+
+<h4><em>示例</em></h4>
+<pre>
+$ssdb-&gt;zcount('z', 0, 100);
+</pre>
+
+
+<a name="m-zsum"></a>
+<h3>zsum</h3>
+
+<h4><em>说明</em></h4>
+<p>返回 key 处于区间 [start,end] 的 score 的和.</p>
+
+<h4><em>参数</em></h4>
+<dl>
+	<dd><code>name</code> - zset 的名字.</dd>
+	<dd><code>score_start</code> - key 的最小权重值(包含), 空字符串表示 -inf.</dd>
+	<dd><code>score_end</code> - key 的最大权重值(包含), 空字符串表示 +inf.</dd>
+</dl>
+
+<h4><em>返回值</em></h4>
+<p>如果出错则返回 <code>false</code>, 否则返回符合条件的 score 的求和.</p>
+
+<h4><em>示例</em></h4>
+<pre>
+$ssdb-&gt;zsum('z', 0, 100);
+</pre>
+
+
+<a name="m-zavg"></a>
+<h3>zavg</h3>
+
+<h4><em>说明</em></h4>
+<p>返回 key 处于区间 [start,end] 的 score 的平均值.</p>
+
+<h4><em>参数</em></h4>
+<dl>
+	<dd><code>name</code> - zset 的名字.</dd>
+	<dd><code>score_start</code> - key 的最小权重值(包含), 空字符串表示 -inf.</dd>
+	<dd><code>score_end</code> - key 的最大权重值(包含), 空字符串表示 +inf.</dd>
+</dl>
+
+<h4><em>返回值</em></h4>
+<p>如果出错则返回 <code>false</code>, 否则返回符合条件的 score 的平均值.</p>
+
+<h4><em>示例</em></h4>
+<pre>
+$ssdb-&gt;zavg('z', 0, 100);
+</pre>
+
+
+
 <a name="m-multi_zset"></a>
 <h3>multi_zset</h3>
 
@@ -1243,16 +1310,16 @@ $ssdb-&gt;qslice('q', 0, -1);
 <h3>qpush_front</h3>
 
 <h4><em>说明</em></h4>
-<p>往队列的首部添加一个元素</p>
+<p>往队列的首部添加一个或者多个元素</p>
 
 <h4><em>参数</em></h4>
 <dl>
 	<dd><code>name</code> - </dd>
-	<dd><code>item</code> - </dd>
+	<dd><code>item</code> - 字符串或是字符串数组.</dd>
 </dl>
 
 <h4><em>返回值</em></h4>
-<p>出错返回 <code>false</code>.</p>
+<p>添加元素之后, 队列的长度, 出错返回 <code>false</code>.</p>
 
 <h4><em>示例</em></h4>
 <pre>
@@ -1264,16 +1331,16 @@ $ssdb-&gt;qpush_front('q', 'a');
 <h3>qpush_back</h3>
 
 <h4><em>说明</em></h4>
-<p>往队列的尾部添加一个元素</p>
+<p>往队列的尾部添加一个或者多个元素</p>
 
 <h4><em>参数</em></h4>
 <dl>
 	<dd><code>name</code> - </dd>
-	<dd><code>item</code> - </dd>
+	<dd><code>item</code> - 字符串或是字符串数组.</dd>
 </dl>
 
 <h4><em>返回值</em></h4>
-<p>出错返回 <code>false</code>.</p>
+<p>添加元素之后, 队列的长度, 出错返回 <code>false</code>.</p>
 
 <h4><em>示例</em></h4>
 <pre>

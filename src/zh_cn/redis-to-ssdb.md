@@ -81,8 +81,10 @@ SSDB 支持 Redis 协议和客户端, 所以你可以使用 Redis 的客户端�
 	<tr><td>zRangeByScore</td><td>zscan</td></tr>
 	<tr><td>zIncrBy</td><td>zincr</td></tr>
 	<tr><td>zDecrBy</td><td>zdecr</td></tr>
-	<tr><td>zCount</td><td></td></tr>
+	<tr><td>zCount</td><td>zcount</td></tr>
 	<tr><td>zCard</td><td>zsize</td></tr>
+	<tr><td>zRemRangeByRank</td><td>zremrangebyrank</td></tr>
+	<tr><td>zRemRangeByScore</td><td>zremrangebyscore</td></tr>
 </table>
 
 ### Key-List/Queue

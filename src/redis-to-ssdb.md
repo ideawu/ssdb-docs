@@ -80,8 +80,10 @@ But if you want to use SSDB clients, you will need this Redis-To-SSDB commands t
 	<tr><td>zRangeByScore</td><td>zscan</td></tr>
 	<tr><td>zIncrBy</td><td>zincr</td></tr>
 	<tr><td>zDecrBy</td><td>zdecr</td></tr>
-	<tr><td>zCount</td><td></td></tr>
+	<tr><td>zCount</td><td>zcount</td></tr>
 	<tr><td>zCard</td><td>zsize</td></tr>
+	<tr><td>zRemRangeByRank</td><td>zremrangebyrank</td></tr>
+	<tr><td>zRemRangeByScore</td><td>zremrangebyscore</td></tr>
 </table>
 
 ### Key-List/Queue
@@ -96,6 +98,6 @@ But if you want to use SSDB clients, you will need this Redis-To-SSDB commands t
 	<tr><td>rpush</td><td>qpush_back</td></tr>
 	<tr><td>lpop</td><td>qpop_front</td></tr>
 	<tr><td>rpop</td><td>qpop_back</td></tr>
-	<tr><td>lrange</td><td>qrange</td></tr>
+	<tr><td>lrange</td><td>qrange/qslice</td></tr>
 	<tr><td>lindex, lget</td><td>qget</td></tr>
 </table>

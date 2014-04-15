@@ -1039,6 +1039,72 @@ $ssdb-&gt;zclear('z');
 </pre>
 
 
+<a name="m-zcount"></a>
+<h3>zcount</h3>
+
+<h4><em>Description</em></h4>
+<p>Returns the number of elements of the sorted set stored at the specified key which have scores in the range [start,end].</p>
+
+<h4><em>Parameters</em></h4>
+<dl>
+	<dd><code>name</code> - The name of the zset.</dd>
+	<dd><code>start</code> - The minimum score related to keys(inclusive), empty string means -inf(no limit).</dd>
+	<dd><code>end</code> - The maximum score related to keys(inclusive), empty string means +inf(no limit).</dd>
+</dl>
+
+<h4><em>Return Value</em></h4>
+<p><code>false</code> on error, or the number of keys in specified range.</p>
+
+<h4><em>Example</em></h4>
+<pre>
+$ssdb-&gt;zcount('z', 0, 100);
+</pre>
+
+
+<a name="m-zsum"></a>
+<h3>zsum</h3>
+
+<h4><em>Description</em></h4>
+<p>Returns the sum of elements of the sorted set stored at the specified key which have scores in the range [start,end].</p>
+
+<h4><em>Parameters</em></h4>
+<dl>
+	<dd><code>name</code> - The name of the zset.</dd>
+	<dd><code>start</code> - The minimum score related to keys(inclusive), empty string means -inf(no limit).</dd>
+	<dd><code>end</code> - The maximum score related to keys(inclusive), empty string means +inf(no limit).</dd>
+</dl>
+
+<h4><em>Return Value</em></h4>
+<p><code>false</code> on error, or the sum of keys in specified range.</p>
+
+<h4><em>Example</em></h4>
+<pre>
+$ssdb-&gt;zsum('z', 0, 100);
+</pre>
+
+
+<a name="m-zavg"></a>
+<h3>zavg</h3>
+
+<h4><em>Description</em></h4>
+<p>Returns the average of elements of the sorted set stored at the specified key which have scores in the range [start,end].</p>
+
+<h4><em>Parameters</em></h4>
+<dl>
+	<dd><code>name</code> - The name of the zset.</dd>
+	<dd><code>start</code> - The minimum score related to keys(inclusive), empty string means -inf(no limit).</dd>
+	<dd><code>end</code> - The maximum score related to keys(inclusive), empty string means +inf(no limit).</dd>
+</dl>
+
+<h4><em>Return Value</em></h4>
+<p><code>false</code> on error, or the average of keys in specified range.</p>
+
+<h4><em>Example</em></h4>
+<pre>
+$ssdb-&gt;zavg('z', 0, 100);
+</pre>
+
+
 <a name="m-multi_zset"></a>
 <h3>multi_zset</h3>
 
@@ -1246,16 +1312,16 @@ $ssdb-&gt;qslice('q', 0, -1);
 <h3>qpush_front</h3>
 
 <h4><em>Description</em></h4>
-<p>Adds an element to the head of the queue.</p>
+<p>Adds one or more than one element to the head of the queue.</p>
 
 <h4><em>Parameters</em></h4>
 <dl>
 	<dd><code>name</code> - </dd>
-	<dd><code>item</code> - </dd>
+	<dd><code>item</code> - string or array of string.</dd>
 </dl>
 
 <h4><em>Return Value</em></h4>
-<p><code>false</code> on error.</p>
+<p>The length of the list after the push operation, <code>false</code> on error.</p>
 
 <h4><em>Example</em></h4>
 <pre>
@@ -1267,16 +1333,16 @@ $ssdb-&gt;qpush_front('q', 'a');
 <h3>qpush_back</h3>
 
 <h4><em>Description</em></h4>
-<p>Adds an element to the end of the queue.</p>
+<p>Adds an or more than one element to the end of the queue.</p>
 
 <h4><em>Parameters</em></h4>
 <dl>
 	<dd><code>name</code> - </dd>
-	<dd><code>item</code> - </dd>
+	<dd><code>item</code> - string or array of string.</dd>
 </dl>
 
 <h4><em>Return Value</em></h4>
-<p><code>false</code> on error.</p>
+<p>The length of the list after the push operation, <code>false</code> on error.</p>
 
 <h4><em>Example</em></h4>
 <pre>

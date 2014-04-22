@@ -1106,6 +1106,50 @@ $ssdb-&gt;zavg('z', 0, 100);
 </pre>
 
 
+<a name="m-zremrangebyrank"></a>
+<h3>zremrangebyrank</h3>
+
+<h4><em>说明</em></h4>
+<p>删除位置处于区间 [start,end] 的元素.</p>
+
+<h4><em>参数</em></h4>
+<dl>
+	<dd><code>name</code> - zset 的名字.</dd>
+	<dd><code>start</code> - (包含).</dd>
+	<dd><code>end</code> -(包含).</dd>
+</dl>
+
+<h4><em>返回值</em></h4>
+<p>出错则返回 <code>false</code>, 否则返回被删除的元素个数.</p>
+
+<h4><em>示例</em></h4>
+<pre>
+$ssdb-&gt;zremrangebyrank('z', 1, 2);
+</pre>
+
+
+<a name="m-zremrangebyscore"></a>
+<h3>zremrangebyscore</h3>
+
+<h4><em>说明</em></h4>
+<p>删除权重处于区间 [start,end] 的元素.</p>
+
+<h4><em>参数</em></h4>
+<dl>
+	<dd><code>name</code> - zset 的名字.</dd>
+	<dd><code>start</code> - (包含).</dd>
+	<dd><code>end</code> -(包含).</dd>
+</dl>
+
+<h4><em>返回值</em></h4>
+<p>出错则返回 <code>false</code>, 否则返回被删除的元素个数.</p>
+
+<h4><em>示例</em></h4>
+<pre>
+$ssdb-&gt;zremrangebyscore('z', 1, 2);
+</pre>
+
+
 
 <a name="m-multi_zset"></a>
 <h3>multi_zset</h3>

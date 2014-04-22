@@ -1105,6 +1105,50 @@ $ssdb-&gt;zavg('z', 0, 100);
 </pre>
 
 
+<a name="m-zremrangebyrank"></a>
+<h3>zremrangebyrank</h3>
+
+<h4><em>Description</em></h4>
+<p>Delete the elements of the zset which have rank in the range [start,end].</p>
+
+<h4><em>Parameters</em></h4>
+<dl>
+	<dd><code>name</code> - The name of the zset.</dd>
+	<dd><code>start</code> - inclusive, unsigned number.</dd>
+	<dd><code>end</code> - inclusive, unsigned number.</dd>
+</dl>
+
+<h4><em>Return Value</em></h4>
+<p><code>false</code> on error, or the number of deleted elements.</p>
+
+<h4><em>Example</em></h4>
+<pre>
+$ssdb-&gt;zremrangebyrank('z', 1, 2);
+</pre>
+
+
+<a name="m-zremrangebyscore"></a>
+<h3>zremrangebyscore</h3>
+
+<h4><em>Description</em></h4>
+<p>Delete the elements of the zset which have score in the range [start,end].</p>
+
+<h4><em>Parameters</em></h4>
+<dl>
+	<dd><code>name</code> - The name of the zset.</dd>
+	<dd><code>start</code> - (inclusive).</dd>
+	<dd><code>end</code> - (inclusive).</dd>
+</dl>
+
+<h4><em>Return Value</em></h4>
+<p><code>false</code> on error, or the number of deleted elements.</p>
+
+<h4><em>Example</em></h4>
+<pre>
+$ssdb-&gt;zremrangebyscore('z', 1, 2);
+</pre>
+
+
 <a name="m-multi_zset"></a>
 <h3>multi_zset</h3>
 

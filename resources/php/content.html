@@ -321,6 +321,21 @@ $ssdb-&gt;keys('a', 'z', 10);
 $ssdb-&gt;scan('a', 'z', 10);
 </pre>
 
+<b>Iterate over all key-value pairs</b>
+<pre>
+$start = ''; 
+$limit = 2;
+while(1){
+    $kvs = $ssdb-&gt;scan($start, '', $limit);
+    if(!$kvs){
+        break;
+    }
+    // do something on key-value pairs...
+    $max_key = array_keys(array_slice($kvs, -1, 1, true))[0];
+    $start = $max_key;
+}
+</pre>
+
 
 <a name="m-rscan"></a>
 <h3>rscan</h3>

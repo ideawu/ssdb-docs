@@ -324,7 +324,7 @@ $ssdb-&gt;scan('a', 'z', 10);
 <b>遍历 key-value 对列表</b>
 <pre>
 $start = ''; 
-$limit = 2;
+$limit = 1000;
 while(1){
     $kvs = $ssdb-&gt;scan($start, '', $limit);
     if(!$kvs){

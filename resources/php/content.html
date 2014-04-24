@@ -331,7 +331,8 @@ while(1){
         break;
     }
     // do something on key-value pairs...
-    $max_key = array_keys(array_slice($kvs, -1, 1, true))[0];
+    $keys = array_keys(array_slice($kvs, -1, 1, true));
+    $max_key = $keys[0];
     $start = $max_key;
 }
 </pre>

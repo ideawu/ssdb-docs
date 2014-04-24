@@ -14,7 +14,7 @@
 
 ---
 
-## QIHU 360 在线游戏
+## <a href="#360" name="360">QIHU 360 在线游戏</a>
 
 ![](http://www.ideawu.com/ssdb/img/ssdb-users/wan.360.cn.png)
 
@@ -22,7 +22,7 @@
 
 ---
 
-## 世界工厂
+## <a href="#gongchang" name="gongchang">世界工厂</a>
 
 ![](http://www.ideawu.com/ssdb/img/ssdb-users/gongchang.com.png)
 
@@ -30,7 +30,7 @@
 
 ---
 
-## 得脉
+## <a href="#demai" name="demai">得脉</a>
 
 ![](http://www.ideawu.com/ssdb/img/ssdb-users/demai.com.png)
 
@@ -38,7 +38,7 @@
 
 ---
 
-## TOPGAME
+## <a href="#topgame" name="topgame">TOPGAME</a>
 
 ![](http://www.ideawu.com/ssdb/img/ssdb-users/topgame.com.png)
 
@@ -46,7 +46,7 @@
 
 ---
 
-## 百度
+## <a href="#baidu" name="baidu">百度</a>
 
 ![](http://www.ideawu.com/ssdb/img/ssdb-users/baidu.com.png)
 
@@ -54,7 +54,7 @@ SSDB 在 [百度](http://www.baidu.com/) 的一些服务中用作缓存服务.
 
 ---
 
-## Mobvista
+## <a href="#mobvista" name="mobvista">Mobvista</a>
 
 ![](http://www.ideawu.com/ssdb/img/ssdb-users/mobvista.com.png)
 
@@ -76,5 +76,5 @@ SSDB 在 [百度](http://www.baidu.com/) 的一些服务中用作缓存服务.
 
 [比亚迪汽车](http://http://www.bydauto.com.cn/) 是位于中国深圳的汽车制造端.
 
-比亚迪选择 SSDB 来存储从汽车上收集的汽车相关数据(天气, 交通, 速度, 等等), 并从 SSDB 中分析和产生报表.
+比亚迪选择 SSDB 作为其车联网大数据在存储服务器, 来存储从汽车上收集的汽车相关数据(天气, 交通, 速度, 等等), 并从 SSDB 中分析和产生报表, 为车主提供更好的服务.
 

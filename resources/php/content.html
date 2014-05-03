@@ -604,6 +604,26 @@ $ssdb-&gt;hkeys('h', 'a', 'z', 10);
 </pre>
 
 
+<a name="m-hgetall"></a>
+<h3>hgetall</h3>
+
+<h4><em>Description</em></h4>
+<p>Returns the whole hash, as an array of strings indexed by strings.</p>
+
+<h4><em>Parameters</em></h4>
+<dl>
+	<dd><code>name</code> - The name of the hashmap</dd>
+</dl>
+
+<h4><em>Return Value</em></h4>
+<p><code>false</code> on error, otherwise an associative array containing the key-value pairs.</p>
+
+<h4><em>Example</em></h4>
+<pre>
+$ssdb-&gt;hgetall('h');
+</pre>
+
+
 <a name="m-hscan"></a>
 <h3>hscan</h3>
 
@@ -625,7 +645,7 @@ $ssdb-&gt;hkeys('h', 'a', 'z', 10);
 
 <h4><em>Example</em></h4>
 <pre>
-$ssdb-&gt;hscan('a', 'z', 10);
+$ssdb-&gt;hscan('h', 'a', 'z', 10);
 </pre>
 
 
@@ -650,7 +670,7 @@ $ssdb-&gt;hscan('a', 'z', 10);
 
 <h4><em>Example</em></h4>
 <pre>
-$ssdb-&gt;hrscan('a', 'z', 10);
+$ssdb-&gt;hrscan('h', 'a', 'z', 10);
 </pre>
 
 

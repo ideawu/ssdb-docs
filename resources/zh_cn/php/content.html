@@ -605,6 +605,26 @@ $ssdb-&gt;hkeys('h', 'a', 'z', 10);
 </pre>
 
 
+<a name="m-hgetall"></a>
+<h3>hgetall</h3>
+
+<h4><em>说明</em></h4>
+<p>返回整个 hashmap.</p>
+
+<h4><em>参数</em></h4>
+<dl>
+	<dd><code>name</code> - hashmap 的名字.</dd>
+</dl>
+
+<h4><em>返回值</em></h4>
+<p>如果出错则返回 <code>false</code>, 否则返回包含 key-value 的关联数组.</p>
+
+<h4><em>示例</em></h4>
+<pre>
+$ssdb-&gt;hgetall('h');
+</pre>
+
+
 <a name="m-hscan"></a>
 <h3>hscan</h3>
 
@@ -622,11 +642,11 @@ $ssdb-&gt;hkeys('h', 'a', 'z', 10);
 </dl>
 
 <h4><em>返回值</em></h4>
-<p>如果出错则返回 <code>false</code>, 否则返回包含 key-score 的关联数组.</p>
+<p>如果出错则返回 <code>false</code>, 否则返回包含 key-value 的关联数组.</p>
 
 <h4><em>示例</em></h4>
 <pre>
-$ssdb-&gt;hscan('a', 'z', 10);
+$ssdb-&gt;hscan('h', 'a', 'z', 10);
 </pre>
 
 
@@ -651,7 +671,7 @@ $ssdb-&gt;hscan('a', 'z', 10);
 
 <h4><em>示例</em></h4>
 <pre>
-$ssdb-&gt;hrscan('a', 'z', 10);
+$ssdb-&gt;hrscan('h', 'a', 'z', 10);
 </pre>
 
 

@@ -89,7 +89,7 @@
 						<i class="glyphicon glyphicon-share-alt"></i> GitHub <b class="caret"></b>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a target="_blank" href="https://github.com/ideawu/ssdb">Project</a></li>
+						<li><a target="_blank" href="https://github.com/ideawu/ssdb">Source Code</a></li>
 						<li><a target="_blank" href="https://github.com/ideawu/ssdb-docs">Documentation</a></li>
 					</ul>
 				</li>
@@ -119,6 +119,7 @@
 					<ul class="dropdown-menu">
 						<li><a href="https://github.com/ideawu/ssdb/issues">Issue Tracker</a></li>
 						<li><a href="http://www.ideawu.com/blog/category/ssdb">Blog</a></li>
+						<li><a href="./users.html">User Cases</a></li>
 					</ul>
 				</li>
 			</ul>

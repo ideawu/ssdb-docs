@@ -74,7 +74,7 @@ SSDB 在 [百度](http://www.baidu.com/) 的一些服务中用作缓存服务.
 
 ![](http://www.ideawu.com/ssdb/img/ssdb-users/bydauto.com.cn.png)
 
-[比亚迪汽车](http://www.bydauto.com.cn/) 是位于中国深圳的汽车制造端.
+[比亚迪汽车](http://www.bydauto.com.cn/) 是位于中国深圳的汽车制造商.
 
 比亚迪选择 SSDB 作为其车联网大数据的存储服务器, 来存储从汽车上收集的汽车相关数据(天气, 交通, 速度, 等等), 并从 SSDB 中分析和产生报表, 为车主提供更好的服务.
 

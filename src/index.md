@@ -36,4 +36,4 @@ SSDB is stable, production-ready and is widely used by many Internet companies, 
 
 ## Presentations
 
-* <a href="http://vdisk.weibo.com/s/dWpk2caREXGf" target="_blank">SSDB 入门基础(Chinese)</a>
+* <a href="http://www.ideawu.com/ssdb/ssdb-get-started.pdf" target="_blank">SSDB 入门基础(Chinese)</a>

@@ -78,3 +78,11 @@ SSDB 在 [百度](http://www.baidu.com/) 的一些服务中用作缓存服务.
 
 比亚迪选择 SSDB 作为其车联网大数据的存储服务器, 来存储从汽车上收集的汽车相关数据(天气, 交通, 速度, 等等), 并从 SSDB 中分析和产生报表, 为车主提供更好的服务.
 
+---
+
+## <a href="#zhangyue" name="zhangyue">掌阅 iReader</a>
+
+![](http://www.ideawu.com/ssdb/img/ssdb-users/zhangyue.com.png)
+
+[掌阅 iReader](http://www.zhangyue.com/) 是一款非常流行的移动设备上的电子书阅读器软件. iReader 使用 SSDB 存储书籍的订阅用户, 以便向用户推送书籍更新消息.
+

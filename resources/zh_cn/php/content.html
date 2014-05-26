@@ -151,6 +151,26 @@ $ssdb-&gt;setx('key', 'value', 60);
 </pre>
 
 
+<a name="m-ttl"></a>
+<h3>ttl</h3>
+
+<h4><em>说明</em></h4>
+<p>返回 key(只针对 KV 类型) 的存活时间.</p>
+
+<h4><em>参数</em></h4>
+<dl>
+	<dd><code>key</code> - </dd>
+</dl>
+
+<h4><em>返回值</em></h4>
+<p>出错则返回 <code>false</code>, 否则返回 key 的存活时间(秒), -1 表示没有设置存活时间.</p>
+
+<h4><em>示例</em></h4>
+<pre>
+$ssdb-&gt;ttl('key');
+</pre>
+
+
 <a name="m-setnx"></a>
 <h3>setnx</h3>
 

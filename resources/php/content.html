@@ -151,6 +151,26 @@ $ssdb-&gt;setx('key', 'value', 60);
 </pre>
 
 
+<a name="m-ttl"></a>
+<h3>ttl</h3>
+
+<h4><em>Description</em></h4>
+<p>Returns the time left to live in seconds, only for keys of KV type.</p>
+
+<h4><em>Parameters</em></h4>
+<dl>
+	<dd><code>key</code> - </dd>
+</dl>
+
+<h4><em>Return Value</em></h4>
+<p><code>false</code> on error, or time to live of the key, in seconds, -1 if there is no associated expire to the key.</p>
+
+<h4><em>Example</em></h4>
+<pre>
+$ssdb-&gt;ttl('key');
+</pre>
+
+
 <a name="m-setnx"></a>
 <h3>setnx</h3>
 

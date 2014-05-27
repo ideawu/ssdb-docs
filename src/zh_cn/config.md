@@ -17,7 +17,7 @@
 
 <div class="alert alert-danger">
     <span class="label label-danger">警告!</span>
-    如果不做网络限制便监听 <code>0.0.0.0</code> IP 可能导致你的任意机器访问到你的数据, 这很可能是一个安全问题! 你可以结合操作系统的 iptables 来限制网络访问.
+    如果不做网络限制便监听 <code>0.0.0.0</code> IP 可能导致被任意机器访问到你的数据, 这很可能是一个安全问题! 你可以结合操作系统的 iptables 来限制网络访问.
 </div>
 
 ## 主从

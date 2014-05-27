@@ -1,6 +1,10 @@
 # Download and Install
 
-I suggest deploying SSDB using the __Linux operating system__.
+Deploying SSDB using the __Linux operating system__.
+
+<div class="alert alert-warning">
+Do not run SSDB server on Windows system for a production environment. If you wish to stick with Windows system, please run a Linux virtual machine on Windows, and run SSDB server on that Linux.
+</div>
 
 	$ wget --no-check-certificate https://github.com/ideawu/ssdb/archive/master.zip
 	$ unzip master

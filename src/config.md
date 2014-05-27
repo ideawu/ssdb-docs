@@ -20,6 +20,16 @@ Meanwhile, specify with `deny, allow` instructions to only allow connections fro
     Listen to <code>0.0.0.0</code> without network restriction is often a security issue, any one can access to your data! You can use iptables as well.
 </div>
 
+## Memory Usage
+
+A ssdb-server may consume up to this many memory(in MB):
+
+	cache_size + write_buffer_size * 66 + 32
+
+You can tune the configuration the limit the memory usage of a ssdb-server instance.
+
+---
+
 ## Master-Slave
 
 ### \#server 1
@@ -70,11 +80,3 @@ replication:
 ## Multiple Masters
 
 Within a group of SSDB servers of n instances, each instance must be slaveof other n-1 instances.
-
-## Memory Usage
-
-A ssdb-server may consume up to this many memory(in MB):
-
-	cache_size + write_buffer_size * 66 + 32
-
-You can tune the configuration the limit the memory usage of a ssdb-server instance.

@@ -20,6 +20,16 @@
     如果不做网络限制便监听 <code>0.0.0.0</code> IP 可能导致被任意机器访问到你的数据, 这很可能是一个安全问题! 你可以结合操作系统的 iptables 来限制网络访问.
 </div>
 
+## 内存占用
+
+一个 ssdb-server 实例占用的内存最高达到(MB):
+
+	cache_size + write_buffer_size * 66 + 32
+
+你可以调整配置参数, 限制 ssdb-server 的内存占用.
+
+---
+
 ## 主从
 
 ### \#server 1
@@ -70,11 +80,3 @@ replication:
 ## 多主
 
 在一组一共包含 n 个实例的 SSDB 实例群中, 每一个实例必须 slaveof 其余的 n-1 个实例.
-
-## 内存占用
-
-一个 ssdb-server 实例占用的内存最高达到(MB):
-
-	cache_size + write_buffer_size * 66 + 32
-
-你可以调整配置参数, 限制 ssdb-server 的内存占用.

@@ -73,13 +73,13 @@
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 	<div class="container">
 		<div class="navbar-header">
-			<a class="navbar-brand" href="http://www.ideawu.com/ssdb/">SSDB</a>
+			<a class="navbar-brand" href="http://ssdb.io/zh_cn/">SSDB</a>
 		</div>
 		<div class="navbar-collapse collapse">
 			<ul class="nav navbar-nav">
 				<li class="divider-vertical"></li>
 				<li>
-					<a href="http://www.ideawu.com/ssdb/zh_cn/">
+					<a href="http://ssdb.io/zh_cn/">
 						<i class="glyphicon glyphicon-home"></i> 首页
 					</a>
 				</li>

@@ -16,7 +16,7 @@
 
 ## <a href="#360" name="360">QIHU 360 在线游戏</a>
 
-![](http://www.ideawu.com/ssdb/img/ssdb-users/wan.360.cn.png)
+![](http://ssdb.io/img/ssdb-users/wan.360.cn.png)
 
 [QIHU 360 在线游戏](http://wan.360.cn/) 是 SSDB 的第一个重要用户. 当用户登录网站, 进入游戏, 消息弹窗时, 都会查询 SSDB. QIHU 360 在线游戏服务数亿用户, 每天有数百万的活跃用户.
 
@@ -24,7 +24,7 @@
 
 ## <a href="#gongchang" name="gongchang">世界工厂</a>
 
-![](http://www.ideawu.com/ssdb/img/ssdb-users/gongchang.com.png)
+![](http://ssdb.io/img/ssdb-users/gongchang.com.png)
 
 在 [Gongchang.com](http://www.gongchang.com/), SSDB 作为 Cache 服务器.
 
@@ -32,7 +32,7 @@
 
 ## <a href="#demai" name="demai">得脉</a>
 
-![](http://www.ideawu.com/ssdb/img/ssdb-users/demai.com.png)
+![](http://ssdb.io/img/ssdb-users/demai.com.png)
 
 [得脉](http://demai.com/) 是热门移动商务社交工具.
 
@@ -40,7 +40,7 @@
 
 ## <a href="#topgame" name="topgame">TOPGAME</a>
 
-![](http://www.ideawu.com/ssdb/img/ssdb-users/topgame.com.png)
+![](http://ssdb.io/img/ssdb-users/topgame.com.png)
 
 [TOPGAME](http://topgame.com/) 是领先的移动端游戏开发商. TOPGAME 使用 SSDB 来存储游戏战斗数据, 玩家日志, 游戏成就等.
 
@@ -48,7 +48,7 @@
 
 ## <a href="#baidu" name="baidu">百度</a>
 
-![](http://www.ideawu.com/ssdb/img/ssdb-users/baidu.com.png)
+![](http://ssdb.io/img/ssdb-users/baidu.com.png)
 
 SSDB 在 [百度](http://www.baidu.com/) 的一些服务中用作缓存服务.
 
@@ -56,7 +56,7 @@ SSDB 在 [百度](http://www.baidu.com/) 的一些服务中用作缓存服务.
 
 ## <a href="#mobvista" name="mobvista">Mobvista</a>
 
-![](http://www.ideawu.com/ssdb/img/ssdb-users/mobvista.com.png)
+![](http://ssdb.io/img/ssdb-users/mobvista.com.png)
 
 [Mobvista](http://mobvista.com/) 是领先的移动广告平台. Mobvista 将广告数据存储于 SSDB, 并接受实时的查询.
 
@@ -64,7 +64,7 @@ SSDB 在 [百度](http://www.baidu.com/) 的一些服务中用作缓存服务.
 
 ## <a href="#autohome" name="autohome">汽车之家</a>
 
-![](http://www.ideawu.com/ssdb/img/ssdb-users/autohome.com.cn.png)
+![](http://ssdb.io/img/ssdb-users/autohome.com.cn.png)
 
 [汽车之家](http://autohome.com.cn/) 是中国领先的汽车消费者社区. 汽车之家网站使用 SSDB 作为缓存服务器, 存储数百 GB 的缓存数据.
 
@@ -72,7 +72,7 @@ SSDB 在 [百度](http://www.baidu.com/) 的一些服务中用作缓存服务.
 
 ## <a href="#byd" name="byd">比亚迪汽车</a>
 
-![](http://www.ideawu.com/ssdb/img/ssdb-users/bydauto.com.cn.png)
+![](http://ssdb.io/img/ssdb-users/bydauto.com.cn.png)
 
 [比亚迪汽车](http://www.bydauto.com.cn/) 是位于中国深圳的汽车制造商.
 
@@ -82,7 +82,7 @@ SSDB 在 [百度](http://www.baidu.com/) 的一些服务中用作缓存服务.
 
 ## <a href="#zhangyue" name="zhangyue">掌阅 iReader</a>
 
-![](http://www.ideawu.com/ssdb/img/ssdb-users/zhangyue.com.png)
+![](http://ssdb.io/img/ssdb-users/zhangyue.com.png)
 
 [掌阅 iReader](http://www.zhangyue.com/) 是一款非常流行的移动设备上的电子书阅读器软件. iReader 使用 SSDB 存储书籍的订阅用户, 以便向用户推送书籍更新消息.
 

@@ -37,4 +37,4 @@ SSDB 是稳定的, 生产环境使用的, 已经在许多互联网公司得到�
 
 ## 幻灯片
 
-* <a href="http://www.ideawu.com/ssdb/ssdb-get-started.pdf" target="_blank">SSDB 入门基础(Chinese)</a>
+* <a href="http://ssdb.io/ssdb-get-started.pdf" target="_blank">SSDB 入门基础(Chinese)</a>

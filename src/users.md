@@ -16,7 +16,7 @@ If you are using SSDB in production, please send me a email(ssdb#ideawu.com), I 
 
 ## <a href="#360" name="360">QIHU 360 Online Game</a>
 
-![](http://www.ideawu.com/ssdb/img/ssdb-users/wan.360.cn.png)
+![](http://ssdb.io/img/ssdb-users/wan.360.cn.png)
 
 [QIHU 360 Online Game](http://wan.360.cn/) is the first major user of SSDB. Whenever a user logs in the website, join a game, a pop message is received, SSDB queries are executed. QIHU 360 Online Game serves hundreds of millions of users, millions active per day.
 
@@ -24,7 +24,7 @@ If you are using SSDB in production, please send me a email(ssdb#ideawu.com), I 
 
 ## <a href="#gongchang" name="gongchang">Gongchang</a>
 
-![](http://www.ideawu.com/ssdb/img/ssdb-users/gongchang.com.png)
+![](http://ssdb.io/img/ssdb-users/gongchang.com.png)
 
 SSDB runs as cache server in [Gongchang.com](http://www.gongchang.com/).
 
@@ -32,7 +32,7 @@ SSDB runs as cache server in [Gongchang.com](http://www.gongchang.com/).
 
 ## <a href="#demai" name="demai">Demai</a>
 
-![](http://www.ideawu.com/ssdb/img/ssdb-users/demai.com.png)
+![](http://ssdb.io/img/ssdb-users/demai.com.png)
 
 [Demai](http://demai.com/) is business social tool on mobile platform.
 
@@ -40,7 +40,7 @@ SSDB runs as cache server in [Gongchang.com](http://www.gongchang.com/).
 
 ## <a href="#topgame" name="topgame">TOPGAME</a>
 
-![](http://www.ideawu.com/ssdb/img/ssdb-users/topgame.com.png)
+![](http://ssdb.io/img/ssdb-users/topgame.com.png)
 
 [TOPGAME](http://topgame.com/) is an industry leading mobile casual games developer. TOPGAME stores game combat statistics, players' logs, player archievements in SSDB.
 
@@ -48,7 +48,7 @@ SSDB runs as cache server in [Gongchang.com](http://www.gongchang.com/).
 
 ## <a href="#baidu" name="baidu">Baidu</a>
 
-![](http://www.ideawu.com/ssdb/img/ssdb-users/baidu.com.png)
+![](http://ssdb.io/img/ssdb-users/baidu.com.png)
 
 SSDB runs as cache server in [Baidu](http://www.baidu.com/) for some service.
 
@@ -56,7 +56,7 @@ SSDB runs as cache server in [Baidu](http://www.baidu.com/) for some service.
 
 ## <a href="#mobvista" name="mobvista">Mobvista</a>
 
-![](http://www.ideawu.com/ssdb/img/ssdb-users/mobvista.com.png)
+![](http://ssdb.io/img/ssdb-users/mobvista.com.png)
 
 [Mobvista](http://mobvista.com/) is a leading mobile ad platform that helps to monetize your traffic inventory and distribute your mobile applications.
 
@@ -66,7 +66,7 @@ Mobvista stores advertisement data in SSDB, the serve realtime queries.
 
 ## <a href="#autohome" name="autohome">Autohome</a>
 
-![](http://www.ideawu.com/ssdb/img/ssdb-users/autohome.com.cn.png)
+![](http://ssdb.io/img/ssdb-users/autohome.com.cn.png)
 
 [Autohome Inc.](http://autohome.com.cn/) is the leading online destination for automobile consumers in China.
 
@@ -76,7 +76,7 @@ SSDB runs as cache server in Autohome website, storing 100+GB cached data.
 
 ## <a href="#byd" name="byd">BYD Auto</a>
 
-![](http://www.ideawu.com/ssdb/img/ssdb-users/bydauto.com.cn.png)
+![](http://ssdb.io/img/ssdb-users/bydauto.com.cn.png)
 
 [BYD Auto](http://www.bydauto.com.cn/) is a Chinese automobile manufacturer based in Shenzhen, China.
 
@@ -86,7 +86,7 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 ## <a href="#zhangyue" name="zhangyue">iReader</a>
 
-![](http://www.ideawu.com/ssdb/img/ssdb-users/zhangyue.com.png)
+![](http://ssdb.io/img/ssdb-users/zhangyue.com.png)
 
 [iReader](http://www.zhangyue.com/) is a very popular e-book reader app on mobile devices. iReader stores book readers in SSDB.
 

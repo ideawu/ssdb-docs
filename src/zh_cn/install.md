@@ -3,7 +3,7 @@
 强烈推荐你把 SSDB 部署在 __Linux 操作系统__上.
 
 <div class="alert alert-warning">
-不要在生成环境中使用 Windows 操作系统来运行 SSDB 服务器. 如果你确实必须使用 Windows 操作系统, 请在上面运行一个 Linux 虚拟机, 然后再让 SSDB 运行于这个虚拟机之中.
+不要在生产环境中使用 Windows 操作系统来运行 SSDB 服务器. 如果你确实必须使用 Windows 操作系统, 请在上面运行一个 Linux 虚拟机, 然后再让 SSDB 运行于这个虚拟机之中.
 </div>
 
 	$ wget --no-check-certificate https://github.com/ideawu/ssdb/archive/master.zip

@@ -6,13 +6,39 @@ Deploying SSDB using the __Linux operating system__.
 Do not run SSDB server on Windows system for a production environment. If you wish to stick with Windows system, please run a Linux virtual machine on Windows, and run SSDB server on that Linux.
 </div>
 
+## Compile and Install
+
 	$ wget --no-check-certificate https://github.com/ideawu/ssdb/archive/master.zip
 	$ unzip master
 	$ cd ssdb-master
 	$ make
 	$ # optional, install ssdb in /usr/local/ssdb
 	$ sudo make install
-	
+
+If you see error messages like this:
+
+	g++ ...deps/snappy-1.1.0/.libs/libsnappy.a: No such file or directory
+	make[1]: *** [all] Error 1
+
+or
+
+	g++ ...deps/jemalloc-3.3.1/lib/libjemalloc.a: No such file or directory
+	make[1]: *** [all] Error 1
+ 
+It is because Snappy or Jemalloc is not compile sucess, maybe your system clock is wrong. Solve it by doing this:
+
+    cd deps/snappy-1.1.0;
+	./configure
+	make
+
+or
+
+    cd deps/jemalloc-3.3.1;
+	./configure
+	make
+
+## Start ssdb-server
+
 	# start master
 	$ ./ssdb-server ssdb.conf
 	

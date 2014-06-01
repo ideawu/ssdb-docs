@@ -6,17 +6,43 @@
 不要在生产环境中使用 Windows 操作系统来运行 SSDB 服务器. 如果你确实必须使用 Windows 操作系统, 请在上面运行一个 Linux 虚拟机, 然后再让 SSDB 运行于这个虚拟机之中.
 </div>
 
+## 编译和安装
+
 	$ wget --no-check-certificate https://github.com/ideawu/ssdb/archive/master.zip
 	$ unzip master
 	$ cd ssdb-master
 	$ make
 	$ # 将安装在 /usr/local/ssdb 目录下
 	$ sudo make install
-	
+
+如果出现如下错误:
+
+	g++ ...deps/snappy-1.1.0/.libs/libsnappy.a: No such file or directory
+	make[1]: *** [all] Error 1
+
+或者
+
+	g++ ...deps/jemalloc-3.3.1/lib/libjemalloc.a: No such file or directory
+	make[1]: *** [all] Error 1
+
+这是因为 Snappy 或者 Jemalloc 没有编译成功, 这一般是因为你的系统时钟有问题. 可以这样解决:
+
+    cd deps/snappy-1.1.0;
+	./configure
+	make
+
+或者
+
+    cd deps/jemalloc-3.3.1;
+	./configure
+	make
+
+## 启动
+
 	# 启动主库
 	$ ./ssdb-server ssdb.conf
 	
-	# 启动为后台进程
+	# 或者启动为后台进程
 	$ ./ssdb-server -d ssdb.conf
 	
 	# 启动 ssdb 命令行

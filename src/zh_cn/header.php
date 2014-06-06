@@ -102,6 +102,7 @@
 						<li><a href="./index.html">文档首页</a></li>
 						<li class="divider"></li>
 						<li><a href="./install.html">安装</a></li>
+						<li><a href="./commands.html">命令</a></li>
 						<li><a href="./config.html">配置</a></li>
 						<li><a href="./protocol.html">SSDB 网络协议</a></li>
 						<li class="divider"></li>

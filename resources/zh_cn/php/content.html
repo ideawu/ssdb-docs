@@ -21,10 +21,12 @@
 		border: 1px solid #999;
 	}
 	pre{
-	padding: 6px;
-	background: #eee;
+		padding: 6px;
+		background: #eee;
 	}
 	code{
+		color: #c00;
+		background: #eee;
 	}
 	h1{font-size: 220%;}
 	h2{font-size: 180%; border-bottom: 1px solid #999;}
@@ -40,21 +42,19 @@
 <body>
 
 <p style="float: right; margin-right: 10px;">
-	<a href="https://github.com/ideawu/ssdb-docs" target="_blank"
-		style="color: #00f; background: #9d9; border: 1px solid #666;
-		text-decoration: none; padding: 6px 4px;">帮助改进此文档</a>
+	<a href="https://github.com/ideawu/ssdb-docs" target="_blank">帮助改进此文档</a>
 </p>
 
 <h1>SSDB PHP 客户端 API 文档</h1>
 
 <dl>
 	<dd>@作者: <a href="http://www.ideawu.net/">ideawu</a></dd>
-	<dd>@更新: 2014-01-01</dd>
+	<dd>@更新: 2014-06-08</dd>
 </dl>
 
-<p>SSDB 是一个快速的 LevelDB 服务器, 支持 zset 数据结构. 官方网站是 <a href="https://github.com/ideawu/ssdb">https://github.com/ideawu/ssdb</a>. 本文档介绍了 SSDB 的 PHP 客户端 API.</p>
+<p>SSDB 是一个高性能 NoSQL 数据库, 支持 zset 数据结构, 用于替代 Redis. 官方网站是 <a href="http://ssdb.io/" target="_blank">http://ssdb.io</a>. 本文档介绍了 SSDB 的 PHP 客户端 API.</p>
 
-<p>注意: SSDB 所使用的名词 "hashmap" 是指 "map".
+<p>注意: SSDB 所使用的名词 "hashmap" 是指 "hash", "map".
 
 <h2>类 SimpleSSDB</h2>
 
@@ -148,6 +148,27 @@ $ssdb-&gt;set('key', 'value');
 <h4><em>示例</em></h4>
 <pre>
 $ssdb-&gt;setx('key', 'value', 60);
+</pre>
+
+
+<a name="m-expire"></a>
+<h3>expire</h3>
+
+<h4><em>说明</em></h4>
+<p>设置 key(只针对 KV 类型) 的存活时间.</p>
+
+<h4><em>参数</em></h4>
+<dl>
+	<dd><code>key</code> - </dd>
+	<dd><code>ttl</code> - 存活时间(秒)</dd>
+</dl>
+
+<h4><em>返回值</em></h4>
+<p>出错则返回 <code>false</code>. 如果 key 存在并设置成功, 返回 1, 如果 key 不存在, 返回 0.</p>
+
+<h4><em>示例</em></h4>
+<pre>
+$ssdb-&gt;expire('key', 60);
 </pre>
 
 
@@ -291,6 +312,113 @@ $ssdb-&gt;incr('key', 1);
 <h4><em>示例</em></h4>
 <pre>
 $ssdb-&gt;exists('key');
+</pre>
+
+
+<a name="m-getbit"></a>
+<h3>getbit</h3>
+
+<h4><em>说明</em></h4>
+<p>获取字符串内指定位置的位值(BIT).</p>
+
+<h4><em>参数</em></h4>
+<dl>
+	<dd><code>key</code> - </dd>
+	<dd><code>offset</code> - 位偏移</dd>
+</dl>
+
+<h4><em>返回值</em></h4>
+<p>返回位值(0 或 1), 如果 key 不存在或者偏移超过活字符串长度范围, 返回 0.</p>
+
+<h4><em>示例</em></h4>
+<pre>
+$ssdb-&gt;getbit('key', 9);
+</pre>
+
+
+<a name="m-setbit"></a>
+<h3>setbit</h3>
+
+<h4><em>说明</em></h4>
+<p>设置字符串内指定位置的位值(BIT), 字符串的长度会自动扩展.</p>
+
+<h4><em>参数</em></h4>
+<dl>
+	<dd><code>key</code> - </dd>
+	<dd><code>offset</code> - 位偏移</dd>
+	<dd><code>val</code> - 0 或 1</dd>
+</dl>
+
+<h4><em>返回值</em></h4>
+<p>返回原来的位值. 如果 val 不是 0 或者 1, 返回 <code>false</code>.</p>
+
+<h4><em>示例</em></h4>
+<pre>
+$ssdb-&gt;setbit('key', 9, 1);
+</pre>
+
+
+<a name="m-countbit"></a>
+<h3>countbit</h3>
+
+<h4><em>说明</em></h4>
+<p>计算字符串的子串所包含的位值为 1 的个数. 若 <code>start</code> 是负数, 则从字符串末尾算起. 若 <code>size</code> 是负数, 则表示从字符串末尾算起, 忽略掉那么多字节.</p>
+
+<h4><em>参数</em></h4>
+<dl>
+	<dd><code>key</code> - </dd>
+	<dd><code>start</code> - 可选, 子串的字节偏移</dd>
+	<dd><code>size</code> - 可选, 子串的长度(字节数), 默认为到字符串最后一个字节</dd>
+</dl>
+
+<h4><em>返回值</em></h4>
+<p>返回位值为 1 的个数. 出错返回 <code>false</code>.</p>
+
+<h4><em>示例</em></h4>
+<pre>
+$ssdb-&gt;countbit('key', 2, 10);
+</pre>
+
+
+<a name="m-substr"></a>
+<h3>substr</h3>
+
+<h4><em>说明</em></h4>
+<p>获取字符串的子串. 若 <code>start</code> 是负数, 则从字符串末尾算起. 若 <code>size</code> 是负数, 则表示从字符串末尾算起, 忽略掉那么多字节.</p>
+
+<h4><em>参数</em></h4>
+<dl>
+	<dd><code>key</code> - </dd>
+	<dd><code>start</code> - 可选, int, 子串的字节偏移</dd>
+	<dd><code>size</code> - 可选, int, 子串的长度(字节数), 默认为到字符串最后一个字节</dd>
+</dl>
+
+<h4><em>返回值</em></h4>
+<p>字符串的子串.</p>
+
+<h4><em>示例</em></h4>
+<pre>
+$ssdb-&gt;substr('key', 2, 10);
+</pre>
+
+
+<a name="m-strlen"></a>
+<h3>strlen</h3>
+
+<h4><em>说明</em></h4>
+<p>计算字符串的长度(字节数).</p>
+
+<h4><em>参数</em></h4>
+<dl>
+	<dd><code>key</code> - </dd>
+</dl>
+
+<h4><em>返回值</em></h4>
+<p>返回字符串的长度, key 不存在则返回 0.</p>
+
+<h4><em>示例</em></h4>
+<pre>
+$ssdb-&gt;strlen('key');
 </pre>
 
 

@@ -21,10 +21,12 @@
 		border: 1px solid #999;
 	}
 	pre{
-	padding: 6px;
-	background: #eee;
+		padding: 6px;
+		background: #eee;
 	}
 	code{
+		color: #c00;
+		background: #eee;
 	}
 	h1{font-size: 220%;}
 	h2{font-size: 180%; border-bottom: 1px solid #999;}
@@ -40,21 +42,19 @@
 <body>
 
 <p style="float: right; margin-right: 10px;">
-	<a href="https://github.com/ideawu/ssdb-docs" target="_blank"
-		style="color: #00f; background: #9d9; border: 1px solid #666;
-		text-decoration: none; padding: 6px 4px;">Improve this page on GitHub</a>
+	<a href="https://github.com/ideawu/ssdb-docs" target="_blank">Improve this page on GitHub</a>
 </p>
 
 <h1>SSDB PHP Client API Documentation</h1>
 
 <dl>
 	<dd>@author: <a href="http://www.ideawu.com/">ideawu</a></dd>
-	<dd>@updated: 2014-01-01</dd>
+	<dd>@updated: 2014-06-08</dd>
 </dl>
 
-<p>SSDB is a fast LevelDB server with zset data type, the official website is <a href="https://github.com/ideawu/ssdb">https://github.com/ideawu/ssdb</a>. This documentation describes the PHP client API of SSDB.</p>
+<p>SSDB is a high performance NoSQL database, an alternative to Redis, the official website is <a href="http://ssdb.io/" target="_blank">http://ssdb.io</a>. This documentation describes the PHP client API of SSDB.</p>
 
-<p>Notice: The phrase "hashmap" means "map" in SSDB.</p>
+<p>Notice: The phrase "hashmap" means "hash", "map" in SSDB.</p>
 
 <h2>Class SimpleSSDB</h2>
 
@@ -148,6 +148,27 @@ $ssdb-&gt;set('key', 'value');
 <h4><em>Example</em></h4>
 <pre>
 $ssdb-&gt;setx('key', 'value', 60);
+</pre>
+
+
+<a name="m-expire"></a>
+<h3>expire</h3>
+
+<h4><em>Description</em></h4>
+<p>Set the time left to live in seconds, only for keys of KV type.</p>
+
+<h4><em>Parameters</em></h4>
+<dl>
+	<dd><code>key</code> - </dd>
+	<dd><code>ttl</code> - number of seconds to live.</dd>
+</dl>
+
+<h4><em>Return Value</em></h4>
+<p><code>false</code> on error, if key exists and ttl is set, return 1, if key not exists, return 0.</p>
+
+<h4><em>Example</em></h4>
+<pre>
+$ssdb-&gt;expire('key', 60);
 </pre>
 
 
@@ -291,6 +312,113 @@ $ssdb-&gt;incr('key', 1);
 <h4><em>Example</em></h4>
 <pre>
 $ssdb-&gt;exists('key');
+</pre>
+
+
+<a name="m-getbit"></a>
+<h3>getbit</h3>
+
+<h4><em>Description</em></h4>
+<p>Return a single bit out of a string.</p>
+
+<h4><em>Parameters</em></h4>
+<dl>
+	<dd><code>key</code> - </dd>
+	<dd><code>offset</code> - bit offset.</dd>
+</dl>
+
+<h4><em>Return Value</em></h4>
+<p>0 or 1.</p>
+
+<h4><em>Example</em></h4>
+<pre>
+$ssdb-&gt;getbit('key', 7);
+</pre>
+
+
+<a name="m-setbit"></a>
+<h3>setbit</h3>
+
+<h4><em>Description</em></h4>
+<p>Changes a single bit of a string. The string is auto expanded.</p>
+
+<h4><em>Parameters</em></h4>
+<dl>
+	<dd><code>key</code> - </dd>
+	<dd><code>offset</code> - bit offset.</dd>
+	<dd><code>val</code> - 0 or 1.</dd>
+</dl>
+
+<h4><em>Return Value</em></h4>
+<p>The value of the bit before it was set: 0 or 1. If <code>val</code> is not 0 or 1, returns <code>false</code>.</p>
+
+<h4><em>Example</em></h4>
+<pre>
+$ssdb-&gt;setbit('key', 7, 1);
+</pre>
+
+
+<a name="m-countbit"></a>
+<h3>countbit</h3>
+
+<h4><em>Description</em></h4>
+<p>Count the number of set bits (population counting) in part of a string.</p>
+
+<h4><em>Parameters</em></h4>
+<dl>
+	<dd><code>key</code> - </dd>
+	<dd><code>start</code> - Optional, if <code>start</code> is negative, count from start'th character from the end of string.</dd>
+	<dd><code>size</code> - Optional, if <code>size</code> is negative, then that many characters will be omitted from the end of string.</dd>
+</dl>
+
+<h4><em>Return Value</em></h4>
+<p>The number of bits set to 1.</p>
+
+<h4><em>Example</em></h4>
+<pre>
+$ssdb-&gt;countbit('key', 2, 10);
+</pre>
+
+
+<a name="m-substr"></a>
+<h3>substr</h3>
+
+<h4><em>Description</em></h4>
+<p>Return part of a string.</p>
+
+<h4><em>Parameters</em></h4>
+<dl>
+	<dd><code>key</code> - </dd>
+	<dd><code>start</code> - Optional, the offset of first byte returned. If <code>start</code> is negative, the returned string will start at the start'th character from the end of string.</dd>
+	<dd><code>size</code> - Optional, number of bytes returned. If <code>size</code> is negative, then that many characters will be omitted from the end of string.</dd>
+</dl>
+
+<h4><em>Return Value</em></h4>
+<p>The extracted part of the string.</p>
+
+<h4><em>Example</em></h4>
+<pre>
+$ssdb-&gt;substr('key', 2, 10);
+</pre>
+
+
+<a name="m-strlen"></a>
+<h3>strlen</h3>
+
+<h4><em>Description</em></h4>
+<p>Return the number of bytes of a string.</p>
+
+<h4><em>Parameters</em></h4>
+<dl>
+	<dd><code>key</code> - </dd>
+</dl>
+
+<h4><em>Return Value</em></h4>
+<p>The number of bytes of the string, if key not exists, returns 0.</p>
+
+<h4><em>Example</em></h4>
+<pre>
+$ssdb-&gt;strlen('key');
 </pre>
 
 

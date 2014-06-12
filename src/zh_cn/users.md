@@ -92,5 +92,5 @@ SSDB 在 [百度](http://www.baidu.com/) 的一些服务中用作缓存服务.
 
 ![](http://ssdb.io/img/ssdb-users/fever38.com.png)
 
-[Fever38 发烧网](http://www.fever38.com/) 曾经是台湾地区流量 Top 100 的网站, 针对长期想要在 Facebook 经营粉丝的品牌客户所设计的一套全方位的社群行销工具。Fever38 将 SSDB 作为缓存服务使用.
+[Fever38 发烧网](http://www.fever38.com/) 是台湾地区百大网站之一, 针对长期想要在 Facebook 经营粉丝的品牌客户所设计的一套全方位的社群行销工具。Fever38 将 SSDB 作为缓存服务使用.
 

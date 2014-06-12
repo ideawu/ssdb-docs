@@ -96,5 +96,5 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 ![](http://ssdb.io/img/ssdb-users/fever38.com.png)
 
-[Fever38](http://www.fever38.com/) used to be a top 100 traffic website in Taiwan district, it helps customers to promote their brands on Facebook.
+[Fever38](http://www.fever38.com/) used to be a top 100 traffic website in Taiwan district, it helps customers to promote their brands on Facebook. Fever38 uses SSDB as cache server.
 

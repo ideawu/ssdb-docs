@@ -90,3 +90,11 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 [iReader](http://www.zhangyue.com/) is a very popular e-book reader app on mobile devices. iReader stores book readers in SSDB.
 
+---
+
+## <a href="#fever38" name="fever38">Fever38</a>
+
+![](http://ssdb.io/img/ssdb-users/fever38.com.png)
+
+[Fever38](http://www.fever38.com/) used to be a top 100 traffic website in Taiwan district, it helps customers to promote their brands on Facebook.
+

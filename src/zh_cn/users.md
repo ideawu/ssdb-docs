@@ -86,3 +86,11 @@ SSDB 在 [百度](http://www.baidu.com/) 的一些服务中用作缓存服务.
 
 [掌阅 iReader](http://www.zhangyue.com/) 是一款非常流行的移动设备上的电子书阅读器软件. iReader 使用 SSDB 存储书籍的订阅用户, 以便向用户推送书籍更新消息.
 
+---
+
+## <a href="#fever38" name="fever38">Fever38 發燒網</a>
+
+![](http://ssdb.io/img/ssdb-users/fever38.com.png)
+
+[Fever38 发烧网](http://www.fever38.com/) 曾经是台湾地区流量 Top 100 的网站, 针对长期想要在 Facebook 经营粉丝的品牌客户所设计的一套全方位的社群行销工具。
+

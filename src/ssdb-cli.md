@@ -28,6 +28,10 @@ Type in 'h', and press ```Enter``` key to see the help messages. Here is screens
     (0.000 sec)
     ssdb 127.0.0.1:8888>
 
+## Escape binary data
+
+	: escape
+
 ## Monitoring the status of SSDB instance
 
 ### info

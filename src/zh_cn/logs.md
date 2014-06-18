@@ -25,11 +25,11 @@
 
 __找出大于 10 毫秒的请求:__
 
-	cat a.txt | grep resp | grep '[wp]:[1-9][0-9]\{1,\}\.'
+	cat log.txt | grep resp | grep '[wp]:[1-9][0-9]\{1,\}\.'
 
 __找出大于 100 毫秒的请求:__
 
-	cat a.txt | grep resp | grep '[wp]:[1-9][0-9]\{2,\}\.'
+	cat log.txt | grep resp | grep '[wp]:[1-9][0-9]\{2,\}\.'
 
 ## SSDB 在工作中
 

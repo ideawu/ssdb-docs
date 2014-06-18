@@ -94,3 +94,8 @@ SSDB 在 [百度](http://www.baidu.com/) 的一些服务中用作缓存服务.
 
 [Fever38 发烧网](http://www.fever38.com/) 是台湾地区百大网站之一, 针对长期想要在 Facebook 经营粉丝的品牌客户所设计的一套全方位的社群行销工具。Fever38 将 SSDB 作为缓存服务使用.
 
+## <a href="#zto" name="zto">中通快递</a>
+
+![](http://ssdb.io/img/ssdb-users/zto.cn.png)
+
+[中通快递](http://www.zto.cn/) 是中国最有影响力的物流快递企业之一. 中通快递使用 SSDB 存储数以亿计的订单数据. SSDB 支持着其物流业务中的网点派单等重要环节.

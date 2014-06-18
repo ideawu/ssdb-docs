@@ -98,3 +98,8 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 [Fever38](http://www.fever38.com/) is one of top 100 website in Taiwan district, it helps customers to promote their brands on Facebook. Fever38 uses SSDB as cache server.
 
+## <a href="#zto" name="zto">ZTO Express</a>
+
+![](http://ssdb.io/img/ssdb-users/zto.cn.png)
+
+[ZTO Express](http://www.zto.cn/) is one of the most influential express logistics company in China. ZTO stores billions of deliveries in SSDB server. SSDB supports ZTO's delivery distribution and other important operations.

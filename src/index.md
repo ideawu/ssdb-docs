@@ -18,7 +18,7 @@ SSDB is stable, production-ready and is widely used by many Internet companies, 
 
 * [ssdb-cli](./ssdb-cli.html): The SSDB command line tool.
 * [Backup](./backup.html)
-* [Logs Analytics](./logs.html): (TO BE DONE...)
+* [Logs Analytics](./logs.html)
 
 ## Specification
 

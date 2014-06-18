@@ -18,7 +18,7 @@ SSDB 是稳定的, 生产环境使用的, 已经在许多互联网公司得到�
 
 * [ssdb-cli](./ssdb-cli.html): SSDB 命令行工具.
 * [备份](./backup.html)
-* [日志解读](./logs.html): (未完成...)
+* [日志解读](./logs.html)
 
 ## 定义
 

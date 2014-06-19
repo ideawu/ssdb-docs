@@ -100,4 +100,4 @@ SSDB 在 [百度](http://www.baidu.com/) 的一些服务中用作缓存服务.
 
 ![](http://ssdb.io/img/ssdb-users/zto.cn.png)
 
-[中通快递](http://www.zto.cn/) 是中国最有影响力的物流快递企业之一. 中通快递使用 SSDB 存储数以亿计的订单数据. SSDB 支持着其物流业务中的网点派单等重要环节.
+[中通快递](http://www.zto.cn/) 是中国最有影响力的物流快递企业之一. 中通快递使用 SSDB 存储数以亿计的运单数据. SSDB 支持着其物流业务中的网点派单等重要环节.

@@ -46,16 +46,16 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 	</tr>
 </table>
 
-<h3>C#</h3>
+<h3>C# .Net</h3>
 
 ---
 
 <table width="100%">
 	<tr>
-		<td width="15%">built-in <span style="color: #cc3;">★</span></td>
+		<td width="15%">official <span style="color: #cc3;">★</span></td>
 		<td width="15%">ideawu</td>
 		<td width="20%">
-			<a href="https://github.com/ideawu/ssdb">Repository</a>
+			<a href="https://github.com/ssdb/dotnetssdb">Repository</a>
 		</td>
 		<td>
 			This is the official client
@@ -69,10 +69,10 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 
 <table width="100%">
 	<tr>
-		<td width="15%">built-in <span style="color: #cc3;">★</span></td>
+		<td width="15%">official <span style="color: #cc3;">★</span></td>
 		<td width="15%">ideawu</td>
 		<td width="20%">
-			<a href="https://github.com/ideawu/ssdb">Repository</a>
+			<a href="https://github.com/ssdb/gossdb">Repository</a>
 		</td>
 		<td>
 			This is the official client
@@ -86,10 +86,10 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 
 <table width="100%">
 	<tr>
-		<td width="15%">built-in <span style="color: #cc3;">★</span></td>
+		<td width="15%">official <span style="color: #cc3;">★</span></td>
 		<td width="15%">ideawu</td>
 		<td width="20%">
-			<a href="https://github.com/ideawu/ssdb">Repository</a>
+			<a href="https://github.com/ssdb/javassdb">Repository</a>
 		</td>
 		<td>
 			This is the official client
@@ -130,10 +130,10 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 
 <table width="100%">
 	<tr>
-		<td width="15%">built-in <span style="color: #cc3;">★</span></td>
+		<td width="15%">official <span style="color: #cc3;">★</span></td>
 		<td width="15%">ideawu</td>
 		<td width="20%">
-			<a href="https://github.com/ideawu/ssdb">Repository</a>
+			<a href="https://github.com/ssdb/nodessdb">Repository</a>
 		</td>
 		<td>
 			This is the official client

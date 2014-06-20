@@ -46,16 +46,16 @@ SSDB 源码仓库中, 内置了许多语言的客户端, 这些便是所谓的__
 	</tr>
 </table>
 
-<h3>C#</h3>
+<h3>C# .Net</h3>
 
 ---
 
 <table width="100%">
 	<tr>
-		<td width="15%">内置 <span style="color: #cc3;">★</span></td>
+		<td width="15%">官方 <span style="color: #cc3;">★</span></td>
 		<td width="15%">ideawu</td>
 		<td width="20%">
-			<a href="https://github.com/ideawu/ssdb">Repository</a>
+			<a href="https://github.com/ssdb/dotnetssdb">Repository</a>
 		</td>
 		<td>
 			官方客户端
@@ -69,10 +69,10 @@ SSDB 源码仓库中, 内置了许多语言的客户端, 这些便是所谓的__
 
 <table width="100%">
 	<tr>
-		<td width="15%">内置 <span style="color: #cc3;">★</span></td>
+		<td width="15%">官方 <span style="color: #cc3;">★</span></td>
 		<td width="15%">ideawu</td>
 		<td width="20%">
-			<a href="https://github.com/ideawu/ssdb">Repository</a>
+			<a href="https://github.com/ssdb/gossdb">Repository</a>
 		</td>
 		<td>
 			官方客户端
@@ -86,10 +86,10 @@ SSDB 源码仓库中, 内置了许多语言的客户端, 这些便是所谓的__
 
 <table width="100%">
 	<tr>
-		<td width="15%">内置 <span style="color: #cc3;">★</span></td>
+		<td width="15%">官方 <span style="color: #cc3;">★</span></td>
 		<td width="15%">ideawu</td>
 		<td width="20%">
-			<a href="https://github.com/ideawu/ssdb">Repository</a>
+			<a href="https://github.com/ssdb/javassdb">Repository</a>
 		</td>
 		<td>
 			官方客户端
@@ -130,10 +130,10 @@ SSDB 源码仓库中, 内置了许多语言的客户端, 这些便是所谓的__
 
 <table width="100%">
 	<tr>
-		<td width="15%">内置 <span style="color: #cc3;">★</span></td>
+		<td width="15%">官方 <span style="color: #cc3;">★</span></td>
 		<td width="15%">ideawu</td>
 		<td width="20%">
-			<a href="https://github.com/ideawu/ssdb">Repository</a>
+			<a href="https://github.com/ssdb/nodessdb">Repository</a>
 		</td>
 		<td>
 			官方客户端

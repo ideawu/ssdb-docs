@@ -1,6 +1,6 @@
 # Clients
 
-<div class="alert alert-info">
+<div class="alert alert-success">
 	SSDB supports Redis network protocol, you can use Redis clients to connect to a SSDB server and operate on it. But using SSDB client is the most efficient way.
 	<br/><br/>
 	All SSDB client APIs are binary-compatible, binary is string, string is binary.

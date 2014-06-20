@@ -1,6 +1,6 @@
 # 客户端
 
-<div class="alert alert-info">
+<div class="alert alert-success">
 	SSDB 支持 Redis 网络协议, 所以你可以用 Redis 的客户端来连接 SSDB 服务器. 但是, 使用 SSDB 客户端是最高效的方式.
 	<br/><br/>
 	所有的 SSDB 客户端 API 都是支持二进制数据的, 二进制数据即是字符串, 字符串就是二进制数据.

@@ -143,7 +143,7 @@
 			<script>
 			function set_lang(lang){
 				var langs = ['en', 'zh_cn'];
-				var url = location.href;
+				var url = location.href.replace(/lang=\w+&?/g, '').replace(/\?+$/, '');
 				var ps = url.split('/');
 				var curr_lang = ps[ps.length - 2];
 				if(langs.indexOf(curr_lang) == -1){

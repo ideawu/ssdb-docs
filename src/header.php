@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<?php
-	$title = 'A high performance NoSQL database supporting many data structures, an alternative to Redis';
+	$title = 'A high performance NoSQL database supporting many data structures, an alternative for Redis';
 	if($markdown['title']){
 		$title = $markdown['title'];
 	}

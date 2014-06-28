@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<?php
-	$title = '一个快速的用来存储十亿级别列表数据的 NoSQL 数据库';
+	$title = '高性能的支持丰富数据结构的 NoSQL 数据库, 替代 Redis';
 	if($markdown['title']){
 		$title = $markdown['title'];
 	}

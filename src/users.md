@@ -105,3 +105,11 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 ![](http://ssdb.io/img/ssdb-users/zto.cn.png)
 
 [ZTO Express](http://www.zto.cn/) is one of the most influential express logistics company in China. ZTO stores billions of deliveries in SSDB server. SSDB supports ZTO's delivery distribution and other important operations.
+
+---
+
+## <a href="#youxi" name="youxi">youxi.com</a>
+
+![](http://ssdb.io/img/ssdb-users/youxi.com.png)
+
+[youxi.com](http://www.youxi.com/) Uses SSDB to store sessions.

@@ -20,6 +20,8 @@
 
 [QIHU 360 在线游戏](http://wan.360.cn/) 是 SSDB 的第一个重要用户. 当用户登录网站, 进入游戏, 消息弹窗时, 都会查询 SSDB. QIHU 360 在线游戏服务数亿用户, 每天有数百万的活跃用户.
 
+QIHU 将原来使用的数十个 Redis 实例, 全部迁到了 SSDB, 节省了服务器, 提高了维护效率.
+
 ---
 
 ## <a href="#gongchang" name="gongchang">世界工厂</a>

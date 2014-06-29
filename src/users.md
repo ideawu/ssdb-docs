@@ -20,6 +20,8 @@ If you are using SSDB in production, please send me a email(ssdb#ideawu.com), I 
 
 [QIHU 360 Online Game](http://wan.360.cn/) is the first major user of SSDB. Whenever a user logs in the website, join a game, a pop message is received, SSDB queries are executed. QIHU 360 Online Game serves hundreds of millions of users, millions active per day.
 
+QIHU migrated its Redis instances to SSDB, and it uses less servers for storage now.
+
 ---
 
 ## <a href="#gongchang" name="gongchang">Gongchang</a>

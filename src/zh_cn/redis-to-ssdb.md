@@ -20,6 +20,35 @@ __参数:__
 
 请确保你的 PHP Redis 模块 [https://github.com/nicolasff/phpredis](https://github.com/nicolasff/phpredis) 已经安装.
 
+
+<a name="redis-tools"></a>
+
+## Redis 工具的支持
+
+<table class="table">
+<thead>
+	<tr>
+		<th width="200">Tool</th>
+		<th>Supported</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td>redis-cli</td>
+		<td><span class="label label-success">支持</span></td>
+	</tr>
+	<tr>
+		<td>Twemproxy</td>
+		<td><span class="label label-success">支持</span></td>
+	</tr>
+	<tr>
+		<td>Sentinel</td>
+		<td><span class="label label-default">不支持</span></td>
+	</tr>
+</tbody>
+</table>
+
+
 ## SSDB 和 Redis 命令对照表
 
 SSDB 支持 Redis 协议和客户端, 所以你可以使用 Redis 的客户端来连接 SSDB 进行操作.
@@ -29,11 +58,14 @@ SSDB 支持 Redis 协议和客户端, 所以你可以使用 Redis 的客户端�
 
 ### Key-Value
 
-<table>
+<table class="table table-striped">
+<thead>
 	<tr>
-		<th width="150">Redis</th>
-		<th width="150">SSDB</th>
+		<th width="200">Redis</th>
+		<th>SSDB</th>
 	</tr>
+</thead>
+<tbody>
 	<tr><td>get</td><td>get</td></tr>
 	<tr><td>set</td><td>set</td></tr>
 	<tr><td>del</td><td>del</td></tr>
@@ -51,15 +83,19 @@ SSDB 支持 Redis 协议和客户端, 所以你可以使用 Redis 的客户端�
 	<tr><td>bitcount</td><td>redis_bitcount, countbit</td></tr>
 	<tr><td>strlen</td><td>strlen</td></tr>
 	<tr><td>getrange</td><td>redis_getrange, substr</td></tr>
+</tbody>
 </table>
 
 ### Key-Map
 
-<table>
+<table class="table table-striped">
+<thead>
 	<tr>
-		<th width="150">Redis</th>
-		<th width="150">SSDB</th>
+		<th width="200">Redis</th>
+		<th>SSDB</th>
 	</tr>
+</thead>
+<tbody>
 	<tr><td>del</td><td>hclear</td></tr>
 	<tr><td>hget</td><td>hget</td></tr>
 	<tr><td>hset</td><td>hset</td></tr>
@@ -71,16 +107,20 @@ SSDB 支持 Redis 协议和客户端, 所以你可以使用 Redis 的客户端�
 	<tr><td>hMGet</td><td>multi_hget</td></tr>
 	<tr><td>hMSet</td><td>multi_hset</td></tr>
 	<tr><td>hLen</td><td>hsize</td></tr>
+</tbody>
 </table>
 
 
 ### Key-Zset
 
-<table>
+<table class="table table-striped">
+<thead>
 	<tr>
-		<th width="150">Redis</th>
-		<th width="150">SSDB</th>
+		<th width="200">Redis</th>
+		<th>SSDB</th>
 	</tr>
+</thead>
+<tbody>
 	<tr><td>del</td><td>zclear</td></tr>
 	<tr><td>zScore</td><td>zget</td></tr>
 	<tr><td>zAdd</td><td>zset</td></tr>
@@ -93,15 +133,19 @@ SSDB 支持 Redis 协议和客户端, 所以你可以使用 Redis 的客户端�
 	<tr><td>zCard</td><td>zsize</td></tr>
 	<tr><td>zRemRangeByRank</td><td>zremrangebyrank</td></tr>
 	<tr><td>zRemRangeByScore</td><td>zremrangebyscore</td></tr>
+</tbody>
 </table>
 
 ### Key-List/Queue
 
-<table>
+<table class="table table-striped">
+<thead>
 	<tr>
-		<th width="150">Redis</th>
-		<th width="150">SSDB</th>
+		<th width="200">Redis</th>
+		<th>SSDB</th>
 	</tr>
+</thead>
+<tbody>
 	<tr><td>del</td><td>qclear</td></tr>
 	<tr><td>llen/lsize</td><td>qsize</td></tr>
 	<tr><td>lpush</td><td>qpush_front</td></tr>
@@ -110,5 +154,6 @@ SSDB 支持 Redis 协议和客户端, 所以你可以使用 Redis 的客户端�
 	<tr><td>rpop</td><td>qpop_back</td></tr>
 	<tr><td>lrange</td><td>qrange/qslice</td></tr>
 	<tr><td>lindex, lget</td><td>qget</td></tr>
+</tbody>
 </table>
 

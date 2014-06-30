@@ -20,6 +20,35 @@ __Options:__
 
 Make sure you have the PHP Redis module [https://github.com/nicolasff/phpredis](https://github.com/nicolasff/phpredis) installed.
 
+
+<a name="redis-tools"></a>
+
+## Supported Redis Tools
+
+<table class="table">
+<thead>
+	<tr>
+		<th width="200">Tool</th>
+		<th>Supported</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td>redis-cli</td>
+		<td><span class="label label-success">Yes</span></td>
+	</tr>
+	<tr>
+		<td>Twemproxy</td>
+		<td><span class="label label-success">Yes</span></td>
+	</tr>
+	<tr>
+		<td>Sentinel</td>
+		<td><span class="label label-default">No</span></td>
+	</tr>
+</tbody>
+</table>
+
+
 ## SSDB vs Redis Commands
 
 SSDB supports Redis network protocol, you can use Redis clients to connect to a SSDB server and operate on it.
@@ -28,11 +57,14 @@ But if you want to use SSDB clients, you will need this Redis-To-SSDB commands t
 
 ### Key-Value
 
-<table>
+<table class="table table-striped">
+<thead>
 	<tr>
-		<th width="150">Redis</th>
-		<th width="150">SSDB</th>
+		<th width="200">Redis</th>
+		<th>SSDB</th>
 	</tr>
+</thead>
+<tbody>
 	<tr><td>get</td><td>get</td></tr>
 	<tr><td>set</td><td>set</td></tr>
 	<tr><td>del</td><td>del</td></tr>
@@ -50,15 +82,19 @@ But if you want to use SSDB clients, you will need this Redis-To-SSDB commands t
 	<tr><td>bitcount</td><td>redis_bitcount, countbit</td></tr>
 	<tr><td>strlen</td><td>strlen</td></tr>
 	<tr><td>getrange</td><td>redis_getrange, substr</td></tr>
+</tbody>
 </table>
 
 ### Key-Map
 
-<table>
+<table class="table table-striped">
+<thead>
 	<tr>
-		<th width="150">Redis</th>
-		<th width="150">SSDB</th>
+		<th width="200">Redis</th>
+		<th>SSDB</th>
 	</tr>
+</thead>
+<tbody>
 	<tr><td>del</td><td>hclear</td></tr>
 	<tr><td>hget</td><td>hget</td></tr>
 	<tr><td>hset</td><td>hset</td></tr>
@@ -70,16 +106,20 @@ But if you want to use SSDB clients, you will need this Redis-To-SSDB commands t
 	<tr><td>hMGet</td><td>multi_hget</td></tr>
 	<tr><td>hMSet</td><td>multi_hset</td></tr>
 	<tr><td>hLen</td><td>hsize</td></tr>
+</tbody>
 </table>
 
 
 ### Key-Zset
 
-<table>
+<table class="table table-striped">
+<thead>
 	<tr>
-		<th width="150">Redis</th>
-		<th width="150">SSDB</th>
+		<th width="200">Redis</th>
+		<th>SSDB</th>
 	</tr>
+</thead>
+<tbody>
 	<tr><td>del</td><td>zclear</td></tr>
 	<tr><td>zScore</td><td>zget</td></tr>
 	<tr><td>zAdd</td><td>zset</td></tr>
@@ -92,15 +132,19 @@ But if you want to use SSDB clients, you will need this Redis-To-SSDB commands t
 	<tr><td>zCard</td><td>zsize</td></tr>
 	<tr><td>zRemRangeByRank</td><td>zremrangebyrank</td></tr>
 	<tr><td>zRemRangeByScore</td><td>zremrangebyscore</td></tr>
+</tbody>
 </table>
 
 ### Key-List/Queue
 
-<table>
+<table class="table table-striped">
+<thead>
 	<tr>
-		<th width="150">Redis</th>
-		<th width="150">SSDB</th>
+		<th width="200">Redis</th>
+		<th>SSDB</th>
 	</tr>
+</thead>
+<tbody>
 	<tr><td>del</td><td>qclear</td></tr>
 	<tr><td>llen/lsize</td><td>qsize</td></tr>
 	<tr><td>lpush</td><td>qpush_front</td></tr>
@@ -109,4 +153,6 @@ But if you want to use SSDB clients, you will need this Redis-To-SSDB commands t
 	<tr><td>rpop</td><td>qpop_back</td></tr>
 	<tr><td>lrange</td><td>qrange/qslice</td></tr>
 	<tr><td>lindex, lget</td><td>qget</td></tr>
+</tbody>
 </table>
+

@@ -20,6 +20,6 @@ __示例:__
 
 目录 ```output_folder``` 必须不存在, 因为 ssdb-dump 会创建这个目录. 导出之后, 这个目录里将有两个子目录, ```data``` 目录里包含着数据, 还有一个空的 ```meta``` 目录.
 
-## 导入
+## 恢复
 
 将 ```output_folder``` 目录拷贝到你的服务器上面, 你可能需要将它改名. 然后修改你的 ssdb.conf 配置文件, 将 ```work_dir``` 指向 ```output_folder``` 目录, 然后重启 ssdb-server.

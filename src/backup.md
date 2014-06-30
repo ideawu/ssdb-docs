@@ -20,6 +20,6 @@ __Example:__
 
 The ```output_folder``` must not exist, it will be created by ssdb-dump. And there are two folders in it, a ```data``` folder contains data, and an empty folder ```meta```.
 
-## Import
+## Recover
 
 Copy the folder ```output_folder``` to your server, you may want to rename it. Update your ssdb.conf, point ```work_dir``` to your ```output_folder```, then restart ssdb-server.

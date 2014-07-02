@@ -1,8 +1,13 @@
 # 配置
 
+<span class="label label-success" style="font-size: 120%;">注意</span>
 <div class="alert alert-info">
-    <span class="label label-info">注意</span>
     SSDB 的配置文件使用一个 TAB 来表示一级缩进, 不要使用空格来缩进, 无论你用2个, 3个, 4个, 或者无数个空格都不行!
+</div>
+
+<span class="label label-warning" style="font-size: 120%;">重要</span>
+<div class="alert alert-danger">
+	一定要记得修改你的 Linux 内核参数, 关于 <code>max open files(最大文件描述符数)</code>的内容, 请参考 <a href="http://www.ideawu.net/blog/archives/740.html">[1]</a>. 否则, 你会在 log.txt 看到 <code>Too many open files</code> 类似的错误, 或者在客户端看到 <code>Connection reset by peer</code> 错误.
 </div>
 
 ## 监听网络端口
@@ -15,8 +20,8 @@
 
 同时, 利用配置文件的 `deny, allow` 指令限制可信的来源 IP 访问.
 
+<span class="label label-danger" style="font-size: 120%;">警告!</span>
 <div class="alert alert-danger">
-    <span class="label label-danger">警告!</span>
     如果不做网络限制便监听 <code>0.0.0.0</code> IP 可能导致被任意机器访问到你的数据, 这很可能是一个安全问题! 你可以结合操作系统的 iptables 来限制网络访问.
 </div>
 

@@ -114,4 +114,4 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 ![](http://ssdb.io/img/ssdb-users/youxi.com.png)
 
-[youxi.com](http://www.youxi.com/) Uses SSDB to store sessions.
+[youxi.com](http://www.youxi.com/) uses SSDB to store sessions.

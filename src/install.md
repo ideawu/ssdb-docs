@@ -8,12 +8,12 @@ Do not run SSDB server on Windows system for a production environment. If you wi
 
 ## Compile and Install
 
-	$ wget --no-check-certificate https://github.com/ideawu/ssdb/archive/master.zip
-	$ unzip master
-	$ cd ssdb-master
-	$ make
-	$ # optional, install ssdb in /usr/local/ssdb
-	$ sudo make install
+	wget --no-check-certificate https://github.com/ideawu/ssdb/archive/master.zip
+	unzip master
+	cd ssdb-master
+	make
+	# optional, install ssdb in /usr/local/ssdb
+	sudo make install
 
 If you see error messages like this:
 
@@ -40,16 +40,16 @@ or
 ## Start ssdb-server
 
 	# start master
-	$ ./ssdb-server ssdb.conf
+	./ssdb-server ssdb.conf
 	
 	# or start as daemon
-	$ ./ssdb-server -d ssdb.conf
+	./ssdb-server -d ssdb.conf
 	
 	# ssdb command line
-	$ ./tools/ssdb-cli -p 8888
+	./tools/ssdb-cli -p 8888
 	
 	# stop ssdb-server
-	$ kill `cat ./var/ssdb.pid`
+	kill `cat ./var/ssdb.pid`
 
 By now, you will have to manage the ```ssdb-server``` process(es) manually, if you want to set it to start and stop along with the system, follow the instructions below.
 

@@ -8,12 +8,12 @@
 
 ## 编译和安装
 
-	$ wget --no-check-certificate https://github.com/ideawu/ssdb/archive/master.zip
-	$ unzip master
-	$ cd ssdb-master
-	$ make
-	$ # 将安装在 /usr/local/ssdb 目录下
-	$ sudo make install
+	wget --no-check-certificate https://github.com/ideawu/ssdb/archive/master.zip
+	unzip master
+	cd ssdb-master
+	make
+	# 将安装在 /usr/local/ssdb 目录下
+	sudo make install
 
 如果出现如下错误:
 
@@ -40,16 +40,16 @@
 ## 启动
 
 	# 启动主库
-	$ ./ssdb-server ssdb.conf
+	./ssdb-server ssdb.conf
 	
 	# 或者启动为后台进程
-	$ ./ssdb-server -d ssdb.conf
+	./ssdb-server -d ssdb.conf
 	
 	# 启动 ssdb 命令行
-	$ ./tools/ssdb-cli -p 8888
+	./tools/ssdb-cli -p 8888
 	
 	# 停止 ssdb-server
-	$ kill `cat ./var/ssdb.pid`
+	kill `cat ./var/ssdb.pid`
 
 到目前为止, 你需要手动管理 ```ssdb-server``` 进程, 如果你希望在操作系统启动和停止时自动地管理, 请按下面的说明进行.
 

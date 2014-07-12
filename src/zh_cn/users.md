@@ -110,4 +110,4 @@ SSDB 在 [百度](http://www.baidu.com/) 的一些服务中用作缓存服务.
 
 ![](http://ssdb.io/img/ssdb-users/youxi.com.png)
 
-[游戏网(youxi.com)](http://www.youxi.com/) 使用 SSDB 来存储用户 Session.
+[游戏网(youxi.com)](http://www.youxi.com/) 使用 SSDB 来存储用户 Session 和业务数据, 如活动信息, 用户列表等.

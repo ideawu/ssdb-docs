@@ -26,15 +26,38 @@
 	.container{
 		width: 880px;
 	}
-	.navbar{
-	}
-	.navbar .divider-vertical {
-		background-color: #222222;
-		border-right: 1px solid #333333;
-		height: 50px;
-		overflow: hidden;
-		width: 1px;
-	}
+.navbar{
+	min-height: 40px;
+}
+.navbar-header{
+	float: left;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+.navbar-brand{
+	margin: 0 !important;
+	padding: 10px 10px 0 4px;
+	height: 40px;
+}
+.navbar-nav{
+	margin: 0;
+	padding: 0;
+}
+.navbar-nav > li{
+	float: left;
+}
+.navbar-nav > li > a{
+	margin: 0;
+	padding: 10px;
+	height: 40px;
+}
+.navbar .divider-vertical {
+	background-color: #222222;
+	border-right: 1px solid #333333;
+	height: 40px;
+	overflow: hidden;
+	width: 1px;
+}
 	.footer{
 		text-align: center;
 	}
@@ -126,7 +149,7 @@
 			</ul>
 
 
-			<ul class="nav navbar-nav navbar-right" style="margin-top: 14px;">
+			<ul class="nav navbar-nav navbar-right" style="margin-top: 9px;">
 				<div class="btn-group">
 					<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
 						Language: English

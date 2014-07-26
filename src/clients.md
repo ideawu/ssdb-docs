@@ -1,6 +1,6 @@
 # Clients
 
-<div class="alert alert-success">
+<div class="alert alert-info">
 	SSDB supports Redis network protocol, you can use Redis clients to connect to a SSDB server and operate on it. But using SSDB client is the most efficient way.
 	<br/><br/>
 	All SSDB client APIs are binary-compatible, binary is string, string is binary.
@@ -191,6 +191,16 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 		</td>
 		<td>
 			SSDB Python Client like Redis-Py
+		</td>
+	</tr>
+	<tr>
+		<td width="15%">ssdb.py</td>
+		<td width="15%">hit9</td>
+		<td width="20%">
+			<a href="https://github.com/hit9/ssdb.py">Repository</a>
+		</td>
+		<td>
+			SSDB Python Client Library by hit9
 		</td>
 	</tr>
 </table>

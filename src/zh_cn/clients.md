@@ -193,6 +193,16 @@ SSDB 源码仓库中, 内置了许多语言的客户端, 这些便是所谓的__
 			SSDB Python Client like Redis-Py
 		</td>
 	</tr>
+	<tr>
+		<td width="15%">ssdb.py</td>
+		<td width="15%">hit9</td>
+		<td width="20%">
+			<a href="https://github.com/hit9/ssdb.py">Repository</a>
+		</td>
+		<td>
+			SSDB Python Client Library by hit9
+		</td>
+	</tr>
 </table>
 
 ### Ruby

@@ -28,6 +28,14 @@ SSDB 的命令行工具 ```ssdb-cli``` 对于 SSDB 的管理非常有用, 你可
     (0.000 sec)
     ssdb 127.0.0.1:8888>
 
+__对于 Windows 用户:__
+
+在 ssdb-master 源码的目录时运行
+
+	deps/cpy/cpy tools/ssdb-cli.cpy
+
+需要安装 Python.
+
 ## 转义响应中的中文和二进制数据
 
 	: escape

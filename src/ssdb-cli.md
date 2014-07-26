@@ -28,6 +28,14 @@ Type in 'h', and press ```Enter``` key to see the help messages. Here is screens
     (0.000 sec)
     ssdb 127.0.0.1:8888>
 
+__For Windows users:__
+
+Run
+
+	deps/cpy/cpy tools/ssdb-cli.cpy
+
+From within the ssdb-master source code folder, Python is required.
+
 ## Escape binary data
 
 	: escape

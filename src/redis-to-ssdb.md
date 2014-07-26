@@ -88,7 +88,7 @@ But if you want to use SSDB clients, you will need this Redis-To-SSDB commands t
 __Please read these notes very carefully:__
 
 * `substr` command is deprecated in Redis, so you should never use `substr` with a Redis client(however, you CAN do this, but MUST not do this)
-* use `getrange` instead if you are stick your mind with Redis
+* use `getrange` instead if you are sticking your mind with Redis
 * notice the difference between `substr(start, size)` and `getrange(start, end)`
 * when `size` is negative, the behavior may be strange for those who are not familiar with PHP language
 * `substr` in SSDB works as described [here](http://ssdb.io/docs/php/content.html#m-substr)

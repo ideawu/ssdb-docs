@@ -82,9 +82,18 @@ SSDB 支持 Redis 协议和客户端, 所以你可以使用 Redis 的客户端�
 	<tr><td>setbit</td><td>setbit</td></tr>
 	<tr><td>bitcount</td><td>redis_bitcount, countbit</td></tr>
 	<tr><td>strlen</td><td>strlen</td></tr>
-	<tr><td>getrange</td><td>redis_getrange, substr</td></tr>
+	<tr><td>getrange</td><td>getrange</td></tr>
 </tbody>
 </table>
+
+__Please read these notes very carefully:__
+
+* 对于 Redis, `substr` 命令早已经被废弃, 所以你不要使用 `substr` 命令在 Redis 客户端(当然, 你__可以__这么做, 但你__必须不__这么做)
+* 如果你还想着 Redis, 那么就用 `getrange` 命令
+* 注意这两者的区别: `substr(start, size)`, `getrange(start, end)`
+* 当 size 是负数时, 如果你不熟悉 PHP 语言, 那么你会觉得有些奇怪
+* SSDB 的 `substr` 命令的描述这 [这里](http://ssdb.io/docs/zh_cn/php/content.html#m-substr)
+
 
 ### Key-Map(Hash)
 

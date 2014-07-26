@@ -81,9 +81,17 @@ But if you want to use SSDB clients, you will need this Redis-To-SSDB commands t
 	<tr><td>setbit</td><td>setbit</td></tr>
 	<tr><td>bitcount</td><td>redis_bitcount, countbit</td></tr>
 	<tr><td>strlen</td><td>strlen</td></tr>
-	<tr><td>getrange</td><td>redis_getrange, substr</td></tr>
+	<tr><td>getrange</td><td>getrange</td></tr>
 </tbody>
 </table>
+
+__Please read these notes very carefully:__
+
+* `substr` command is deprecated in Redis, so you should never use `substr` with a Redis client(however, you CAN do this, but MUST not do this)
+* use `getrange` instead if you are stick your mind with Redis
+* notice the difference between `substr(start, size)` and `getrange(start, end)`
+* when `size` is negative, the behavior may be strange for those who are not familiar with PHP language
+* `substr` in SSDB works as described [here](http://ssdb.io/docs/php/content.html#m-substr)
 
 
 ### Key-Map(Hash)

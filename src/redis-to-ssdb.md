@@ -85,7 +85,8 @@ But if you want to use SSDB clients, you will need this Redis-To-SSDB commands t
 </tbody>
 </table>
 
-### Key-Map
+
+### Key-Map(Hash)
 
 <table class="table table-striped">
 <thead>
@@ -95,7 +96,7 @@ But if you want to use SSDB clients, you will need this Redis-To-SSDB commands t
 	</tr>
 </thead>
 <tbody>
-	<tr><td>del</td><td>hclear</td></tr>
+	<tr><td>del(<b>not supported</b>)</td><td>hclear</td></tr>
 	<tr><td>hget</td><td>hget</td></tr>
 	<tr><td>hset</td><td>hset</td></tr>
 	<tr><td>hdel</td><td>hdel</td></tr>
@@ -109,6 +110,8 @@ But if you want to use SSDB clients, you will need this Redis-To-SSDB commands t
 </tbody>
 </table>
 
+__If you want to delete a hash entirely, you have to use a SSDB client to execute `hclear` command. You cannot delete a hash with any Redis client.__
+
 
 ### Key-Zset
 
@@ -120,7 +123,7 @@ But if you want to use SSDB clients, you will need this Redis-To-SSDB commands t
 	</tr>
 </thead>
 <tbody>
-	<tr><td>del</td><td>zclear</td></tr>
+	<tr><td>del(<b>not supported</b>)</td><td>zclear</td></tr>
 	<tr><td>zScore</td><td>zget</td></tr>
 	<tr><td>zAdd</td><td>zset</td></tr>
 	<tr><td>zRem</td><td>zdel</td></tr>
@@ -135,6 +138,9 @@ But if you want to use SSDB clients, you will need this Redis-To-SSDB commands t
 </tbody>
 </table>
 
+__If you want to delete a zset entirely, you have to use a SSDB client to execute `zclear` command. You cannot delete a zset with any Redis client.__
+
+
 ### Key-List/Queue
 
 <table class="table table-striped">
@@ -145,7 +151,7 @@ But if you want to use SSDB clients, you will need this Redis-To-SSDB commands t
 	</tr>
 </thead>
 <tbody>
-	<tr><td>del</td><td>qclear</td></tr>
+	<tr><td>del(<b>not supported</b>)</td><td>qclear</td></tr>
 	<tr><td>llen/lsize</td><td>qsize</td></tr>
 	<tr><td>lpush</td><td>qpush_front</td></tr>
 	<tr><td>rpush</td><td>qpush_back</td></tr>
@@ -155,4 +161,6 @@ But if you want to use SSDB clients, you will need this Redis-To-SSDB commands t
 	<tr><td>lindex, lget</td><td>qget</td></tr>
 </tbody>
 </table>
+
+__If you want to delete a list entirely, you have to use a SSDB client to execute `qclear` command. You cannot delete a list with any Redis client.__
 

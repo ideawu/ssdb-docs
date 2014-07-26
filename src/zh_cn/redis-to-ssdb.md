@@ -86,7 +86,7 @@ SSDB 支持 Redis 协议和客户端, 所以你可以使用 Redis 的客户端�
 </tbody>
 </table>
 
-### Key-Map
+### Key-Map(Hash)
 
 <table class="table table-striped">
 <thead>
@@ -96,7 +96,7 @@ SSDB 支持 Redis 协议和客户端, 所以你可以使用 Redis 的客户端�
 	</tr>
 </thead>
 <tbody>
-	<tr><td>del</td><td>hclear</td></tr>
+	<tr><td>del(<b>not supported</b>)</td><td>hclear</td></tr>
 	<tr><td>hget</td><td>hget</td></tr>
 	<tr><td>hset</td><td>hset</td></tr>
 	<tr><td>hdel</td><td>hdel</td></tr>
@@ -110,6 +110,8 @@ SSDB 支持 Redis 协议和客户端, 所以你可以使用 Redis 的客户端�
 </tbody>
 </table>
 
+__如果你想删除整个 hash, 那么你就必须使用 SSDB 的客户端来执行 `hclear` 命令, 用 Redis 的客户端是删除不了整个 hash 的.__
+
 
 ### Key-Zset
 
@@ -121,7 +123,7 @@ SSDB 支持 Redis 协议和客户端, 所以你可以使用 Redis 的客户端�
 	</tr>
 </thead>
 <tbody>
-	<tr><td>del</td><td>zclear</td></tr>
+	<tr><td>del(<b>not supported</b>)</td><td>zclear</td></tr>
 	<tr><td>zScore</td><td>zget</td></tr>
 	<tr><td>zAdd</td><td>zset</td></tr>
 	<tr><td>zRem</td><td>zdel</td></tr>
@@ -136,7 +138,10 @@ SSDB 支持 Redis 协议和客户端, 所以你可以使用 Redis 的客户端�
 </tbody>
 </table>
 
-### Key-List/Queue
+__如果你想删除整个 zset, 那么你就必须使用 SSDB 的客户端来执行 `zclear` 命令, 用 Redis 的客户端是删除不了整个 zset 的.__
+
+
+### Key-List(Queue)
 
 <table class="table table-striped">
 <thead>
@@ -146,7 +151,7 @@ SSDB 支持 Redis 协议和客户端, 所以你可以使用 Redis 的客户端�
 	</tr>
 </thead>
 <tbody>
-	<tr><td>del</td><td>qclear</td></tr>
+	<tr><td>del(<b>not supported</b>)</td><td>qclear</td></tr>
 	<tr><td>llen/lsize</td><td>qsize</td></tr>
 	<tr><td>lpush</td><td>qpush_front</td></tr>
 	<tr><td>rpush</td><td>qpush_back</td></tr>
@@ -156,4 +161,6 @@ SSDB 支持 Redis 协议和客户端, 所以你可以使用 Redis 的客户端�
 	<tr><td>lindex, lget</td><td>qget</td></tr>
 </tbody>
 </table>
+
+__如果你想删除整个 list, 那么你就必须使用 SSDB 的客户端来执行 `qclear` 命令, 用 Redis 的客户端是删除不了整个 list 的.__
 

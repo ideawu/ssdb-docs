@@ -59,6 +59,7 @@
 	width: 1px;
 }
 	.footer{
+		font-size: 12px;
 		text-align: center;
 	}
 	p{

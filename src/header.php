@@ -17,7 +17,7 @@
 	-->
 	<style type="text/css">
 	body{
-		padding-top: 50px;
+		padding-top: 40px;
 		padding-bottom: 10px;
 		font-size: 14px;
 		font-family: arial;

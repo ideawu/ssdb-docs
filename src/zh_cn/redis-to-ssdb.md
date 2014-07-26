@@ -86,7 +86,7 @@ SSDB 支持 Redis 协议和客户端, 所以你可以使用 Redis 的客户端�
 </tbody>
 </table>
 
-__Please read these notes very carefully:__
+__请非常细心地阅读此处的说明:__
 
 * 对于 Redis, `substr` 命令早已经被废弃, 所以你不要使用 `substr` 命令在 Redis 客户端(当然, 你__可以__这么做, 但你__必须不__这么做)
 * 如果你还想着 Redis, 那么就用 `getrange` 命令

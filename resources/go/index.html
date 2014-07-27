@@ -42,7 +42,7 @@
 <h2>About</h2>
 <p>All SSDB operations go with <code>ssdb.Client.Do()</code>, it accepts variable arguments. The first argument of Do() is the SSDB command, for example "get", "set", etc. The rest arguments(maybe none) are the arguments of that command.</p>
 <p>The Do() method will return an array of string if no error. The first element in that array is the response code, <code>"ok"</code> means the following elements in that array(maybe none) are valid results. The response code may be <code>"not_found"</code> if you are calling "get" on an non-exist key.</p>
-<p>Refer to the <a href="http://www.ideawu.com/ssdb/docs/php/">PHP documentation</a> to checkout a complete list of all avilable commands and corresponding responses.</p>
+<p>Refer to the <a href="http://www.ideawu.com/ssdb/docs/php/">PHP documentation</a> to checkout a complete list of all available commands and corresponding responses.</p>
 <h2>Example</h2>
 <pre class="fragment">package main
 

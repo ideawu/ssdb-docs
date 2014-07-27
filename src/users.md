@@ -1,6 +1,6 @@
 # Use Cases
 
-If you are using SSDB in production, please send me a email(ssdb#ideawu.com), I would love to add you the user list below. Please provide informations as below:
+If you are using SSDB in production, please send me a email(ssdb#ideawu.com), I would like to add you to the user list below. Please provide informations as below:
 
 <div class="alert alert-info">
 	<ul>

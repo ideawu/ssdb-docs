@@ -31,7 +31,7 @@ __Find out requests slower than 100ms:__
 
 	cat log.txt | grep resp | grep '[wp]:[1-9][0-9]\{2,\}\.'
 
-## SSDB is working
+## SSDB is Working
 
 ssdb-server print out log like these every 5 minutes:
 

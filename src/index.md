@@ -42,4 +42,4 @@ SSDB is stable, production-ready and is widely used by many Internet companies, 
 
 ## Authors
 
-@ideawu
+[@ideawu](http://www.ideawu.com/)

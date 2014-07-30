@@ -1065,20 +1065,16 @@ $ssdb-&gt;zlist('a', 'z', 10);
 
 <a name="m-zkeys"></a>
 <h3>zkeys</h3>
+<p>List keys in a zset. See method <code><a href="#m-zscan">zscan()</a></code>.</p>
 
 <h4><em>Description</em></h4>
-<p>List keys of a zset in range (key_start+score_start, score_end]. If key_start is empty, keys with a score greater than or equal to score_start will be returned. If key_start is not empty, keys with score larger than score_start, and keys larger than key_start also with score equal to score_start will be returned.</p>
-
-<p>That is: return keys in <code>(key.score == score_start &amp;&amp; key &gt; key_start || key.score &gt; score_start)</code>.</p>
-
-<p>("", ""] means no range limit.</p>
 
 <h4><em>Parameters</em></h4>
 <dl>
 	<dd><code>name</code> - The name of the zset</dd>
-	<dd><code>key_start</code> - The key related to score_start, could be empty string.</dd>
-	<dd><code>score_start</code> - The minimum score related to keys(may not be included, depend on key_start), empty string means -inf(no limit).</dd>
-	<dd><code>score_end</code> - The maximum score(inclusive) related to keys, empty string means +inf(no limit).</dd>
+	<dd><code>key_start</code> - See method <code><a href="#m-zscan">zscan()</a></code>.</dd>
+	<dd><code>score_start</code> - See method <code><a href="#m-zscan">zscan()</a></code>.</dd>
+	<dd><code>score_end</code> - See method <code><a href="#m-zscan">zscan()</a></code>.</dd>
 	<dd><code>limit</code> - Up to that many elements will be returned.</dd>
 </dl>
 
@@ -1095,14 +1091,18 @@ $ssdb-&gt;zkeys('z', '', 1, 100, 10);
 <h3>zscan</h3>
 
 <h4><em>Description</em></h4>
-<p>List key-score pairs of a zset. See method <code><a href="#m-zkeys">zkeys()</a></code>.</p>
+<p>List key-score pairs in a zset, where key-score in range (key_start+score_start, score_end]. If key_start is empty, keys with a score greater than or equal to score_start will be returned. If key_start is not empty, keys with score larger than score_start, and keys larger than key_start also with score equal to score_start will be returned.</p>
+
+<p>That is: return keys in <code>(key.score == score_start &amp;&amp; key &gt; key_start || key.score &gt; score_start), and key.score &lt;= score_end</code>.</p>
+
+<p>("", ""] means no range limit.</p>
 
 <h4><em>Parameters</em></h4>
 <dl>
 	<dd><code>name</code> - The name of the zset</dd>
-	<dd><code>key_start</code> - See method <code><a href="#m-zkeys">zkeys()</a></code>.</dd>
-	<dd><code>score_start</code> - See method <code><a href="#m-zkeys">zkeys()</a></code>.</dd>
-	<dd><code>score_end</code> - See method <code><a href="#m-zkeys">zkeys()</a></code>.</dd>
+	<dd><code>key_start</code> - The key related to score_start, could be empty string.</dd>
+	<dd><code>score_start</code> - The minimum score related to keys(may not be included, depend on key_start), empty string means -inf(no limit).</dd>
+	<dd><code>score_end</code> - The maximum score(inclusive) related to keys, empty string means +inf(no limit).</dd>
 	<dd><code>limit</code> - Up to that many pairs will be returned.</dd>
 </dl>
 

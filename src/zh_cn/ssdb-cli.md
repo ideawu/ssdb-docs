@@ -28,7 +28,7 @@ SSDB 的命令行工具 ```ssdb-cli``` 对于 SSDB 的管理非常有用, 你可
     (0.000 sec)
     ssdb 127.0.0.1:8888>
 
-__对于 Windows 用户:__
+### 对于 <span class="label label-info">Windows</span> 用户:
 
 在 ssdb-master 源码的目录时运行
 
@@ -37,6 +37,8 @@ __对于 Windows 用户:__
 需要安装 Python.
 
 ## 转义响应中的中文和二进制数据
+
+如果你执行完命令后发现有乱码或者屏幕输出异常, 可以把下面这行命令拷贝进 ssdb-cli 然后按`回车`键:
 
 	: escape
 

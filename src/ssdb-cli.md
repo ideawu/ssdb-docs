@@ -28,7 +28,7 @@ Type in 'h', and press ```Enter``` key to see the help messages. Here is screens
     (0.000 sec)
     ssdb 127.0.0.1:8888>
 
-__For Windows users:__
+### For <span class="label label-info">Windows</span> users:
 
 Run
 
@@ -37,6 +37,8 @@ Run
 From within the ssdb-master source code folder, Python is required.
 
 ## Escape binary data
+
+If you see strange outputs in the screen after queries, copy this whole line into ssdb-cli and press `Enter` key:
 
 	: escape
 

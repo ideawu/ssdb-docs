@@ -32,7 +32,7 @@ __For Windows users:__
 
 Run
 
-	deps/cpy/cpy tools/ssdb-cli.cpy
+	deps\cpy\cpy tools\ssdb-cli.cpy
 
 From within the ssdb-master source code folder, Python is required.
 

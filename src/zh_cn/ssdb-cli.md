@@ -32,7 +32,7 @@ __对于 Windows 用户:__
 
 在 ssdb-master 源码的目录时运行
 
-	deps/cpy/cpy tools/ssdb-cli.cpy
+	deps\cpy\cpy tools\ssdb-cli.cpy
 
 需要安装 Python.
 

@@ -111,3 +111,16 @@ SSDB 在 [百度](http://www.baidu.com/) 的一些服务中用作缓存服务.
 ![](http://ssdb.io/img/ssdb-users/youxi.com.png)
 
 [游戏网(youxi.com)](http://www.youxi.com/) 使用 SSDB 来存储用户 Session 和业务数据, 如活动信息, 用户列表等.
+
+---
+
+## <a href="#zuiyoudai" name="zuiyoudai">zuiyoudai.com</a>
+
+![](http://ssdb.io/img/ssdb-users/zuiyoudai.com.png)
+
+[最优贷](http://www.zuiyoudai.com/)是北京银库旗下的互联网金融服务平台, 为用户提供互联网投融资信息服务. 使用SSDB存储部分基础数据, 系统日志, 临时数据, 同时作为缓存使用.
+
+
+
+
+

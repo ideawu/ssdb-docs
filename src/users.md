@@ -115,3 +115,14 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 ![](http://ssdb.io/img/ssdb-users/youxi.com.png)
 
 [youxi.com](http://www.youxi.com/) uses SSDB to store sessions and application data, such as activities, user list, etc.
+
+---
+
+## <a href="#zuiyoudai" name="zuiyoudai">zuiyoudai.com</a>
+
+![](http://ssdb.io/img/ssdb-users/zuiyoudai.com.png)
+
+[ZUIYOUDAI](http://www.zuiyoudai.com/) is a online finance service platform. Is uses SSDB to store business data, logs, and cache data.
+
+
+

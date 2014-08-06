@@ -1,6 +1,6 @@
 # 用户案例
 
-如果你在生产环境中使用 SSDB, 欢迎你给我发邮件(ssdb#ideawu.com), 我很愿意把你加入到下面的用户列表中. 邮件中请包含如下信息:
+如果你在生产环境中使用 SSDB, 欢迎你给我发邮件(ssdb#udpwork.com), 我很愿意把你加入到下面的用户列表中. 邮件中请包含如下信息:
 
 <div class="alert alert-info">
 	<ul>

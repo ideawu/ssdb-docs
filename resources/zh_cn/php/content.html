@@ -705,7 +705,7 @@ $ssdb-&gt;hsize('h');
 
 
 <a name="m-hlist"></a>
-<h3>hlist</h3>
+<h3>hlist, hrlist</h3>
 
 <h4><em>说明</em></h4>
 <p>列出名字处于区间 (name_start, name_end] 的 hashmap.</p>
@@ -1041,7 +1041,7 @@ $ssdb-&gt;zsize('z');
 
 
 <a name="m-zlist"></a>
-<h3>zlist</h3>
+<h3>zlist, zrlist</h3>
 
 <h4><em>说明</em></h4>
 <p>列出名字处于区间 (name_start, name_end] 的 zset.</p>
@@ -1420,6 +1420,30 @@ $ssdb-&gt;multi_zdel('z', array('k1', 'k2'));
 <h4><em>示例</em></h4>
 <pre>
 $ssdb-&gt;qsize('q');
+</pre>
+
+
+<a name="m-qlist"></a>
+<h3>qlist, qrlist</h3>
+
+<h4><em>说明</em></h4>
+<p>列出名字处于区间 (name_start, name_end] 的 queue/list.</p>
+
+<p>("", ""] 表示整个区间.</p>
+
+<h4><em>参数</em></h4>
+<dl>
+	<dd><code>name_start</code> - 返回的起始名字(不包含), 空字符串表示 -inf.</dd>
+	<dd><code>name_end</code> - 返回的结束名字(包含), 空字符串表示 +inf.</dd>
+	<dd><code>limit</code> - 最多返回这么多个元素.</dd>
+</dl>
+
+<h4><em>返回值</em></h4>
+<p>出错则返回 <code>false</code>, 返回返回包含名字的数组.</p>
+
+<h4><em>示例</em></h4>
+<pre>
+$ssdb-&gt;qlist('a', 'z', 10);
 </pre>
 
 

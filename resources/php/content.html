@@ -704,7 +704,7 @@ $ssdb-&gt;hsize('h');
 
 
 <a name="m-hlist"></a>
-<h3>hlist</h3>
+<h3>hlist, hrlist</h3>
 
 <h4><em>Description</em></h4>
 <p>List hashmap names in range (name_start, name_end].</p>
@@ -1040,7 +1040,7 @@ $ssdb-&gt;zsize('z');
 
 
 <a name="m-zlist"></a>
-<h3>zlist</h3>
+<h3>zlist, zrlist</h3>
 
 <h4><em>Description</em></h4>
 <p>List zset names in range (name_start, name_end].</p>
@@ -1419,6 +1419,30 @@ $ssdb-&gt;multi_zdel('z', array('k1', 'k2'));
 <h4><em>Example</em></h4>
 <pre>
 $ssdb-&gt;qsize('q');
+</pre>
+
+
+<a name="m-qlist"></a>
+<h3>qlist, qrlist</h3>
+
+<h4><em>Description</em></h4>
+<p>List list/queue names in range (name_start, name_end].</p>
+
+<p>("", ""] means no range limit.</p>
+
+<h4><em>Parameters</em></h4>
+<dl>
+	<dd><code>name_start</code> - The lower bound(not included) of names to be returned, empty string means -inf(no limit).</dd>
+	<dd><code>name_end</code> - The upper bound(inclusive) of names to be returned, empty string means +inf(no limit).</dd>
+	<dd><code>limit</code> - Up to that many elements will be returned.</dd>
+</dl>
+
+<h4><em>Return Value</em></h4>
+<p><code>false</code> on error, otherwise an array containing the names.</p>
+
+<h4><em>Example</em></h4>
+<pre>
+$ssdb-&gt;qlist('a', 'z', 10);
 </pre>
 
 

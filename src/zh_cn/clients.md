@@ -139,6 +139,16 @@ SSDB 源码仓库中, 内置了许多语言的客户端, 这些便是所谓的__
 			官方客户端
 		</td>
 	</tr>
+	<tr>
+		<td width="15%">node-ssdb by @hit9</td>
+		<td width="15%">hit9</td>
+		<td width="20%">
+			<a href="https://github.com/eleme/node-ssdb">Repository</a>
+		</td>
+		<td>
+			node-ssdb by @hit9
+		</td>
+	</tr>
 </table>
 
 ### PHP

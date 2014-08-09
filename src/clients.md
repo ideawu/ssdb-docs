@@ -139,6 +139,16 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 			This is the official client
 		</td>
 	</tr>
+	<tr>
+		<td width="15%">node-ssdb by @hit9</td>
+		<td width="15%">hit9</td>
+		<td width="20%">
+			<a href="https://github.com/eleme/node-ssdb">Repository</a>
+		</td>
+		<td>
+			node-ssdb by @hit9
+		</td>
+	</tr>
 </table>
 
 ### PHP

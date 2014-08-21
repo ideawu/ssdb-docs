@@ -68,6 +68,7 @@ SSDB 支持 Redis 协议和客户端, 所以你可以使用 Redis 的客户端�
 <tbody>
 	<tr><td>get</td><td>get</td></tr>
 	<tr><td>set</td><td>set</td></tr>
+	<tr><td>setex</td><td>setx(for kv type only)</td></tr>
 	<tr><td>del</td><td>del</td></tr>
 	<tr><td>incr/incrBy</td><td>incr</td></tr>
 	<tr><td>decr/decrBy</td><td>decr</td></tr>

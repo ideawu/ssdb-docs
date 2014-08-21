@@ -67,6 +67,7 @@ But if you want to use SSDB clients, you will need this Redis-To-SSDB commands t
 <tbody>
 	<tr><td>get</td><td>get</td></tr>
 	<tr><td>set</td><td>set</td></tr>
+	<tr><td>setex</td><td>setx(for kv type only)</td></tr>
 	<tr><td>del</td><td>del</td></tr>
 	<tr><td>incr/incrBy</td><td>incr</td></tr>
 	<tr><td>decr/decrBy</td><td>decr</td></tr>

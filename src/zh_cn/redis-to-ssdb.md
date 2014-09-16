@@ -117,6 +117,7 @@ __请非常细心地阅读此处的说明:__
 	<tr><td>hMGet</td><td>multi_hget</td></tr>
 	<tr><td>hMSet</td><td>multi_hset</td></tr>
 	<tr><td>hLen</td><td>hsize</td></tr>
+	<tr><td>keys</td><td>hlist(for hash type only)</td></tr>
 </tbody>
 </table>
 
@@ -145,6 +146,7 @@ __如果你想删除整个 hash, 那么你就必须使用 SSDB 的客户端来�
 	<tr><td>zCard</td><td>zsize</td></tr>
 	<tr><td>zRemRangeByRank</td><td>zremrangebyrank</td></tr>
 	<tr><td>zRemRangeByScore</td><td>zremrangebyscore</td></tr>
+	<tr><td>keys</td><td>zlist(for zset type only)</td></tr>
 </tbody>
 </table>
 
@@ -169,6 +171,7 @@ __如果你想删除整个 zset, 那么你就必须使用 SSDB 的客户端来�
 	<tr><td>rpop</td><td>qpop_back</td></tr>
 	<tr><td>lrange</td><td>qrange/qslice</td></tr>
 	<tr><td>lindex, lget</td><td>qget</td></tr>
+	<tr><td>keys</td><td>qlist(for queue/list type only)</td></tr>
 </tbody>
 </table>
 

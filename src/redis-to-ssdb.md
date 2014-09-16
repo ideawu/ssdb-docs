@@ -116,6 +116,7 @@ __Please read these notes very carefully:__
 	<tr><td>hMGet</td><td>multi_hget</td></tr>
 	<tr><td>hMSet</td><td>multi_hset</td></tr>
 	<tr><td>hLen</td><td>hsize</td></tr>
+	<tr><td>keys</td><td>hlist(for hash type only)</td></tr>
 </tbody>
 </table>
 
@@ -144,6 +145,7 @@ __If you want to delete a hash entirely, you have to use a SSDB client to execut
 	<tr><td>zCard</td><td>zsize</td></tr>
 	<tr><td>zRemRangeByRank</td><td>zremrangebyrank</td></tr>
 	<tr><td>zRemRangeByScore</td><td>zremrangebyscore</td></tr>
+	<tr><td>keys</td><td>zlist(for zset type only)</td></tr>
 </tbody>
 </table>
 
@@ -168,6 +170,7 @@ __If you want to delete a zset entirely, you have to use a SSDB client to execut
 	<tr><td>rpop</td><td>qpop_back</td></tr>
 	<tr><td>lrange</td><td>qrange/qslice</td></tr>
 	<tr><td>lindex, lget</td><td>qget</td></tr>
+	<tr><td>keys</td><td>qlist(for queue/list type only)</td></tr>
 </tbody>
 </table>
 

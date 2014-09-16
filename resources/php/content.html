@@ -1613,15 +1613,16 @@ $ssdb-&gt;qpush_back('q', 'a');
 <h3>qpop_front</h3>
 
 <h4><em>Description</em></h4>
-<p>Removes and returns the first element of a queue.</p>
+<p>Pop out one or more elements from the head of a queue.</p>
 
 <h4><em>Parameters</em></h4>
 <dl>
 	<dd><code>name</code> - </dd>
+	<dd><code>size</code> - optional, number of elements to pop, default is 1</dd>
 </dl>
 
 <h4><em>Return Value</em></h4>
-<p><code>false</code> on error, <code>null</code> if queue empty, otherwise the item removed.</p>
+<p><code>false</code> on error. When <code>size</code> is not specified or less than 2, returns <code>null</code> if queue empty, otherwise the item removed. When <code>size</code> is specified and greater than or equal to 2, returns an array of elements removed.</p>
 
 <h4><em>Example</em></h4>
 <pre>
@@ -1633,15 +1634,16 @@ $ssdb-&gt;qpop_front('q');
 <h3>qpop_back</h3>
 
 <h4><em>Description</em></h4>
-<p>Removes and returns the last element of a queue.</p>
+<p>Pop out one or more elements from the tail of a queue.</p>
 
 <h4><em>Parameters</em></h4>
 <dl>
 	<dd><code>name</code> - </dd>
+	<dd><code>size</code> - optional, number of elements to pop, default is 1</dd>
 </dl>
 
 <h4><em>Return Value</em></h4>
-<p><code>false</code> on error, <code>null</code> if queue empty, otherwise the item removed.</p>
+<p><code>false</code> on error. When <code>size</code> is not specified or less than 2, returns <code>null</code> if queue empty, otherwise the item removed. When <code>size</code> is specified and greater than or equal to 2, returns an array of elements removed.</p>
 
 <h4><em>Example</em></h4>
 <pre>

@@ -1611,15 +1611,16 @@ $ssdb-&gt;qpush_back('q', 'a');
 <h3>qpop_front</h3>
 
 <h4><em>说明</em></h4>
-<p>删除并返回队列的第一个元素.</p>
+<p>从队列首部弹出最后一个或者多个元素.</p>
 
 <h4><em>参数</em></h4>
 <dl>
 	<dd><code>name</code> - </dd>
+	<dd><code>size</code> - 可选, 最多从队列弹出这么多个元素</dd>
 </dl>
 
 <h4><em>返回值</em></h4>
-<p>出错返回 <code>false</code>, 队列不存在(或者为空)则返回 <code>null</code>, 否则删除并返回一个元素.</p>
+<p>出错返回 <code>false</code>. 当 <code>size</code> 未指定或者小于等于 1 时, 队列不存在(或者为空)则返回 <code>null</code>, 否则删除并返回一个元素. 当 <code>size</code> 大于等于 2 时, 返回一个数组包含弹出的元素.</p>
 
 <h4><em>示例</em></h4>
 <pre>
@@ -1631,15 +1632,16 @@ $ssdb-&gt;qpop_front('q');
 <h3>qpop_back</h3>
 
 <h4><em>说明</em></h4>
-<p>删除并返回队列的最后一个元素.</p>
+<p>从队列尾部弹出最后一个或者多个元素.</p>
 
 <h4><em>参数</em></h4>
 <dl>
 	<dd><code>name</code> - </dd>
+	<dd><code>size</code> - 可选, 最多从队列弹出这么多个元素</dd>
 </dl>
 
 <h4><em>返回值</em></h4>
-<p>出错返回 <code>false</code>, 队列不存在(或者为空)则返回 <code>null</code>, 否则删除并返回一个元素.</p>
+<p>出错返回 <code>false</code>. 当 <code>size</code> 未指定或者小于等于 1 时, 队列不存在(或者为空)则返回 <code>null</code>, 否则删除并返回一个元素. 当 <code>size</code> 大于等于 2 时, 返回一个数组包含弹出的元素.</p>
 
 <h4><em>示例</em></h4>
 <pre>

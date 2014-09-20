@@ -106,6 +106,29 @@ echo $ssdb-&gt;get('key');
 $ssdb = new SimpleSSDB('127.0.0.1', 8888);
 </pre>
 
+
+
+<a name="m-auth"></a>
+<h3>auth</h3>
+
+<h4><em>说明</em></h4>
+<p>配置密码, 之后将用于向服务器校验. 这个校验不是立即进行的, 而是等你执行第一条命令的时候才发给服务器. <b>注意, 密码是明文传输的!</b></p>
+
+<h4><em>参数</em></h4>
+<dl>
+	<dd><code>password</code> - </dd>
+</dl>
+
+<h4><em>返回值</em></h4>
+<p>出错则返回 <code>false</code>, 否则返回 <code>null</code>.</p>
+
+<h4><em>示例</em></h4>
+<pre>
+$ssdb-&gt;auth('very-strong-password');
+</pre>
+
+
+
 <!-- ##############  key value ############## -->
 
 <a name="m-set"></a>

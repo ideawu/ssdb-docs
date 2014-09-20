@@ -106,6 +106,28 @@ echo $ssdb-&gt;get('key');
 $ssdb = new SimpleSSDB('127.0.0.1', 8888);
 </pre>
 
+
+<a name="m-auth"></a>
+<h3>auth</h3>
+
+<h4><em>Description</em></h4>
+<p>Config the password for later use to authenticate the connection. The authentication is not invoked immediately, but later when you send the first request to the server. <b>Warning: The password is sent in plain-text over the network!</b></p>
+
+<h4><em>Parameters</em></h4>
+<dl>
+	<dd><code>password</code> - </dd>
+</dl>
+
+<h4><em>Return Value</em></h4>
+<p><code>false</code> on error, otherwise returns <code>null</code>.</p>
+
+<h4><em>Example</em></h4>
+<pre>
+$ssdb-&gt;auth('very-strong-password');
+</pre>
+
+
+
 <!-- ##############  key value ############## -->
 
 <a name="m-set"></a>

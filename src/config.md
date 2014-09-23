@@ -100,3 +100,20 @@ replication:
 ## Multiple Masters
 
 Within a group of SSDB servers of n instances, each instance must be slaveof other n-1 instances.
+
+```
+replication:
+	slaveof:
+		id: svc_1
+		# sync|mirror, default is sync
+		type: mirror
+		ip: 127.0.0.1
+		port: 8888
+	slaveof:
+		id: svc_2
+		# sync|mirror, default is sync
+		type: mirror
+		ip: 127.0.0.1
+		port: 8889
+	# ... more slaveof
+```

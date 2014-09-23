@@ -99,3 +99,20 @@ replication:
 ## 多主
 
 在一组一共包含 n 个实例的 SSDB 实例群中, 每一个实例必须 slaveof 其余的 n-1 个实例.
+
+```
+replication:
+	slaveof:
+		id: svc_1
+		# sync|mirror, default is sync
+		type: mirror
+		ip: 127.0.0.1
+		port: 8888
+	slaveof:
+		id: svc_2
+		# sync|mirror, default is sync
+		type: mirror
+		ip: 127.0.0.1
+		port: 8889
+	# ... more slaveof
+```

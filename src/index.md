@@ -24,6 +24,7 @@ SSDB is stable, production-ready and is widely used by many Internet companies, 
 ## Specification
 
 * [SSDB Network Protocol Specification](./protocol.html): For those who want to implement a SSDB client.
+* [Limitations](./limit.html): Limitations like max key length, etc.
 
 ## API Docs
 

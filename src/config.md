@@ -27,7 +27,17 @@ Meanwhile, specify with `deny, allow` instructions to only allow connections fro
 </div>
 
 
-## Write logs to console
+## Log Configuration
+
+See also [Log Analytics](./logs.html).
+
+### Log levels
+
+The log levels are: `debug, warn, error, fatal`.
+
+Generally, I recommend you set `logger.level` to `debug`.
+
+### Write logs to console
 
 Edit ssdb.conf, modify
 

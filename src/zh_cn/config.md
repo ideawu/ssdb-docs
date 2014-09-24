@@ -26,9 +26,19 @@
 </div>
 
 
-## 输出日志到终端屏幕
+## 日志配置
 
-编程 ssdb.conf, 将
+另外参见 [日志分析](./logs.html).
+
+### 日志级别
+
+支持的日志级别有: `debug, warn, error, fatal`.
+
+一般, 建议你将 `logger.level` 设置为 `debug` 级别.
+
+### 输出日志到终端屏幕
+
+编辑 ssdb.conf, 将
 
 	logger:
 		output: log.txt

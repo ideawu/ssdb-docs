@@ -114,7 +114,7 @@ SSDB 在 [百度](http://www.baidu.com/) 的一些服务中用作缓存服务.
 
 ---
 
-## <a href="#zuiyoudai" name="最优贷">最优贷</a>
+## <a href="#zuiyoudai" name="zuiyoudai">最优贷</a>
 
 ![](http://ssdb.io/img/ssdb-users/zuiyoudai.com.png)
 
@@ -122,7 +122,7 @@ SSDB 在 [百度](http://www.baidu.com/) 的一些服务中用作缓存服务.
 
 ---
 
-## <a href="#jd" name="京东">京东商城</a>
+## <a href="#jd" name="jd">京东商城</a>
 
 ![](http://ssdb.io/img/ssdb-users/jd.com.png)
 

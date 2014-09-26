@@ -126,7 +126,7 @@ SSDB 在 [百度](http://www.baidu.com/) 的一些服务中用作缓存服务.
 
 ![](http://ssdb.io/img/ssdb-users/jd.com.png)
 
-[京东商城](http://jd.com/)京东（JD.com）是中国最大的自营式电商企业. 京东商城将 SSDB 应用在多个线上业务中.
+[京东商城](http://jd.com/) 是中国最大的自营式电商企业. 京东商城将 SSDB 应用在多个线上业务中.
 
 
 

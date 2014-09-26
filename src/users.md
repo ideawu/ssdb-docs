@@ -124,5 +124,11 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 [ZUIYOUDAI](http://www.zuiyoudai.com/) is a online finance service platform. Is uses SSDB to store business data, logs, and cache data.
 
+---
 
+## <a href="#jd" name="JD.com">JD.com</a>
+
+![](http://ssdb.io/img/ssdb-users/jd.com.png)
+
+[JD.com](http://jd.com/) the largest online direct sales company in China in terms of transaction volume with a market share in China. JD.com uses SSDB in many online services.
 

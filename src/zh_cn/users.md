@@ -114,11 +114,19 @@ SSDB 在 [百度](http://www.baidu.com/) 的一些服务中用作缓存服务.
 
 ---
 
-## <a href="#zuiyoudai" name="zuiyoudai">zuiyoudai.com</a>
+## <a href="#zuiyoudai" name="最优贷">最优贷</a>
 
 ![](http://ssdb.io/img/ssdb-users/zuiyoudai.com.png)
 
 [最优贷](http://www.zuiyoudai.com/)是北京银库旗下的互联网金融服务平台, 为用户提供互联网投融资信息服务. 使用SSDB存储部分基础数据, 系统日志, 临时数据, 同时作为缓存使用.
+
+---
+
+## <a href="#jd" name="京东">京东商城</a>
+
+![](http://ssdb.io/img/ssdb-users/jd.com.png)
+
+[京东商城](http://jd.com/)京东（JD.com）是中国最大的自营式电商企业. 京东商城将 SSDB 应用在多个线上业务中.
 
 
 

@@ -86,4 +86,4 @@ val
 		// Data received
 	}
 
-Advice to SDK developers: `Data` may contains any character, including `\r, \n, \0...`, so you MUST NOT expecting there is not such thing in `Data`.
+Advice to SDK developers: `Data` may contains any character, including `\r, \n, \0...`, so you MUST NOT expecting there is no such thing in `Data`.

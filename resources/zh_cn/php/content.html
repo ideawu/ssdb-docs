@@ -1556,6 +1556,28 @@ $ssdb-&gt;qget('q', -2);
 </pre>
 
 
+<a name="m-qrange"></a>
+<h3>qrange</h3>
+
+<h4><em>说明</em></h4>
+<p>返回下标处于区域 [offset, offset + limit] 的元素.</p>
+
+<h4><em>参数</em></h4>
+<dl>
+	<dd><code>name</code> - queue 的名字.</dd>
+	<dd><code>offset</code> - 整数, 从此下标处开始返回. 从 0 开始. 可以是负数, 表示从末尾算起.</dd>
+	<dd><code>limit</code> - 正整数, 最多返回这么多个元素.</dd>
+</dl>
+
+<h4><em>返回值</em></h4>
+<p>如果出错则返回 <code>false</code>, 否则返回数组.</p>
+
+<h4><em>示例</em></h4>
+<pre>
+$ssdb-&gt;qrange('q', 0, 10);
+</pre>
+
+
 <a name="m-qslice"></a>
 <h3>qslice</h3>
 

@@ -1556,6 +1556,28 @@ $ssdb-&gt;qget('q', -2);
 </pre>
 
 
+<a name="m-qrange"></a>
+<h3>qrange</h3>
+
+<h4><em>Description</em></h4>
+<p>Returns a portion of elements from the queue at the specified range [offset, offset + limit].</p>
+
+<h4><em>Parameters</em></h4>
+<dl>
+	<dd><code>name</code> - </dd>
+	<dd><code>offset</code> - </dd>
+	<dd><code>limit</code> - </dd>
+</dl>
+
+<h4><em>Return Value</em></h4>
+<p><code>false</code> on error, otherwise an array containing items.</p>
+
+<h4><em>Example</em></h4>
+<pre>
+$ssdb-&gt;qrange('q', 0, -1);
+</pre>
+
+
 <a name="m-qslice"></a>
 <h3>qslice</h3>
 

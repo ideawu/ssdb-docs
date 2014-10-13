@@ -2,7 +2,7 @@
 
 ##  使用 ssdb-cli
 
-Use ssdb-cli to connect to a ssdb server.
+使用 ssdb-cli 连接到 SSDB 服务器.
 
 	# backup current database into file backup.ssdb
 	ssdb 127.0.0.1:8888> export backup.ssdb
@@ -10,7 +10,7 @@ Use ssdb-cli to connect to a ssdb server.
 	# import backup.ssdb into current database
 	ssdb 127.0.0.1:8888> import backup.ssdb
 
-Notice: the import command will replace existing key(s).
+<span class="label label-warning" style="font-size: 120%;">注意</span> import 命令会把数据库中的相同 key 给替换.
 
 ## 备份 SSDB 数据
 

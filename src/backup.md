@@ -10,7 +10,7 @@ Use ssdb-cli to connect to a ssdb server.
 	# import backup.ssdb into current database
 	ssdb 127.0.0.1:8888> import backup.ssdb
 
-Notice: the import command will replace existing key(s).
+<span class="label label-warning" style="font-size: 120%;">Notice</span> The import command will replace existing key(s).
 
 ## Backup with ssdb-dump
 

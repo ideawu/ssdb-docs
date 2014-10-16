@@ -4,15 +4,39 @@
 
 使用 ssdb-cli 连接到 SSDB 服务器.
 
+### 导出
+
+导出整个数据库:
+
 	# backup current database into file backup.ssdb
 	ssdb 127.0.0.1:8888> export backup.ssdb
-	
+
+按照 Key 区间导出数据库(交互模式):
+
+	ssdb 127.0.0.1:8888> export -i a
+	input KV range[start, end]: 
+	  start(inclusive, default none): a
+	    end(inclusive, default none): z
+	input HASH range: 
+	  start(inclusive, default none): 
+	    end(inclusive, default none): 
+	input ZSET range: 
+	  start(inclusive, default none): 
+	    end(inclusive, default none): 
+	input QUEUE range: 
+	  start(inclusive, default none): 
+	    end(inclusive, default none): 
+
+命令 `export -i a` 将导出区间 [a, z] 内的 KV, 所有的 HASH, ZSET, QUEUE.
+
+### 导入
+
 	# import backup.ssdb into current database
 	ssdb 127.0.0.1:8888> import backup.ssdb
 
 <span class="label label-warning" style="font-size: 120%;">注意</span> import 命令会把数据库中的相同 key 给替换.
 
-## 备份 SSDB 数据
+## 使用 ssdb-dump
 
 用来备份 SSDB 数据的工具是 ```ssdb-dump```.
 

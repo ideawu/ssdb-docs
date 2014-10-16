@@ -72,13 +72,15 @@ SSDB 支持 Redis 协议和客户端, 所以你可以使用 Redis 的客户端�
 	<tr><td>del</td><td>del</td></tr>
 	<tr><td>incr/incrBy</td><td>incr</td></tr>
 	<tr><td>decr/decrBy</td><td>decr</td></tr>
-	<tr><td>getMultiple</td><td>multi_get</td></tr>
+	<tr><td>mget/getMultiple</td><td>multi_get</td></tr>
 	<tr><td>setMultiple</td><td>multi_set</td></tr>
 	<tr><td>del(multiple)</td><td>multi_del</td></tr>
 	<tr><td>keys</td><td>keys(for kv type only)</td></tr>
 	<tr><td>getset</td><td>getset</td></tr>
 	<tr><td>setnx</td><td>setnx</td></tr>
+	<tr><td>exists</td><td>exists</td></tr>
 	<tr><td>ttl</td><td>ttl</td></tr>
+	<tr><td>expire</td><td>expire</td></tr>
 	<tr><td>getbit</td><td>getbit</td></tr>
 	<tr><td>setbit</td><td>setbit</td></tr>
 	<tr><td>bitcount</td><td>redis_bitcount, countbit</td></tr>
@@ -109,7 +111,7 @@ __请非常细心地阅读此处的说明:__
 	<tr><td>del(<b>not supported</b>)</td><td>hclear</td></tr>
 	<tr><td>hget</td><td>hget</td></tr>
 	<tr><td>hset</td><td>hset</td></tr>
-	<tr><td>hdel</td><td>hdel</td></tr>
+	<tr><td>hdel, hmdel</td><td>hdel, multi_hdel</td></tr>
 	<tr><td>hIncrBy</td><td>hincr</td></tr>
 	<tr><td>hDecrBy</td><td>hdecr</td></tr>
 	<tr><td>hKeys</td><td>hkeys</td></tr>
@@ -117,6 +119,7 @@ __请非常细心地阅读此处的说明:__
 	<tr><td>hMGet</td><td>multi_hget</td></tr>
 	<tr><td>hMSet</td><td>multi_hset</td></tr>
 	<tr><td>hLen</td><td>hsize</td></tr>
+	<tr><td>hExists</td><td>hexists</td></tr>
 	<tr><td>keys</td><td>hlist(for hash type only)</td></tr>
 </tbody>
 </table>
@@ -138,12 +141,17 @@ __如果你想删除整个 hash, 那么你就必须使用 SSDB 的客户端来�
 	<tr><td>zScore</td><td>zget</td></tr>
 	<tr><td>zAdd</td><td>zset</td></tr>
 	<tr><td>zRem</td><td>zdel</td></tr>
-	<tr><td>zRange</td><td>zrange/zscan</td></tr>
+	<tr><td>zRange</td><td>zrange</td></tr>
+	<tr><td>zRevRange</td><td>zrrange</td></tr>
 	<tr><td>zRangeByScore</td><td>zscan</td></tr>
+	<tr><td>zRevRangeByScore</td><td>zrscan</td></tr>
 	<tr><td>zIncrBy</td><td>zincr</td></tr>
 	<tr><td>zDecrBy</td><td>zdecr</td></tr>
 	<tr><td>zCount</td><td>zcount</td></tr>
+	<tr><td>zSum</td><td>zsum</td></tr>
+	<tr><td>zAvg</td><td>zavg</td></tr>
 	<tr><td>zCard</td><td>zsize</td></tr>
+	<tr><td>zRank</td><td>zrank</td></tr>
 	<tr><td>zRemRangeByRank</td><td>zremrangebyrank</td></tr>
 	<tr><td>zRemRangeByScore</td><td>zremrangebyscore</td></tr>
 	<tr><td>keys</td><td>zlist(for zset type only)</td></tr>
@@ -169,7 +177,7 @@ __如果你想删除整个 zset, 那么你就必须使用 SSDB 的客户端来�
 	<tr><td>rpush</td><td>qpush_back</td></tr>
 	<tr><td>lpop</td><td>qpop_front</td></tr>
 	<tr><td>rpop</td><td>qpop_back</td></tr>
-	<tr><td>lrange</td><td>qrange/qslice</td></tr>
+	<tr><td>lrange</td><td>qslice</td></tr>
 	<tr><td>lindex, lget</td><td>qget</td></tr>
 	<tr><td>keys</td><td>qlist(for queue/list type only)</td></tr>
 </tbody>

@@ -178,6 +178,7 @@ __If you want to delete a zset entirely, you have to use a SSDB client to execut
 	<tr><td>rpop</td><td>qpop_back</td></tr>
 	<tr><td>lrange</td><td>qslice</td></tr>
 	<tr><td>lindex, lget</td><td>qget</td></tr>
+	<tr><td>lset</td><td>qset</td></tr>
 	<tr><td>keys</td><td>qlist(for queue/list type only)</td></tr>
 </tbody>
 </table>

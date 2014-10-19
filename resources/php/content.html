@@ -1544,7 +1544,7 @@ $ssdb-&gt;qback('q');
 <h4><em>Parameters</em></h4>
 <dl>
 	<dd><code>name</code> - </dd>
-	<dd><code>index</code> - </dd>
+	<dd><code>index</code> - negative intexes accepted.</dd>
 </dl>
 
 <h4><em>Return Value</em></h4>
@@ -1553,6 +1553,29 @@ $ssdb-&gt;qback('q');
 <h4><em>Example</em></h4>
 <pre>
 $ssdb-&gt;qget('q', -2);
+</pre>
+
+
+<a name="m-qset"></a>
+<h3>qset</h3>
+<p>Since: 1.7.0.0</p>
+
+<h4><em>Description</em></h4>
+<p>Sets the list element at index to value. An error is returned for out of range indexes.</p>
+
+<h4><em>Parameters</em></h4>
+<dl>
+	<dd><code>name</code> - </dd>
+	<dd><code>index</code> - negative intexes accepted.</dd>
+	<dd><code>val</code> - </dd>
+</dl>
+
+<h4><em>Return Value</em></h4>
+<p><code>false</code> on error, other values indicate OK.</p>
+
+<h4><em>Example</em></h4>
+<pre>
+$ssdb-&gt;qset('q', 0, 'new val');
 </pre>
 
 

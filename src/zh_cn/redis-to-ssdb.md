@@ -179,6 +179,7 @@ __如果你想删除整个 zset, 那么你就必须使用 SSDB 的客户端来�
 	<tr><td>rpop</td><td>qpop_back</td></tr>
 	<tr><td>lrange</td><td>qslice</td></tr>
 	<tr><td>lindex, lget</td><td>qget</td></tr>
+	<tr><td>lset</td><td>qset</td></tr>
 	<tr><td>keys</td><td>qlist(for queue/list type only)</td></tr>
 </tbody>
 </table>

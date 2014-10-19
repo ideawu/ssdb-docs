@@ -1544,7 +1544,7 @@ $ssdb-&gt;qback('q');
 <h4><em>参数</em></h4>
 <dl>
 	<dd><code>name</code> - </dd>
-	<dd><code>index</code> - </dd>
+	<dd><code>index</code> - 可传负数.</dd>
 </dl>
 
 <h4><em>返回值</em></h4>
@@ -1553,6 +1553,29 @@ $ssdb-&gt;qback('q');
 <h4><em>示例</em></h4>
 <pre>
 $ssdb-&gt;qget('q', -2);
+</pre>
+
+
+<a name="m-qset"></a>
+<h3>qset</h3>
+<p>Since: 1.7.0.0</p>
+
+<h4><em>说明</em></h4>
+<p>更新位于 index 位置的元素. 如果超过现有的元素范围, 会返回错误.</p>
+
+<h4><em>参数</em></h4>
+<dl>
+	<dd><code>name</code> - </dd>
+	<dd><code>index</code> - 可传负数.</dd>
+	<dd><code>val</code> - </dd>
+</dl>
+
+<h4><em>返回值</em></h4>
+<p>出错则返回 <code>false</code>, 其它值表示正常.</p>
+
+<h4><em>示例</em></h4>
+<pre>
+$ssdb-&gt;qset('q', 0, 'new val');
 </pre>
 
 

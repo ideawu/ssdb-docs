@@ -305,6 +305,8 @@ $ssdb-&gt;del('key');
 <a name="m-incr"></a>
 <h3>incr</h3>
 
+<p><b>从 1.7.0.1 起, 如果 value 不能转换成整数, *incr 会返回错误.</b></p>
+
 <h4><em>说明</em></h4>
 <p>使 <code>key</code> 对应的值增加 <code>num</code>. 参数 <code>num</code> 可以为负数. 如果原来的值不是整数(字符串形式的整数), 它会被先转换成整数.</p>
 
@@ -671,6 +673,8 @@ $ssdb-&gt;hdel('h', 'key');
 
 <a name="m-hincr"></a>
 <h3>hincr</h3>
+
+<p><b>从 1.7.0.1 起, 如果 value 不能转换成整数, *incr 会返回错误.</b></p>
 
 <h4><em>说明</em></h4>
 <p>使 hashmap 中的 <code>key</code> 对应的值增加 <code>num</code>. 参数 <code>num</code> 可以为负数. 如果原来的值不是整数(字符串形式的整数), 它会被先转换成整数.</p>

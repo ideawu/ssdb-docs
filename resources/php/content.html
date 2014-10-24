@@ -303,6 +303,8 @@ $ssdb-&gt;del('key');
 <a name="m-incr"></a>
 <h3>incr</h3>
 
+<p><b>Since 1.7.0.1, *incr methods return error if value cannot be converted to integer.</b></p>
+
 <h4><em>Description</em></h4>
 <p>Increment the number stored at <code>key</code> by <code>num</code>. The <code>num</code> argument could be a negative integer. The old number is first converted to an integer before increment, assuming it was stored as literal integer.</p>
 
@@ -668,6 +670,8 @@ $ssdb-&gt;hdel('h', 'key');
 
 <a name="m-hincr"></a>
 <h3>hincr</h3>
+
+<p><b>Since 1.7.0.1, *incr methods return error if value cannot be converted to integer.</b></p>
 
 <h4><em>Description</em></h4>
 <p>Increment the number stored at <code>key</code> in a hashmap by <code>num</code>. The <code>num</code> argument could be a negative integer. The old number is first converted to an integer before increment, assuming it was stored as literal integer.</p>

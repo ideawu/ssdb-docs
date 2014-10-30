@@ -1124,9 +1124,9 @@ $ssdb-&gt;zkeys('z', '', 1, 100, 10);
 <h3>zscan</h3>
 
 <h4><em>说明</em></h4>
-<p>列出 zset 中处于区间 (key_start+score_start, score_end] 的 key-score 列表. 如果 key_start 为空, 那么对应权重值大于或者等于 score_start 的 key 将被返回. 如果 key_start 不为空, 那么对应权重值大于 score_start 的 key, 和大于 key_start 且对应权重值等于 score_start 的 key 将被返回.</p>
+<p>列出 zset 中处于区间 (key_start+score_start, score_end] 的 key-score 列表. 如果 key_start 为空, 那么对应权重值大于或者等于 score_start 的 key 将被返回. 如果 key_start 不为空, 那么对应权重值大于 score_start 的 key, 或者大于 key_start 且对应权重值等于 score_start 的 key 将被返回.</p>
 
-<p>也就是说, 返回的 key 在 <code>(key.score == score_start &amp;&amp; key &gt; key_start || key.score &gt; score_start), 并且 key.score &lt;= score_end</code> 区间.</p>
+<p>也就是说, 返回的 key 在 <code>(key.score == score_start &amp;&amp; key &gt; key_start || key.score &gt; score_start), 并且 key.score &lt;= score_end</code> 区间. <b>先判断 score_start, score_end, 然后判断 key_start.</b></p>
 
 <p>("", ""] 表示整个区间.</p>
 

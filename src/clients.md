@@ -78,6 +78,16 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 			This is the official client
 		</td>
 	</tr>
+	<tr>
+		<td width="15%">hissdb</td>
+		<td width="15%">eryx</td>
+		<td width="20%">
+			<a href="https://github.com/eryx/lessgo/tree/master/data/hissdb">Repository</a>
+		</td>
+		<td>
+			hissdb in lessgo.
+		</td>
+	</tr>
 </table>
 
 ### <a href="#java" name="java">Java</a>

@@ -78,6 +78,16 @@ SSDB 源码仓库中, 内置了许多语言的客户端, 这些便是所谓的__
 			官方客户端
 		</td>
 	</tr>
+	<tr>
+		<td width="15%">hissdb</td>
+		<td width="15%">eryx</td>
+		<td width="20%">
+			<a href="https://github.com/eryx/lessgo/tree/master/data/hissdb">Repository</a>
+		</td>
+		<td>
+			在 lessgo 项目中的 hissdb.
+		</td>
+	</tr>
 </table>
 
 ### <a href="#java" name="java">Java</a>

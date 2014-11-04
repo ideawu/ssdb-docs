@@ -85,7 +85,7 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 			<a href="https://github.com/eryx/lessgo/tree/master/data/hissdb">Repository</a>
 		</td>
 		<td>
-			hissdb in lessgo.
+			hissdb in lessgo, supports connection pool.
 		</td>
 	</tr>
 </table>

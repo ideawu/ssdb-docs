@@ -85,7 +85,7 @@ SSDB 源码仓库中, 内置了许多语言的客户端, 这些便是所谓的__
 			<a href="https://github.com/eryx/lessgo/tree/master/data/hissdb">Repository</a>
 		</td>
 		<td>
-			在 lessgo 项目中的 hissdb.
+			在 lessgo 项目中的 hissdb, 支持连接池.
 		</td>
 	</tr>
 </table>

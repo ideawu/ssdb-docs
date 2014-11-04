@@ -138,5 +138,5 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 ![](http://ssdb.io/img/ssdb-users/duoshuo.com.png)
 
-[Duoshuo](http://duoshuo.com/) is the No. 1 comment hosting service in China. Duoshuo store comment objects in SSDB.
+[Duoshuo](http://duoshuo.com/) is the No. 1 comment hosting service in China. Duoshuo store data about commented objects in SSDB.
 

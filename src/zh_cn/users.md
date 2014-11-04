@@ -128,6 +128,14 @@ SSDB 在 [百度](http://www.baidu.com/) 的一些服务中用作缓存服务.
 
 [京东商城](http://jd.com/) 是中国最大的自营式电商企业. 京东商城将 SSDB 应用在多个线上业务中.
 
+---
+
+## <a href="#duoshuo" name="duoshuo">多说评论</a>
+
+![](http://ssdb.io/img/ssdb-users/duoshuo.com.png)
+
+[多说评论](http://jd.com/) 是中国下载量第1的评论系统. 多说采用 SSDB 数据库存储其最核心的评论数据, 如评论内容, 评论列表等等, 
+
 
 
 

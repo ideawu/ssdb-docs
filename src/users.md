@@ -132,3 +132,11 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 [JD.com](http://jd.com/) the largest online direct sales company in China in terms of transaction volume with a market share in China. JD.com uses SSDB in many online services.
 
+---
+
+## <a href="#duoshuo" name="duoshuo">Duoshuo</a>
+
+![](http://ssdb.io/img/ssdb-users/duoshuo.com.png)
+
+[Duoshuo](http://duoshuo.com/) is the No. 1 comment hosting service in China. Duoshuo store its most important comments and comment lists in SSDB database.
+

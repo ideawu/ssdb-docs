@@ -12,7 +12,7 @@ The recommended client(s) for a language are marked with a <span style="color: #
 
 If you want your client be listed here, please fork the [ssdb-docs repository](https://github.com/ideawu/ssdb-docs) on GitHub and edit the ```clients.md``` file. __Submit a pull request__ and you are done. 
 
-### C++
+### <a href="#cpp" name="cpp">C++</a>
 
 ---
 
@@ -29,7 +29,7 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 	</tr>
 </table>
 
-### [Cpy](https://github.com/ideawu/cpy)
+### <a href="#cpy" name="cpy">Cpy</a>
 
 ---
 
@@ -41,12 +41,12 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 			<a href="https://github.com/ideawu/ssdb">Repository</a>
 		</td>
 		<td>
-			This is the official client
+			This is the official client. see [Cpy](https://github.com/ideawu/cpy).
 		</td>
 	</tr>
 </table>
 
-<h3>C# .Net</h3>
+<h3><a href="#cs" name="cs">C# .Net</a></h3>
 
 ---
 
@@ -63,7 +63,7 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 	</tr>
 </table>
 
-### Go
+### <a href="#go" name="go">Go</a>
 
 ---
 
@@ -80,7 +80,7 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 	</tr>
 </table>
 
-### Java
+### <a href="#java" name="java">Java</a>
 
 ---
 
@@ -107,7 +107,7 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 	</tr>
 </table>
 
-### Lua
+### <a href="#lua" name="lua">Lua</a>
 
 ---
 
@@ -124,7 +124,7 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 	</tr>
 </table>
 
-### NodeJS
+### <a href="#nodejs" name="nodejs">NodeJS</a>
 
 ---
 
@@ -151,7 +151,7 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 	</tr>
 </table>
 
-### PHP
+### <a href="#php" name="php">PHP</a>
 
 ---
 
@@ -166,9 +166,19 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 			This is the official client
 		</td>
 	</tr>
+	<tr>
+		<td width="15%">official <span style="color: #cc3;">★</span></td>
+		<td width="15%">ideawu, shen2</td>
+		<td width="20%">
+			<a href="https://packagist.org/packages/ssdb/phpssdb">Repository</a>
+		</td>
+		<td>
+			Maintained by @shen2 in Packagist.
+		</td>
+	</tr>
 </table>
 
-### Python
+### <a href="#python" name="python">Python</a>
 
 ---
 
@@ -215,7 +225,7 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 	</tr>
 </table>
 
-### Ruby
+### <a href="#ruby" name="ruby">Ruby</a>
 
 ---
 

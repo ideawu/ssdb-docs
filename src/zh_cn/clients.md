@@ -12,7 +12,7 @@ SSDB 源码仓库中, 内置了许多语言的客户端, 这些便是所谓的__
 
 如果你开发了一个客户端, 希望列在这个页面的话, 请在 GitHub 上 fork [ssdb-docs 项目](https://github.com/ideawu/ssdb-docs), 编辑 ```clients.md```, 然后提交一个 Pull Request.
 
-### C++
+### <a href="#cpp" name="cpp">C++</a>
 
 ---
 
@@ -29,7 +29,7 @@ SSDB 源码仓库中, 内置了许多语言的客户端, 这些便是所谓的__
 	</tr>
 </table>
 
-### [Cpy](https://github.com/ideawu/cpy)
+### <a href="#cpy" name="cpy">Cpy</a>
 
 ---
 
@@ -41,12 +41,12 @@ SSDB 源码仓库中, 内置了许多语言的客户端, 这些便是所谓的__
 			<a href="https://github.com/ideawu/ssdb">Repository</a>
 		</td>
 		<td>
-			官方客户端
+			官方客户端. see [Cpy](https://github.com/ideawu/cpy).
 		</td>
 	</tr>
 </table>
 
-<h3>C# .Net</h3>
+<h3><a href="#cs" name="cs">C# .Net</a></h3>
 
 ---
 
@@ -63,7 +63,7 @@ SSDB 源码仓库中, 内置了许多语言的客户端, 这些便是所谓的__
 	</tr>
 </table>
 
-### Go
+### <a href="#go" name="go">Go</a>
 
 ---
 
@@ -80,7 +80,7 @@ SSDB 源码仓库中, 内置了许多语言的客户端, 这些便是所谓的__
 	</tr>
 </table>
 
-### Java
+### <a href="#java" name="java">Java</a>
 
 ---
 
@@ -107,7 +107,7 @@ SSDB 源码仓库中, 内置了许多语言的客户端, 这些便是所谓的__
 	</tr>
 </table>
 
-### Lua
+### <a href="#lua" name="lua">Lua</a>
 
 ---
 
@@ -124,7 +124,7 @@ SSDB 源码仓库中, 内置了许多语言的客户端, 这些便是所谓的__
 	</tr>
 </table>
 
-### NodeJS
+### <a href="#nodejs" name="nodejs">NodeJS</a>
 
 ---
 
@@ -151,7 +151,7 @@ SSDB 源码仓库中, 内置了许多语言的客户端, 这些便是所谓的__
 	</tr>
 </table>
 
-### PHP
+### <a href="#php" name="php">PHP</a>
 
 ---
 
@@ -166,9 +166,19 @@ SSDB 源码仓库中, 内置了许多语言的客户端, 这些便是所谓的__
 			官方客户端
 		</td>
 	</tr>
+	<tr>
+		<td width="15%">官方 <span style="color: #cc3;">★</span></td>
+		<td width="15%">ideawu, shen2</td>
+		<td width="20%">
+			<a href="https://packagist.org/packages/ssdb/phpssdb">Repository</a>
+		</td>
+		<td>
+			由 @shen2 维护于 Packagist.
+		</td>
+	</tr>
 </table>
 
-### Python
+### <a href="#python" name="python">Python</a>
 
 ---
 
@@ -215,7 +225,7 @@ SSDB 源码仓库中, 内置了许多语言的客户端, 这些便是所谓的__
 	</tr>
 </table>
 
-### Ruby
+### <a href="#ruby" name="ruby">Ruby</a>
 
 ---
 

@@ -128,6 +128,7 @@
 						<li><a href="./install.html">Installation</a></li>
 						<li><a href="./commands.html">Commands</a></li>
 						<li><a href="./config.html">Configuration</a></li>
+						<li><a href="./clients.html">Clients</a></li>
 						<li><a href="./protocol.html">SSDB Network Protocol</a></li>
 						<li class="divider"></li>
 						<li><a href="./php/index.html">PHP API Doc</a></li>

@@ -134,7 +134,7 @@ SSDB 在 [百度](http://www.baidu.com/) 的一些服务中用作缓存服务.
 
 ![](http://ssdb.io/img/ssdb-users/duoshuo.com.png)
 
-[多说评论](http://jd.com/) 是中国下载量第1的评论系统. 多说采用 SSDB 数据库存储其最核心的评论数据, 如评论内容, 评论列表等等, 
+[多说评论](http://jd.com/) 是中国下载量第1的评论系统. 多说采用 SSDB 数据库存储评论对象的数据, 
 
 
 

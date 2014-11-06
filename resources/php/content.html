@@ -37,6 +37,7 @@
 		padding: 8px;
 		border-top: 1px solid #ccc;
 	}
+	h4 em{font-weight: bold;}
 	</style>
 </head>
 <body>
@@ -49,12 +50,12 @@
 
 <dl>
 	<dd>@author: <a href="http://www.ideawu.com/">ideawu</a></dd>
-	<dd>@updated: 2014-06-08</dd>
+	<dd>@updated: 2014-11-05</dd>
 </dl>
 
 <p>SSDB is a high performance NoSQL database, an alternative for Redis, the official website is <a href="http://ssdb.io/" target="_blank">http://ssdb.io</a>. This documentation describes the PHP client API of SSDB.</p>
 
-<p>Notice: The phrase "hashmap" means "hash", "map" in SSDB.</p>
+<p>Notice: The phrases "hashmap", "hash", "map" are equivelant in SSDB.</p>
 
 <h2>Class SimpleSSDB</h2>
 
@@ -1726,6 +1727,48 @@ $ssdb-&gt;qpop_back('q');
 </pre>
 
 
+<a name="m-qtrim_front"></a>
+<h3>qtrim_front</h3>
+
+<h4><em>Description</em></h4>
+<p>Remove multi elements from the head of a queue.</p>
+
+<h4><em>Parameters</em></h4>
+<dl>
+	<dd><code>name</code> - </dd>
+	<dd><code>size</code> - number of elements to delete.</dd>
+</dl>
+
+<h4><em>Return Value</em></h4>
+<p><code>false</code> on error. Return the number of elements removed.</p>
+
+<h4><em>Example</em></h4>
+<pre>
+$ssdb-&gt;qtrim_front('q', 3);
+</pre>
+
+
+<a name="m-qtrim_back"></a>
+<h3>qtrim_back</h3>
+
+<h4><em>Description</em></h4>
+<p>Remove multi elements from the tail of a queue.</p>
+
+<h4><em>Parameters</em></h4>
+<dl>
+	<dd><code>name</code> - </dd>
+	<dd><code>size</code> - number of elements to delete.</dd>
+</dl>
+
+<h4><em>Return Value</em></h4>
+<p><code>false</code> on error. Return the number of elements removed.</p>
+
+<h4><em>Example</em></h4>
+<pre>
+$ssdb-&gt;qtrim_back('q', 3);
+</pre>
+
+
 
 
 
@@ -1738,6 +1781,8 @@ $ssdb-&gt;qpop_back('q');
 <h4><em>Description</em></h4>
 <p>Execute a batch of commands. Batch Commands can reduce the round trip time(rtt) between SSDB client and the server.</p>
 
+<p><b>This feature is implemented in client side, the ssdb-server does not support batch command execution. The server will execute each command as if they are separated. The total amount of the commands and arguments must be less than 10MB.</b></p>
+
 <h4><em>Parameters</em></h4>
 <dl>
 	<dd></dd>
@@ -1748,7 +1793,7 @@ $ssdb-&gt;qpop_back('q');
 
 <h4><em>Example</em></h4>
 <pre>
-$ssdb-&gt;batch()
+$ret = $ssdb-&gt;batch()
 	-&gt;set('a', 1)
 	-&gt;get('a')
 	-&gt;exec();
@@ -1756,30 +1801,47 @@ $ssdb-&gt;batch()
 $ssdb-&gt;batch();
 $ssdb-&gt;set('a', 1);
 $ssdb-&gt;get('a');
-$ssdb-&gt;exec();
+$ret = $ssdb-&gt;exec();
 </pre>
 
 
-<!--
-<a name="m-"></a>
-<h3></h3>
+<a name="m-dbsize"></a>
+<h3>dbsize</h3>
 
 <h4><em>Description</em></h4>
-<p></p>
+<p>Return the <b>approximate</b> size of the database, in bytes. If the server enable compression, the size will be of the compressed data.</p>
 
 <h4><em>Parameters</em></h4>
 <dl>
-	<dd><code></code> - </dd>
 </dl>
 
 <h4><em>Return Value</em></h4>
-<p><code>false</code> on error, otherwise an associative array containing the key-value pairs.</p>
+<p><code>false</code> on error. Return approximate size of the database, in bytes.</p>
 
 <h4><em>Example</em></h4>
 <pre>
-$ssdb-&gt;rscan('a', 'z', 10);
+$ssdb-&gt;dbsize();
 </pre>
--->
+
+
+<a name="m-info"></a>
+<h3>info</h3>
+
+<h4><em>Description</em></h4>
+<p>Return information about the server.</p>
+
+<h4><em>Parameters</em></h4>
+<dl>
+	<dd><code>opt</code> - optional, could be <code>cmd, leveldb</code></dd>
+</dl>
+
+<h4><em>Return Value</em></h4>
+<p><code>false</code> on error. Return an associative array of information about the server.</p>
+
+<h4><em>Example</em></h4>
+<pre>
+$ssdb-&gt;info();
+</pre>
 
 
 

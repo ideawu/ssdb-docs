@@ -50,22 +50,64 @@ SSDB 的命令行工具 ```ssdb-cli``` 对于 SSDB 的管理非常有用, 你可
 
 	ssdb 127.0.0.1:8899> info
 	version
-		1.6.7
-	key_range.kv
-		"TES10" - "TEST999926"
-	key_range.hash
-		"" - ""
-	key_range.zset
-		"" - ""
+	    1.8.0
+	links
+	    1
+	total_calls
+	    4
+	dbsize
+	    1829
+	binlogs
+        capacity : 10000000
+        min_seq  : 1
+        max_seq  : 74
+	replication
+	    client 127.0.0.1:55479
+	        type     : sync
+	        status   : SYNC
+	        last_seq : 73
+	replication
+	    slaveof 127.0.0.1:8888
+	        id         : svc_2
+	        type       : sync
+	        status     : SYNC
+	        last_seq   : 73
+	        copy_count : 0
+	        sync_count : 44
 	leveldb.stats
-                                      Compactions
-        Level  Files Size(MB) Time(sec) Read(MB) Write(MB)
-        --------------------------------------------------
-          0        0        0         1        0       103
-          1        0        0         3      202       361
-          2        8      253        18      938       928
+	                     Compactions
+	    Level  Files Size(MB) Time(sec) Read(MB) Write(MB)
+	    --------------------------------------------------
+	      0        0        0         0        0         0
+	      1        1        0         0        0         0
 	
-	11 result(s) (0.001 sec)
+	25 result(s) (0.001 sec)
+
+__links__
+
+当前服务器的连接数.
+
+__dbsize__
+
+数据库*预估*的大小, 字节数. 如果服务器开启了压缩, 这个大小是压缩后的大小.
+
+__binlogs__
+
+* capacity: binlog 队列的最大长度
+* min_seq: 当前队列中的最小 binlog 序号
+* max_seq: 当前队列中的最大 binlog 序号
+
+__replication__
+
+可以有多条记录. 每一条表示一个连接进来的 slave(*client*), 或者一个当前服务器所连接的 master(*slaveof*).
+
+* slaveof|client ip:port, 远端 master/slave 的 ip:port.
+* type: 类型, sync 或者 mirror.
+* status: 当前同步状态.
+* last_seq: 上一条发送或者收到的 binlog 的序号.
+* slaveof.id: master 的 id(这是从 slave's 角度来看的, 你永远不需要在 master 上配置它自己的 id).
+* slaveof.copy_count: 在全量同步时, 已经复制的 key 的数量.
+* slaveof.sync_count: 发送或者收到的 binlog 的数量.
 
 __key\_range.*__
 

@@ -46,26 +46,68 @@ If you see strange outputs in the screen after queries, copy this whole line int
 
 ### info
 
-The ```info``` show the basic info about data stored in SSDB, and the health degree of LevelDB.
+The ```info``` command shows the basic info about data stored in SSDB, and the health degree of LevelDB.
 
 	ssdb 127.0.0.1:8899> info
 	version
-		1.6.7
-	key_range.kv
-		"TES10" - "TEST999926"
-	key_range.hash
-		"" - ""
-	key_range.zset
-		"" - ""
+	    1.8.0
+	links
+	    1
+	total_calls
+	    4
+	dbsize
+	    1829
+	binlogs
+        capacity : 10000000
+        min_seq  : 1
+        max_seq  : 74
+	replication
+	    client 127.0.0.1:55479
+	        type     : sync
+	        status   : SYNC
+	        last_seq : 73
+	replication
+	    slaveof 127.0.0.1:8888
+	        id         : svc_2
+	        type       : sync
+	        status     : SYNC
+	        last_seq   : 73
+	        copy_count : 0
+	        sync_count : 44
 	leveldb.stats
-                                      Compactions
-        Level  Files Size(MB) Time(sec) Read(MB) Write(MB)
-        --------------------------------------------------
-          0        0        0         1        0       103
-          1        0        0         3      202       361
-          2        8      253        18      938       928
+	                     Compactions
+	    Level  Files Size(MB) Time(sec) Read(MB) Write(MB)
+	    --------------------------------------------------
+	      0        0        0         0        0         0
+	      1        1        0         0        0         0
 	
-	11 result(s) (0.001 sec)
+	25 result(s) (0.001 sec)
+
+__links__
+
+The number of currently connected connections(links).
+
+__dbsize__
+
+The *approximate* size of the database, in bytes. If the server enable compression, the size will be of the compressed data.
+
+__binlogs__
+
+* capacity: the maximum count of binlogs in the queue.
+* min_seq: currently minimum seq of binlog in the queue.
+* max_seq: currently maximum seq of binlog in the queue.
+
+__replication__
+
+Could be multiple. Each describes a connected slave(*client*) or connection to a master(*slaveof*).
+
+* slaveof|client ip:port, the remote master/slave's ip:port.
+* type: sync or mirror.
+* status: replication status.
+* last_seq: seq of the last binlog sent or received.
+* slaveof.id: the master's id(from the slave's view, you never configure a master'id in the master itself).
+* slaveof.copy_count: number of keys copied during a full replication from the master.
+* slaveof.sync_count: number of binglogs sent or received.
 
 __key\_range.*__
 

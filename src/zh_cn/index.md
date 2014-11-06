@@ -2,7 +2,7 @@
 
 SSDB 是一个 C/C++ 语言开发的高性能 NoSQL 数据库, 支持 KV, list, map(hash), zset(sorted set) 等数据结构, 用来替代或者与 Redis 配合存储十亿级别列表的数据.
 
-SSDB 是稳定的, 生产环境使用的, 已经在许多互联网公司得到广泛使用, 如奇虎 360, TOPGAME.
+SSDB 是稳定的, 生产环境使用的, 已经在[许多互联网公司得到广泛使用](./users.html), 如奇虎 360, TOPGAME.
 
 ## 开始
 

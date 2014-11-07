@@ -136,6 +136,13 @@ SSDB 在 [百度](http://www.baidu.com/) 的一些服务中用作缓存服务.
 
 [多说评论](http://jd.com/) 是中国下载量第1的评论系统. 多说采用 SSDB 数据库存储评论对象的数据, 
 
+---
+
+## <a href="#dnspod" name="dnspod">DNSPOD</a>
+
+![](http://ssdb.io/img/ssdb-users/dnspod.cn.png)
+
+[DNSPOD](http://dnspod.cn/) 是中国最大的DNS域名解析商和域名托管商, 全球排名第四位. DNSPOD 将 SSDB 用在其离线的大日志分析系统.
 
 
 

@@ -140,3 +140,14 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 [Duoshuo](http://duoshuo.com/) is the No. 1 comment hosting service in China. Duoshuo store data about commented objects in SSDB.
 
+---
+
+## <a href="#dnspod" name="dnspod">DNSPOD</a>
+
+![](http://ssdb.io/img/ssdb-users/dnspod.cn.png)
+
+[DNSPOD](http://dnspod.cn/) is China's biggest DNS service provider, it uses SSDB with offline log analytics.
+
+
+
+

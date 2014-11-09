@@ -9,4 +9,16 @@
 		<td>Max value length</td>
 		<td>31MB</td>
 	</tr>
+	<tr>
+		<td>Max elements in a HASH</td>
+		<td>9,223,372,036,854,775,807</td>
+	</tr>
+	<tr>
+		<td>Max elements in a ZSET</td>
+		<td>9,223,372,036,854,775,807</td>
+	</tr>
+	<tr>
+		<td>Max elements in a QUEUE</td>
+		<td>9,223,372,036,854,775,807</td>
+	</tr>
 </table>

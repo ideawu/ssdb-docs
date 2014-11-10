@@ -144,6 +144,14 @@ SSDB 在 [百度](http://www.baidu.com/) 的一些服务中用作缓存服务.
 
 [DNSPOD](http://dnspod.cn/) 是中国最大的DNS域名解析商和域名托管商, 全球排名第四位. DNSPOD 将 SSDB 用在其离线的大日志分析系统.
 
+---
+
+## <a href="#toutiao" name="toutiao">今日头条</a>
+
+![](http://ssdb.io/img/ssdb-users/toutiao.com.png)
+
+[今日头条](http://toutiao.com/) 是一款基于数据挖掘的推荐引擎产品, 是国内移动互联网领域成长最快的产品服务之一, 服务于 9000 多万用户. 今日头条将 SSDB 应用于其关键的线上服务.
+
 
 
 

@@ -148,6 +148,13 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 [DNSPOD](http://dnspod.cn/) is China's biggest DNS service provider, it uses SSDB with offline log analytics.
 
+---
+
+## <a href="#toutiao" name="toutiao">Toutiao</a>
+
+![](http://ssdb.io/img/ssdb-users/toutiao.com.png)
+
+[Toutiao](http://toutiao.com/) is a information recommend service based on Data Mining technology, it serves more than 90 million users. Toutiao uses SSDB on its most important online service.
 
 
 

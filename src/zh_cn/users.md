@@ -152,6 +152,14 @@ SSDB 在 [百度](http://www.baidu.com/) 的一些服务中用作缓存服务.
 
 [今日头条](http://toutiao.com/) 是一款基于数据挖掘的推荐引擎产品, 是国内移动互联网领域成长最快的产品服务之一, 服务于 9000 多万用户. 今日头条将 SSDB 应用于其关键的线上服务.
 
+---
+
+## <a href="#3wmm" name="3wmm">3WMM</a>
+
+![](http://ssdb.io/img/ssdb-users/3wmm.com.png)
+
+[3WMM](http://www.3wmm.com/) 3wmm小游戏是国内具有较强影响力的Flash小游戏网站, 3wmm 使用 SSDB 作为其 cache 服务.
+
 
 
 

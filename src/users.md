@@ -156,5 +156,13 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 [Toutiao](http://toutiao.com/) is a information recommend service based on Data Mining technology, it serves more than 90 million users. Toutiao uses SSDB on its most important online service.
 
+---
+
+## <a href="#3wmm" name="3wmm">3WMM</a>
+
+![](http://ssdb.io/img/ssdb-users/3wmm.com.png)
+
+[3WMM](http://www.3wmm.com/) is a Flash game website, 3wmm uses SSDB as cache service.
+
 
 

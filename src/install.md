@@ -49,6 +49,8 @@ or
 	./tools/ssdb-cli -p 8888
 	
 	# stop ssdb-server
+	./ssdb-server ssdb.conf -s stop
+	# for older version
 	kill `cat ./var/ssdb.pid`
 
 By now, you will have to manage the ```ssdb-server``` process(es) manually, if you want to set it to start and stop along with the system, follow the instructions below.

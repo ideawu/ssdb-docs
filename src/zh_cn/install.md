@@ -49,6 +49,8 @@
 	./tools/ssdb-cli -p 8888
 	
 	# 停止 ssdb-server
+	./ssdb-server ssdb.conf -s stop
+	# 对于旧版本
 	kill `cat ./var/ssdb.pid`
 
 到目前为止, 你需要手动管理 ```ssdb-server``` 进程, 如果你希望在操作系统启动和停止时自动地管理, 请按下面的说明进行.

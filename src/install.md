@@ -15,6 +15,8 @@ Do not run SSDB server on Windows system for a production environment. If you wi
 	# optional, install ssdb in /usr/local/ssdb
 	sudo make install
 
+### Trouble Shooting
+
 If you see error messages like this:
 
 	g++ ...deps/snappy-1.1.0/.libs/libsnappy.a: No such file or directory

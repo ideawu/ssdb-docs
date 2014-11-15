@@ -15,6 +15,8 @@
 	# 将安装在 /usr/local/ssdb 目录下
 	sudo make install
 
+### 问题解决
+
 如果出现如下错误:
 
 	g++ ...deps/snappy-1.1.0/.libs/libsnappy.a: No such file or directory

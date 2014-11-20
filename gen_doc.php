@@ -65,9 +65,9 @@ function gen_doc($file, $output_dir, $template=null){
 	$lines = file($file);
 	foreach($lines as $line){
 		if($line[0] == '`'){
-			$in_commment = $in_commment? false:true;
+			$in_comment = $in_comment? false:true;
 		}
-		if($line[0] == '#' && $line[1] != '#' && !$in_commment){
+		if($line[0] == '#' && $line[1] != '#' && !$in_comment){
 			$line = trim($line);
 			$line = trim($line, '#');
 			$line = trim($line);

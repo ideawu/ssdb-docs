@@ -170,7 +170,7 @@ SSDB 在 [百度](http://www.baidu.com/) 的一些服务中用作缓存服务.
 
 ---
 
-## <a href="#mhsx" name="mhsx">九游 - 《梦幻生肖》</a>
+## <a href="#9game" name="9game">九游 - 《梦幻生肖》</a>
 
 ![](http://ssdb.io/img/ssdb-users/9game.cn.png)
 

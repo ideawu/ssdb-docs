@@ -172,5 +172,12 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 [3WMM](http://www.3wmm.com/) is a Flash game website, 3wmm uses SSDB as cache service.
 
+---
+
+## <a href="#mhsx" name="mhsx">9game.cn</a>
+
+![](http://ssdb.io/img/ssdb-users/9game.cn.png)
+
+[MengHuanShengXiao](http://www.9game.cn/mhsx/) is a MMO game, it implements its battle system using SSDB as storage. Players' and pets' info are stored in SSDB, read or write directly everytime the game screen needs to show, or needs to save.
 
 

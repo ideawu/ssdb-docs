@@ -168,6 +168,16 @@ SSDB 在 [百度](http://www.baidu.com/) 的一些服务中用作缓存服务.
 
 [3WMM](http://www.3wmm.com/) 3wmm小游戏是国内具有较强影响力的Flash小游戏网站, 3wmm 使用 SSDB 作为其 cache 服务.
 
+---
+
+## <a href="#mhsx" name="mhsx">九游 - 《梦幻生肖》</a>
+
+![](http://ssdb.io/img/ssdb-users/9game.cn.png)
+
+[九游 - 《梦幻生肖》](http://www.9game.cn/mhsx/) 是一款回合制MMO, 其竞技场系统使用SSDB作为储存, 当用户进入竞技场和发起挑战时, 会从SSDB中读取规则内的玩家基本信息和战斗(以及宠物)属性.
+
+当玩家的排名以及玩家(或者宠物)自身属性变更时, 会立即储存到SSDB. 而且用户查看排行榜时都是及时的从SSDB中读取最新排行榜.
+
 
 
 

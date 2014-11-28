@@ -13,7 +13,7 @@
 
 按照 Key 区间导出数据库(交互模式):
 
-	ssdb 127.0.0.1:8888> export -i a
+	ssdb 127.0.0.1:8888> export -i backup.ssdb
 	input KV range[start, end]: 
 	  start(inclusive, default none): a
 	    end(inclusive, default none): z
@@ -27,7 +27,7 @@
 	  start(inclusive, default none): 
 	    end(inclusive, default none): 
 
-命令 `export -i a` 将导出区间 [a, z] 内的 KV, 所有的 HASH, ZSET, QUEUE.
+命令 `export -i backup.ssdb` 将导出区间 [a, z] 内的 KV, 所有的 HASH, ZSET, QUEUE.
 
 ### 导入
 

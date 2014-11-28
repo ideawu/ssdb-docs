@@ -13,7 +13,7 @@ Export the whole database:
 
 Export by key range(interactive mode):
 
-	ssdb 127.0.0.1:8888> export -i a
+	ssdb 127.0.0.1:8888> export -i backup.ssdb
 	input KV range[start, end]: 
 	  start(inclusive, default none): a
 	    end(inclusive, default none): z
@@ -27,7 +27,7 @@ Export by key range(interactive mode):
 	  start(inclusive, default none): 
 	    end(inclusive, default none): 
 
-The command `export -i a` will export KV in range[a, z], all HASH, ZSET, QUEUE.
+The command `export -i backup.ssdb` will export KV in range[a, z], all HASH, ZSET, QUEUE.
 
 ### Import
 

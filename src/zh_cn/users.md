@@ -178,6 +178,14 @@ SSDB 在 [百度](http://www.baidu.com/) 的一些服务中用作缓存服务.
 
 当玩家的排名以及玩家(或者宠物)自身属性变更时, 会立即储存到SSDB. 而且用户查看排行榜时都是及时的从SSDB中读取最新排行榜.
 
+---
+
+## <a href="#kuwo" name="kuwo">酷我音乐</a>
+
+![](http://ssdb.io/img/ssdb-users/kuwo.cn.png)
+
+[酷我音乐](http://www.kuwo.cn/) 酷我音乐是中国最新最全的在线正版音乐网站, 其使用 SSDB 存储专辑和歌曲的封面信息.
+
 
 
 

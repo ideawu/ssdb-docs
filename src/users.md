@@ -180,4 +180,11 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 [MengHuanShengXiao](http://www.9game.cn/mhsx/) is a MMO game, it implements its battle system using SSDB as storage. Players' and pets' info are stored in SSDB, read or write directly everytime the game screen needs to show, or needs to save.
 
+---
+
+## <a href="#kuwo" name="kuwo">Kuwo.cn</a>
+
+![](http://ssdb.io/img/ssdb-users/kuwo.cn.png)
+
+[Kuwo.cn](http://www.kuwo.cn/) is online music website, it stores album and music meta data in SSDB database.
 

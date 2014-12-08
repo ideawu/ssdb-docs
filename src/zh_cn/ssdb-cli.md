@@ -32,9 +32,9 @@ SSDB 的命令行工具 ```ssdb-cli``` 对于 SSDB 的管理非常有用, 你可
 
 在 ssdb-master 源码的目录时运行
 
-	deps\cpy\cpy tools\ssdb-cli.cpy
+	tools\ssdb-cli.bat
 
-需要安装 Python.
+需要安装 Python 2.x, 同时, 你需要将 Python 的目录加入到环境变量中的 Path 变量.
 
 ## 转义响应中的中文和二进制数据
 

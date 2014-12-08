@@ -32,9 +32,9 @@ Type in 'h', and press ```Enter``` key to see the help messages. Here is screens
 
 Run
 
-	deps\cpy\cpy tools\ssdb-cli.cpy
+	tools\ssdb-cli.bat
 
-From within the ssdb-master source code folder, Python is required.
+From within the ssdb-master source code folder, Python 2.x executable is required, also, the path must be set in the System Environment Variables.
 
 ## Escape binary data
 

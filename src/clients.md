@@ -115,6 +115,16 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 			Yet another SSDB client for Java
 		</td>
 	</tr>
+	<tr>
+		<td width="15%">another ssdb4j</td>
+		<td width="15%">jbakwd</td>
+		<td width="20%">
+			<a href="http://git.oschina.net/jbakwd/ssdbj">Repository</a>
+		</td>
+		<td>
+			
+		</td>
+	</tr>
 </table>
 
 ### <a href="#lua" name="lua">Lua</a>

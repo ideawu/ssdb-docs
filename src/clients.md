@@ -88,6 +88,16 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 			hissdb in lessgo, supports connection pool.
 		</td>
 	</tr>
+	<tr>
+		<td width="15%">gossdb</td>
+		<td width="15%">seefan</td>
+		<td width="20%">
+			<a href="https://github.com/seefan/gossdb">Repository</a>
+		</td>
+		<td>
+			From the official client derived from the client, supports the connection pool and set|get, habits and most client consistent.
+		</td>
+	</tr>
 </table>
 
 ### <a href="#java" name="java">Java</a>

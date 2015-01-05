@@ -88,6 +88,16 @@ SSDB 源码仓库中, 内置了许多语言的客户端, 这些便是所谓的__
 			在 lessgo 项目中的 hissdb, 支持连接池.
 		</td>
 	</tr>
+	<tr>
+		<td width="15%">gossdb</td>
+		<td width="15%">seefan</td>
+		<td width="20%">
+			<a href="https://github.com/seefan/gossdb">Repository</a>
+		</td>
+		<td>
+			从官方客户端派生出来的客户端，支持连接池，使用习惯与大多数客户端保持一致。
+		</td>
+	</tr>
 </table>
 
 ### <a href="#java" name="java">Java</a>

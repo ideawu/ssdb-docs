@@ -93,21 +93,11 @@ __dbsize__
 
 __binlogs__
 
-* capacity: binlog 队列的最大长度
-* min_seq: 当前队列中的最小 binlog 序号
-* max_seq: 当前队列中的最大 binlog 序号
+* 参见 [同步和复制](./replication.html)
 
 __replication__
 
-可以有多条记录. 每一条表示一个连接进来的 slave(*client*), 或者一个当前服务器所连接的 master(*slaveof*).
-
-* slaveof|client ip:port, 远端 master/slave 的 ip:port.
-* type: 类型, sync 或者 mirror.
-* status: 当前同步状态.
-* last_seq: 上一条发送或者收到的 binlog 的序号.
-* slaveof.id: master 的 id(这是从 slave's 角度来看的, 你永远不需要在 master 上配置它自己的 id).
-* slaveof.copy_count: 在全量同步时, 已经复制的 key 的数量.
-* slaveof.sync_count: 发送或者收到的 binlog 的数量.
+* 参见 [同步和复制](./replication.html)
 
 __key\_range.*__
 

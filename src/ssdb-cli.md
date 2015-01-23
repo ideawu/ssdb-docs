@@ -93,21 +93,11 @@ The *approximate* size of the database, in bytes. If the server enable compressi
 
 __binlogs__
 
-* capacity: the maximum count of binlogs in the queue.
-* min_seq: currently minimum seq of binlog in the queue.
-* max_seq: currently maximum seq of binlog in the queue.
+* See [Replication](./replication.html)
 
 __replication__
 
-Could be multiple. Each describes a connected slave(*client*) or connection to a master(*slaveof*).
-
-* slaveof|client ip:port, the remote master/slave's ip:port.
-* type: sync or mirror.
-* status: replication status.
-* last_seq: seq of the last binlog sent or received.
-* slaveof.id: the master's id(from the slave's view, you never configure a master'id in the master itself).
-* slaveof.copy_count: number of keys copied during a full replication from the master.
-* slaveof.sync_count: number of binglogs sent or received.
+* See [Replication](./replication.html)
 
 __key\_range.*__
 

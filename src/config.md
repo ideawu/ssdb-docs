@@ -37,7 +37,7 @@ The log levels are: `debug, warn, error, fatal`.
 
 Generally, I recommend you set `logger.level` to `debug`.
 
-### Write logs to console
+### Writing logs to console
 
 Edit ssdb.conf, modify
 
@@ -60,70 +60,6 @@ You can tune the configuration the limit the memory usage of a ssdb-server insta
 
 ---
 
-## Master-Slave
+## Replication
 
-### \#server 1
-
-```
-replication:
-	slaveof:
-```
-
-### \#server 2
-
-```
-replication:
-	slaveof:
-		id: svc_1
-		# sync|mirror, default is sync
-		type: sync
-		ip: 127.0.0.1
-		port: 8888
-```
-
-## Master-Master
-
-### \#server 1
-
-```
-replication:
-	slaveof:
-		id: svc_2
-		# sync|mirror, default is sync
-		type: mirror
-		ip: 127.0.0.1
-		port: 8889
-```
-
-### \#server 2
-
-```
-replication:
-	slaveof:
-		id: svc_1
-		# sync|mirror, default is sync
-		type: mirror
-		ip: 127.0.0.1
-		port: 8888
-```
-
-## Multiple Masters
-
-Within a group of SSDB servers of n instances, each instance must be slaveof other n-1 instances.
-
-```
-replication:
-	slaveof:
-		id: svc_1
-		# sync|mirror, default is sync
-		type: mirror
-		ip: 127.0.0.1
-		port: 8888
-	slaveof:
-		id: svc_2
-		# sync|mirror, default is sync
-		type: mirror
-		ip: 127.0.0.1
-		port: 8889
-	# ... more slaveof
-```
+* See also [Replication](./replication.html)

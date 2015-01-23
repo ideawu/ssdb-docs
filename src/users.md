@@ -188,3 +188,11 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 [Kuwo.cn](http://www.kuwo.cn/) is online music website, it stores album and music meta data in SSDB database.
 
+---
+
+## <a href="#qyer" name="qyer">qyer.com</a>
+
+![](http://ssdb.io/img/ssdb-users/qyer.com.png)
+
+[qyer.com](http://www.qyer.com/) a website about touring.
+

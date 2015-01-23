@@ -186,6 +186,14 @@ SSDB 在 [百度](http://www.baidu.com/) 的一些服务中用作缓存服务.
 
 [酷我音乐](http://www.kuwo.cn/) 酷我音乐是中国最新最全的在线正版音乐网站, 其使用 SSDB 存储专辑和歌曲的封面信息.
 
+---
+
+## <a href="#qyer" name="qyer">穷游网</a>
+
+![](http://ssdb.io/img/ssdb-users/qyer.com.png)
+
+[穷游网](http://www.qyer.com/) 关于旅游的网站.
+
 
 
 

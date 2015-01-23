@@ -112,7 +112,7 @@ __replication__
 * slaveof.copy_count: 在全量同步时, 已经复制的 key 的数量.
 * slaveof.sync_count: 发送或者收到的 binlog 的数量.
 
-### 状态同步状态
+### 判断同步状态
 
 `binlogs.max_seq` 是指当前实例上的最新一次的写(写/更新/删除)操作的序号, `replication.client.last_seq` 是指已发送给 slave 的最新一条 binlog 的序号.
 

@@ -20,7 +20,7 @@ SSDB 是稳定的, 生产环境使用的, 已经在[许多互联网公司得到�
 * [PHP SSDB Admin](https://github.com/ssdb/phpssdbadmin): SSDB 的图形化界面管理工具.
 * [备份](./backup.html): 导出/导入数据库.
 * [日志解读](./logs.html)
-* [同步和复制](./replication.html)
+* [同步和复制](./replication.html): 同步和复制的配置与监控
 
 ## 定义
 

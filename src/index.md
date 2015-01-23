@@ -20,7 +20,7 @@ SSDB is stable, production-ready and is widely used by [many Internet companies]
 * [PHP SSDB Admin](https://github.com/ssdb/phpssdbadmin): The SSDB administration tool with Web GUI interface.
 * [Backup](./backup.html): Export/Import database.
 * [Logs Analytics](./logs.html)
-* [Replication](./replication.html)
+* [Replication](./replication.html): Replication Configuration and Monitoring
 
 ## Specification
 

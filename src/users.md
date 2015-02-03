@@ -196,3 +196,11 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 [qyer.com](http://www.qyer.com/) a website about touring.
 
+---
+
+## <a href="#kugou" name="kugou">Kugou</a>
+
+![](http://ssdb.io/img/ssdb-users/kugou.com.png)
+
+[Kugou Music](http://www.kugou.com/) is a digital music provider in China. Kugou stores comments in SSDB database.
+

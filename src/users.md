@@ -204,3 +204,11 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 [Kugou Music](http://www.kugou.com/) is a digital music provider in China. Kugou stores comments in SSDB database.
 
+---
+
+## <a href="#sinosig" name="sinosig">Sunshine Insurance</a>
+
+![](http://ssdb.io/img/ssdb-users/sinosig.com.jpg)
+
+[Sunshine Insurance](http://www.sinosig.com/) uses SSDB database.
+

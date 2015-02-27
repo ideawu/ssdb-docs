@@ -202,5 +202,13 @@ SSDB 在 [百度](http://www.baidu.com/) 的一些服务中用作缓存服务.
 
 [酷狗音乐](http://www.kugou.com/) 是中国领先的数字音乐交互服务提供商,  互联网技术创新的领军企业, 致力于为互联网用户和数字音乐产业发展提供最佳的解决方案. 酷狗音乐使用SSDB存储玩家评论数据.
 
+---
+
+## <a href="#sinosig" name="sinosig">阳光保险</a>
+
+![](http://ssdb.io/img/ssdb-users/sinosig.com.jpg)
+
+[阳光保险](http://www.sinosig.com/) 也在使用 SSDB 数据库.
+
 
 

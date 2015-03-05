@@ -179,6 +179,27 @@ $ssdb-&gt;setx('key', 'value', 60);
 </pre>
 
 
+<a name="m-setnx"></a>
+<h3>setnx</h3>
+
+<h4><em>说明</em></h4>
+<p>当 key 不存在时, 设置指定 key 的值内容. 如果已存在, 则不设置.</p>
+
+<h4><em>参数</em></h4>
+<dl>
+	<dd><code>key</code> - </dd>
+	<dd><code>value</code> - </dd>
+</dl>
+
+<h4><em>返回值</em></h4>
+<p>出错则返回 <code>false</code>, 1: value 已经设置, 0: key 已经存在, 不更新.</p>
+
+<h4><em>示例</em></h4>
+<pre>
+$ssdb-&gt;setnx('key', 'value');
+</pre>
+
+
 <a name="m-expire"></a>
 <h3>expire</h3>
 
@@ -217,27 +238,6 @@ $ssdb-&gt;expire('key', 60);
 <h4><em>示例</em></h4>
 <pre>
 $ssdb-&gt;ttl('key');
-</pre>
-
-
-<a name="m-setnx"></a>
-<h3>setnx</h3>
-
-<h4><em>说明</em></h4>
-<p>当 key 不存在时, 设置指定 key 的值内容. 如果已存在, 则不设置.</p>
-
-<h4><em>参数</em></h4>
-<dl>
-	<dd><code>key</code> - </dd>
-	<dd><code>value</code> - </dd>
-</dl>
-
-<h4><em>返回值</em></h4>
-<p>出错则返回 <code>false</code>, 1: value 已经设置, 0: key 已经存在, 不更新.</p>
-
-<h4><em>示例</em></h4>
-<pre>
-$ssdb-&gt;setnx('key', 'value');
 </pre>
 
 

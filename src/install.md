@@ -61,6 +61,10 @@ By now, you will have to manage the ```ssdb-server``` process(es) manually, if y
 
 Assumming you have installed SSDB under the ```/usr/local/ssdb``` folder, put the ```tools/ssdb.sh``` script into ```/etc/init.d``` directory.
 
+<div class="alert alert-warning">
+Notice: For CentOS users, rename <code>ssdb.sh</code> to <code>ssdb</code>.
+</div>
+
 Edit the following lines of ```ssdb.sh```:
 
 	# each config file for one instance
@@ -70,3 +74,15 @@ Change ```/data/ssdb_data/test/ssdb.conf``` to the location of your SSDB config 
 
 	# each config file for one instance
 	configs=/data/ssdb_data/test/ssdb.conf /data/ssdb_data/demo/ssdb.conf
+
+__CentOS__
+
+<pre>
+chkconfig --add ssdb
+</pre>
+
+__Ubuntu__
+
+<pre>
+TODO:
+</pre>

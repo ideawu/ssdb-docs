@@ -23,6 +23,6 @@
 	</tr>
 	<tr>
 		<td>Max number of command arguments</td>
-		<td>all arguments do not exceed 10MB total size</td>
+		<td>all arguments do not exceed 31MB total size</td>
 	</tr>
 </table>

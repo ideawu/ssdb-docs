@@ -27,7 +27,7 @@ or
 	g++ ...deps/jemalloc-3.3.1/lib/libjemalloc.a: No such file or directory
 	make[1]: *** [all] Error 1
  
-It is because Snappy or Jemalloc is not compile sucess, maybe your system clock is wrong. Solve it by doing this:
+It is because Snappy or Jemalloc is not compiled successfully, maybe your system clock is wrong. Solve it by doing this:
 
     cd deps/snappy-1.1.0;
 	./configure

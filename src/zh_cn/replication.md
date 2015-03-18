@@ -105,12 +105,20 @@ __replication__
 可以有多条 `replication` 记录. 每一条表示一个连接进来的 slave(*client*), 或者一个当前服务器所连接的 master(*slaveof*).
 
 * slaveof|client ip:port, 远端 master/slave 的 ip:port.
-* type: 类型, sync 或者 mirror.
-* status: 当前同步状态.
+* type: 类型, `sync|mirror`.
+* status: 当前同步状态, `DISCONNECTED|INIT|OUT_OF_SYNC|COPY|SYNC`.
 * last_seq: 上一条发送或者收到的 binlog 的序号.
 * slaveof.id: master 的 id(这是从 slave's 角度来看的, 你永远不需要在 master 上配置它自己的 id).
 * slaveof.copy_count: 在全量同步时, 已经复制的 key 的数量.
 * slaveof.sync_count: 发送或者收到的 binlog 的数量.
+
+关于 status:
+
+* DISCONNECTED: 与 master 断开了连接, 一般是网络中断.
+* INIT: 初始化状态.
+* OUT_OF_SYNC: 由于短时间内在 master 有大量写操作, 导致 binlog 队列淘汰, slave 丢失同步点, 只好重新复制全部的数据.
+* COPY: 正在复制基准数据的过程中, 新的写操作可能无法及时地同步.
+* SYNC: 同步状态是健康的.
 
 ### 判断同步状态
 

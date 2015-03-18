@@ -105,12 +105,20 @@ __replication__
 There could be multiple `replication` sections. Each describes a connected slave(*client*) or connecting to a master(*slaveof*).
 
 * slaveof|client ip:port, the remote master/slave's ip:port.
-* type: sync or mirror.
-* status: replication status.
+* type: `sync|mirror`.
+* status: replication status, `DISCONNECTED|INIT|OUT_OF_SYNC|COPY|SYNC`.
 * last_seq: seq of the last binlog sent or received.
 * slaveof.id: the master's id(from the slave's view, you never configure a master'id in the master itself).
 * slaveof.copy_count: number of keys copied during a full replication from the master.
 * slaveof.sync_count: number of binglogs sent or received.
+
+About status:
+
+* DISCONNECTED: normally, this means the network is broken.
+* INIT: init.
+* OUT_OF_SYNC: because the master receives too many writes, the slave could not catch up with the binlog, it will restart the replication from beginning.
+* COPY: the base data is being copied, new write may not be replicated immediately.
+* SYNC: the replication is healthy.
 
 ### To determine the replication status
 

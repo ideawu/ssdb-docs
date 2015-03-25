@@ -200,7 +200,8 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 		<td width="15%">official <span style="color: #cc3;">★</span></td>
 		<td width="15%">ideawu, shen2</td>
 		<td width="20%">
-			<a href="https://packagist.org/packages/ssdb/phpssdb">Repository</a>
+			<a href="https://packagist.org/packages/ssdb/phpssdb">Packagist</a>
+			<a href="https://github.com/ssdb/phpssdb">Repository</a>
 		</td>
 		<td>
 			Maintained by @shen2 in Packagist.

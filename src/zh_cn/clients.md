@@ -200,7 +200,8 @@ SSDB 源码仓库中, 内置了许多语言的客户端, 这些便是所谓的__
 		<td width="15%">官方 <span style="color: #cc3;">★</span></td>
 		<td width="15%">ideawu, shen2</td>
 		<td width="20%">
-			<a href="https://packagist.org/packages/ssdb/phpssdb">Repository</a>
+			<a href="https://packagist.org/packages/ssdb/phpssdb">Packagist</a>
+			<a href="https://github.com/ssdb/phpssdb">Repository</a>
 		</td>
 		<td>
 			由 @shen2 维护于 Packagist.

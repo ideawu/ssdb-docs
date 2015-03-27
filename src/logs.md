@@ -9,7 +9,7 @@ Generally, I recommend you set `logger.level` to `debug`.
 	2014-06-18 11:01:40.335 [DEBUG] serv.cpp(395): w:0.393,p:5.356, req: set a 1, resp: ok 1
 
 * `w:0.393` request wait time, in ms
-* `p:0.393` request process time, in ms
+* `p:5.356` request process time, in ms
 * `req:...` the request
 * `resp:...` the response
 

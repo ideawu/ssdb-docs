@@ -27,6 +27,16 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 			This is the official client
 		</td>
 	</tr>
+	<tr>
+		<td width="15%">cppssdb</span></td>
+		<td width="15%">ironsdu</td>
+		<td width="20%">
+			<a href="https://github.com/IronsDu/ssdb-cpp-api">Repository</a>
+		</td>
+		<td>
+			C++ 11 async API client
+		</td>
+	</tr>
 </table>
 
 ### <a href="#cpy" name="cpy">Cpy</a>

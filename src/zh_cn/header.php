@@ -58,6 +58,13 @@
 	overflow: hidden;
 	width: 1px;
 }
+/* show menu on mouse hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+.dropdown-menu li:hover .sub-menu {
+    visibility: visible;
+}
 	.footer{
 		font-size: 12px;
 		text-align: center;

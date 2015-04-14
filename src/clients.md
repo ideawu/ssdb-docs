@@ -219,7 +219,7 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 	</tr>
 	<tr>
 		<td width="15%">phpssdb</td>
-		<td width="15%">xingqiba</td>
+		<td width="15%">星期八</td>
 		<td width="20%"><a href="https://github.com/jonnywang/ssdb">Repository</a></td>
 		<td>This is a client written in C as a PHP module for ssdb.</td>
 	</tr>

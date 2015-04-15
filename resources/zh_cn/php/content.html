@@ -388,6 +388,28 @@ $ssdb-&gt;setbit('key', 9, 1);
 </pre>
 
 
+<a name="m-bitcount"></a>
+<h3>bitcount</h3>
+
+<h4><em>说明</em></h4>
+<p>计算字符串的子串所包含的位值为 1 的个数. 若 <code>start</code> 是负数, 则从字符串末尾算起. 若 <code>end</code> 是负数, 则表示从字符串末尾算起(包含). 类似 Redis 的 <a href="http://redis.io/commands/bitcount">bitcount</a></p>
+
+<h4><em>参数</em></h4>
+<dl>
+	<dd><code>key</code> - </dd>
+	<dd><code>start</code> - 可选, 子串的字节偏移</dd>
+	<dd><code>end</code> - 可选</dd>
+</dl>
+
+<h4><em>返回值</em></h4>
+<p>返回位值为 1 的个数. 出错返回 <code>false</code>.</p>
+
+<h4><em>示例</em></h4>
+<pre>
+$ssdb-&gt;bitcount('key', 2, 10);
+</pre>
+
+
 <a name="m-countbit"></a>
 <h3>countbit</h3>
 
@@ -414,7 +436,7 @@ $ssdb-&gt;countbit('key', 2, 10);
 <h3>substr</h3>
 
 <h4><em>说明</em></h4>
-<p>获取字符串的子串. 若 <code>start</code> 是负数, 则从字符串末尾算起. 若 <code>size</code> 是负数, 则表示从字符串末尾算起, 忽略掉那么多字节.</p>
+<p>获取字符串的子串. 若 <code>start</code> 是负数, 则从字符串末尾算起. 若 <code>size</code> 是负数, 则表示从字符串末尾算起, 忽略掉那么多字节(类似 PHP 的 <a href="http://php.net/substr">substr()</a>).</p>
 
 <h4><em>参数</em></h4>
 <dl>

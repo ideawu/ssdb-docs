@@ -387,6 +387,28 @@ $ssdb-&gt;setbit('key', 7, 1);
 </pre>
 
 
+<a name="m-bitcount"></a>
+<h3>bitcount</h3>
+
+<h4><em>Description</em></h4>
+<p>Like Redis's <a href="http://redis.io/commands/bitcount">bitcount</a>.</p>
+
+<h4><em>Parameters</em></h4>
+<dl>
+	<dd><code>key</code> - </dd>
+	<dd><code>start</code> - Optional, if <code>start</code> is negative, count from start'th character from the end of string.</dd>
+	<dd><code>end</code> - Optional.</dd>
+</dl>
+
+<h4><em>Return Value</em></h4>
+<p>The number of bits set to 1.</p>
+
+<h4><em>Example</em></h4>
+<pre>
+$ssdb-&gt;bitcount('key', 2, 10);
+</pre>
+
+
 <a name="m-countbit"></a>
 <h3>countbit</h3>
 
@@ -413,7 +435,7 @@ $ssdb-&gt;countbit('key', 2, 10);
 <h3>substr</h3>
 
 <h4><em>Description</em></h4>
-<p>Return part of a string.</p>
+<p>Return part of a string(like PHP's <a href="http://php.net/substr">substr()</a>).</p>
 
 <h4><em>Parameters</em></h4>
 <dl>

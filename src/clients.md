@@ -18,7 +18,7 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 
 <table width="100%">
 	<tr>
-		<td width="15%">built-in <span style="color: #cc3;">★</span></td>
+		<td width="21%">built-in <span style="color: #cc3;">★</span></td>
 		<td width="15%">ideawu</td>
 		<td width="20%">
 			<a href="https://github.com/ideawu/ssdb">Repository</a>
@@ -28,7 +28,7 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 		</td>
 	</tr>
 	<tr>
-		<td width="15%">cppssdb</span></td>
+		<td width="21%">cppssdb</span></td>
 		<td width="15%">ironsdu</td>
 		<td width="20%">
 			<a href="https://github.com/IronsDu/ssdb-cpp-api">Repository</a>
@@ -45,7 +45,7 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 
 <table width="100%">
 	<tr>
-		<td width="15%">built-in <span style="color: #cc3;">★</span></td>
+		<td width="21%">built-in <span style="color: #cc3;">★</span></td>
 		<td width="15%">ideawu</td>
 		<td width="20%">
 			<a href="https://github.com/ideawu/ssdb">Repository</a>
@@ -62,7 +62,7 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 
 <table width="100%">
 	<tr>
-		<td width="15%">official <span style="color: #cc3;">★</span></td>
+		<td width="21%">official <span style="color: #cc3;">★</span></td>
 		<td width="15%">ideawu</td>
 		<td width="20%">
 			<a href="https://github.com/ssdb/dotnetssdb">Repository</a>
@@ -79,7 +79,7 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 
 <table width="100%">
 	<tr>
-		<td width="15%">official <span style="color: #cc3;">★</span></td>
+		<td width="21%">official <span style="color: #cc3;">★</span></td>
 		<td width="15%">ideawu</td>
 		<td width="20%">
 			<a href="https://github.com/ssdb/gossdb">Repository</a>
@@ -89,7 +89,7 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 		</td>
 	</tr>
 	<tr>
-		<td width="15%">hissdb</td>
+		<td width="21%">hissdb</td>
 		<td width="15%">Eryx</td>
 		<td width="20%">
 			<a href="https://github.com/lessos/lessgo/tree/master/data/hissdb">Repository</a>
@@ -99,7 +99,7 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 		</td>
 	</tr>
 	<tr>
-		<td width="15%">gossdb</td>
+		<td width="21%">gossdb</td>
 		<td width="15%">seefan</td>
 		<td width="20%">
 			<a href="https://github.com/seefan/gossdb">Repository</a>
@@ -116,7 +116,7 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 
 <table width="100%">
 	<tr>
-		<td width="15%">official <span style="color: #cc3;">★</span></td>
+		<td width="21%">official <span style="color: #cc3;">★</span></td>
 		<td width="15%">ideawu</td>
 		<td width="20%">
 			<a href="https://github.com/ssdb/javassdb">Repository</a>
@@ -126,7 +126,7 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 		</td>
 	</tr>
 	<tr>
-		<td width="15%">ssdb4j</td>
+		<td width="21%">ssdb4j</td>
 		<td width="15%">nutzam</td>
 		<td width="20%">
 			<a href="https://github.com/nutzam/ssdb4j">Repository</a>
@@ -136,7 +136,7 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 		</td>
 	</tr>
 	<tr>
-		<td width="15%">another ssdb4j</td>
+		<td width="21%">another ssdb4j</td>
 		<td width="15%">jbakwd</td>
 		<td width="20%">
 			<a href="http://git.oschina.net/jbakwd/ssdbj">Repository</a>
@@ -153,7 +153,7 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 
 <table width="100%">
 	<tr>
-		<td width="15%">lua-resty-ssdb</td>
+		<td width="21%">lua-resty-ssdb</td>
 		<td width="15%">LazyZhu</td>
 		<td width="20%">
 			<a href="https://github.com/LazyZhu/lua-resty-ssdb">Repository</a>
@@ -170,7 +170,7 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 
 <table width="100%">
 	<tr>
-		<td width="15%">official <span style="color: #cc3;">★</span></td>
+		<td width="21%">official <span style="color: #cc3;">★</span></td>
 		<td width="15%">ideawu</td>
 		<td width="20%">
 			<a href="https://github.com/ssdb/nodessdb">Repository</a>
@@ -180,7 +180,7 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 		</td>
 	</tr>
 	<tr>
-		<td width="15%">node-ssdb by @hit9</td>
+		<td width="21%">node-ssdb by @hit9</td>
 		<td width="15%">hit9</td>
 		<td width="20%">
 			<a href="https://github.com/eleme/node-ssdb">Repository</a>
@@ -197,7 +197,7 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 
 <table width="100%">
 	<tr>
-		<td width="15%">built-in <span style="color: #cc3;">★</span></td>
+		<td width="21%">built-in <span style="color: #cc3;">★</span></td>
 		<td width="15%">ideawu</td>
 		<td width="20%">
 			<a href="https://github.com/ideawu/ssdb">Repository</a>
@@ -207,7 +207,7 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 		</td>
 	</tr>
 	<tr>
-		<td width="15%">official <span style="color: #cc3;">★</span></td>
+		<td width="21%">official <span style="color: #cc3;">★</span></td>
 		<td width="15%">ideawu, shen2</td>
 		<td width="20%">
 			<a href="https://packagist.org/packages/ssdb/phpssdb">Packagist</a>
@@ -215,6 +215,16 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 		</td>
 		<td>
 			Maintained by @shen2 in Packagist.
+		</td>
+	</tr>
+	<tr>
+		<td width="21%">phpssdb(PHP module)<span style="color: #cc3;">★</span></td>
+		<td width="15%">jonnywang</td>
+		<td width="20%">
+			<a href="https://github.com/jonnywang/phpssdb">Repository</a>
+		</td>
+		<td>
+			The SSDB PHP module.
 		</td>
 	</tr>
 </table>
@@ -225,7 +235,7 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 
 <table width="100%">
 	<tr>
-		<td width="15%">built-in <span style="color: #cc3;">★</span></td>
+		<td width="21%">built-in <span style="color: #cc3;">★</span></td>
 		<td width="15%">ideawu</td>
 		<td width="20%">
 			<a href="https://github.com/ideawu/ssdb">Repository</a>
@@ -235,7 +245,7 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 		</td>
 	</tr>
 	<tr>
-		<td width="15%">pyssdb</td>
+		<td width="21%">pyssdb</td>
 		<td width="15%">ifduyue</td>
 		<td width="20%">
 			<a href="https://github.com/ifduyue/pyssdb">Repository</a>
@@ -245,7 +255,7 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 		</td>
 	</tr>
 	<tr>
-		<td width="15%">ssdb-py</td>
+		<td width="21%">ssdb-py</td>
 		<td width="15%">wrongwaycn</td>
 		<td width="20%">
 			<a href="https://github.com/wrongwaycn/ssdb-py">Repository</a>
@@ -255,7 +265,7 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 		</td>
 	</tr>
 	<tr>
-		<td width="15%">ssdb.py</td>
+		<td width="21%">ssdb.py</td>
 		<td width="15%">hit9</td>
 		<td width="20%">
 			<a href="https://github.com/hit9/ssdb.py">Repository</a>
@@ -272,7 +282,7 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 
 <table width="100%">
 	<tr>
-		<td width="15%">ssdb-rb</td>
+		<td width="21%">ssdb-rb</td>
 		<td width="15%">bsm</td>
 		<td width="20%">
 			<a href="https://github.com/bsm/ssdb-rb">Repository</a>

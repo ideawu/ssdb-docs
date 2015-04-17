@@ -29,18 +29,18 @@
 						<i class="glyphicon glyphicon-list"></i> 文档 <b class="caret"></b>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a href="./index.html">文档首页</a></li>
+						<li><a href="<?php echo $base_url?>/zh_cn/index.html">文档首页</a></li>
 						<li class="divider"></li>
-						<li><a href="./install.html">安装</a></li>
-						<li><a href="./config.html">配置</a></li>
-						<li><a href="./commands.html">命令</a></li>
-						<li><a href="./clients.html">客户端 SDK</a></li>
-						<li><a href="./protocol.html">SSDB 网络协议</a></li>
+						<li><a href="<?php echo $base_url?>/zh_cn/install.html">安装</a></li>
+						<li><a href="<?php echo $base_url?>/zh_cn/config.html">配置</a></li>
+						<li><a href="<?php echo $base_url?>/zh_cn/commands/index.html">命令</a></li>
+						<li><a href="<?php echo $base_url?>/zh_cn/clients.html">客户端 SDK</a></li>
+						<li><a href="<?php echo $base_url?>/zh_cn/protocol.html">SSDB 网络协议</a></li>
 						<li class="divider"></li>
-						<li><a href="./php/index.html">PHP API 文档</a></li>
-						<li><a href="../cpp/index.html">C++ API 文档(英文)</a></li>
-						<li><a href="../java/index.html">Java API 文档(英文)</a></li>
-						<li><a href="../go/index.html">Go API 文档(英文)</a></li>
+						<li><a href="<?php echo $base_url?>/zh_cn/php/index.html">PHP API 文档</a></li>
+						<li><a href="<?php echo $base_url?>/cpp/index.html">C++ API 文档(英文)</a></li>
+						<li><a href="<?php echo $base_url?>/java/index.html">Java API 文档(英文)</a></li>
+						<li><a href="<?php echo $base_url?>/go/index.html">Go API 文档(英文)</a></li>
 						<li class="divider"></li>
 						<li><a href="http://vdisk.weibo.com/s/dWpk2caREXGf" target="_blank">SSDB 入门基础</a></li>
 					</ul>
@@ -53,7 +53,7 @@
 					<ul class="dropdown-menu">
 						<li><a href="https://github.com/ideawu/ssdb/issues">Issue Tracker</a></li>
 						<li><a href="http://www.ideawu.net/blog/category/ssdb">博客</a></li>
-						<li><a href="./users.html">用户案例</a></li>
+						<li><a href="<?php echo $base_url?>/zh_cn/users.html">用户案例</a></li>
 					</ul>
 				</li>
 			</ul>

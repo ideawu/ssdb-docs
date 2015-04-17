@@ -1,18 +1,17 @@
 # AUTH password
 
-__Available since: 1.7.0.0.__
+__Since: 1.7.0.0__
 
-Config the password for later use to authenticate the connection. The authentication is not invoked immediately, but later when you send the first request to the server. 
+向服务器校验访问密码.
 
 <div class="alert alert-warning">
-Warning: The password is sent in plain-text over the network!
+注意, 密码是明文传输的!
 </div>
 
-## Return value
+## 返回值
 
-```ok``` if success, error message if error occurrs.
-
-## Examples
+成功返回 ```ok```, 否则返回错误码和错误信息.
+## 示例
 
 	ssdb 127.0.0.1:8888> AUTH p@ssword
 	ok

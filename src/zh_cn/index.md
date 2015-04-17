@@ -8,7 +8,7 @@ SSDB 是稳定的, 生产环境使用的, 已经在[许多互联网公司得到�
 
 * [下载和安装](./install.html)
 * [配置](./config.html)
-* [命令列表](./commands.html)
+* [命令列表](./commands/index.html)
 * [客户端](./clients.html): 不同语言的 SSDB 客户端.
 * [从 __Redis__ 迁移到 SSDB](./redis-to-ssdb.html)
 * [导入 LevelDB](./leveldb-import.html): 将现有的 LevelDB 数据导入 SSDB.

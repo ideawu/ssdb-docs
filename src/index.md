@@ -8,7 +8,7 @@ SSDB is stable, production-ready and is widely used by [many Internet companies]
 
 * [Download and Install](./install.html)
 * [Configuration](./config.html)
-* [Commands](./commands.html)
+* [Commands](./commands/index.html)
 * [Clients](./clients.html): SSDB clients for various languages.
 * [__Redis__ to SSDB](./redis-to-ssdb.html)
 * [Import LevelDB](./leveldb-import.html): Import existing LevelDB data into SSDB.

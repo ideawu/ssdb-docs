@@ -1,104 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<?php
-	$title = '高性能的支持丰富数据结构的 NoSQL 数据库, 替代 Redis';
-	if($markdown['title']){
-		$title = $markdown['title'];
-	}
-	?>
-	<title>SSDB - <?php echo $title; ?></title>
-	<meta name="keywords" content="SSDB, SSDB 文档, LevelDB, Redis, LevelDB Server, zset" />
-	<meta name="description" content="SSDB 是一个高性能 NoSQL 数据库, 使用 LevelDB 作为存储引擎, 支持 Redis 协议." />
-	<link href="../css/bootstrap.min.css" rel="stylesheet" />
-	<!--
-	<link href="../css/bootstrap-theme.min.css" rel="stylesheet" />
-	-->
-	<style type="text/css">
-	body{
-		padding-top: 40px;
-		padding-bottom: 10px;
-		font-size: 14px;
-		font-family: arial;
-		background: #fff;
-	}
-	.container{
-		width: 880px;
-	}
-.navbar{
-	min-height: 40px;
-}
-.navbar-header{
-	float: left;
-	margin: 0 !important;
-	padding: 0 !important;
-}
-.navbar-brand{
-	margin: 0 !important;
-	padding: 10px 10px 0 4px;
-	height: 40px;
-}
-.navbar-nav{
-	margin: 0;
-	padding: 0;
-}
-.navbar-nav > li{
-	float: left;
-}
-.navbar-nav > li > a{
-	margin: 0;
-	padding: 10px;
-	height: 40px;
-}
-.navbar .divider-vertical {
-	background-color: #222222;
-	border-right: 1px solid #333333;
-	height: 40px;
-	overflow: hidden;
-	width: 1px;
-}
-/* show menu on mouse hover */
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
-.dropdown-menu li:hover .sub-menu {
-    visibility: visible;
-}
-	.footer{
-		font-size: 12px;
-		text-align: center;
-	}
-	p{
-		margin: 12px 0;
-	}
-	td{
-		padding: 4px;
-	}
-	h1{
-		font-weight: bold;
-		font-size: 170%;
-		margin: 15px 0;
-		padding-bottom: 6px;
-		border-bottom: 1px solid #ddd;
-	}
-	h2{
-		font-weight: bold;
-		font-size: 140%;
-	}
-	h3{
-		font-weight: bold;
-		font-size: 120%;
-	}
-	h4{
-		font-weight: bold;
-		font-size: 105%;
-	}
-	</style>
-</head>
-<body>
-
-
 
 <!-- Fixed navbar -->
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -174,25 +73,13 @@
 			</ul>
 			<script>
 			function set_lang(lang){
-				var langs = ['en', 'zh_cn'];
 				var url = location.href.replace(/lang=\w+&?/g, '').replace(/\?+$/, '');
 				var ps = url.split('/');
-				var curr_lang = ps[ps.length - 2];
-				if(langs.indexOf(curr_lang) == -1){
-					curr_lang = 'en';
-				}
-				if(curr_lang == lang){
-					return false;
-				}
-				if(curr_lang == 'en' && lang != 'en'){
-					// insert
-					ps.splice(ps.length - 1, 0, lang);
-				}else if(curr_lang != 'en' && lang == 'en'){
-					// remove
-					ps.splice(ps.length - 2, 1);
+				var index = ps.indexOf('docs');
+				if(ps[index + 1] == 'zh_cn'){
+					ps.splice(index + 1, 1);
 				}else{
-					// replace
-					ps[ps.length - 2] = lang;
+					ps.splice(index + 1, 0, 'zh_cn');
 				}
 				url = ps.join('/');
 				location.href = url;
@@ -205,5 +92,3 @@
 </div>
 
 
-
-<div class="container">

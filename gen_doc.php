@@ -16,7 +16,7 @@ $output_dir = rtrim($output_dir, '/');
 
 parse_dir($input_dir, $output_dir);
 
-function parse_dir($input_dir, $output_dir){
+function parse_dir($input_dir, $output_dir, $base_url='.'){
 	if(!file_exists($output_dir)){
 		mkdir($output_dir);
 	}
@@ -34,12 +34,12 @@ function parse_dir($input_dir, $output_dir){
 
 		if(is_dir($fullpath)){
 			$new_output_dir = $output_dir . '/' . $file;
-			parse_dir($fullpath, $new_output_dir);
+			parse_dir($fullpath, $new_output_dir, "$base_url/..");
 		}else{
 			$ps = explode('.', $file);
 			$ext = $ps[count($ps) - 1];
 			if($ext == 'md'){
-				gen_doc($fullpath, $output_dir, $template);
+				gen_doc($fullpath, $output_dir, $template, $base_url);
 			}else if(!in_array($ext, array('php'))){
 				copy($fullpath, "$output_dir/$file");
 			}
@@ -47,7 +47,7 @@ function parse_dir($input_dir, $output_dir){
 	}
 }
 
-function gen_doc($file, $output_dir, $template=null){
+function gen_doc($file, $output_dir, $template=null, $base_url=''){
 	$name = str_replace('.md', '', basename($file));
 	$markdown = array(
 			'name' => $name,
@@ -55,6 +55,7 @@ function gen_doc($file, $output_dir, $template=null){
 			'output_file' => "$output_dir/$name.html",
 			'title' => '',
 			'html' => '',
+			'base_url' => $base_url,
 			);
 	if(file_exists($markdown['output_file']) && filemtime($file) < filemtime($markdown['output_file'])){
 		echo "[skip] {$markdown['output_file']} => {$markdown['output_file']}\n";

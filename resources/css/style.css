@@ -1,0 +1,96 @@
+body{
+	padding-top: 40px;
+	padding-bottom: 10px;
+	font-size: 14px;
+	font-family: arial;
+	background: #fff;
+}
+.container{
+	width: 880px;
+}
+.navbar{
+	min-height: 40px;
+}
+.navbar-header{
+	float: left;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+.navbar-brand{
+	margin: 0 !important;
+	padding: 10px 10px 0 4px;
+	height: 40px;
+}
+.navbar-nav{
+	margin: 0;
+	padding: 0;
+}
+.navbar-nav > li{
+	float: left;
+}
+.navbar-nav > li > a{
+	margin: 0;
+	padding: 10px;
+	height: 40px;
+}
+.navbar .divider-vertical {
+	background-color: #222222;
+	border-right: 1px solid #333333;
+	height: 40px;
+	overflow: hidden;
+	width: 1px;
+}
+/* show menu on mouse hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+.dropdown-menu li:hover .sub-menu {
+    visibility: visible;
+}
+.footer{
+	font-size: 12px;
+	text-align: center;
+}
+p{
+	margin: 12px 0;
+}
+td{
+	padding: 4px;
+}
+h1{
+	font-weight: bold;
+	font-size: 170%;
+	margin: 15px 0;
+	padding-bottom: 6px;
+	border-bottom: 1px solid #ddd;
+}
+h2{
+	font-weight: bold;
+	font-size: 140%;
+}
+h3{
+	font-weight: bold;
+	font-size: 120%;
+}
+h4{
+	font-weight: bold;
+	font-size: 105%;
+}
+
+
+/** Styles for commands list. */
+
+#commands ul { overflow: hidden; *zoom: 1; margin: 0; text-align: left; padding: 0; }
+#commands li { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+#commands li a { display: block; padding: 1em; color: #333; text-decoration: none; }
+#commands li a:hover, #commands li a:focus { color: #333; background: #ecf7fa; }
+#commands li .command { white-space: nowrap; overflow: hidden; -ms-text-overflow: ellipsis; -o-text-overflow: ellipsis; text-overflow: ellipsis; font-family: "Monaco", "Menlo", monospace; display: block; margin: 0 0 2px 0; color: #06a; }
+#commands li .command .args { color: #555; }
+#commands li .summary { display: block; font-size: 0.9em; line-height: 1.5em; }
+
+@media only screen and (min-width: 992px) {
+  #commands .command { font-size: 0.9em; }
+  #commands .command .args {}
+  #commands ul li { float: left; margin: 0px 10px 20px 0; overflow: hidden; width: 30%; }
+  #commands ul li a { -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; background-color: #fafafa; height: 6em; } }
+

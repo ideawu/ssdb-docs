@@ -1,5 +1,9 @@
 # 命令
 
+<div class="alert alert-info">
+	命令不区分大小写, 推荐使用小写!
+</div>
+
 ## Server
 ---
 <section id="commands">

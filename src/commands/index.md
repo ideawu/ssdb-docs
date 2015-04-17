@@ -1,5 +1,9 @@
 # Commands
 
+<div class="alert alert-info">
+	Commands are case-insensitive, lower case is recommended!
+</div>
+
 ## Server
 ---
 <section id="commands">

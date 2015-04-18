@@ -1,3 +1,15 @@
-# 命令
+# multi_set key1 value1 key2 value2 ...
 
-所有的 SSDB 命令在 [PHP API Doc](http://ssdb.io/docs/zh_cn/php/) 中介绍.
+Set multiple key-value pairs(kvs) in one method call.
+
+## Parameters
+
+* `key1` -
+* `value1` -
+* ...
+
+## Return Value
+
+false on error, other values indicate OK.
+
+## Example

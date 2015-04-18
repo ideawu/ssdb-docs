@@ -1,3 +1,24 @@
-# 命令
+# hsize name
 
-所有的 SSDB 命令在 [PHP API Doc](http://ssdb.io/docs/zh_cn/php/) 中介绍.
+Return the number of key-value pairs in the hashmap.
+
+## Parameters
+
+* `name` - The name of the hashmap
+
+## Return Value
+
+Integer reply.
+
+## Example
+
+	ssdb 127.0.0.1:8888> hsize h
+	7
+	(0.000 sec)
+	ssdb 127.0.0.1:8888> hclear h
+	7
+	(0.000 sec)
+	ssdb 127.0.0.1:8888> hsize h
+	0
+	(0.000 sec)
+	ssdb 127.0.0.1:8888> 

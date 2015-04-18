@@ -1,3 +1,15 @@
-# 命令
+# setx key value ttl
 
-所有的 SSDB 命令在 [PHP API Doc](http://ssdb.io/docs/zh_cn/php/) 中介绍.
+Set the value of the key, with a time to live.
+
+## Parameters
+
+* `key` - 
+* `value` - 
+* `ttl` - number of seconds to live.
+
+## Return Value
+
+false on error, other values indicate OK.
+
+## Example

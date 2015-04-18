@@ -1,3 +1,14 @@
-# 命令
+# setnx key value
 
-所有的 SSDB 命令在 [PHP API Doc](http://ssdb.io/docs/zh_cn/php/) 中介绍.
+Set the string value in argument as value of the key if and only if the key doesn't exist.
+
+## Parameters
+
+* `key` - 
+* `value` - 
+
+## Return Value
+
+`1`: value is set, `0`: key already exists.
+
+## Example

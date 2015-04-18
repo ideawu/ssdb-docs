@@ -1,3 +1,3 @@
-# 命令
+# qrlist name_start name_end limit
 
-所有的 SSDB 命令在 [PHP API Doc](http://ssdb.io/docs/zh_cn/php/) 中介绍.
+Like [qlist](./qlist.html), but in reverse order.

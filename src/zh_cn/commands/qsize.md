@@ -1,3 +1,14 @@
-# 命令
+# qsize name
 
-所有的 SSDB 命令在 [PHP API Doc](http://ssdb.io/docs/zh_cn/php/) 中介绍.
+Returns the number of items in the queue.
+
+## Parameters
+
+* `name` - 
+
+## Return Value
+
+false on error, otherwise an integer, 0 if the queue does not exist.
+
+## Example
+

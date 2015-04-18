@@ -1,3 +1,3 @@
-# 命令
+# keys key_start key_end limit
 
-所有的 SSDB 命令在 [PHP API Doc](http://ssdb.io/docs/zh_cn/php/) 中介绍.
+All SSDB commands are described by [PHP API Doc](http://ssdb.io/docs/php/).

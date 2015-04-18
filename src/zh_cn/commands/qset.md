@@ -1,3 +1,15 @@
-# 命令
+# qset name index val
 
-所有的 SSDB 命令在 [PHP API Doc](http://ssdb.io/docs/zh_cn/php/) 中介绍.
+Sets the list element at index to value. An error is returned for out of range indexes.
+
+## Parameters
+
+* `name` - 
+* `index` - negative intexes accepted.
+* `val` - 
+
+## Return Value
+
+false on error, other values indicate OK.
+
+## Example

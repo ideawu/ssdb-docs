@@ -1,3 +1,15 @@
-# 命令
+# multi_zdel name key1 key2 ...
 
-所有的 SSDB 命令在 [PHP API Doc](http://ssdb.io/docs/zh_cn/php/) 中介绍.
+Delete specified multiple keys of a zset.
+
+## Parameters
+
+* `name` -
+* `key1` -
+* ...
+
+## Return Value
+
+false on error, other values indicate OK.
+
+## Example

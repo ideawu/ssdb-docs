@@ -1,3 +1,14 @@
-# 命令
+# qback name
 
-所有的 SSDB 命令在 [PHP API Doc](http://ssdb.io/docs/zh_cn/php/) 中介绍.
+Returns the last element of a queue.
+
+## Parameters
+
+* `name` - 
+
+## Return Value
+
+false on error, null if queue empty, otherwise the item returned.
+
+## Example
+

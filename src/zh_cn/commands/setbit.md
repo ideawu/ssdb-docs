@@ -1,3 +1,16 @@
-# 命令
+# setbit key offset val
 
-所有的 SSDB 命令在 [PHP API Doc](http://ssdb.io/docs/zh_cn/php/) 中介绍.
+Changes a single bit of a string. The string is auto expanded.
+
+## Parameters
+
+* `key` - 
+* `offset` - bit offset.
+* `val` - 0 or 1.
+
+## Return Value
+
+The value of the bit before it was set: 0 or 1. If val is not 0 or 1, returns false.
+
+## Example
+

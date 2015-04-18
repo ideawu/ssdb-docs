@@ -1,3 +1,3 @@
-# 命令
+# qpop name size
 
-所有的 SSDB 命令在 [PHP API Doc](http://ssdb.io/docs/zh_cn/php/) 中介绍.
+Alias of [qpop_front](./qpop_front.html)

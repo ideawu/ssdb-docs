@@ -1,3 +1,29 @@
-# 命令
+# get key
 
-所有的 SSDB 命令在 [PHP API Doc](http://ssdb.io/docs/zh_cn/php/) 中介绍.
+Get the value related to the specified key.
+
+## Parameters
+
+* `key` - 
+
+## Return Value
+
+Value reply.
+
+Return the value to the key, if the key does not exists, return `not_found` Status Code.
+
+## Example
+
+	ssdb 127.0.0.1:8888> set a 123
+	ok
+	(0.000 sec)
+	ssdb 127.0.0.1:8888> get a
+	123
+	(0.000 sec)
+	ssdb 127.0.0.1:8888> del a
+	ok
+	(0.000 sec)
+	ssdb 127.0.0.1:8888> get a
+	not_found
+	(0.000 sec)
+	ssdb 127.0.0.1:8888> 

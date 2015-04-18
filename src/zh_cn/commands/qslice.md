@@ -1,3 +1,15 @@
-# 命令
+# qslice name begin end
 
-所有的 SSDB 命令在 [PHP API Doc](http://ssdb.io/docs/zh_cn/php/) 中介绍.
+Returns a portion of elements from the queue at the specified range [begin, end]. begin and end could be negative.
+
+## Parameters
+
+* `name` - 
+* `begin` - 
+* `end` - 
+
+## Return Value
+
+false on error, otherwise an array containing items.
+
+## Example

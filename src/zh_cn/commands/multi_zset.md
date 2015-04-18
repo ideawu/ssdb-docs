@@ -1,3 +1,17 @@
-# 命令
+# multi_zset name key1 score1 key2 score2 ...
 
-所有的 SSDB 命令在 [PHP API Doc](http://ssdb.io/docs/zh_cn/php/) 中介绍.
+Set multiple key-score pairs(kvs) of a zset in one method call.
+
+## Parameters
+
+* `name` -
+* `key1` -
+* `score1` -
+* ...
+
+## Return Value
+
+false on error, other values indicate OK.
+
+## Example
+

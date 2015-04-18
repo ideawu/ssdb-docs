@@ -1,3 +1,16 @@
-# 命令
+# multi_hset name key1 value1 key2 value2 ...
 
-所有的 SSDB 命令在 [PHP API Doc](http://ssdb.io/docs/zh_cn/php/) 中介绍.
+Set multiple key-value pairs(kvs) of a hashmap in one method call.
+
+## Parameters
+
+* `name` - 
+* `key1` -
+* `value1` -
+* ...
+
+## Return Value
+
+false on error, other values indicate OK.
+
+## Example

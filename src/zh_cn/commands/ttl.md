@@ -1,3 +1,13 @@
-# 命令
+# ttl key
 
-所有的 SSDB 命令在 [PHP API Doc](http://ssdb.io/docs/zh_cn/php/) 中介绍.
+Returns the time left to live in seconds, only for keys of KV type.
+
+## Parameters
+
+* `key` - 
+
+## Return Value
+
+Time to live of the key, in seconds, -1 if there is no associated expire to the key.
+
+## Example

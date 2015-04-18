@@ -100,7 +100,7 @@
 	<li data-group="string" data-name="expire">
 		<a href="expire.html">
 		<span class="command">
-			EXPIRE
+			expire
 			<span class="args">
 			key ttl
 			</span>
@@ -144,7 +144,7 @@
 	<li data-group="string" data-name="del">
 		<a href="del.html">
 		<span class="command">
-			DEL
+			del
 			<span class="args">
 			key
 			</span>
@@ -165,7 +165,7 @@
 	<li data-group="string" data-name="exists">
 		<a href="exists.html">
 		<span class="command">
-			EXISTS
+			exists
 			<span class="args">
 			key
 			</span>

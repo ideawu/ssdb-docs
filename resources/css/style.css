@@ -86,7 +86,7 @@ h4{
 .commands li a:hover, .commands li a:focus { color: #333; background: #ecf7fa; }
 .commands li .command { white-space: nowrap; overflow: hidden; -ms-text-overflow: ellipsis; -o-text-overflow: ellipsis; text-overflow: ellipsis; font-family: "Monaco", "Menlo", monospace; display: block; margin: 0 0 2px 0; color: #06a; }
 .commands li .command .args { color: #555; }
-.commands li .summary { display: block; font-size: 0.85em; line-height: 1.5em; }
+.commands li .summary { display: block; font-size: 0.9em; line-height: 1.5em; }
 
 @media only screen and (min-width: 992px) {
   .commands .command { font-size: 0.9em; }

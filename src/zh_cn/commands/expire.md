@@ -1,6 +1,6 @@
 # expire key ttl
 
-Set the time left to live in seconds, only for keys of KV type.
+设置 key(只针对 KV 类型) 的存活时间.
 
 ## Parameters
 

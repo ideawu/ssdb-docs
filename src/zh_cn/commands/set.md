@@ -1,6 +1,6 @@
 # set key value
 
-Set the value of the key.
+设置指定 key 的值内容.
 
 ## Parameters
 

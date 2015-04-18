@@ -70,7 +70,7 @@
 			key value
 			</span>
 		</span>
-		<span class="summary">Set the value of the key.</span>
+		<span class="summary">设置指定 key 的值内容.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="setx">
@@ -81,7 +81,7 @@
 			key value ttl
 			</span>
 		</span>
-		<span class="summary">Set the value of the key, with a time to live.</span>
+		<span class="summary">设置指定 key 的值内容, 同时设置存活时间.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="setnx">
@@ -92,7 +92,7 @@
 			key value
 			</span>
 		</span>
-		<span class="summary">Set the string value in argument as value of the key only if the key doesn"t exist.</span>
+		<span class="summary">当 key 不存在时, 设置指定 key 的值内容. 如果已存在, 则不设置.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="expire">
@@ -103,7 +103,7 @@
 			key ttl
 			</span>
 		</span>
-		<span class="summary">Set the time left to live in seconds, only for keys of KV type.</span>
+		<span class="summary">设置 key(只针对 KV 类型) 的存活时间.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="ttl">
@@ -114,7 +114,7 @@
 			key
 			</span>
 		</span>
-		<span class="summary">Returns the time left to live in seconds, only for keys of KV type.</span>
+		<span class="summary">返回 key(只针对 KV 类型) 的存活时间.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="get">

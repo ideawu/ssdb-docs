@@ -1,6 +1,6 @@
 # setnx key value
 
-Set the string value in argument as value of the key if and only if the key doesn't exist.
+当 key 不存在时, 设置指定 key 的值内容. 如果已存在, 则不设置.
 
 ## Parameters
 

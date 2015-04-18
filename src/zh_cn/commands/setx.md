@@ -1,6 +1,6 @@
 # setx key value ttl
 
-Set the value of the key, with a time to live.
+设置指定 key 的值内容, 同时设置存活时间.
 
 ## Parameters
 

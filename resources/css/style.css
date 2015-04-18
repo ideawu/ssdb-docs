@@ -91,6 +91,6 @@ h4{
 @media only screen and (min-width: 992px) {
   .commands .command { font-size: 0.9em; }
   .commands .command .args {}
-  .commands ul li { float: left; margin: 0px 10px 20px 0; overflow: hidden; width: 30%; }
+  .commands ul li { float: left; margin: 0px 10px 20px 0; overflow: hidden; width: 32%; }
   .commands ul li a { -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; background-color: #fafafa; height: 6em; } }
 

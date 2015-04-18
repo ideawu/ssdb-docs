@@ -4,7 +4,7 @@ Clear the queue.
 
 ## Parameters
 
-    name - 
+* `name` - 
 
 ## Return Value
 

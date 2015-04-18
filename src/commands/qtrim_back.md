@@ -4,8 +4,8 @@ Remove multi elements from the tail of a queue.
 
 ## Parameters
 
-    name - 
-    size - number of elements to delete.
+* `name` - 
+* `size` - Number of elements to delete.
 
 ## Return Value
 

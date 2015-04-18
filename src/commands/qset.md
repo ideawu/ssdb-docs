@@ -4,9 +4,9 @@ Sets the list element at index to value. An error is returned for out of range i
 
 ## Parameters
 
-    name - 
-    index - negative intexes accepted.
-    val - 
+* `name` - 
+* `index` - negative intexes accepted.
+* `val` - 
 
 ## Return Value
 

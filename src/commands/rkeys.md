@@ -2,4 +2,4 @@
 
 __Since 1.9.0__
 
-All SSDB commands are described by [PHP API Doc](http://ssdb.io/docs/php/).
+Like [keys](./keys.html), but in reverse order.

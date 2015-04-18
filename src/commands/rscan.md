@@ -1,3 +1,3 @@
 # Commands
 
-All SSDB commands are described by [PHP API Doc](http://ssdb.io/docs/php/).
+Like [scan](./scan.html), but in reverse order.

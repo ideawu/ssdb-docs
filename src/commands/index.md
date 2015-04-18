@@ -59,6 +59,7 @@
 </section>
 
 ## Key Value
+
 ---
 
 <section id="commands">
@@ -67,7 +68,7 @@
 	<li data-group="string" data-name="set">
 		<a href="set.html">
 		<span class="command">
-			SET
+			set
 			<span class="args">
 			key value
 			</span>
@@ -78,7 +79,7 @@
 	<li data-group="string" data-name="setx">
 		<a href="setx.html">
 		<span class="command">
-			SETX
+			setx
 			<span class="args">
 			key value ttl
 			</span>
@@ -89,7 +90,7 @@
 	<li data-group="string" data-name="setnx">
 		<a href="setnx.html">
 		<span class="command">
-			SETNX
+			setnx
 			<span class="args">
 			key value
 			</span>
@@ -111,7 +112,7 @@
 	<li data-group="string" data-name="ttl">
 		<a href="ttl.html">
 		<span class="command">
-			TTL
+			ttl
 			<span class="args">
 			key
 			</span>
@@ -188,7 +189,7 @@
 	<li data-group="string" data-name="setbit">
 		<a href="setbit.html">
 		<span class="command">
-			SETBIT
+			setbit
 			<span class="args">
 			key offset val
 			</span>
@@ -221,9 +222,9 @@
 	<li data-group="string" data-name="substr">
 		<a href="substr.html">
 		<span class="command">
-			SUBSTR
+			substr
 			<span class="args">
-			key start start size size
+			key start size
 			</span>
 		</span>
 		<span class="summary">Return part of a string.</span>
@@ -232,7 +233,7 @@
 	<li data-group="string" data-name="strlen">
 		<a href="strlen.html">
 		<span class="command">
-			STRLEN
+			strlen
 			<span class="args">
 			key
 			</span>
@@ -265,8 +266,9 @@
 	<li data-group="string" data-name="scan">
 		<a href="scan.html">
 		<span class="command">
-			SCAN
+			scan
 			<span class="args">
+				key_start key_end limit
 			</span>
 		</span>
 		<span class="summary">List key-value pairs with keys in range (key_start, key_end].</span>
@@ -275,8 +277,9 @@
 	<li data-group="string" data-name="rscan">
 		<a href="rscan.html">
 		<span class="command">
-			RSCAN
+			rscan
 			<span class="args">
+				key_start key_end limit
 			</span>
 		</span>
 		<span class="summary">List key-value pairs with keys in range (key_start, key_end], in reverse order.</span>
@@ -315,8 +318,6 @@
 		<span class="summary">Delete specified multiple keys.</span>
 		</a>
 	</li>
-
-
 </ul>
 </div>
 </section>

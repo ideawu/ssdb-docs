@@ -1,3 +1,15 @@
-# Commands
+# set key value
 
-All SSDB commands are described by [PHP API Doc](http://ssdb.io/docs/php/).
+Set the value of the key.
+
+## Parameters
+
+* `key` - 
+* `value` - 
+
+## Return Value
+
+false on error, other values indicate OK.
+
+## Example
+

@@ -1,3 +1,15 @@
-# Commands
+# setx key value ttl
 
-All SSDB commands are described by [PHP API Doc](http://ssdb.io/docs/php/).
+Set the value of the key, with a time to live.
+
+## Parameters
+
+* `key` - 
+* `value` - 
+* `ttl` - number of seconds to live.
+
+## Return Value
+
+false on error, other values indicate OK.
+
+## Example

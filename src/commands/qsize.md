@@ -4,7 +4,7 @@ Returns the number of items in the queue.
 
 ## Parameters
 
-    name - 
+* `name` - 
 
 ## Return Value
 

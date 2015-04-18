@@ -4,7 +4,7 @@ Returns the first element of a queue.
 
 ## Parameters
 
-    name - 
+* `name` - 
 
 ## Return Value
 

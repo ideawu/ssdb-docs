@@ -1,3 +1,13 @@
-# Commands
+# strlen key
 
-All SSDB commands are described by [PHP API Doc](http://ssdb.io/docs/php/).
+Return the number of bytes of a string.
+
+## Parameters
+
+* `key` - 
+
+## Return Value
+
+The number of bytes of the string, if key not exists, returns 0.
+
+## Example

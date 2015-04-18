@@ -1,3 +1,18 @@
-# Commands
+# scan key_start key_end limit
 
-All SSDB commands are described by [PHP API Doc](http://ssdb.io/docs/php/).
+List key-value pairs with keys in range `(key_start, key_end]`.
+
+`("", ""]` means no range limit.
+
+## Parameters
+
+* `key_start` - The lower bound(not included) of keys to be returned, empty string means -inf(no limit).
+* `key_end` - The upper bound(inclusive) of keys to be returned, empty string means +inf(no limit).
+* `limit` - Up to that many pairs will be returned.
+
+## Return Value
+
+false on error, otherwise an associative array containing the key-value pairs.
+
+## Example
+

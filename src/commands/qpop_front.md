@@ -4,8 +4,8 @@ Pop out one or more elements from the head of a queue.
 
 ## Parameters
 
-    name - 
-    size - optional, number of elements to pop, default is 1
+* `name` - 
+* `size` - Optional, number of elements to pop, default is 1
 
 ## Return Value
 

@@ -4,8 +4,8 @@ Adds an or more than one element to the end of the queue.
 
 ## Parameters
 
-    name - 
-    item - string or array of string.
+* `name` - 
+* `item` - string or array of string.
 
 ## Return Value
 

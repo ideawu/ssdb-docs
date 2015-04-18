@@ -4,9 +4,9 @@ Returns a portion of elements from the queue at the specified range [begin, end]
 
 ## Parameters
 
-    name - 
-    begin - 
-    end - 
+* `name` - 
+* `begin` - 
+* `end` - 
 
 ## Return Value
 

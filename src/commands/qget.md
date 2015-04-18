@@ -4,8 +4,8 @@ Returns the element a the specified index(position). 0 the first element, 1 the 
 
 ## Parameters
 
-    name - 
-    index - negative intexes accepted.
+* `name` - 
+* `index` - negative intexes accepted.
 
 ## Return Value
 

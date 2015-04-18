@@ -1,3 +1,3 @@
-# Commands
+# multi_del key1 key2 ...
 
 All SSDB commands are described by [PHP API Doc](http://ssdb.io/docs/php/).

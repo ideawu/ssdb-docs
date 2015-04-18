@@ -1,3 +1,3 @@
-# Commands
+# multi_hset name key1 value1 key2 value2 ...
 
 All SSDB commands are described by [PHP API Doc](http://ssdb.io/docs/php/).

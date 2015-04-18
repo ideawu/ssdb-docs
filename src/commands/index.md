@@ -243,11 +243,23 @@
 	<li data-group="string" data-name="keys">
 		<a href="keys.html">
 		<span class="command">
-			KEYS
+			keys
 			<span class="args">
+				key_start key_end limit
 			</span>
 		</span>
 		<span class="summary">List keys in range (key_start, key_end].</span>
+		</a>
+	</li>
+	<li data-group="string" data-name="keys">
+		<a href="keys.html">
+		<span class="command">
+			rkeys
+			<span class="args">
+				key_start key_end limit
+			</span>
+		</span>
+		<span class="summary">List keys in range (key_start, key_end], in reverse order.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="scan">
@@ -273,9 +285,9 @@
 	<li data-group="string" data-name="multi_set">
 		<a href="multi_set.html">
 		<span class="command">
-			MULTI_SET
+			multi_set
 			<span class="args">
-			kvs
+			key1 value1 key2 value2 ...
 			</span>
 		</span>
 		<span class="summary">Set multiple key-value pairs(kvs) in one method call.</span>
@@ -284,9 +296,9 @@
 	<li data-group="string" data-name="multi_get">
 		<a href="multi_get.html">
 		<span class="command">
-			MULTI_GET
+			multi_get
 			<span class="args">
-			keys
+			key1 key2 ...
 			</span>
 		</span>
 		<span class="summary">Get the values related to the specified multiple keys</span>
@@ -295,9 +307,9 @@
 	<li data-group="string" data-name="multi_del">
 		<a href="multi_del.html">
 		<span class="command">
-			MULTI_DEL
+			multi_del
 			<span class="args">
-			keys
+			key1 key2 ...
 			</span>
 		</span>
 		<span class="summary">Delete specified multiple keys.</span>
@@ -462,9 +474,9 @@
 	<li data-group="string" data-name="multi_hset">
 		<a href="multi_hset.html">
 		<span class="command">
-			MULTI_HSET
+			multi_hset
 			<span class="args">
-			name kvs
+			name key1 value1 key2 value2 ...
 			</span>
 		</span>
 		<span class="summary">Set multiple key-value pairs(kvs) of a hashmap in one method call.</span>
@@ -473,9 +485,9 @@
 	<li data-group="string" data-name="multi_hget">
 		<a href="multi_hget.html">
 		<span class="command">
-			MULTI_HGET
+			multi_hget
 			<span class="args">
-			name keys
+			name key1 key2 ...
 			</span>
 		</span>
 		<span class="summary">Get the values related to the specified multiple keys of a hashmap.</span>
@@ -484,9 +496,9 @@
 	<li data-group="string" data-name="multi_hdel">
 		<a href="multi_hdel.html">
 		<span class="command">
-			MULTI_HDEL
+			multi_hdel
 			<span class="args">
-			name keys
+			name key1 key2 ...
 			</span>
 		</span>
 		<span class="summary">Delete specified multiple keys in a hashmap.</span>
@@ -732,9 +744,9 @@
 	<li data-group="string" data-name="multi_zset">
 		<a href="multi_zset.html">
 		<span class="command">
-			MULTI_ZSET
+			multi_zset
 			<span class="args">
-			name kvs
+			name key1 score1 key2 score2 ...
 			</span>
 		</span>
 		<span class="summary">Set multiple key-score pairs(kvs) of a zset in one method call.</span>
@@ -743,9 +755,9 @@
 	<li data-group="string" data-name="multi_zget">
 		<a href="multi_zget.html">
 		<span class="command">
-			MULTI_ZGET
+			multi_zget
 			<span class="args">
-			name keys
+			name key1 key2 ...
 			</span>
 		</span>
 		<span class="summary">Get the values related to the specified multiple keys of a zset.</span>
@@ -754,9 +766,9 @@
 	<li data-group="string" data-name="multi_zdel">
 		<a href="multi_zdel.html">
 		<span class="command">
-			MULTI_ZDEL
+			multi_zdel
 			<span class="args">
-			name keys
+			name key1 key2 ...
 			</span>
 		</span>
 		<span class="summary">Delete specified multiple keys of a zset.</span>
@@ -770,6 +782,7 @@
 
 
 ## List
+
 ---
 
 <section id="commands">

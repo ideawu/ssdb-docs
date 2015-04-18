@@ -1,3 +1,3 @@
-# Commands
+# multi_zset name key1 score1 key2 score2 ...
 
 All SSDB commands are described by [PHP API Doc](http://ssdb.io/docs/php/).

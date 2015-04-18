@@ -17,7 +17,7 @@
 			password
 			</span>
 		</span>
-		<span class="summary">Config password for later use to authenticate the connection.</span>
+		<span class="summary">设置访问服务器的校验密码</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="dbsize">
@@ -27,7 +27,7 @@
 			<span class="args">
 			</span>
 		</span>
-		<span class="summary">Return the <strong>approximate</strong> size of the database.</span>
+		<span class="summary">返回数据库大小的<strong>近似值</strong></span>
 		</a>
 	</li>
 	<li data-group="string" data-name="flushdb">
@@ -38,7 +38,7 @@
 			[type]
 			</span>
 		</span>
-		<span class="summary">Delete all data in ssdb server.</span>
+		<span class="summary">删除服务器的所有数据</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="info">
@@ -49,7 +49,7 @@
 			opt
 			</span>
 		</span>
-		<span class="summary">Return the information of server.</span>
+		<span class="summary">返回服务器信息</span>
 		</a>
 	</li>
 </ul>

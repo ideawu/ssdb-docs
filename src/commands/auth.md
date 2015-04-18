@@ -1,4 +1,4 @@
-# AUTH password
+# auth password
 
 __Available since: 1.7.0.0__
 
@@ -8,9 +8,13 @@ Config the password for later use to authenticate the connection. The authentica
 Warning: The password is sent in plain-text over the network!
 </div>
 
-## Return value
+## Parameters
 
-```ok``` if success, error code and message if error occurrs.
+* `password` - the password
+
+## Return Value
+
+Status reply.
 
 ## Examples
 

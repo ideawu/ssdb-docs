@@ -5,14 +5,16 @@
 </div>
 
 ## Server
+
 ---
+
 <section id="commands">
 <div class="container">
 <ul>
 	<li data-group="string" data-name="auth">
 		<a href="auth.html">
 		<span class="command">
-			AUTH
+			auth
 			<span class="args">
 			password
 			</span>
@@ -23,7 +25,7 @@
 	<li data-group="string" data-name="dbsize">
 		<a href="dbsize.html">
 		<span class="command">
-			DBSIZE
+			dbsize
 			<span class="args">
 			</span>
 		</span>
@@ -196,20 +198,19 @@
 	<li data-group="string" data-name="bitcount">
 		<a href="bitcount.html">
 		<span class="command">
-			BITCOUNT
+			bitcount
 			<span class="args">
-			key start start end
+			key [start] [end]
 			</span>
 		</span>
-		<span class="summary">Like Redis"s bitcount.</span>
-		</a>
+		<span class="summary">Count the number of set bits (population counting) in part of a string.</span>
 	</li>
 	<li data-group="string" data-name="countbit">
 		<a href="countbit.html">
 		<span class="command">
-			COUNTBIT
+			countbit
 			<span class="args">
-			key start start size size
+			key start size
 			</span>
 		</span>
 		<span class="summary">Count the number of set bits (population counting) in part of a string.</span>

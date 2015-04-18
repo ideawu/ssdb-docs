@@ -4,7 +4,7 @@ Return information about the server.
 
 ## Parameters
 
-```opt``` - optional, could be ```cmd```, ```leveldb```
+* ```opt``` - optional, could be ```cmd```, ```leveldb```
 
 ## Return value
 

@@ -32,8 +32,8 @@
 						<li><a href="<?php echo $base_url?>/zh_cn/index.html">文档首页</a></li>
 						<li class="divider"></li>
 						<li><a href="<?php echo $base_url?>/zh_cn/install.html">安装</a></li>
-						<li><a href="<?php echo $base_url?>/zh_cn/config.html">配置</a></li>
 						<li><a href="<?php echo $base_url?>/zh_cn/commands/index.html">命令</a></li>
+						<li><a href="<?php echo $base_url?>/zh_cn/config.html">配置</a></li>
 						<li><a href="<?php echo $base_url?>/zh_cn/clients.html">客户端 SDK</a></li>
 						<li><a href="<?php echo $base_url?>/zh_cn/protocol.html">SSDB 网络协议</a></li>
 						<li class="divider"></li>

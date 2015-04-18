@@ -1,3 +1,3 @@
-# Commands
+# qrlist name_start name_end limit
 
-All SSDB commands are described by [PHP API Doc](http://ssdb.io/docs/php/).
+Like [qlist](./qlist.html), but in reverse order.

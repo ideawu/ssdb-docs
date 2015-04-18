@@ -788,129 +788,12 @@
 <section id="commands">
 <div class="container">
 <ul>
-	<li data-group="string" data-name="qsize">
-		<a href="qsize.html">
-		<span class="command">
-			QSIZE
-			<span class="args">
-			name
-			</span>
-		</span>
-		<span class="summary">Returns the number of items in the queue.</span>
-		</a>
-	</li>
-	<li data-group="string" data-name="qlist">
-		<a href="qlist.html">
-		<span class="command">
-			QLIST
-			<span class="args">
-			</span>
-		</span>
-		<span class="summary">List list/queue names in range (name_start, name_end].</span>
-		</a>
-	</li>
-	<li data-group="string" data-name="qrlist">
-		<a href="qrlist.html">
-		<span class="command">
-			QRLIST
-			<span class="args">
-			</span>
-		</span>
-		<span class="summary">List list/queue names in range (name_start, name_end].</span>
-		</a>
-	</li>
-	<li data-group="string" data-name="qclear">
-		<a href="qclear.html">
-		<span class="command">
-			QCLEAR
-			<span class="args">
-			name
-			</span>
-		</span>
-		<span class="summary">Clear the queue.</span>
-		</a>
-	</li>
-	<li data-group="string" data-name="qfront">
-		<a href="qfront.html">
-		<span class="command">
-			QFRONT
-			<span class="args">
-			name
-			</span>
-		</span>
-		<span class="summary">Returns the first element of a queue.</span>
-		</a>
-	</li>
-	<li data-group="string" data-name="qback">
-		<a href="qback.html">
-		<span class="command">
-			QBACK
-			<span class="args">
-			name
-			</span>
-		</span>
-		<span class="summary">Returns the last element of a queue.</span>
-		</a>
-	</li>
-	<li data-group="string" data-name="qget">
-		<a href="qget.html">
-		<span class="command">
-			QGET
-			<span class="args">
-			name index
-			</span>
-		</span>
-		<span class="summary">Returns the element a the specified index(position).</span>
-		</a>
-	</li>
-	<li data-group="string" data-name="qset">
-		<a href="qset.html">
-		<span class="command">
-			QSET
-			<span class="args">
-			</span>
-		</span>
-		<span class="summary">Description</span>
-		</a>
-	</li>
-	<li data-group="string" data-name="qrange">
-		<a href="qrange.html">
-		<span class="command">
-			QRANGE
-			<span class="args">
-			name offset limit
-			</span>
-		</span>
-		<span class="summary">Returns a portion of elements from the queue at the specified range [offset, offset + limit].</span>
-		</a>
-	</li>
-	<li data-group="string" data-name="qslice">
-		<a href="qslice.html">
-		<span class="command">
-			QSLICE
-			<span class="args">
-			name begin end
-			</span>
-		</span>
-		<span class="summary">Returns a portion of elements from the queue at the specified range [begin, end].</span>
-		</a>
-	</li>
-	<li data-group="string" data-name="qpush">
-		<a href="qpush.html">
-		<span class="command">
-			QPUSH
-			<span class="args">
-			</span>
-		</span>
-		<span class="summary">This function is an alias of: qpush_back().</span>
-		</a>
-	</li>
 	<li data-group="string" data-name="qpush_front">
 		<a href="qpush_front.html">
 		<span class="command">
-			QPUSH_FRONT
+			qpush_front
 			<span class="args">
-			name item
+			name item1 item2 ...
 			</span>
 		</span>
 		<span class="summary">Adds one or more than one element to the head of the queue.</span>
@@ -919,28 +802,18 @@
 	<li data-group="string" data-name="qpush_back">
 		<a href="qpush_back.html">
 		<span class="command">
-			QPUSH_BACK
+			qpush_back
 			<span class="args">
-			name item
+			name item1 item2 ...
 			</span>
 		</span>
 		<span class="summary">Adds an or more than one element to the end of the queue.</span>
 		</a>
 	</li>
-	<li data-group="string" data-name="qpop">
-		<a href="qpop.html">
-		<span class="command">
-			QPOP
-			<span class="args">
-			</span>
-		</span>
-		<span class="summary">This function is an alias of: qpop_front(). </span>
-		</a>
-	</li>
 	<li data-group="string" data-name="qpop_front">
 		<a href="qpop_front.html">
 		<span class="command">
-			QPOP_FRONT
+			qpop_front
 			<span class="args">
 			name size
 			</span>
@@ -951,7 +824,7 @@
 	<li data-group="string" data-name="qpop_back">
 		<a href="qpop_back.html">
 		<span class="command">
-			QPOP_BACK
+			qpop_back
 			<span class="args">
 			name size
 			</span>
@@ -959,10 +832,120 @@
 		<span class="summary">Pop out one or more elements from the tail of a queue.</span>
 		</a>
 	</li>
+	<li data-group="string" data-name="qpush">
+		<a href="qpush.html">
+		<span class="command">
+			qpush
+			<span class="args">
+				name item1 item2 ...
+			</span>
+		</span>
+		<span class="summary">Alias of `qpush_front`. </span>
+		</a>
+	</li>
+	<li data-group="string" data-name="qpop">
+		<a href="qpop.html">
+		<span class="command">
+			qpop
+			<span class="args">
+			name size
+			</span>
+		</span>
+		<span class="summary">Alias of `qpop_front`. </span>
+		</a>
+	</li>
+	<li data-group="string" data-name="qfront">
+		<a href="qfront.html">
+		<span class="command">
+			qfront
+			<span class="args">
+			name
+			</span>
+		</span>
+		<span class="summary">Returns the first element of a queue.</span>
+		</a>
+	</li>
+	<li data-group="string" data-name="qback">
+		<a href="qback.html">
+		<span class="command">
+			qback
+			<span class="args">
+			name
+			</span>
+		</span>
+		<span class="summary">Returns the last element of a queue.</span>
+		</a>
+	</li>
+	<li data-group="string" data-name="qsize">
+		<a href="qsize.html">
+		<span class="command">
+			qsize
+			<span class="args">
+			name
+			</span>
+		</span>
+		<span class="summary">Returns the number of items in the queue.</span>
+		</a>
+	</li>
+	<li data-group="string" data-name="qclear">
+		<a href="qclear.html">
+		<span class="command">
+			qclear
+			<span class="args">
+			name
+			</span>
+		</span>
+		<span class="summary">Clear the queue.</span>
+		</a>
+	</li>
+	<li data-group="string" data-name="qget">
+		<a href="qget.html">
+		<span class="command">
+			qget
+			<span class="args">
+			name index
+			</span>
+		</span>
+		<span class="summary">Returns the element a the specified index(position).</span>
+		</a>
+	</li>
+	<li data-group="string" data-name="qset">
+		<a href="qset.html">
+		<span class="command">
+			qset
+			<span class="args">
+				name index val
+			</span>
+		</span>
+		<span class="summary">Description</span>
+		</a>
+	</li>
+	<li data-group="string" data-name="qrange">
+		<a href="qrange.html">
+		<span class="command">
+			qrange
+			<span class="args">
+			name offset limit
+			</span>
+		</span>
+		<span class="summary">Returns a portion of elements from the queue at the specified range [offset, offset + limit].</span>
+		</a>
+	</li>
+	<li data-group="string" data-name="qslice">
+		<a href="qslice.html">
+		<span class="command">
+			qslice
+			<span class="args">
+			name begin end
+			</span>
+		</span>
+		<span class="summary">Returns a portion of elements from the queue at the specified range [begin, end].</span>
+		</a>
+	</li>
 	<li data-group="string" data-name="qtrim_front">
 		<a href="qtrim_front.html">
 		<span class="command">
-			QTRIM_FRONT
+			qtrim_front
 			<span class="args">
 			name size
 			</span>
@@ -973,7 +956,7 @@
 	<li data-group="string" data-name="qtrim_back">
 		<a href="qtrim_back.html">
 		<span class="command">
-			QTRIM_BACK
+			qtrim_back
 			<span class="args">
 			name size
 			</span>
@@ -981,6 +964,29 @@
 		<span class="summary">Remove multi elements from the tail of a queue.</span>
 		</a>
 	</li>
+	<li data-group="string" data-name="qlist">
+		<a href="qlist.html">
+		<span class="command">
+			qlist
+			<span class="args">
+				name_start name_end limit
+			</span>
+		</span>
+		<span class="summary">List list/queue names in range (name_start, name_end].</span>
+		</a>
+	</li>
+	<li data-group="string" data-name="qrlist">
+		<a href="qrlist.html">
+		<span class="command">
+			qrlist
+			<span class="args">
+				name_start name_end limit
+			</span>
+		</span>
+		<span class="summary">List list/queue names in range (name_start, name_end], in reverse order.</span>
+		</a>
+	</li>
+
 </ul>
 </div>
 </section>

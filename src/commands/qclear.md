@@ -1,3 +1,13 @@
-# Commands
+# qclear name
 
-All SSDB commands are described by [PHP API Doc](http://ssdb.io/docs/php/).
+Clear the queue.
+
+## Parameters
+
+    name - 
+
+## Return Value
+
+false on error.
+
+## Example

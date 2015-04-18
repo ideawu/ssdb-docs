@@ -1,3 +1,14 @@
-# Commands
+# qpush_back name item1 item2 ...
 
-All SSDB commands are described by [PHP API Doc](http://ssdb.io/docs/php/).
+Adds an or more than one element to the end of the queue.
+
+## Parameters
+
+    name - 
+    item - string or array of string.
+
+## Return Value
+
+The length of the list after the push operation, false on error.
+
+## Example

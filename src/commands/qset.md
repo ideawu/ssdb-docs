@@ -1,3 +1,15 @@
-# Commands
+# qset name index val
 
-All SSDB commands are described by [PHP API Doc](http://ssdb.io/docs/php/).
+Sets the list element at index to value. An error is returned for out of range indexes.
+
+## Parameters
+
+    name - 
+    index - negative intexes accepted.
+    val - 
+
+## Return Value
+
+false on error, other values indicate OK.
+
+## Example

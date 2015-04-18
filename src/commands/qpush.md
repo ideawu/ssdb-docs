@@ -1,3 +1,3 @@
-# Commands
+# qpush name item1 item2 ...
 
-All SSDB commands are described by [PHP API Doc](http://ssdb.io/docs/php/).
+Alias of [qpush_back](./qpush_back.html)

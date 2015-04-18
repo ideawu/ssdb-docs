@@ -1,3 +1,14 @@
-# Commands
+# qtrim_back name size
 
-All SSDB commands are described by [PHP API Doc](http://ssdb.io/docs/php/).
+Remove multi elements from the tail of a queue.
+
+## Parameters
+
+    name - 
+    size - number of elements to delete.
+
+## Return Value
+
+false on error. Return the number of elements removed.
+
+## Example

@@ -1,3 +1,15 @@
-# Commands
+# qrange offset limit
 
-All SSDB commands are described by [PHP API Doc](http://ssdb.io/docs/php/).
+Returns a portion of elements from the queue at the specified range [offset, offset + limit].
+
+## Parameters
+
+    name - 
+    offset - 
+    limit - 
+
+## Return Value
+
+false on error, otherwise an array containing items.
+
+## Example

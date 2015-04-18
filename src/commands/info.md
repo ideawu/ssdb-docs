@@ -1,4 +1,4 @@
-# INFO opt
+# INFO [opt]
 
 Return information about the server.
 

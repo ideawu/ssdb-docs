@@ -1,4 +1,4 @@
-# INFO opt
+# INFO [opt]
 
 返回服务器的信息。
 

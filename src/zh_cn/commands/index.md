@@ -46,7 +46,7 @@
 		<span class="command">
 			INFO
 			<span class="args">
-			opt
+			[opt]
 			</span>
 		</span>
 		<span class="summary">返回服务器信息</span>

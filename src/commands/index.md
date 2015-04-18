@@ -35,7 +35,7 @@
 	<li data-group="string" data-name="flushdb">
 		<a href="flushdb.html">
 		<span class="command">
-			FLUSHDB
+			flushdb
 			<span class="args">
 			[type]
 			</span>
@@ -122,7 +122,7 @@
 	<li data-group="string" data-name="get">
 		<a href="get.html">
 		<span class="command">
-			GET
+			get
 			<span class="args">
 			key
 			</span>
@@ -133,7 +133,7 @@
 	<li data-group="string" data-name="getset">
 		<a href="getset.html">
 		<span class="command">
-			GETSET
+			getset
 			<span class="args">
 			key value
 			</span>
@@ -176,7 +176,7 @@
 	<li data-group="string" data-name="getbit">
 		<a href="getbit.html">
 		<span class="command">
-			GETBIT
+			getbit
 			<span class="args">
 			key offset
 			</span>
@@ -341,7 +341,7 @@
 	<li data-group="string" data-name="hdel">
 		<a href="hdel.html">
 		<span class="command">
-			HDEL
+			hdel
 			<span class="args">
 			name key
 			</span>
@@ -354,7 +354,6 @@
 		<span class="command">
 			HINCR
 			<span class="args">
-			
 			</span>
 		</span>
 		<span class="summary">Description</span>
@@ -451,7 +450,7 @@
 	<li data-group="string" data-name="hclear">
 		<a href="hclear.html">
 		<span class="command">
-			HCLEAR
+			hclear
 			<span class="args">
 			name
 			</span>

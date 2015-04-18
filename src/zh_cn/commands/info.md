@@ -4,7 +4,7 @@
 
 ## 参数
 
-```opt``` - 可选，可取值```cmd```, ```leveldb```
+* `opt` - 可选，可取值 `cmd`, `leveldb`.
 
 ## 返回值
 
@@ -12,7 +12,7 @@
 
 ## 示例
 
-	ssdb 127.0.0.1:8888> INFO
+	ssdb 127.0.0.1:8888> info
 	version
 		1.9.0
 	links

@@ -46,7 +46,7 @@
 	<li data-group="string" data-name="info">
 		<a href="info.html">
 		<span class="command">
-			INFO
+			info
 			<span class="args">
 			[opt]
 			</span>
@@ -155,8 +155,9 @@
 	<li data-group="string" data-name="incr">
 		<a href="incr.html">
 		<span class="command">
-			INCR
+			incr
 			<span class="args">
+				key [num]
 			</span>
 		</span>
 		<span class="summary">Increment the number stored at key by num.</span>
@@ -204,6 +205,7 @@
 			</span>
 		</span>
 		<span class="summary">Count the number of set bits (population counting) in part of a string.</span>
+		</a>
 	</li>
 	<li data-group="string" data-name="countbit">
 		<a href="countbit.html">
@@ -243,7 +245,6 @@
 		<span class="command">
 			KEYS
 			<span class="args">
-			
 			</span>
 		</span>
 		<span class="summary">List keys in range (key_start, key_end].</span>
@@ -254,7 +255,6 @@
 		<span class="command">
 			SCAN
 			<span class="args">
-			
 			</span>
 		</span>
 		<span class="summary">List key-value pairs with keys in range (key_start, key_end].</span>
@@ -265,7 +265,6 @@
 		<span class="command">
 			RSCAN
 			<span class="args">
-			
 			</span>
 		</span>
 		<span class="summary">List key-value pairs with keys in range (key_start, key_end], in reverse order.</span>
@@ -311,6 +310,7 @@
 </section>
 
 ## Hashmap
+
 ---
 
 <section id="commands">
@@ -319,7 +319,7 @@
 	<li data-group="string" data-name="hset">
 		<a href="hset.html">
 		<span class="command">
-			HSET
+			hset
 			<span class="args">
 			name key value
 			</span>
@@ -374,12 +374,12 @@
 	<li data-group="string" data-name="hsize">
 		<a href="hsize.html">
 		<span class="command">
-			HSIZE
+			hsize
 			<span class="args">
 			name
 			</span>
 		</span>
-		<span class="summary">Return the number of pairs of a hashmap.</span>
+		<span class="summary">Return the number of key-value pairs in the hashmap.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="hlist">
@@ -429,8 +429,9 @@
 	<li data-group="string" data-name="hscan">
 		<a href="hscan.html">
 		<span class="command">
-			HSCAN
+			hscan
 			<span class="args">
+				key_start key_end limit
 			</span>
 		</span>
 		<span class="summary">List key-value pairs of a hashmap with keys in range (key_start, key_end].</span>
@@ -439,8 +440,9 @@
 	<li data-group="string" data-name="hrscan">
 		<a href="hrscan.html">
 		<span class="command">
-			HRSCAN
+			hrscan
 			<span class="args">
+				key_start key_end limit
 			</span>
 		</span>
 		<span class="summary">List key-value pairs with keys in range (key_start, key_end], in reverse order.</span>

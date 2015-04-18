@@ -73,10 +73,12 @@
 				var url = location.href.replace(/lang=\w+&?/g, '').replace(/\?+$/, '');
 				var ps = url.split('/');
 				var index = ps.indexOf('docs');
-				if(ps[index + 1] == 'zh_cn'){
+				if(lang == 'en' && ps[index + 1] == 'zh_cn'){
 					ps.splice(index + 1, 1);
-				}else{
+				}else if(lang == 'zh_cn' && ps[index + 1] != 'zh_cn'){
 					ps.splice(index + 1, 0, 'zh_cn');
+				}else{
+					return false;
 				}
 				url = ps.join('/');
 				location.href = url;

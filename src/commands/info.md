@@ -4,15 +4,17 @@ Return information about the server.
 
 ## Parameters
 
-* ```opt``` - optional, could be ```cmd```, ```leveldb```
+* `opt` - Optional, could be `cmd`, `leveldb`
 
-## Return value
+## Return Value
 
-Return an associative array of information about the server.
+Key-Value list.
+
+The key-value list is return as: k1 v1 k2 v2 ...
 
 ## Examples
 
-	ssdb 127.0.0.1:8888> INFO
+	ssdb 127.0.0.1:8888> info
 	version
 		1.9.0
 	links
@@ -66,4 +68,3 @@ Return an associative array of information about the server.
 		
 	15 result(s) (0.001 sec)
 	ssdb 127.0.0.1:8888> 
-

@@ -2,16 +2,16 @@
 
 __这个命令实际上并不是一个真正的命令, 它是由 `ssdb-cli` 提供的, 只能在 `ssdb-cli` 中使用.__
 
-删除ssdb服务器的所有数据。可选参数type指定删除对应类型的数据。
+删除 SSDB 服务器的所有数据. 可选参数 type 指定删除对应类型的数据.
 
 <span class="label label-danger" style="font-size: 120%;">注意</span>
 <div class="alert alert-danger">
-	这个命令很危险，产生的后果不可恢复，而且会破坏主从状态，请谨慎使用。
+	这个命令很危险, 产生的后果不可恢复, 而且会破坏主从状态, 请谨慎使用.
 </div>
 
 ## 参数
 
-* `type` - 可选参数，可取值 `kv`, `hash`, `zset`, `list`.
+* `type` - 可选参数, 可取值 `kv`, `hash`, `zset`, `list`.
 
 ## 返回值
 

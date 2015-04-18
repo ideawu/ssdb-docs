@@ -18,7 +18,7 @@
 			password
 			</span>
 		</span>
-		<span class="summary">Config password for later use to authenticate the connection.</span>
+		<span class="summary">Authenticate the connection.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="dbsize">

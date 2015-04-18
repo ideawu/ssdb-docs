@@ -13,44 +13,44 @@
 	<li data-group="string" data-name="auth">
 		<a href="auth.html">
 		<span class="command">
-			AUTH
+			auth
 			<span class="args">
 			password
 			</span>
 		</span>
-		<span class="summary">设置访问服务器的校验密码</span>
+		<span class="summary">Config password for later use to authenticate the connection.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="dbsize">
 		<a href="dbsize.html">
 		<span class="command">
-			DBSIZE
+			dbsize
 			<span class="args">
 			</span>
 		</span>
-		<span class="summary">返回数据库大小的<strong>近似值</strong></span>
+		<span class="summary">Return the <strong>approximate</strong> size of the database.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="flushdb">
 		<a href="flushdb.html">
 		<span class="command">
-			FLUSHDB
+			flushdb
 			<span class="args">
 			[type]
 			</span>
 		</span>
-		<span class="summary">删除服务器的所有数据</span>
+		<span class="summary">Delete all data in ssdb server.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="info">
 		<a href="info.html">
 		<span class="command">
-			INFO
+			info
 			<span class="args">
 			[opt]
 			</span>
 		</span>
-		<span class="summary">返回服务器信息</span>
+		<span class="summary">Return the information of server.</span>
 		</a>
 	</li>
 </ul>
@@ -65,7 +65,7 @@
 	<li data-group="string" data-name="set">
 		<a href="set.html">
 		<span class="command">
-			SET
+			set
 			<span class="args">
 			key value
 			</span>
@@ -76,7 +76,7 @@
 	<li data-group="string" data-name="setx">
 		<a href="setx.html">
 		<span class="command">
-			SETX
+			setx
 			<span class="args">
 			key value ttl
 			</span>
@@ -87,7 +87,7 @@
 	<li data-group="string" data-name="setnx">
 		<a href="setnx.html">
 		<span class="command">
-			SETNX
+			setnx
 			<span class="args">
 			key value
 			</span>
@@ -98,7 +98,7 @@
 	<li data-group="string" data-name="expire">
 		<a href="expire.html">
 		<span class="command">
-			EXPIRE
+			expire
 			<span class="args">
 			key ttl
 			</span>
@@ -109,7 +109,7 @@
 	<li data-group="string" data-name="ttl">
 		<a href="ttl.html">
 		<span class="command">
-			TTL
+			ttl
 			<span class="args">
 			key
 			</span>
@@ -120,7 +120,7 @@
 	<li data-group="string" data-name="get">
 		<a href="get.html">
 		<span class="command">
-			GET
+			get
 			<span class="args">
 			key
 			</span>
@@ -131,7 +131,7 @@
 	<li data-group="string" data-name="getset">
 		<a href="getset.html">
 		<span class="command">
-			GETSET
+			getset
 			<span class="args">
 			key value
 			</span>
@@ -142,7 +142,7 @@
 	<li data-group="string" data-name="del">
 		<a href="del.html">
 		<span class="command">
-			DEL
+			del
 			<span class="args">
 			key
 			</span>
@@ -153,8 +153,9 @@
 	<li data-group="string" data-name="incr">
 		<a href="incr.html">
 		<span class="command">
-			INCR
+			incr
 			<span class="args">
+				key [num]
 			</span>
 		</span>
 		<span class="summary">Increment the number stored at key by num.</span>
@@ -163,7 +164,7 @@
 	<li data-group="string" data-name="exists">
 		<a href="exists.html">
 		<span class="command">
-			EXISTS
+			exists
 			<span class="args">
 			key
 			</span>
@@ -174,7 +175,7 @@
 	<li data-group="string" data-name="getbit">
 		<a href="getbit.html">
 		<span class="command">
-			GETBIT
+			getbit
 			<span class="args">
 			key offset
 			</span>
@@ -185,7 +186,7 @@
 	<li data-group="string" data-name="setbit">
 		<a href="setbit.html">
 		<span class="command">
-			SETBIT
+			setbit
 			<span class="args">
 			key offset val
 			</span>
@@ -196,20 +197,20 @@
 	<li data-group="string" data-name="bitcount">
 		<a href="bitcount.html">
 		<span class="command">
-			BITCOUNT
+			bitcount
 			<span class="args">
-			key start start end
+			key [start] [end]
 			</span>
 		</span>
-		<span class="summary">Like Redis"s bitcount.</span>
+		<span class="summary">Count the number of set bits (population counting) in part of a string.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="countbit">
 		<a href="countbit.html">
 		<span class="command">
-			COUNTBIT
+			countbit
 			<span class="args">
-			key start start size size
+			key start size
 			</span>
 		</span>
 		<span class="summary">Count the number of set bits (population counting) in part of a string.</span>
@@ -218,9 +219,9 @@
 	<li data-group="string" data-name="substr">
 		<a href="substr.html">
 		<span class="command">
-			SUBSTR
+			substr
 			<span class="args">
-			key start start size size
+			key start size
 			</span>
 		</span>
 		<span class="summary">Return part of a string.</span>
@@ -229,7 +230,7 @@
 	<li data-group="string" data-name="strlen">
 		<a href="strlen.html">
 		<span class="command">
-			STRLEN
+			strlen
 			<span class="args">
 			key
 			</span>
@@ -240,20 +241,31 @@
 	<li data-group="string" data-name="keys">
 		<a href="keys.html">
 		<span class="command">
-			KEYS
+			keys
 			<span class="args">
-			
+				key_start key_end limit
 			</span>
 		</span>
 		<span class="summary">List keys in range (key_start, key_end].</span>
 		</a>
 	</li>
+	<li data-group="string" data-name="keys">
+		<a href="keys.html">
+		<span class="command">
+			rkeys
+			<span class="args">
+				key_start key_end limit
+			</span>
+		</span>
+		<span class="summary">List keys in range (key_start, key_end], in reverse order.</span>
+		</a>
+	</li>
 	<li data-group="string" data-name="scan">
 		<a href="scan.html">
 		<span class="command">
-			SCAN
+			scan
 			<span class="args">
-			
+				key_start key_end limit
 			</span>
 		</span>
 		<span class="summary">List key-value pairs with keys in range (key_start, key_end].</span>
@@ -262,9 +274,9 @@
 	<li data-group="string" data-name="rscan">
 		<a href="rscan.html">
 		<span class="command">
-			RSCAN
+			rscan
 			<span class="args">
-			
+				key_start key_end limit
 			</span>
 		</span>
 		<span class="summary">List key-value pairs with keys in range (key_start, key_end], in reverse order.</span>
@@ -273,9 +285,9 @@
 	<li data-group="string" data-name="multi_set">
 		<a href="multi_set.html">
 		<span class="command">
-			MULTI_SET
+			multi_set
 			<span class="args">
-			kvs
+			key1 value1 key2 value2 ...
 			</span>
 		</span>
 		<span class="summary">Set multiple key-value pairs(kvs) in one method call.</span>
@@ -284,9 +296,9 @@
 	<li data-group="string" data-name="multi_get">
 		<a href="multi_get.html">
 		<span class="command">
-			MULTI_GET
+			multi_get
 			<span class="args">
-			keys
+			key1 key2 ...
 			</span>
 		</span>
 		<span class="summary">Get the values related to the specified multiple keys</span>
@@ -295,16 +307,14 @@
 	<li data-group="string" data-name="multi_del">
 		<a href="multi_del.html">
 		<span class="command">
-			MULTI_DEL
+			multi_del
 			<span class="args">
-			keys
+			key1 key2 ...
 			</span>
 		</span>
 		<span class="summary">Delete specified multiple keys.</span>
 		</a>
 	</li>
-
-
 </ul>
 </div>
 
@@ -317,7 +327,7 @@
 	<li data-group="string" data-name="hset">
 		<a href="hset.html">
 		<span class="command">
-			HSET
+			hset
 			<span class="args">
 			name key value
 			</span>
@@ -328,7 +338,7 @@
 	<li data-group="string" data-name="hget">
 		<a href="hget.html">
 		<span class="command">
-			HGET
+			hget
 			<span class="args">
 			name key
 			</span>
@@ -339,7 +349,7 @@
 	<li data-group="string" data-name="hdel">
 		<a href="hdel.html">
 		<span class="command">
-			HDEL
+			hdel
 			<span class="args">
 			name key
 			</span>
@@ -350,18 +360,18 @@
 	<li data-group="string" data-name="hincr">
 		<a href="hincr.html">
 		<span class="command">
-			HINCR
+			hincr
 			<span class="args">
-			
+				name key [num]
 			</span>
 		</span>
-		<span class="summary">Description</span>
+		<span class="summary">Increment the number stored at key in a hashmap by num</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="hexists">
 		<a href="hexists.html">
 		<span class="command">
-			HEXISTS
+			hexists
 			<span class="args">
 			name key
 			</span>
@@ -372,20 +382,20 @@
 	<li data-group="string" data-name="hsize">
 		<a href="hsize.html">
 		<span class="command">
-			HSIZE
+			hsize
 			<span class="args">
 			name
 			</span>
 		</span>
-		<span class="summary">Return the number of pairs of a hashmap.</span>
+		<span class="summary">Return the number of key-value pairs in the hashmap.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="hlist">
 		<a href="hlist.html">
 		<span class="command">
-			HLIST
+			hlist
 			<span class="args">
-			
+				name_start name_end limit
 			</span>
 		</span>
 		<span class="summary">List hashmap names in range (name_start, name_end].</span>
@@ -394,9 +404,9 @@
 	<li data-group="string" data-name="hrlist">
 		<a href="hrlist.html">
 		<span class="command">
-			HRLIST
+			hrlist
 			<span class="args">
-			
+				name_start name_end limit
 			</span>
 		</span>
 		<span class="summary">List hashmap names in range (name_start, name_end].</span>
@@ -405,9 +415,9 @@
 	<li data-group="string" data-name="hkeys">
 		<a href="hkeys.html">
 		<span class="command">
-			HKEYS
+			hkeys
 			<span class="args">
-			
+				name key_start key_end
 			</span>
 		</span>
 		<span class="summary">List keys of a hashmap in range (key_start, key_end].</span>
@@ -416,7 +426,7 @@
 	<li data-group="string" data-name="hgetall">
 		<a href="hgetall.html">
 		<span class="command">
-			HGETALL
+			hgetall
 			<span class="args">
 			name
 			</span>
@@ -427,9 +437,9 @@
 	<li data-group="string" data-name="hscan">
 		<a href="hscan.html">
 		<span class="command">
-			HSCAN
+			hscan
 			<span class="args">
-			
+				key_start key_end limit
 			</span>
 		</span>
 		<span class="summary">List key-value pairs of a hashmap with keys in range (key_start, key_end].</span>
@@ -438,9 +448,9 @@
 	<li data-group="string" data-name="hrscan">
 		<a href="hrscan.html">
 		<span class="command">
-			HRSCAN
+			hrscan
 			<span class="args">
-			
+				key_start key_end limit
 			</span>
 		</span>
 		<span class="summary">List key-value pairs with keys in range (key_start, key_end], in reverse order.</span>
@@ -449,7 +459,7 @@
 	<li data-group="string" data-name="hclear">
 		<a href="hclear.html">
 		<span class="command">
-			HCLEAR
+			hclear
 			<span class="args">
 			name
 			</span>
@@ -460,9 +470,9 @@
 	<li data-group="string" data-name="multi_hset">
 		<a href="multi_hset.html">
 		<span class="command">
-			MULTI_HSET
+			multi_hset
 			<span class="args">
-			name kvs
+			name key1 value1 key2 value2 ...
 			</span>
 		</span>
 		<span class="summary">Set multiple key-value pairs(kvs) of a hashmap in one method call.</span>
@@ -471,9 +481,9 @@
 	<li data-group="string" data-name="multi_hget">
 		<a href="multi_hget.html">
 		<span class="command">
-			MULTI_HGET
+			multi_hget
 			<span class="args">
-			name keys
+			name key1 key2 ...
 			</span>
 		</span>
 		<span class="summary">Get the values related to the specified multiple keys of a hashmap.</span>
@@ -482,19 +492,16 @@
 	<li data-group="string" data-name="multi_hdel">
 		<a href="multi_hdel.html">
 		<span class="command">
-			MULTI_HDEL
+			multi_hdel
 			<span class="args">
-			name keys
+			name key1 key2 ...
 			</span>
 		</span>
 		<span class="summary">Delete specified multiple keys in a hashmap.</span>
 		</a>
 	</li>
-
-
 </ul>
 </div>
-
 
 ## Sorted Set
 
@@ -505,7 +512,7 @@
 	<li data-group="string" data-name="zset">
 		<a href="zset.html">
 		<span class="command">
-			ZSET
+			zset
 			<span class="args">
 			name key score
 			</span>
@@ -516,7 +523,7 @@
 	<li data-group="string" data-name="zget">
 		<a href="zget.html">
 		<span class="command">
-			ZGET
+			zget
 			<span class="args">
 			name key
 			</span>
@@ -527,7 +534,7 @@
 	<li data-group="string" data-name="zdel">
 		<a href="zdel.html">
 		<span class="command">
-			ZDEL
+			zdel
 			<span class="args">
 			name key
 			</span>
@@ -538,7 +545,7 @@
 	<li data-group="string" data-name="zincr">
 		<a href="zincr.html">
 		<span class="command">
-			ZINCR
+			zincr
 			<span class="args">
 			name key num
 			</span>
@@ -549,7 +556,7 @@
 	<li data-group="string" data-name="zexists">
 		<a href="zexists.html">
 		<span class="command">
-			ZEXISTS
+			zexists
 			<span class="args">
 			name key
 			</span>
@@ -560,7 +567,7 @@
 	<li data-group="string" data-name="zsize">
 		<a href="zsize.html">
 		<span class="command">
-			ZSIZE
+			zsize
 			<span class="args">
 			name
 			</span>
@@ -571,9 +578,8 @@
 	<li data-group="string" data-name="zlist">
 		<a href="zlist.html">
 		<span class="command">
-			ZLIST
+			zlist
 			<span class="args">
-			
 			</span>
 		</span>
 		<span class="summary">List zset names in range (name_start, name_end].</span>
@@ -582,20 +588,19 @@
 	<li data-group="string" data-name="zrlist">
 		<a href="zrlist.html">
 		<span class="command">
-			ZRLIST
+			zrlist
 			<span class="args">
-			
 			</span>
 		</span>
-		<span class="summary">List zset names in range (name_start, name_end].</span>
+		<span class="summary">List zset names in range (name_start, name_end], in reverse order.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="zkeys">
 		<a href="zkeys.html">
 		<span class="command">
-			ZKEYS
+			zkeys
 			<span class="args">
-			name key_start  score_start  score_end  limit
+				name key_start score_start score_end limit
 			</span>
 		</span>
 		<span class="summary">List keys in a zset.</span>
@@ -604,9 +609,9 @@
 	<li data-group="string" data-name="zscan">
 		<a href="zscan.html">
 		<span class="command">
-			ZSCAN
+			zscan
 			<span class="args">
-			
+				name key_start score_start score_end limit
 			</span>
 		</span>
 		<span class="summary">List key-score pairs where key-score in range (key_start+score_start, score_end].</span>
@@ -615,9 +620,9 @@
 	<li data-group="string" data-name="zrscan">
 		<a href="zrscan.html">
 		<span class="command">
-			ZRSCAN
+			zrscan
 			<span class="args">
-			name key_start  score_start  score_end  limit
+				name key_start score_start score_end limit
 			</span>
 		</span>
 		<span class="summary">List key-score pairs of a zset, in reverse order. See method zkeys().</span>
@@ -626,53 +631,51 @@
 	<li data-group="string" data-name="zrank">
 		<a href="zrank.html">
 		<span class="command">
-			ZRANK
+			zrank
 			<span class="args">
-			
+				name key
 			</span>
 		</span>
-		<span class="summary"></span>
+		<span class="summary">Returns the rank(index) of a given key in the specified sorted set.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="zrrank">
 		<a href="zrrank.html">
 		<span class="command">
-			ZRRANK
+			zrrank
 			<span class="args">
-			
+				name key
 			</span>
 		</span>
-		<span class="summary"></span>
+		<span class="summary">Returns the rank(index) of a given key in the specified sorted set, in reverse order.</span>
 		</a>
 	</li>
-
 	<li data-group="string" data-name="zrange, zrrange">
 		<a href="zrange.html">
 		<span class="command">
-			ZRANGE
+			zrange
 			<span class="args">
-			
+				name offset limit
 			</span>
 		</span>
-		<span class="summary"></span>
+		<span class="summary">Returns a range of key-score pairs by index range [offset, offset + limit).</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="zrrange">
 		<a href="zrrange.html">
 		<span class="command">
-			ZRRANGE
+			zrrange
 			<span class="args">
-			
+				name offset limit
 			</span>
 		</span>
-		<span class="summary"></span>
+		<span class="summary">Returns a range of key-score pairs by index range [offset, offset + limit), in reverse order.</span>
 		</a>
 	</li>
-
 	<li data-group="string" data-name="zclear">
 		<a href="zclear.html">
 		<span class="command">
-			ZCLEAR
+			zclear
 			<span class="args">
 			name
 			</span>
@@ -683,9 +686,9 @@
 	<li data-group="string" data-name="zcount">
 		<a href="zcount.html">
 		<span class="command">
-			ZCOUNT
+			zcount
 			<span class="args">
-			name start end
+				name start end
 			</span>
 		</span>
 		<span class="summary">Returns the number of elements of the sorted set stored at the specified key.</span>
@@ -694,9 +697,9 @@
 	<li data-group="string" data-name="zsum">
 		<a href="zsum.html">
 		<span class="command">
-			ZSUM
+			zsum
 			<span class="args">
-			name start end
+				name start end
 			</span>
 		</span>
 		<span class="summary">Returns the sum of elements of the sorted set stored at the specified key.</span>
@@ -705,9 +708,9 @@
 	<li data-group="string" data-name="zavg">
 		<a href="zavg.html">
 		<span class="command">
-			ZAVG
+			zavg
 			<span class="args">
-			name start end
+				name start end
 			</span>
 		</span>
 		<span class="summary">Returns the average of elements of the sorted set stored at the specified key.</span>
@@ -716,9 +719,9 @@
 	<li data-group="string" data-name="zremrangebyrank">
 		<a href="zremrangebyrank.html">
 		<span class="command">
-			ZREMRANGEBYRANK
+			zremrangebyrank
 			<span class="args">
-			name start end
+				name start end
 			</span>
 		</span>
 		<span class="summary">Delete the elements of the zset which have rank in the range [start,end].</span>
@@ -727,9 +730,9 @@
 	<li data-group="string" data-name="zremrangebyscore">
 		<a href="zremrangebyscore.html">
 		<span class="command">
-			ZREMRANGEBYSCORE
+			zremrangebyscore
 			<span class="args">
-			name start end
+				name start end
 			</span>
 		</span>
 		<span class="summary">Delete the elements of the zset which have score in the range [start,end].</span>
@@ -738,9 +741,9 @@
 	<li data-group="string" data-name="multi_zset">
 		<a href="multi_zset.html">
 		<span class="command">
-			MULTI_ZSET
+			multi_zset
 			<span class="args">
-			name kvs
+			name key1 score1 key2 score2 ...
 			</span>
 		</span>
 		<span class="summary">Set multiple key-score pairs(kvs) of a zset in one method call.</span>
@@ -749,9 +752,9 @@
 	<li data-group="string" data-name="multi_zget">
 		<a href="multi_zget.html">
 		<span class="command">
-			MULTI_ZGET
+			multi_zget
 			<span class="args">
-			name keys
+			name key1 key2 ...
 			</span>
 		</span>
 		<span class="summary">Get the values related to the specified multiple keys of a zset.</span>
@@ -760,9 +763,9 @@
 	<li data-group="string" data-name="multi_zdel">
 		<a href="multi_zdel.html">
 		<span class="command">
-			MULTI_ZDEL
+			multi_zdel
 			<span class="args">
-			name keys
+			name key1 key2 ...
 			</span>
 		</span>
 		<span class="summary">Delete specified multiple keys of a zset.</span>
@@ -780,133 +783,12 @@
 
 <div class="commands">
 <ul>
-	<li data-group="string" data-name="qsize">
-		<a href="qsize.html">
-		<span class="command">
-			QSIZE
-			<span class="args">
-			name
-			</span>
-		</span>
-		<span class="summary">Returns the number of items in the queue.</span>
-		</a>
-	</li>
-	<li data-group="string" data-name="qlist">
-		<a href="qlist.html">
-		<span class="command">
-			QLIST
-			<span class="args">
-			
-			</span>
-		</span>
-		<span class="summary">List list/queue names in range (name_start, name_end].</span>
-		</a>
-	</li>
-	<li data-group="string" data-name="qrlist">
-		<a href="qrlist.html">
-		<span class="command">
-			QRLIST
-			<span class="args">
-			
-			</span>
-		</span>
-		<span class="summary">List list/queue names in range (name_start, name_end].</span>
-		</a>
-	</li>
-	<li data-group="string" data-name="qclear">
-		<a href="qclear.html">
-		<span class="command">
-			QCLEAR
-			<span class="args">
-			name
-			</span>
-		</span>
-		<span class="summary">Clear the queue.</span>
-		</a>
-	</li>
-	<li data-group="string" data-name="qfront">
-		<a href="qfront.html">
-		<span class="command">
-			QFRONT
-			<span class="args">
-			name
-			</span>
-		</span>
-		<span class="summary">Returns the first element of a queue.</span>
-		</a>
-	</li>
-	<li data-group="string" data-name="qback">
-		<a href="qback.html">
-		<span class="command">
-			QBACK
-			<span class="args">
-			name
-			</span>
-		</span>
-		<span class="summary">Returns the last element of a queue.</span>
-		</a>
-	</li>
-	<li data-group="string" data-name="qget">
-		<a href="qget.html">
-		<span class="command">
-			QGET
-			<span class="args">
-			name index
-			</span>
-		</span>
-		<span class="summary">Returns the element a the specified index(position).</span>
-		</a>
-	</li>
-	<li data-group="string" data-name="qset">
-		<a href="qset.html">
-		<span class="command">
-			QSET
-			<span class="args">
-			
-			</span>
-		</span>
-		<span class="summary">Description</span>
-		</a>
-	</li>
-	<li data-group="string" data-name="qrange">
-		<a href="qrange.html">
-		<span class="command">
-			QRANGE
-			<span class="args">
-			name offset limit
-			</span>
-		</span>
-		<span class="summary">Returns a portion of elements from the queue at the specified range [offset, offset + limit].</span>
-		</a>
-	</li>
-	<li data-group="string" data-name="qslice">
-		<a href="qslice.html">
-		<span class="command">
-			QSLICE
-			<span class="args">
-			name begin end
-			</span>
-		</span>
-		<span class="summary">Returns a portion of elements from the queue at the specified range [begin, end].</span>
-		</a>
-	</li>
-	<li data-group="string" data-name="qpush">
-		<a href="qpush.html">
-		<span class="command">
-			QPUSH
-			<span class="args">
-			
-			</span>
-		</span>
-		<span class="summary">This function is an alias of: qpush_back().</span>
-		</a>
-	</li>
 	<li data-group="string" data-name="qpush_front">
 		<a href="qpush_front.html">
 		<span class="command">
-			QPUSH_FRONT
+			qpush_front
 			<span class="args">
-			name item
+			name item1 item2 ...
 			</span>
 		</span>
 		<span class="summary">Adds one or more than one element to the head of the queue.</span>
@@ -915,29 +797,18 @@
 	<li data-group="string" data-name="qpush_back">
 		<a href="qpush_back.html">
 		<span class="command">
-			QPUSH_BACK
+			qpush_back
 			<span class="args">
-			name item
+			name item1 item2 ...
 			</span>
 		</span>
 		<span class="summary">Adds an or more than one element to the end of the queue.</span>
 		</a>
 	</li>
-	<li data-group="string" data-name="qpop">
-		<a href="qpop.html">
-		<span class="command">
-			QPOP
-			<span class="args">
-			
-			</span>
-		</span>
-		<span class="summary">This function is an alias of: qpop_front(). </span>
-		</a>
-	</li>
 	<li data-group="string" data-name="qpop_front">
 		<a href="qpop_front.html">
 		<span class="command">
-			QPOP_FRONT
+			qpop_front
 			<span class="args">
 			name size
 			</span>
@@ -948,7 +819,7 @@
 	<li data-group="string" data-name="qpop_back">
 		<a href="qpop_back.html">
 		<span class="command">
-			QPOP_BACK
+			qpop_back
 			<span class="args">
 			name size
 			</span>
@@ -956,10 +827,120 @@
 		<span class="summary">Pop out one or more elements from the tail of a queue.</span>
 		</a>
 	</li>
+	<li data-group="string" data-name="qpush">
+		<a href="qpush.html">
+		<span class="command">
+			qpush
+			<span class="args">
+				name item1 item2 ...
+			</span>
+		</span>
+		<span class="summary">Alias of `qpush_front`. </span>
+		</a>
+	</li>
+	<li data-group="string" data-name="qpop">
+		<a href="qpop.html">
+		<span class="command">
+			qpop
+			<span class="args">
+			name size
+			</span>
+		</span>
+		<span class="summary">Alias of `qpop_front`. </span>
+		</a>
+	</li>
+	<li data-group="string" data-name="qfront">
+		<a href="qfront.html">
+		<span class="command">
+			qfront
+			<span class="args">
+			name
+			</span>
+		</span>
+		<span class="summary">Returns the first element of a queue.</span>
+		</a>
+	</li>
+	<li data-group="string" data-name="qback">
+		<a href="qback.html">
+		<span class="command">
+			qback
+			<span class="args">
+			name
+			</span>
+		</span>
+		<span class="summary">Returns the last element of a queue.</span>
+		</a>
+	</li>
+	<li data-group="string" data-name="qsize">
+		<a href="qsize.html">
+		<span class="command">
+			qsize
+			<span class="args">
+			name
+			</span>
+		</span>
+		<span class="summary">Returns the number of items in the queue.</span>
+		</a>
+	</li>
+	<li data-group="string" data-name="qclear">
+		<a href="qclear.html">
+		<span class="command">
+			qclear
+			<span class="args">
+			name
+			</span>
+		</span>
+		<span class="summary">Clear the queue.</span>
+		</a>
+	</li>
+	<li data-group="string" data-name="qget">
+		<a href="qget.html">
+		<span class="command">
+			qget
+			<span class="args">
+			name index
+			</span>
+		</span>
+		<span class="summary">Returns the element a the specified index(position).</span>
+		</a>
+	</li>
+	<li data-group="string" data-name="qset">
+		<a href="qset.html">
+		<span class="command">
+			qset
+			<span class="args">
+				name index val
+			</span>
+		</span>
+		<span class="summary">Description</span>
+		</a>
+	</li>
+	<li data-group="string" data-name="qrange">
+		<a href="qrange.html">
+		<span class="command">
+			qrange
+			<span class="args">
+			name offset limit
+			</span>
+		</span>
+		<span class="summary">Returns a portion of elements from the queue at the specified range [offset, offset + limit].</span>
+		</a>
+	</li>
+	<li data-group="string" data-name="qslice">
+		<a href="qslice.html">
+		<span class="command">
+			qslice
+			<span class="args">
+			name begin end
+			</span>
+		</span>
+		<span class="summary">Returns a portion of elements from the queue at the specified range [begin, end].</span>
+		</a>
+	</li>
 	<li data-group="string" data-name="qtrim_front">
 		<a href="qtrim_front.html">
 		<span class="command">
-			QTRIM_FRONT
+			qtrim_front
 			<span class="args">
 			name size
 			</span>
@@ -970,7 +951,7 @@
 	<li data-group="string" data-name="qtrim_back">
 		<a href="qtrim_back.html">
 		<span class="command">
-			QTRIM_BACK
+			qtrim_back
 			<span class="args">
 			name size
 			</span>
@@ -978,5 +959,28 @@
 		<span class="summary">Remove multi elements from the tail of a queue.</span>
 		</a>
 	</li>
+	<li data-group="string" data-name="qlist">
+		<a href="qlist.html">
+		<span class="command">
+			qlist
+			<span class="args">
+				name_start name_end limit
+			</span>
+		</span>
+		<span class="summary">List list/queue names in range (name_start, name_end].</span>
+		</a>
+	</li>
+	<li data-group="string" data-name="qrlist">
+		<a href="qrlist.html">
+		<span class="command">
+			qrlist
+			<span class="args">
+				name_start name_end limit
+			</span>
+		</span>
+		<span class="summary">List list/queue names in range (name_start, name_end], in reverse order.</span>
+		</a>
+	</li>
+
 </ul>
 </div>

@@ -8,8 +8,7 @@
 
 ---
 
-<section id="commands">
-<div class="container">
+<div class="commands">
 <ul>
 	<li data-group="string" data-name="auth">
 		<a href="auth.html">
@@ -56,14 +55,12 @@
 	</li>
 </ul>
 </div>
-</section>
 
 ## Key Value
 
 ---
 
-<section id="commands">
-<div class="container">
+<div class="commands">
 <ul>
 	<li data-group="string" data-name="set">
 		<a href="set.html">
@@ -320,14 +317,12 @@
 	</li>
 </ul>
 </div>
-</section>
 
 ## Hashmap
 
 ---
 
-<section id="commands">
-<div class="container">
+<div class="commands">
 <ul>
 	<li data-group="string" data-name="hset">
 		<a href="hset.html">
@@ -505,23 +500,19 @@
 		<span class="summary">Delete specified multiple keys in a hashmap.</span>
 		</a>
 	</li>
-
-
 </ul>
 </div>
-</section>
 
 ## Sorted Set
 
 ---
 
-<section id="commands">
-<div class="container">
+<div class="commands">
 <ul>
 	<li data-group="string" data-name="zset">
 		<a href="zset.html">
 		<span class="command">
-			ZSET
+			zset
 			<span class="args">
 			name key score
 			</span>
@@ -532,7 +523,7 @@
 	<li data-group="string" data-name="zget">
 		<a href="zget.html">
 		<span class="command">
-			ZGET
+			zget
 			<span class="args">
 			name key
 			</span>
@@ -543,7 +534,7 @@
 	<li data-group="string" data-name="zdel">
 		<a href="zdel.html">
 		<span class="command">
-			ZDEL
+			zdel
 			<span class="args">
 			name key
 			</span>
@@ -554,7 +545,7 @@
 	<li data-group="string" data-name="zincr">
 		<a href="zincr.html">
 		<span class="command">
-			ZINCR
+			zincr
 			<span class="args">
 			name key num
 			</span>
@@ -565,7 +556,7 @@
 	<li data-group="string" data-name="zexists">
 		<a href="zexists.html">
 		<span class="command">
-			ZEXISTS
+			zexists
 			<span class="args">
 			name key
 			</span>
@@ -576,7 +567,7 @@
 	<li data-group="string" data-name="zsize">
 		<a href="zsize.html">
 		<span class="command">
-			ZSIZE
+			zsize
 			<span class="args">
 			name
 			</span>
@@ -587,7 +578,7 @@
 	<li data-group="string" data-name="zlist">
 		<a href="zlist.html">
 		<span class="command">
-			ZLIST
+			zlist
 			<span class="args">
 			</span>
 		</span>
@@ -597,19 +588,19 @@
 	<li data-group="string" data-name="zrlist">
 		<a href="zrlist.html">
 		<span class="command">
-			ZRLIST
+			zrlist
 			<span class="args">
 			</span>
 		</span>
-		<span class="summary">List zset names in range (name_start, name_end].</span>
+		<span class="summary">List zset names in range (name_start, name_end], in reverse order.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="zkeys">
 		<a href="zkeys.html">
 		<span class="command">
-			ZKEYS
+			zkeys
 			<span class="args">
-			name key_start  score_start  score_end  limit
+				name key_start score_start score_end limit
 			</span>
 		</span>
 		<span class="summary">List keys in a zset.</span>
@@ -618,8 +609,9 @@
 	<li data-group="string" data-name="zscan">
 		<a href="zscan.html">
 		<span class="command">
-			ZSCAN
+			zscan
 			<span class="args">
+				name key_start score_start score_end limit
 			</span>
 		</span>
 		<span class="summary">List key-score pairs where key-score in range (key_start+score_start, score_end].</span>
@@ -628,9 +620,9 @@
 	<li data-group="string" data-name="zrscan">
 		<a href="zrscan.html">
 		<span class="command">
-			ZRSCAN
+			zrscan
 			<span class="args">
-			name key_start  score_start  score_end  limit
+				name key_start score_start score_end limit
 			</span>
 		</span>
 		<span class="summary">List key-score pairs of a zset, in reverse order. See method zkeys().</span>
@@ -639,47 +631,51 @@
 	<li data-group="string" data-name="zrank">
 		<a href="zrank.html">
 		<span class="command">
-			ZRANK
+			zrank
 			<span class="args">
+				name key
 			</span>
 		</span>
-		<span class="summary"></span>
+		<span class="summary">Returns the rank(index) of a given key in the specified sorted set.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="zrrank">
 		<a href="zrrank.html">
 		<span class="command">
-			ZRRANK
+			zrrank
 			<span class="args">
+				name key
 			</span>
 		</span>
-		<span class="summary"></span>
+		<span class="summary">Returns the rank(index) of a given key in the specified sorted set, in reverse order.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="zrange, zrrange">
 		<a href="zrange.html">
 		<span class="command">
-			ZRANGE
+			zrange
 			<span class="args">
+				name offset limit
 			</span>
 		</span>
-		<span class="summary"></span>
+		<span class="summary">Returns a range of key-score pairs by index range [offset, offset + limit).</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="zrrange">
 		<a href="zrrange.html">
 		<span class="command">
-			ZRRANGE
+			zrrange
 			<span class="args">
+				name offset limit
 			</span>
 		</span>
-		<span class="summary"></span>
+		<span class="summary">Returns a range of key-score pairs by index range [offset, offset + limit), in reverse order.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="zclear">
 		<a href="zclear.html">
 		<span class="command">
-			ZCLEAR
+			zclear
 			<span class="args">
 			name
 			</span>
@@ -690,9 +686,9 @@
 	<li data-group="string" data-name="zcount">
 		<a href="zcount.html">
 		<span class="command">
-			ZCOUNT
+			zcount
 			<span class="args">
-			name start end
+				name start end
 			</span>
 		</span>
 		<span class="summary">Returns the number of elements of the sorted set stored at the specified key.</span>
@@ -701,9 +697,9 @@
 	<li data-group="string" data-name="zsum">
 		<a href="zsum.html">
 		<span class="command">
-			ZSUM
+			zsum
 			<span class="args">
-			name start end
+				name start end
 			</span>
 		</span>
 		<span class="summary">Returns the sum of elements of the sorted set stored at the specified key.</span>
@@ -712,9 +708,9 @@
 	<li data-group="string" data-name="zavg">
 		<a href="zavg.html">
 		<span class="command">
-			ZAVG
+			zavg
 			<span class="args">
-			name start end
+				name start end
 			</span>
 		</span>
 		<span class="summary">Returns the average of elements of the sorted set stored at the specified key.</span>
@@ -723,9 +719,9 @@
 	<li data-group="string" data-name="zremrangebyrank">
 		<a href="zremrangebyrank.html">
 		<span class="command">
-			ZREMRANGEBYRANK
+			zremrangebyrank
 			<span class="args">
-			name start end
+				name start end
 			</span>
 		</span>
 		<span class="summary">Delete the elements of the zset which have rank in the range [start,end].</span>
@@ -734,9 +730,9 @@
 	<li data-group="string" data-name="zremrangebyscore">
 		<a href="zremrangebyscore.html">
 		<span class="command">
-			ZREMRANGEBYSCORE
+			zremrangebyscore
 			<span class="args">
-			name start end
+				name start end
 			</span>
 		</span>
 		<span class="summary">Delete the elements of the zset which have score in the range [start,end].</span>
@@ -778,7 +774,6 @@
 
 </ul>
 </div>
-</section>
 
 
 
@@ -786,8 +781,7 @@
 
 ---
 
-<section id="commands">
-<div class="container">
+<div class="commands">
 <ul>
 	<li data-group="string" data-name="qpush_front">
 		<a href="qpush_front.html">
@@ -990,4 +984,3 @@
 
 </ul>
 </div>
-</section>

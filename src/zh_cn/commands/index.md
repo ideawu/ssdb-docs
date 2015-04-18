@@ -5,9 +5,10 @@
 </div>
 
 ## Server
+
 ---
-<section id="commands">
-<div class="container">
+
+<div class="commands">
 <ul>
 	<li data-group="string" data-name="auth">
 		<a href="auth.html">
@@ -54,13 +55,12 @@
 	</li>
 </ul>
 </div>
-</section>
 
 ## Key Value
+
 ---
 
-<section id="commands">
-<div class="container">
+<div class="commands">
 <ul>
 	<li data-group="string" data-name="set">
 		<a href="set.html">
@@ -307,13 +307,12 @@
 
 </ul>
 </div>
-</section>
 
 ## Hashmap
+
 ---
 
-<section id="commands">
-<div class="container">
+<div class="commands">
 <ul>
 	<li data-group="string" data-name="hset">
 		<a href="hset.html">
@@ -495,13 +494,13 @@
 
 </ul>
 </div>
-</section>
+
 
 ## Sorted Set
+
 ---
 
-<section id="commands">
-<div class="container">
+<div class="commands">
 <ul>
 	<li data-group="string" data-name="zset">
 		<a href="zset.html">
@@ -772,15 +771,14 @@
 
 </ul>
 </div>
-</section>
 
 
 
 ## List
+
 ---
 
-<section id="commands">
-<div class="container">
+<div class="commands">
 <ul>
 	<li data-group="string" data-name="qsize">
 		<a href="qsize.html">
@@ -982,4 +980,3 @@
 	</li>
 </ul>
 </div>
-</section>

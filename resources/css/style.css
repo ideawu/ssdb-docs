@@ -80,17 +80,17 @@ h4{
 
 /** Styles for commands list. */
 
-#commands ul { overflow: hidden; *zoom: 1; margin: 0; text-align: left; padding: 0; }
-#commands li { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
-#commands li a { display: block; padding: 1em; color: #333; text-decoration: none; }
-#commands li a:hover, #commands li a:focus { color: #333; background: #ecf7fa; }
-#commands li .command { white-space: nowrap; overflow: hidden; -ms-text-overflow: ellipsis; -o-text-overflow: ellipsis; text-overflow: ellipsis; font-family: "Monaco", "Menlo", monospace; display: block; margin: 0 0 2px 0; color: #06a; }
-#commands li .command .args { color: #555; }
-#commands li .summary { display: block; font-size: 0.9em; line-height: 1.5em; }
+.commands ul { overflow: hidden; *zoom: 1; margin: 0; text-align: left; padding: 0; }
+.commands li { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.commands li a { display: block; padding: 1em; color: #333; text-decoration: none; }
+.commands li a:hover, .commands li a:focus { color: #333; background: #ecf7fa; }
+.commands li .command { white-space: nowrap; overflow: hidden; -ms-text-overflow: ellipsis; -o-text-overflow: ellipsis; text-overflow: ellipsis; font-family: "Monaco", "Menlo", monospace; display: block; margin: 0 0 2px 0; color: #06a; }
+.commands li .command .args { color: #555; }
+.commands li .summary { display: block; font-size: 0.85em; line-height: 1.5em; }
 
 @media only screen and (min-width: 992px) {
-  #commands .command { font-size: 0.9em; }
-  #commands .command .args {}
-  #commands ul li { float: left; margin: 0px 10px 20px 0; overflow: hidden; width: 30%; }
-  #commands ul li a { -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; background-color: #fafafa; height: 6em; } }
+  .commands .command { font-size: 0.9em; }
+  .commands .command .args {}
+  .commands ul li { float: left; margin: 0px 10px 20px 0; overflow: hidden; width: 30%; }
+  .commands ul li a { -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; background-color: #fafafa; height: 6em; } }
 

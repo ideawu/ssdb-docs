@@ -330,7 +330,7 @@
 	<li data-group="string" data-name="hget">
 		<a href="hget.html">
 		<span class="command">
-			HGET
+			hget
 			<span class="args">
 			name key
 			</span>
@@ -352,17 +352,18 @@
 	<li data-group="string" data-name="hincr">
 		<a href="hincr.html">
 		<span class="command">
-			HINCR
+			hincr
 			<span class="args">
+				name key [num]
 			</span>
 		</span>
-		<span class="summary">Description</span>
+		<span class="summary">Increment the number stored at key in a hashmap by num</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="hexists">
 		<a href="hexists.html">
 		<span class="command">
-			HEXISTS
+			hexists
 			<span class="args">
 			name key
 			</span>
@@ -384,9 +385,9 @@
 	<li data-group="string" data-name="hlist">
 		<a href="hlist.html">
 		<span class="command">
-			HLIST
+			hlist
 			<span class="args">
-			
+				name_start name_end limit
 			</span>
 		</span>
 		<span class="summary">List hashmap names in range (name_start, name_end].</span>
@@ -395,9 +396,9 @@
 	<li data-group="string" data-name="hrlist">
 		<a href="hrlist.html">
 		<span class="command">
-			HRLIST
+			hrlist
 			<span class="args">
-			
+				name_start name_end limit
 			</span>
 		</span>
 		<span class="summary">List hashmap names in range (name_start, name_end].</span>
@@ -406,9 +407,9 @@
 	<li data-group="string" data-name="hkeys">
 		<a href="hkeys.html">
 		<span class="command">
-			HKEYS
+			hkeys
 			<span class="args">
-			
+				name key_start key_end
 			</span>
 		</span>
 		<span class="summary">List keys of a hashmap in range (key_start, key_end].</span>
@@ -417,7 +418,7 @@
 	<li data-group="string" data-name="hgetall">
 		<a href="hgetall.html">
 		<span class="command">
-			HGETALL
+			hgetall
 			<span class="args">
 			name
 			</span>
@@ -430,7 +431,6 @@
 		<span class="command">
 			HSCAN
 			<span class="args">
-			
 			</span>
 		</span>
 		<span class="summary">List key-value pairs of a hashmap with keys in range (key_start, key_end].</span>
@@ -441,7 +441,6 @@
 		<span class="command">
 			HRSCAN
 			<span class="args">
-			
 			</span>
 		</span>
 		<span class="summary">List key-value pairs with keys in range (key_start, key_end], in reverse order.</span>
@@ -498,6 +497,7 @@
 </section>
 
 ## Sorted Set
+
 ---
 
 <section id="commands">
@@ -574,7 +574,6 @@
 		<span class="command">
 			ZLIST
 			<span class="args">
-			
 			</span>
 		</span>
 		<span class="summary">List zset names in range (name_start, name_end].</span>
@@ -585,7 +584,6 @@
 		<span class="command">
 			ZRLIST
 			<span class="args">
-			
 			</span>
 		</span>
 		<span class="summary">List zset names in range (name_start, name_end].</span>
@@ -607,7 +605,6 @@
 		<span class="command">
 			ZSCAN
 			<span class="args">
-			
 			</span>
 		</span>
 		<span class="summary">List key-score pairs where key-score in range (key_start+score_start, score_end].</span>
@@ -629,7 +626,6 @@
 		<span class="command">
 			ZRANK
 			<span class="args">
-			
 			</span>
 		</span>
 		<span class="summary"></span>
@@ -640,19 +636,16 @@
 		<span class="command">
 			ZRRANK
 			<span class="args">
-			
 			</span>
 		</span>
 		<span class="summary"></span>
 		</a>
 	</li>
-
 	<li data-group="string" data-name="zrange, zrrange">
 		<a href="zrange.html">
 		<span class="command">
 			ZRANGE
 			<span class="args">
-			
 			</span>
 		</span>
 		<span class="summary"></span>
@@ -663,13 +656,11 @@
 		<span class="command">
 			ZRRANGE
 			<span class="args">
-			
 			</span>
 		</span>
 		<span class="summary"></span>
 		</a>
 	</li>
-
 	<li data-group="string" data-name="zclear">
 		<a href="zclear.html">
 		<span class="command">
@@ -798,7 +789,6 @@
 		<span class="command">
 			QLIST
 			<span class="args">
-			
 			</span>
 		</span>
 		<span class="summary">List list/queue names in range (name_start, name_end].</span>
@@ -809,7 +799,6 @@
 		<span class="command">
 			QRLIST
 			<span class="args">
-			
 			</span>
 		</span>
 		<span class="summary">List list/queue names in range (name_start, name_end].</span>
@@ -864,7 +853,6 @@
 		<span class="command">
 			QSET
 			<span class="args">
-			
 			</span>
 		</span>
 		<span class="summary">Description</span>
@@ -897,7 +885,6 @@
 		<span class="command">
 			QPUSH
 			<span class="args">
-			
 			</span>
 		</span>
 		<span class="summary">This function is an alias of: qpush_back().</span>
@@ -930,7 +917,6 @@
 		<span class="command">
 			QPOP
 			<span class="args">
-			
 			</span>
 		</span>
 		<span class="summary">This function is an alias of: qpop_front(). </span>

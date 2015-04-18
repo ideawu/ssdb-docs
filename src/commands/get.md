@@ -8,7 +8,7 @@ Get the value related to the specified key.
 
 ## Return Value
 
-Status reply.
+Value reply.
 
 Return the value to the key, if the key does not exists, return `not_found` Status Code.
 

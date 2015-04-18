@@ -1,3 +1,3 @@
-# Commands
+# hrlist name_start name_end limit
 
-All SSDB commands are described by [PHP API Doc](http://ssdb.io/docs/php/).
+Like [hlist](./hlist.html), but in reverse order.

@@ -2,15 +2,15 @@
 
 Delete specified key.
 
-## Parameters
+## 参数
 
 * `key` - 
 
-## Return Value
+## 返回值
 
 Status reply. You can not determine whether the key exists or not by delete command.
 
-## Example
+## 示例
 
 	ssdb 127.0.0.1:8888> set a 123
 	ok

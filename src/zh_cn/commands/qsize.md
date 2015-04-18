@@ -2,13 +2,13 @@
 
 Returns the number of items in the queue.
 
-## Parameters
+## 参数
 
 * `name` - 
 
-## Return Value
+## 返回值
 
 false on error, otherwise an integer, 0 if the queue does not exist.
 
-## Example
+## 示例
 

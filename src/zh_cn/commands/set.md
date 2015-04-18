@@ -2,14 +2,14 @@
 
 设置指定 key 的值内容.
 
-## Parameters
+## 参数
 
 * `key` - 
 * `value` - 
 
-## Return Value
+## 返回值
 
 false on error, other values indicate OK.
 
-## Example
+## 示例
 

@@ -2,14 +2,14 @@
 
 设置指定 key 的值内容, 同时设置存活时间.
 
-## Parameters
+## 参数
 
 * `key` - 
 * `value` - 
 * `ttl` - number of seconds to live.
 
-## Return Value
+## 返回值
 
 false on error, other values indicate OK.
 
-## Example
+## 示例

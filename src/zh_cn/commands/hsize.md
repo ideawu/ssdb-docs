@@ -2,15 +2,15 @@
 
 Return the number of key-value pairs in the hashmap.
 
-## Parameters
+## 参数
 
 * `name` - The name of the hashmap
 
-## Return Value
+## 返回值
 
 Integer reply.
 
-## Example
+## 示例
 
 	ssdb 127.0.0.1:8888> hsize h
 	7

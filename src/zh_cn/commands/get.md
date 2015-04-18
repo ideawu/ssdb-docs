@@ -2,17 +2,17 @@
 
 Get the value related to the specified key.
 
-## Parameters
+## 参数
 
 * `key` - 
 
-## Return Value
+## 返回值
 
 Value reply.
 
 Return the value to the key, if the key does not exists, return `not_found` Status Code.
 
-## Example
+## 示例
 
 	ssdb 127.0.0.1:8888> set a 123
 	ok

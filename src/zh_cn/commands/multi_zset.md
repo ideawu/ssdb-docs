@@ -2,16 +2,16 @@
 
 Set multiple key-score pairs(kvs) of a zset in one method call.
 
-## Parameters
+## 参数
 
 * `name` -
 * `key1` -
 * `score1` -
 * ...
 
-## Return Value
+## 返回值
 
 false on error, other values indicate OK.
 
-## Example
+## 示例
 

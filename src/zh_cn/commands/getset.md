@@ -2,16 +2,16 @@
 
 Sets a value and returns the previous entry at that key.
 
-## Parameters
+## 参数
 
 * `key` - 
 * `value` -
 
-## Return Value
+## 返回值
 
 If the key already exists, the value related to that key is returned. Otherwise return `not_found` Status Code.
 
-## Example
+## 示例
 
 	ssdb 127.0.0.1:8888> set a 123
 	ok

@@ -2,14 +2,14 @@
 
 Delete specified multiple keys in a hashmap.
 
-## Parameters
+## 参数
 
 * `name` -
 * `key1` -
 * ...
 
-## Return Value
+## 返回值
 
 false on error, other values indicate OK.
 
-## Example
+## 示例

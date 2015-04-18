@@ -2,12 +2,12 @@
 
 Returns the first element of a queue.
 
-## Parameters
+## 参数
 
 * `name` - 
 
-## Return Value
+## 返回值
 
 false on error, null if queue empty, otherwise the item returned.
 
-## Example
+## 示例

@@ -2,17 +2,17 @@
 
 Count the number of set bits (population counting) in a string. Unlike [bitcount](./bitcount.html), it take part of the string by `start` and `size`, not `start` and `end`.
 
-## Parameters
+## 参数
 
 * `key` - 
 * `start - Optional, inclusive, if start is negative, count from start'th character from the end of string.
 * `size` - Optional, if size is negative, then that many characters will be omitted from the end of string.
 
-## Return Value
+## 返回值
 
 The number of bits set to 1.
 
-## Example
+## 示例
 
 	ssdb 127.0.0.1:8888> set a 123
 	ok

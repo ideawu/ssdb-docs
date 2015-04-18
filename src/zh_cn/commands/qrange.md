@@ -2,14 +2,14 @@
 
 Returns a portion of elements from the queue at the specified range [offset, offset + limit].
 
-## Parameters
+## 参数
 
 * `name` - 
 * `offset` - 
 * `limit` - 
 
-## Return Value
+## 返回值
 
 false on error, otherwise an array containing items.
 
-## Example
+## 示例

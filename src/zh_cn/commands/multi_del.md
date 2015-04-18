@@ -2,13 +2,13 @@
 
 Delete specified multiple keys.
 
-## Parameters
+## 参数
 
 * `key1` -
 * ...
 
-## Return Value
+## 返回值
 
 false on error, other values indicate OK.
 
-## Example
+## 示例

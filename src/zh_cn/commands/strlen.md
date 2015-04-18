@@ -2,12 +2,12 @@
 
 Return the number of bytes of a string.
 
-## Parameters
+## 参数
 
 * `key` - 
 
-## Return Value
+## 返回值
 
 The number of bytes of the string, if key not exists, returns 0.
 
-## Example
+## 示例

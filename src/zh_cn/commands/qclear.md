@@ -2,12 +2,12 @@
 
 Clear the queue.
 
-## Parameters
+## 参数
 
 * `name` - 
 
-## Return Value
+## 返回值
 
 false on error.
 
-## Example
+## 示例

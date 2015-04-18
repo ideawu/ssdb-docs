@@ -2,13 +2,13 @@
 
 Remove multi elements from the head of a queue.
 
-## Parameters
+## 参数
 
 * `name` - 
 * `size` - Number of elements to delete.
 
-## Return Value
+## 返回值
 
 false on error. Return the number of elements removed.
 
-## Example
+## 示例

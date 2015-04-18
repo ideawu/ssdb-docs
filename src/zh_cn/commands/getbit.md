@@ -2,16 +2,16 @@
 
 Return a single bit out of a string.
 
-## Parameters
+## 参数
 
 * `key` - 
 * `offset` - bit offset.
 
-## Return Value
+## 返回值
 
 `0` or `1`.
 
-## Example
+## 示例
 
 	ssdb 127.0.0.1:8888> set a 123
 	ok

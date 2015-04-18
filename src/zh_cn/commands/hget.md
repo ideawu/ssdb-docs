@@ -2,18 +2,18 @@
 
 Get the value related to the specified key of a hashmap
 
-## Parameters
+## 参数
 
 * `name` - The name of the hashmap
 * `key` - The key of the key-value pair in the hashmap
 
-## Return Value
+## 返回值
 
 Value reply.
 
 Return the value to the key, if the key does not exists, return `not_found` Status Code.
 
-## Example
+## 示例
 
 	ssdb 127.0.0.1:8888> hset h k v
 	ok

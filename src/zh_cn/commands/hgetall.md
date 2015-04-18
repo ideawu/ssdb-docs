@@ -2,17 +2,17 @@
 
 Returns the whole hash, as an array of strings indexed by strings.
 
-## Parameters
+## 参数
 
 * `name` - The name of the hashmap
 
-## Return Value
+## 返回值
 
 Key-Value list.
 
 The key-value list is return as: k1 v1 k2 v2 ...
 
-## Example
+## 示例
 
 	ssdb 127.0.0.1:8888> hset h k v
 	ok

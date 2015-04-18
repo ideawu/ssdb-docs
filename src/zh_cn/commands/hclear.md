@@ -2,15 +2,15 @@
 
 Delete all keys in a hashmap.
 
-## Parameters
+## 参数
 
 * `name` - The name of the hashmap.
 
-## Return Value
+## 返回值
 
 The number of key deleted in that hashmap.
 
-## Example
+## 示例
 
 	ssdb 127.0.0.1:8888> hset h k v
 	ok

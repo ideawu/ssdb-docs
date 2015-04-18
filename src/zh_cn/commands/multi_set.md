@@ -2,14 +2,14 @@
 
 Set multiple key-value pairs(kvs) in one method call.
 
-## Parameters
+## 参数
 
 * `key1` -
 * `value1` -
 * ...
 
-## Return Value
+## 返回值
 
 false on error, other values indicate OK.
 
-## Example
+## 示例

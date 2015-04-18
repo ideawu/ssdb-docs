@@ -2,14 +2,14 @@
 
 Add an or more than one element to the end of the queue.
 
-## Parameters
+## 参数
 
 * `name` - 
 * `item1` -
 * ...
 
-## Return Value
+## 返回值
 
 The length of the list after the push operation, false on error.
 
-## Example
+## 示例

@@ -10,7 +10,7 @@ Set the string value in argument as value of the key of a hashmap.
 
 ## Return Value
 
-Returns `1` is the value is updated, if the value is the same as the old, returns `0`.
+Returns `1` if `key` is a new key in the hashmap and value is set, else returns `0`.
 
 ## Example
 

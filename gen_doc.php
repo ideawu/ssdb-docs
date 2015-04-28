@@ -76,7 +76,7 @@ function gen_doc($file, $output_dir, $template=null, $base_url=''){
 		}
 	}
 
-	$cmd = "python -m markdown -x tables -x fenced_code -x headerid $file";
+	$cmd = "python -m markdown.__main__ -x tables -x fenced_code -x headerid $file";
 	exec($cmd, $result, $retval);
 	$markdown['html'] = join("\n", $result);
 

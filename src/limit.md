@@ -10,6 +10,10 @@
 		<td>31MB</td>
 	</tr>
 	<tr>
+		<td>Max request/response size</td>
+		<td>31MB</td>
+	</tr>
+	<tr>
 		<td>Max elements in a HASH</td>
 		<td>9,223,372,036,854,775,807</td>
 	</tr>

@@ -1,6 +1,6 @@
 # get key
 
-Get the value related to the specified key.
+获取指定 key 的值内容.
 
 ## 参数
 
@@ -10,7 +10,7 @@ Get the value related to the specified key.
 
 Value reply.
 
-Return the value to the key, if the key does not exists, return `not_found` Status Code.
+返回 key 对应的值, 如果 key 不存在, 返回 `not_found` 状态码.
 
 ## 示例
 

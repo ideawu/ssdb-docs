@@ -125,7 +125,7 @@
 			key
 			</span>
 		</span>
-		<span class="summary">Get the value related to the specified key</span>
+		<span class="summary">获取指定 key 的值内容.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="getset">
@@ -136,7 +136,7 @@
 			key value
 			</span>
 		</span>
-		<span class="summary">Sets a value and returns the previous entry at that key.</span>
+		<span class="summary">更新 key 对应的 value, 并返回更新前的旧的 value.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="del">
@@ -147,7 +147,7 @@
 			key
 			</span>
 		</span>
-		<span class="summary">Delete specified key.</span>
+		<span class="summary">删除指定的 key.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="incr">

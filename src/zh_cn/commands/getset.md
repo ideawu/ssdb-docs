@@ -1,6 +1,6 @@
 # getset key value
 
-Sets a value and returns the previous entry at that key.
+更新 key 对应的 value, 并返回更新前的旧的 value.
 
 ## 参数
 
@@ -9,7 +9,9 @@ Sets a value and returns the previous entry at that key.
 
 ## 返回值
 
-If the key already exists, the value related to that key is returned. Otherwise return `not_found` Status Code.
+Value reply.
+
+返回修改前 key 对应的值, 如果 key 不存在, 返回 `not_found` 状态码. 注意, 即使返回 `not_found`, 值也会被新加进去.
 
 ## 示例
 

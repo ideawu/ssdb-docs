@@ -9,7 +9,7 @@ Sets a value and returns the previous entry at that key.
 
 ## Return Value
 
-If the key already exists, the value related to that key is returned. Otherwise return `not_found` Status Code.
+If the key already exists, the value related to that key is returned. Otherwise return `not_found` Status Code. The value is either added or updated.
 
 ## Example
 

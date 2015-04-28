@@ -1,6 +1,6 @@
 # del key
 
-Delete specified key.
+删除指定的 key.
 
 ## 参数
 
@@ -8,7 +8,9 @@ Delete specified key.
 
 ## 返回值
 
-Status reply. You can not determine whether the key exists or not by delete command.
+Status reply.
+
+即使 key 不存在, 也会返回 `ok`.
 
 ## 示例
 

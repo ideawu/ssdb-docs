@@ -293,3 +293,23 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 	</tr>
 </table>
 
+
+### <a href="#erlang" name="erlang">Erlang</a>
+
+---
+
+<table width="100%">
+	<tr>
+		<td width="21%">ssdb-erlang</td>
+		<td width="15%">kqqsysu</td>
+		<td width="20%">
+			<a href="https://github.com/kqqsysu/ssdb-erlang">Repository</a>
+		</td>
+		<td>
+			Erlang client library for SSDB
+		</td>
+	</tr>
+</table>
+
+
+

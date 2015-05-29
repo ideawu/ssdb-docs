@@ -51,7 +51,7 @@
 
 ## 内存占用
 
-一个 ssdb-server 实例占用的内存最高达到(MB):
+一个 ssdb-server 实例占用的内存瞬时最高达到(MB):
 
 	cache_size + write_buffer_size * 66 + 32
 

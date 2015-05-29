@@ -52,7 +52,7 @@ to
 
 ## Memory Usage
 
-A ssdb-server may consume up to this many memory(in MB):
+A ssdb-server may temporarily consume up to this many memory(in MB):
 
 	cache_size + write_buffer_size * 66 + 32
 

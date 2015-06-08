@@ -51,9 +51,13 @@
 
 ## 内存占用
 
-一个 ssdb-server 实例占用的内存瞬时最高达到(MB):
+一个 ssdb-server 实例占用的内存__瞬时__(有可能, 而且即使达到, 也只是持续短时间)最高达到(MB):
 
 	cache_size + write_buffer_size * 66 + 32
+
+这是对于压缩选项没有开启的情况, 如果 `compression: yes`, 计算公式是:
+
+	cache_size + 10 * write_buffer_size * 66 + 32
 
 你可以调整配置参数, 限制 ssdb-server 的内存占用.
 

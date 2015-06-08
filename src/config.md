@@ -52,11 +52,15 @@ to
 
 ## Memory Usage
 
-A ssdb-server may temporarily consume up to this many memory(in MB):
+A ssdb-server may temporarily(only last for short time) consume up to this many memory(in MB):
 
 	cache_size + write_buffer_size * 66 + 32
 
-You can tune the configuration the limit the memory usage of a ssdb-server instance.
+This is for `compression` is set to `no`, if `compression` is set to `yes`, it would be:
+
+	cache_size + 10 * write_buffer_size * 66 + 32
+
+You can tune the configuration to limit the memory usage of a ssdb-server instance.
 
 ---
 

@@ -108,6 +108,16 @@ SSDB 源码仓库中, 内置了许多语言的客户端, 这些便是所谓的__
 			从官方客户端派生出来的客户端，支持连接池，使用习惯与大多数客户端保持一致。
 		</td>
 	</tr>
+		<tr>
+		<td width="21%">ssgo</td>
+		<td width="15%">tnextday</td>
+		<td width="20%">
+			<a href="https://github.com/tnextday/ssgo">Repository</a>
+		</td>
+		<td>
+			基于hissdb，优化 Client 性能，可伸缩连接池，增加批量命令，hash 与 golang struct 映射功能。
+		</td>
+	</tr>
 </table>
 
 ### <a href="#java" name="java">Java</a>

@@ -835,7 +835,7 @@
 				name item1 item2 ...
 			</span>
 		</span>
-		<span class="summary">Alias of `qpush_front`. </span>
+		<span class="summary">Alias of `qpush_back`. </span>
 		</a>
 	</li>
 	<li data-group="string" data-name="qpop">

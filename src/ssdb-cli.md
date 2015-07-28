@@ -132,3 +132,10 @@ __cmd.*__
 This command force the SSDB server to do compactaction on data, after the compaction, queries are usually much faster.
 
 You should notice that ```compact``` may slow down the service, especially when the database is big. So, you should execute this command when the server is idle.
+
+### SSDB GUI tools
+
+You can try SSDB GUI tools:
+
+* [phpssdbadmin](https://github.com/ssdb/phpssdbadmin) - A SSDB GUI tool like phpmyadmin.
+* [FastoNoSQL](https://github.com/fasto/fastonosql) - A crossplatform SSDB, Redis, Memcached GUI tool.

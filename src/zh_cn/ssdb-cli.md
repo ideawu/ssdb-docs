@@ -132,3 +132,10 @@ __cmd.*__
 这个命令强制 SSDB 服务器对数据进行收缩(compaction), 收缩之后, 操作通常会变得更快.
 
 但是, ```compact``` 的过程可能会拖慢正常服务, 特别是是当数据库比较大时. 所以, 建议在空闲时使用.
+
+### SSDB 图形界面工具
+
+你可以尝试下图形界面(GUI)的 SSDB 管理工具:
+
+* [phpssdbadmin](https://github.com/ssdb/phpssdbadmin) - PHP 开发的 SSDB GUI 管理工具, 类似 phpmyadmin.
+* [FastoNoSQL](https://github.com/fasto/fastonosql) - 跨平台的 SSDB, Redis, Memcached GUI 管理工具.

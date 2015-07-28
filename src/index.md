@@ -16,7 +16,7 @@ SSDB is stable, production-ready and is widely used by [many Internet companies]
 
 ## Administration
 
-* [ssdb-cli](./ssdb-cli.html): The SSDB command line tool.
+* [ssdb-cli](./ssdb-cli.html): The SSDB command line tool(also links to GUI tools).
 * [PHP SSDB Admin](https://github.com/ssdb/phpssdbadmin): The SSDB administration tool with Web GUI interface.
 * [Backup](./backup.html): Export/Import database.
 * [Logs Analytics](./logs.html)

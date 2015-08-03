@@ -39,12 +39,12 @@
 	./configure
 	make
 
-## 启动
+## 启动和停止
 
-	# 启动主库
+	# 启动主库, 此命令会阻塞住命令行
 	./ssdb-server ssdb.conf
 	
-	# 或者启动为后台进程
+	# 或者启动为后台进程(不阻塞命令行)
 	./ssdb-server -d ssdb.conf
 	
 	# 启动 ssdb 命令行
@@ -78,7 +78,8 @@
 __CentOS__
 
 <pre>
-chkconfig --add ssdb
+sudo chkconfig --add ssdb
+sudo chkconfig ssdb on
 </pre>
 
 __Ubuntu__

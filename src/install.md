@@ -39,7 +39,7 @@ or
 	./configure
 	make
 
-## Start ssdb-server
+## Start and Stop ssdb-server
 
 	# start master
 	./ssdb-server ssdb.conf
@@ -57,7 +57,7 @@ or
 
 By now, you will have to manage the ```ssdb-server``` process(es) manually, if you want to set it to start and stop along with the system, follow the instructions below.
 
-## SSDB Init Scripts(Auto startup along with OS)
+## SSDB Init Scripts(Auto Startup Along with OS)
 
 Assumming you have installed SSDB under the ```/usr/local/ssdb``` folder, put the ```tools/ssdb.sh``` script into ```/etc/init.d``` directory.
 
@@ -78,7 +78,8 @@ Change ```/data/ssdb_data/test/ssdb.conf``` to the location of your SSDB config 
 __CentOS__
 
 <pre>
-chkconfig --add ssdb
+sudo chkconfig --add ssdb
+sudo chkconfig ssdb on
 </pre>
 
 __Ubuntu__

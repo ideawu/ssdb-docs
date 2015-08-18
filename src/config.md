@@ -50,6 +50,13 @@ to
 		output: stdout
 
 
+### Logrotate and cleanup
+
+Log files will be cut into 1000MB size files, the names are in the form of: `log.txt.20150723-230422`.
+
+__The rotated files will not be deleted automatically, you need to write a crontab script to deleted unused files yourself.__
+
+
 ## Memory Usage
 
 A ssdb-server may temporarily(only last for short time) consume up to this many memory(in MB):

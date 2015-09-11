@@ -249,8 +249,8 @@
 		<span class="summary">List keys in range (key_start, key_end].</span>
 		</a>
 	</li>
-	<li data-group="string" data-name="keys">
-		<a href="keys.html">
+	<li data-group="string" data-name="rkeys">
+		<a href="rkeys.html">
 		<span class="command">
 			rkeys
 			<span class="args">

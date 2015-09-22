@@ -851,6 +851,22 @@ $ssdb-&gt;hgetall('h');
 $ssdb-&gt;hscan('h', 'a', 'z', 10);
 </pre>
 
+<p>遍历 hash:</p>
+
+<pre>
+$start = '';
+while(1){
+    $kvs = $ssdb-&gt;hscan($name, $start, '', 10);
+    if(!$kvs){
+        break;
+    }
+    // do sth on kvs here
+    
+    $keys = array_keys($kvs);
+    $start = $keys[count($keys) - 1];
+}
+</pre>
+
 
 <a name="m-hrscan"></a>
 <h3>hrscan</h3>

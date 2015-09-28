@@ -749,10 +749,10 @@
 		<span class="summary">从 zset 首部删除 <code>limit</code> 个元素.</span>
 		</a>
 	</li>
-	<li data-group="string" data-name="zpop_backup">
-		<a href="zpop_backup.html">
+	<li data-group="string" data-name="zpop_back">
+		<a href="zpop_back.html">
 		<span class="command">
-			zpop_backup
+			zpop_back
 			<span class="args">
 				name limit
 			</span>

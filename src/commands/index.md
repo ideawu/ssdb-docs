@@ -751,10 +751,10 @@
 		<span class="summary">Delete <code>limit</code> elements from front of the zset.</span>
 		</a>
 	</li>
-	<li data-group="string" data-name="zpop_backup">
-		<a href="zpop_backup.html">
+	<li data-group="string" data-name="zpop_back">
+		<a href="zpop_back.html">
 		<span class="command">
-			zpop_backup
+			zpop_back
 			<span class="args">
 				name limit
 			</span>

@@ -5,7 +5,7 @@ Count the number of set bits (population counting) in a string. Like Redis's [bi
 ## 参数
 
 * `key` - 
-* `start - Optional, inclusive, if start is negative, count from start'th character from the end of string.
+* `start` - Optional, inclusive, if start is negative, count from start'th character from the end of string.
 * `end` - Optional, inclusive.
 
 ## 返回值

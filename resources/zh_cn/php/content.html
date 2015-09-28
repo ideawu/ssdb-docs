@@ -1404,6 +1404,48 @@ $ssdb-&gt;zremrangebyscore('z', 1, 2);
 </pre>
 
 
+<a name="m-zpop_front"></a>
+<h3>zpop_front</h3>
+
+<h4><em>说明</em></h4>
+<p>从 zset 首部删除并返回 `limit` 个元素.</p>
+
+<h4><em>参数</em></h4>
+<dl>
+	<dd><code>name</code> - zset 的名字.</dd>
+	<dd><code>limit</code> - 正整数, 最多要删除并返回这么多个 key-score 对.</dd>
+</dl>
+
+<h4><em>返回值</em></h4>
+<p>如果出错则返回 <code>false</code>, 否则返回包含 key-score 的关联数组.</p>
+
+<h4><em>示例</em></h4>
+<pre>
+$ssdb-&gt;zpop_front('z', 3);
+</pre>
+
+
+<a name="m-zpop_back"></a>
+<h3>zpop_back</h3>
+
+<h4><em>说明</em></h4>
+<p>从 zset 尾部删除并返回 `limit` 个元素.</p>
+
+<h4><em>参数</em></h4>
+<dl>
+	<dd><code>name</code> - zset 的名字.</dd>
+	<dd><code>limit</code> - 正整数, 最多要删除并返回这么多个 key-score 对.</dd>
+</dl>
+
+<h4><em>返回值</em></h4>
+<p>如果出错则返回 <code>false</code>, 否则返回包含 key-score 的关联数组.</p>
+
+<h4><em>示例</em></h4>
+<pre>
+$ssdb-&gt;zpop_back('z', 3);
+</pre>
+
+
 
 <a name="m-multi_zset"></a>
 <h3>multi_zset</h3>

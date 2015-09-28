@@ -580,6 +580,7 @@
 		<span class="command">
 			zlist
 			<span class="args">
+				name_start name_end limit
 			</span>
 		</span>
 		<span class="summary">List zset names in range (name_start, name_end].</span>
@@ -590,6 +591,7 @@
 		<span class="command">
 			zrlist
 			<span class="args">
+				name_start name_end limit
 			</span>
 		</span>
 		<span class="summary">List zset names in range (name_start, name_end], in reverse order.</span>
@@ -688,10 +690,10 @@
 		<span class="command">
 			zcount
 			<span class="args">
-				name start end
+				name score_start score_end
 			</span>
 		</span>
-		<span class="summary">Returns the number of elements of the sorted set stored at the specified key.</span>
+		<span class="summary">Returns the number of elements of the sorted set stored at the specified key which have scores in the range [score_start,score_end].</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="zsum">
@@ -699,10 +701,10 @@
 		<span class="command">
 			zsum
 			<span class="args">
-				name start end
+				name score_start score_end
 			</span>
 		</span>
-		<span class="summary">Returns the sum of elements of the sorted set stored at the specified key.</span>
+		<span class="summary">Returns the sum of elements of the sorted set stored at the specified key which have scores in the range [score_start,score_end].</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="zavg">
@@ -710,10 +712,10 @@
 		<span class="command">
 			zavg
 			<span class="args">
-				name start end
+				name score_start score_end
 			</span>
 		</span>
-		<span class="summary">Returns the average of elements of the sorted set stored at the specified key.</span>
+		<span class="summary">Returns the average of elements of the sorted set stored at the specified key which have scores in the range [score_start,score_end].</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="zremrangebyrank">
@@ -737,6 +739,27 @@
 		</span>
 		<span class="summary">Delete the elements of the zset which have score in the range [start,end].</span>
 		</a>
+	</li>
+	<li data-group="string" data-name="zpop_front">
+		<a href="zpop_front.html">
+		<span class="command">
+			zpop_front
+			<span class="args">
+				name limit
+			</span>
+		</span>
+		<span class="summary">Delete <code>limit</code> elements from front of the zset.</span>
+		</a>
+	</li>
+	<li data-group="string" data-name="zpop_backup">
+		<a href="zpop_backup.html">
+		<span class="command">
+			zpop_backup
+			<span class="args">
+				name limit
+			</span>
+		</span>
+		<span class="summary">Delete <code>limit</code> elements from back of the zset.</span>
 	</li>
 	<li data-group="string" data-name="multi_zset">
 		<a href="multi_zset.html">

@@ -1,10 +1,13 @@
-# zsize name
+# zpop_back name limit
 
-Return the number of pairs of a zset.
+__Since 1.9.0__
+
+Delete and return `limit` element(s) from back of the zset.
 
 ## Parameters
 
 * `name` - The name of the zset
+* `limit` - 
 
 ## Return Value
 

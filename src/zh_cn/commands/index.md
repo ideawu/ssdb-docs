@@ -158,7 +158,7 @@
 				key [num]
 			</span>
 		</span>
-		<span class="summary">Increment the number stored at key by num.</span>
+		<span class="summary">使 key 对应的值增加 num.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="exists">
@@ -169,7 +169,7 @@
 			key
 			</span>
 		</span>
-		<span class="summary">Verify if the specified key exists.</span>
+		<span class="summary">判断指定的 key 是否存在.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="getbit">
@@ -180,7 +180,7 @@
 			key offset
 			</span>
 		</span>
-		<span class="summary">Return a single bit out of a string.</span>
+		<span class="summary">获取字符串内指定位置的位值(BIT).</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="setbit">
@@ -191,7 +191,7 @@
 			key offset val
 			</span>
 		</span>
-		<span class="summary">Changes a single bit of a string. The string is auto expanded.</span>
+		<span class="summary">设置字符串内指定位置的位值(BIT), 字符串的长度会自动扩展.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="bitcount">
@@ -202,7 +202,7 @@
 			key [start] [end]
 			</span>
 		</span>
-		<span class="summary">Count the number of set bits (population counting) in part of a string.</span>
+		<span class="summary">计算字符串的子串所包含的位值为 1 的个数.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="countbit">
@@ -213,7 +213,7 @@
 			key start size
 			</span>
 		</span>
-		<span class="summary">Count the number of set bits (population counting) in part of a string.</span>
+		<span class="summary">计算字符串的子串所包含的位值为 1 的个数.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="substr">
@@ -224,7 +224,7 @@
 			key start size
 			</span>
 		</span>
-		<span class="summary">Return part of a string.</span>
+		<span class="summary">获取字符串的子串.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="strlen">
@@ -235,7 +235,7 @@
 			key
 			</span>
 		</span>
-		<span class="summary">Return the number of bytes of a string.</span>
+		<span class="summary">计算字符串的长度(字节数).</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="keys">
@@ -246,7 +246,7 @@
 				key_start key_end limit
 			</span>
 		</span>
-		<span class="summary">List keys in range (key_start, key_end].</span>
+		<span class="summary">列出处于区间 (key_start, key_end] 的 key 列表.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="rkeys">
@@ -257,7 +257,7 @@
 				key_start key_end limit
 			</span>
 		</span>
-		<span class="summary">List keys in range (key_start, key_end], in reverse order.</span>
+		<span class="summary">列出处于区间 (key_start, key_end] 的 key 列表, 反向.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="scan">
@@ -268,7 +268,7 @@
 				key_start key_end limit
 			</span>
 		</span>
-		<span class="summary">List key-value pairs with keys in range (key_start, key_end].</span>
+		<span class="summary">列出处于区间 (key_start, key_end] 的 key-value 列表.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="rscan">
@@ -279,7 +279,7 @@
 				key_start key_end limit
 			</span>
 		</span>
-		<span class="summary">List key-value pairs with keys in range (key_start, key_end], in reverse order.</span>
+		<span class="summary">列出处于区间 (key_start, key_end] 的 key-value 列表, 反向.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="multi_set">
@@ -290,7 +290,7 @@
 			key1 value1 key2 value2 ...
 			</span>
 		</span>
-		<span class="summary">Set multiple key-value pairs(kvs) in one method call.</span>
+		<span class="summary">批量设置一批 key-value.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="multi_get">
@@ -301,7 +301,7 @@
 			key1 key2 ...
 			</span>
 		</span>
-		<span class="summary">Get the values related to the specified multiple keys</span>
+		<span class="summary">批量获取一批 key 对应的值内容.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="multi_del">
@@ -312,7 +312,7 @@
 			key1 key2 ...
 			</span>
 		</span>
-		<span class="summary">Delete specified multiple keys.</span>
+		<span class="summary">批量删除一批 key 和其对应的值内容.</span>
 		</a>
 	</li>
 </ul>
@@ -332,7 +332,7 @@
 			name key value
 			</span>
 		</span>
-		<span class="summary">Set the string value in argument as value of the key of a hashmap.</span>
+		<span class="summary">设置 hashmap 中指定 key 对应的值内容.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="hget">
@@ -343,7 +343,7 @@
 			name key
 			</span>
 		</span>
-		<span class="summary">Get the value related to the specified key of a hashmap</span>
+		<span class="summary">获取 hashmap 中指定 key 的值内容.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="hdel">
@@ -354,7 +354,7 @@
 			name key
 			</span>
 		</span>
-		<span class="summary">Delete specified key of a hashmap.</span>
+		<span class="summary">获取 hashmap 中的指定 key.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="hincr">
@@ -365,7 +365,7 @@
 				name key [num]
 			</span>
 		</span>
-		<span class="summary">Increment the number stored at key in a hashmap by num</span>
+		<span class="summary">使 hashmap 中的 key 对应的值增加 num.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="hexists">
@@ -376,7 +376,7 @@
 			name key
 			</span>
 		</span>
-		<span class="summary">Verify if the specified key exists in a hashmap.</span>
+		<span class="summary">判断指定的 key 是否存在于 hashmap 中.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="hsize">
@@ -387,7 +387,7 @@
 			name
 			</span>
 		</span>
-		<span class="summary">Return the number of key-value pairs in the hashmap.</span>
+		<span class="summary">返回 hashmap 中的元素个数.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="hlist">
@@ -737,6 +737,27 @@
 		</span>
 		<span class="summary">Delete the elements of the zset which have score in the range [start,end].</span>
 		</a>
+	</li>
+	<li data-group="string" data-name="zpop_front">
+		<a href="zpop_front.html">
+		<span class="command">
+			zpop_front
+			<span class="args">
+				name limit
+			</span>
+		</span>
+		<span class="summary">从 zset 首部删除 <code>limit</code> 个元素.</span>
+		</a>
+	</li>
+	<li data-group="string" data-name="zpop_backup">
+		<a href="zpop_backup.html">
+		<span class="command">
+			zpop_backup
+			<span class="args">
+				name limit
+			</span>
+		</span>
+		<span class="summary">从 zset 尾部删除 <code>limit</code> 个元素.</span>
 	</li>
 	<li data-group="string" data-name="multi_zset">
 		<a href="multi_zset.html">

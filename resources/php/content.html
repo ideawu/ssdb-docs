@@ -1403,6 +1403,48 @@ $ssdb-&gt;zremrangebyscore('z', 1, 2);
 </pre>
 
 
+<a name="m-zpop_front"></a>
+<h3>zpop_front</h3>
+
+<h4><em>Description</em></h4>
+<p>Delete and return `limit` element(s) from front of the zset.</p>
+
+<h4><em>Parameters</em></h4>
+<dl>
+	<dd><code>name</code> - The name of the zset.</dd>
+	<dd><code>limit</code> - The number of elements to be deleted and returned.</dd>
+</dl>
+
+<h4><em>Return Value</em></h4>
+<p><code>false</code> on error, otherwise an array containing key-score pairs.</p>
+
+<h4><em>Example</em></h4>
+<pre>
+$ssdb-&gt;zpop_front('z', 3);
+</pre>
+
+
+<a name="m-zpop_back"></a>
+<h3>zpop_back</h3>
+
+<h4><em>Description</em></h4>
+<p>Delete and return `limit` element(s) from back of the zset.</p>
+
+<h4><em>Parameters</em></h4>
+<dl>
+	<dd><code>name</code> - The name of the zset.</dd>
+	<dd><code>limit</code> - The number of elements to be deleted and returned.</dd>
+</dl>
+
+<h4><em>Return Value</em></h4>
+<p><code>false</code> on error, otherwise an array containing key-score pairs.</p>
+
+<h4><em>Example</em></h4>
+<pre>
+$ssdb-&gt;zpop_back('z', 3);
+</pre>
+
+
 <a name="m-multi_zset"></a>
 <h3>multi_zset</h3>
 

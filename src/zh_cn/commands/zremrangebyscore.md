@@ -1,5 +1,7 @@
 # zremrangebyscore name start end
 
+删除权重处于区间 [start,end] 的元素.
+
 ## 参数
 
 ## 返回值

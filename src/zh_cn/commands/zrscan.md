@@ -1,5 +1,7 @@
 # zrscan name key_start score_start score_end limit
 
+类似 [zscan](./zscan.html), 逆序.
+
 ## 参数
 
 ## 返回值

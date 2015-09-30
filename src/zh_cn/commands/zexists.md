@@ -1,5 +1,7 @@
 # zexists name key
 
+判断指定的 key 是否存在于 zset 中.
+
 ## 参数
 
 ## 返回值

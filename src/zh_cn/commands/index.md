@@ -398,7 +398,7 @@
 				name_start name_end limit
 			</span>
 		</span>
-		<span class="summary">List hashmap names in range (name_start, name_end].</span>
+		<span class="summary">列出名字处于区间 (name_start, name_end] 的 hashmap.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="hrlist">
@@ -409,7 +409,7 @@
 				name_start name_end limit
 			</span>
 		</span>
-		<span class="summary">List hashmap names in range (name_start, name_end].</span>
+		<span class="summary">像 hrlist, 逆序.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="hkeys">
@@ -420,7 +420,7 @@
 				name key_start key_end
 			</span>
 		</span>
-		<span class="summary">List keys of a hashmap in range (key_start, key_end].</span>
+		<span class="summary">列出 hashmap 中处于区间 (key_start, key_end] 的 key 列表.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="hgetall">
@@ -431,7 +431,7 @@
 			name
 			</span>
 		</span>
-		<span class="summary">Returns the whole hash, as an array of strings indexed by strings.</span>
+		<span class="summary">返回整个 hashmap.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="hscan">
@@ -442,7 +442,7 @@
 				key_start key_end limit
 			</span>
 		</span>
-		<span class="summary">List key-value pairs of a hashmap with keys in range (key_start, key_end].</span>
+		<span class="summary">列出 hashmap 中处于区间 (key_start, key_end] 的 key-value 列表.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="hrscan">
@@ -453,7 +453,7 @@
 				key_start key_end limit
 			</span>
 		</span>
-		<span class="summary">List key-value pairs with keys in range (key_start, key_end], in reverse order.</span>
+		<span class="summary">像 hscan, 逆序.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="hclear">
@@ -464,7 +464,7 @@
 			name
 			</span>
 		</span>
-		<span class="summary">Delete all keys in a hashmap.</span>
+		<span class="summary">删除 hashmap 中的所有 key.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="multi_hset">
@@ -475,7 +475,7 @@
 			name key1 value1 key2 value2 ...
 			</span>
 		</span>
-		<span class="summary">Set multiple key-value pairs(kvs) of a hashmap in one method call.</span>
+		<span class="summary">批量设置 hashmap 中的 key-value.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="multi_hget">
@@ -486,7 +486,7 @@
 			name key1 key2 ...
 			</span>
 		</span>
-		<span class="summary">Get the values related to the specified multiple keys of a hashmap.</span>
+		<span class="summary">批量获取 hashmap 中多个 key 对应的权重值.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="multi_hdel">
@@ -497,7 +497,7 @@
 			name key1 key2 ...
 			</span>
 		</span>
-		<span class="summary">Delete specified multiple keys in a hashmap.</span>
+		<span class="summary">指删除 hashmap 中的 key.</span>
 		</a>
 	</li>
 </ul>
@@ -517,7 +517,7 @@
 			name key score
 			</span>
 		</span>
-		<span class="summary">Set the score of the key of a zset.</span>
+		<span class="summary">设置 zset 中指定 key 对应的权重值.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="zget">
@@ -528,7 +528,7 @@
 			name key
 			</span>
 		</span>
-		<span class="summary">Get the score related to the specified key of a zset</span>
+		<span class="summary">获取 zset 中指定 key 的权重值.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="zdel">
@@ -539,7 +539,7 @@
 			name key
 			</span>
 		</span>
-		<span class="summary">Delete specified key of a zset.</span>
+		<span class="summary">获取 zset 中的指定 key.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="zincr">
@@ -550,7 +550,7 @@
 			name key num
 			</span>
 		</span>
-		<span class="summary">Increment the number stored at key in a zset by num.</span>
+		<span class="summary">使 zset 中的 key 对应的值增加 num. 参数 num 可以为负数. 如果原来的值不是整数(字符串形式的整数), 它会被先转换成整数.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="zexists">
@@ -561,7 +561,7 @@
 			name key
 			</span>
 		</span>
-		<span class="summary">Verify if the specified key exists in a zset.</span>
+		<span class="summary">判断指定的 key 是否存在于 zset 中.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="zsize">
@@ -572,7 +572,7 @@
 			name
 			</span>
 		</span>
-		<span class="summary">Return the number of pairs of a zset.</span>
+		<span class="summary">返回 zset 中的元素个数.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="zlist">
@@ -582,7 +582,7 @@
 			<span class="args">
 			</span>
 		</span>
-		<span class="summary">List zset names in range (name_start, name_end].</span>
+		<span class="summary">列出名字处于区间 (name_start, name_end] 的 zset.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="zrlist">
@@ -592,7 +592,7 @@
 			<span class="args">
 			</span>
 		</span>
-		<span class="summary">List zset names in range (name_start, name_end], in reverse order.</span>
+		<span class="summary">像 zlist, 逆序.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="zkeys">
@@ -603,7 +603,7 @@
 				name key_start score_start score_end limit
 			</span>
 		</span>
-		<span class="summary">List keys in a zset.</span>
+		<span class="summary">列出 zset 中的 key 列表.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="zscan">
@@ -614,7 +614,7 @@
 				name key_start score_start score_end limit
 			</span>
 		</span>
-		<span class="summary">List key-score pairs where key-score in range (key_start+score_start, score_end].</span>
+		<span class="summary">列出 zset 中处于区间 (key_start+score_start, score_end] 的 key-score 列表.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="zrscan">
@@ -625,7 +625,7 @@
 				name key_start score_start score_end limit
 			</span>
 		</span>
-		<span class="summary">List key-score pairs of a zset, in reverse order. See method zkeys().</span>
+		<span class="summary">像 zscan, 逆序.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="zrank">
@@ -636,7 +636,7 @@
 				name key
 			</span>
 		</span>
-		<span class="summary">Returns the rank(index) of a given key in the specified sorted set.</span>
+		<span class="summary">返回指定 key 在 zset 中的排序位置(排名), 排名从 0 开始.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="zrrank">
@@ -647,7 +647,7 @@
 				name key
 			</span>
 		</span>
-		<span class="summary">Returns the rank(index) of a given key in the specified sorted set, in reverse order.</span>
+		<span class="summary">像 zrank, 逆序.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="zrange, zrrange">
@@ -658,7 +658,7 @@
 				name offset limit
 			</span>
 		</span>
-		<span class="summary">Returns a range of key-score pairs by index range [offset, offset + limit).</span>
+		<span class="summary">根据下标索引区间 [offset, offset + limit) 获取 key-score 对, 下标从 0 开始.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="zrrange">
@@ -669,7 +669,7 @@
 				name offset limit
 			</span>
 		</span>
-		<span class="summary">Returns a range of key-score pairs by index range [offset, offset + limit), in reverse order.</span>
+		<span class="summary">像 zrange, 逆序.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="zclear">
@@ -680,7 +680,7 @@
 			name
 			</span>
 		</span>
-		<span class="summary">Delete all keys in a zset.</span>
+		<span class="summary">删除 zset 中的所有 key.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="zcount">
@@ -691,7 +691,7 @@
 				name start end
 			</span>
 		</span>
-		<span class="summary">Returns the number of elements of the sorted set stored at the specified key.</span>
+		<span class="summary">返回处于区间 [start,end] key 数量.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="zsum">
@@ -702,7 +702,7 @@
 				name start end
 			</span>
 		</span>
-		<span class="summary">Returns the sum of elements of the sorted set stored at the specified key.</span>
+		<span class="summary">返回 key 处于区间 [start,end] 的 score 的和.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="zavg">
@@ -713,7 +713,7 @@
 				name start end
 			</span>
 		</span>
-		<span class="summary">Returns the average of elements of the sorted set stored at the specified key.</span>
+		<span class="summary">返回 key 处于区间 [start,end] 的 score 的平均值.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="zremrangebyrank">
@@ -724,7 +724,7 @@
 				name start end
 			</span>
 		</span>
-		<span class="summary">Delete the elements of the zset which have rank in the range [start,end].</span>
+		<span class="summary">删除位置处于区间 [start,end] 的元素.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="zremrangebyscore">
@@ -735,7 +735,7 @@
 				name start end
 			</span>
 		</span>
-		<span class="summary">Delete the elements of the zset which have score in the range [start,end].</span>
+		<span class="summary">删除权重处于区间 [start,end] 的元素.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="zpop_front">
@@ -767,7 +767,7 @@
 			name key1 score1 key2 score2 ...
 			</span>
 		</span>
-		<span class="summary">Set multiple key-score pairs(kvs) of a zset in one method call.</span>
+		<span class="summary">批量设置 zset 中的 key-score.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="multi_zget">
@@ -778,7 +778,7 @@
 			name key1 key2 ...
 			</span>
 		</span>
-		<span class="summary">Get the values related to the specified multiple keys of a zset.</span>
+		<span class="summary">批量获取 zset 中多个 key 对应的权重值.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="multi_zdel">
@@ -789,7 +789,7 @@
 			name key1 key2 ...
 			</span>
 		</span>
-		<span class="summary">Delete specified multiple keys of a zset.</span>
+		<span class="summary">批量删除 zset 中的 key.</span>
 		</a>
 	</li>
 

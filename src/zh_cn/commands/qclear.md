@@ -1,6 +1,6 @@
 # qclear name
 
-Clear the queue.
+清空一个队列.
 
 ## 参数
 

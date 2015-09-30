@@ -5,11 +5,13 @@
 ## 参数
 
 * `key` - 
-* `ttl` - number of seconds to live.
+* `ttl` - 存活时间(秒).
 
 ## 返回值
 
-If the key exists and `ttl` is set, return `1`, otherwise return `0`.
+Int reply.
+
+如果 key 存在并且 ttl 设置成功, 返回 1, 否则返回 0.
 
 ## 示例
 

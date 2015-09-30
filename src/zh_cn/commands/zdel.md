@@ -1,5 +1,7 @@
 # zdel name key
 
+获取 zset 中的指定 key.
+
 ## 参数
 
 ## 返回值

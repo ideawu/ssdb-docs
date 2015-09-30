@@ -1,6 +1,6 @@
 # substr key start size
 
-Return part of a string, like PHP's [substr()](http://php.net/substr) function.
+获取字符串的子串. 若 start 是负数, 则从字符串末尾算起. 若 size 是负数, 则表示从字符串末尾算起, 忽略掉那么多字节, 类似 PHP 的 [substr()](http://php.net/substr).
 
 ## 参数
 

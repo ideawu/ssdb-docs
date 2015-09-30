@@ -1,5 +1,7 @@
 # zset name key score 
 
+设置 zset 中指定 key 对应的权重值.
+
 ## 参数
 
 ## 返回值

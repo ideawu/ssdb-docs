@@ -9,7 +9,10 @@
 
 ## 返回值
 
-false on error, other values indicate OK.
+Status reply.
 
 ## 示例
 
+	ssdb 127.0.0.1:8888> set a 1
+	ok
+	(0.000 sec)

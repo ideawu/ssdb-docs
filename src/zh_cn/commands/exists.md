@@ -1,6 +1,6 @@
 # exists key
 
-Verify if the specified key exists.
+判断指定的 key 是否存在.
 
 ## 参数
 
@@ -8,7 +8,9 @@ Verify if the specified key exists.
 
 ## 返回值
 
-If the key exists, return `1`, otherwise return `0`.
+Int reply.
+
+如果 key 存在, 返回 1, 否则返回 0.
 
 ## 示例
 

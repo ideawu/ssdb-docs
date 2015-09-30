@@ -1,6 +1,6 @@
 # strlen key
 
-Return the number of bytes of a string.
+计算字符串的长度(字节数).
 
 ## 参数
 

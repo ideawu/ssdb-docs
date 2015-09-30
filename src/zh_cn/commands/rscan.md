@@ -1,3 +1,3 @@
-# Commands
+# rscan key_start key_end limit
 
-Like [scan](./scan.html), but in reverse order.
+参见 [keys](./scan.html), 逆序.

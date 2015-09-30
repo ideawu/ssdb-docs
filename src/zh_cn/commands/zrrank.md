@@ -1,5 +1,7 @@
 # zrrank name key
 
+类似 [zrank](./zrank.html), 逆序.
+
 ## 参数
 
 ## 返回值

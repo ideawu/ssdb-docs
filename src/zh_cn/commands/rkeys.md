@@ -2,4 +2,4 @@
 
 __Since 1.9.0__
 
-Like [keys](./keys.html), but in reverse order.
+参见 [keys](./keys.html), 逆序.

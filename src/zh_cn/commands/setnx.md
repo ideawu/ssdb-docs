@@ -9,6 +9,18 @@
 
 ## 返回值
 
-`1`: value is set, `0`: key already exists.
+Int reply.
+
+`1`: 设置成功; `0`: key 已经存在.
 
 ## 示例
+
+	ssdb 127.0.0.1:8888> del x
+	ok
+	(0.000 sec)
+	ssdb 127.0.0.1:8888> setnx x 1
+	1
+	(0.000 sec)
+	ssdb 127.0.0.1:8888> setnx x 1
+	0
+	(0.000 sec)

@@ -1,15 +1,17 @@
 # getbit key offset
 
-Return a single bit out of a string.
+获取字符串内指定位置的位值(BIT).
 
 ## 参数
 
 * `key` - 
-* `offset` - bit offset.
+* `offset` - 位偏移.
 
 ## 返回值
 
-`0` or `1`.
+Int reply.
+
+返回 `0` 或 `1`.
 
 ## 示例
 

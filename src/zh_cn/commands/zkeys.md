@@ -1,5 +1,7 @@
 # zkeys name key_start score_start score_end limit
 
+列出 zset 中的 key 列表. 参见 [zscan()](./zscan.html).
+
 ## 参数
 
 ## 返回值

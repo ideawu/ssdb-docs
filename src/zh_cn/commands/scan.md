@@ -1,18 +1,26 @@
 # scan key_start key_end limit
 
-List key-value pairs with keys in range `(key_start, key_end]`.
+列出处于区间 `(key_start, key_end]` 的 key-value 列表.
 
-`("", ""]` means no range limit.
+`("", ""]` 表示整个区间.
 
 ## 参数
 
-* `key_start` - The lower bound(not included) of keys to be returned, empty string means -inf(no limit).
-* `key_end` - The upper bound(inclusive) of keys to be returned, empty string means +inf(no limit).
-* `limit` - Up to that many pairs will be returned.
+* `key_start` - 返回的起始 key(不包含), 空字符串表示 -inf.
+* `key_end` - 返回的结束 key(包含), 空字符串表示 +inf.
+* `limit` - 最多返回这么多个元素. 
 
 ## 返回值
 
-false on error, otherwise an associative array containing the key-value pairs.
+Key-value List reply.
+
+返回 key value 依次出现的列表.
 
 ## 示例
 
+	ssdb 127.0.0.1:8888> scan "" "" 10
+	key             value
+	-------------------------
+	  a               : 1
+	  b               : 1
+	2 result(s) (0.000 sec)

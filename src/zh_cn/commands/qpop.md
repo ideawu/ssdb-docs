@@ -1,3 +1,3 @@
 # qpop name size
 
-Alias of [qpop_front](./qpop_front.html)
+是 [qpop_front](./qpop_front.html) 的别名.

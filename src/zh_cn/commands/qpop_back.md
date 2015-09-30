@@ -1,6 +1,6 @@
 # qpop_back name size
 
-Pop out one or more elements from the tail of a queue.
+从队列尾部弹出一个或者多个元素.
 
 ## 参数
 

@@ -1,6 +1,6 @@
 # qslice name begin end
 
-Returns a portion of elements from the queue at the specified range [begin, end]. begin and end could be negative.
+返回下标处于区域 [begin, end] 的元素. begin 和 end 可以是负数
 
 ## 参数
 

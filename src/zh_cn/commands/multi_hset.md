@@ -1,6 +1,6 @@
 # multi_hset name key1 value1 key2 value2 ...
 
-Set multiple key-value pairs(kvs) of a hashmap in one method call.
+批量设置 hashmap 中的 key-value.
 
 ## 参数
 

@@ -1,6 +1,6 @@
 # multi_zget name key1 key2 ...
 
-Get the values related to the specified multiple keys of a zset.
+批量获取 zset 中多个 key 对应的权重值.
 
 ## 参数
 

@@ -1,6 +1,6 @@
 # qget name index
 
-Returns the element a the specified index(position). 0 the first element, 1 the second ... -1 the last element.
+返回指定位置的元素. 0 表示第一个元素, 1 是第二个 ... -1 是最后一个.
 
 ## 参数
 

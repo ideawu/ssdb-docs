@@ -313,7 +313,7 @@ $ssdb-&gt;del('key');
 <h4><em>参数</em></h4>
 <dl>
 	<dd><code>key</code> - </dd>
-	<dd><code>num</code> - 必须是有符号整数.</dd>
+	<dd><code>num</code> - 可选, 必须是有符号整数, 默认是 1.</dd>
 </dl>
 
 <h4><em>返回值</em></h4>
@@ -705,7 +705,7 @@ $ssdb-&gt;hdel('h', 'key');
 <dl>
 	<dd><code>name</code> - hashmap 的名字.</dd>
 	<dd><code>key</code> - </dd>
-	<dd><code>num</code> - 必须是有符号整数.</dd>
+	<dd><code>num</code> - 可选, 必须是有符号整数, 默认是 1.</dd>
 </dl>
 
 <h4><em>返回值</em></h4>
@@ -962,7 +962,7 @@ $ssdb-&gt;multi_hget('h', array('k1', 'k2'));
 <h3>multi_hdel</h3>
 
 <h4><em>说明</em></h4>
-<p>指删除 hashmap 中的 key.</p>
+<p>批量删除 hashmap 中的 key.</p>
 
 <h4><em>参数</em></h4>
 <dl>
@@ -1768,7 +1768,7 @@ $ssdb-&gt;qpush_back('q', 'a');
 <h3>qpop_front</h3>
 
 <h4><em>说明</em></h4>
-<p>从队列首部弹出最后一个或者多个元素.</p>
+<p>从队列首部弹出一个或者多个元素.</p>
 
 <h4><em>参数</em></h4>
 <dl>
@@ -1789,7 +1789,7 @@ $ssdb-&gt;qpop_front('q');
 <h3>qpop_back</h3>
 
 <h4><em>说明</em></h4>
-<p>从队列尾部弹出最后一个或者多个元素.</p>
+<p>从队列尾部弹出一个或者多个元素.</p>
 
 <h4><em>参数</em></h4>
 <dl>

@@ -1,6 +1,6 @@
 # multi_hdel name key1 key2 ...
 
-Delete specified multiple keys in a hashmap.
+批量删除一批 key 和其对应的值内容.
 
 ## 参数
 

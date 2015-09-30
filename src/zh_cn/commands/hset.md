@@ -1,12 +1,12 @@
 # hset name key value
 
-Set the string value in argument as value of the key of a hashmap.
+设置 hashmap 中指定 key 对应的值内容.
 
 ## 参数
 
-* `name` - The name of the hashmap
-* `key` - The key of the key-value pair in the hashmap
-* `value` - The value of the key-value pair in the hashmap
+* `name` - hashmap 的名字.
+* `key` - hashmap 中的 key.
+* `value` - key 对应的值内容. 
 
 ## 返回值
 

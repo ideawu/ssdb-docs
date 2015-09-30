@@ -1,6 +1,6 @@
 # qpush_back name item1 item2 ...
 
-Add an or more than one element to the end of the queue.
+往队列的尾部添加一个或者多个元素
 
 ## 参数
 

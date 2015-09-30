@@ -1,11 +1,11 @@
 # hget name key
 
-Get the value related to the specified key of a hashmap
+获取 hashmap 中指定 key 的值内容.
 
 ## 参数
 
-* `name` - The name of the hashmap
-* `key` - The key of the key-value pair in the hashmap
+* `name` - hashmap 的名字.
+* `key` - hashmap 中的 key. 
 
 ## 返回值
 

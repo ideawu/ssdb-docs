@@ -1,10 +1,10 @@
 # hexists name key
 
-Verify if the specified key exists in a hashmap.
+判断指定的 key 是否存在于 hashmap 中.
 
 ## 参数
 
-* `name` - The name of the hashmap
+* `name` - hashmap 的名字.
 * `key` - 
 
 ## 返回值

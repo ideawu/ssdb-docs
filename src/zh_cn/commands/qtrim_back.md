@@ -1,6 +1,6 @@
 # qtrim_back name size
 
-Remove multi elements from the tail of a queue.
+从队列头部删除多个元素.
 
 ## 参数
 

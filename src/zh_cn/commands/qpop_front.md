@@ -1,6 +1,6 @@
 # qpop_front name size
 
-Pop out one or more elements from the head of a queue.
+从队列首部弹出一个或者多个元素.
 
 ## 参数
 

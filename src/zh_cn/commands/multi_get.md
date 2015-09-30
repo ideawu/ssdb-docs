@@ -1,6 +1,6 @@
 # multi_get key1 key2 ...
 
-Get the values related to the specified multiple keys
+批量获取一批 key 对应的值内容.
 
 ## 参数
 

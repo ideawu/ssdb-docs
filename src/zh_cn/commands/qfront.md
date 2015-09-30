@@ -1,6 +1,6 @@
 # qfront name
 
-Returns the first element of a queue.
+返回队列的第一个元素.
 
 ## 参数
 

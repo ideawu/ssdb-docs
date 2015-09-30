@@ -1,14 +1,14 @@
 # hincr name key [num]
 
-__Since 1.7.0.1, *incr methods return error if value cannot be converted to integer.__
+__从 1.7.0.1 起, 如果 value 不能转换成整数, *incr 会返回错误.__
 
-Increment the number stored at key in a hashmap by num. The num argument could be a negative integer. The old number is first converted to an integer before increment, assuming it was stored as literal integer.
+使 hashmap 中的 key 对应的值增加 num. 参数 num 可以为负数. 如果原来的值不是整数(字符串形式的整数), 它会被先转换成整数.
 
 ## 参数
 
-* `name` - the name of the hashmap
-* `key - 
-* `num` - Optional, must be a signed integer, default is 1
+* `name` - hashmap 的名字.
+* `key` - 
+* `num` - 可选, 必须是有符号整数, 默认是 1. 
 
 ## 返回值
 

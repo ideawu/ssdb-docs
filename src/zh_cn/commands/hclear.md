@@ -1,10 +1,10 @@
 # hclear name
 
-Delete all keys in a hashmap.
+删除 hashmap 中的所有 key.
 
 ## 参数
 
-* `name` - The name of the hashmap.
+* `name` - hashmap 的名字.
 
 ## 返回值
 

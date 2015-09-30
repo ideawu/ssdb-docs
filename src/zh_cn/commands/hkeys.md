@@ -1,15 +1,15 @@
 # hkeys name key_start key_end limit
 
-List keys of a hashmap in range `(key_start, key_end]`.
+列出 hashmap 中处于区间 (key_start, key_end] 的 key 列表.
 
-`("", ""]` means no range limit.
+("", ""] 表示整个区间.
 
 ## 参数
 
-* `name` - The name of the hashmap
-* `key_start` - The lower bound(not included) of keys to be returned, empty string means -inf(no limit).
-* `key_end` - The upper bound(inclusive) of keys to be returned, empty string means +inf(no limit).
-* `limit` - Up to that many elements will be returned.
+* `name` - hashmap 的名字.
+* `key_start` - 起始 key(不包含), 空字符串表示 -inf.
+* `key_end` - 结束 key(包含), 空字符串表示 +inf.
+* `limit` - 最多返回这么多个元素.
 
 ## 返回值
 

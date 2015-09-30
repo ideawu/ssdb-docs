@@ -1,6 +1,6 @@
 # qback name
 
-Returns the last element of a queue.
+返回队列的最后一个元素.
 
 ## 参数
 

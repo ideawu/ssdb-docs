@@ -1,6 +1,6 @@
 # multi_zdel name key1 key2 ...
 
-Delete specified multiple keys of a zset.
+批量删除 zset 中的 key.
 
 ## 参数
 

@@ -1,6 +1,8 @@
 # qset name index val
 
-Sets the list element at index to value. An error is returned for out of range indexes.
+__Since: 1.7.0.0__
+
+更新位于 index 位置的元素. 如果超过现有的元素范围, 会返回错误.
 
 ## 参数
 

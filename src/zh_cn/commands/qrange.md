@@ -1,6 +1,6 @@
 # qrange offset limit
 
-Returns a portion of elements from the queue at the specified range [offset, offset + limit].
+返回下标处于区域 [offset, offset + limit] 的元素.
 
 ## 参数
 

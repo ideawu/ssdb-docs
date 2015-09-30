@@ -1,3 +1,3 @@
 # qpush name item1 item2 ...
 
-Alias of [qpush_back](./qpush_back.html)
+是 [qpush_back](./qpush_back.html) 的别名.

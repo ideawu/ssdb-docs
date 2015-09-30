@@ -1,6 +1,6 @@
 # multi_set key1 value1 key2 value2 ...
 
-Set multiple key-value pairs(kvs) in one method call.
+批量设置一批 key-value.
 
 ## 参数
 

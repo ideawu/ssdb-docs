@@ -1,6 +1,6 @@
 # qtrim_front name size
 
-Remove multi elements from the head of a queue.
+从队列头部删除多个元素.
 
 ## 参数
 

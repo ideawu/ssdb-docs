@@ -1,6 +1,6 @@
 # multi_hget name key1 key2 ...
 
-Get the values related to the specified multiple keys of a hashmap.
+批量获取 hashmap 中多个 key 对应的权重值.
 
 ## 参数
 

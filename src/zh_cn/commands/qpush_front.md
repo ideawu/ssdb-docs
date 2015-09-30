@@ -1,6 +1,6 @@
 # qpush_front name item1 item2 ...
 
-Add one or more than one element to the head of the queue.
+往队列的首部添加一个或者多个元素
 
 ## 参数
 

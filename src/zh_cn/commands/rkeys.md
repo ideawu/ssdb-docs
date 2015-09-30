@@ -2,4 +2,4 @@
 
 __Since 1.9.0__
 
-参见 [keys](./keys.html), 逆序.
+类似 [keys](./keys.html), 逆序.

@@ -1,10 +1,10 @@
 # hsize name
 
-Return the number of key-value pairs in the hashmap.
+返回 hashmap 中的元素个数.
 
 ## 参数
 
-* `name` - The name of the hashmap
+* `name` - hashmap 的名字.
 
 ## 返回值
 

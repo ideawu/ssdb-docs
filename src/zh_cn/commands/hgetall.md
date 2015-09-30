@@ -1,10 +1,10 @@
 # hgetall name
 
-Returns the whole hash, as an array of strings indexed by strings.
+返回整个 hashmap.
 
 ## 参数
 
-* `name` - The name of the hashmap
+* `name` - hashmap 的名字.
 
 ## 返回值
 

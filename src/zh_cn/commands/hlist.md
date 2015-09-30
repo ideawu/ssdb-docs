@@ -1,14 +1,14 @@
 # hlist name_start name_end limit
 
-List hashmap names in range `(name_start, name_end]`.
+列出名字处于区间 (name_start, name_end] 的 hashmap.
 
-`("", ""]` means no range limit.
+("", ""] 表示整个区间.
 
 ## 参数
 
-* `name_start` - The lower bound(not included) of names to be returned, empty string means -inf(no limit).
-* `name_end` - The upper bound(inclusive) of names to be returned, empty string means +inf(no limit).
-* `limit` - Up to that many elements will be returned.
+* `name_start` - 返回的起始名字(不包含), 空字符串表示 -inf.
+* `name_end` - 返回的结束名字(包含), 空字符串表示 +inf.
+* `limit` - 最多返回这么多个元素. 
 
 ## 返回值
 

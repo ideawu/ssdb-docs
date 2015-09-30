@@ -1,6 +1,6 @@
 # multi_del key1 key2 ...
 
-Delete specified multiple keys.
+批量删除一批 key 和其对应的值内容.
 
 ## 参数
 

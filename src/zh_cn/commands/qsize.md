@@ -1,6 +1,6 @@
 # qsize name
 
-Returns the number of items in the queue.
+返回队列的长度.
 
 ## 参数
 

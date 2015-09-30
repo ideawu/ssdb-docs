@@ -1,12 +1,14 @@
 # countbit key [start] [size]
 
-Count the number of set bits (population counting) in a string. Unlike [bitcount](./bitcount.html), it take part of the string by `start` and `size`, not `start` and `end`.
+计算字符串的子串所包含的位值为 1 的个数. 若 start 是负数, 则从字符串末尾算起. 若 size 是负数, 则表示从字符串末尾算起, 忽略掉那么多字节.
+
+跟 [bitcount](./bitcount.html) 表示区间的参数含义不一样.
 
 ## 参数
 
 * `key` - 
-* `start` - Optional, inclusive, if start is negative, count from start'th character from the end of string.
-* `size` - Optional, if size is negative, then that many characters will be omitted from the end of string.
+* `start` - 可选, 子串的字节偏移
+* `size` - 可选, 子串的长度(字节数), 默认为到字符串最后一个字节 
 
 ## 返回值
 

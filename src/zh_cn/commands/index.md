@@ -812,7 +812,7 @@
 			name item1 item2 ...
 			</span>
 		</span>
-		<span class="summary">Adds one or more than one element to the head of the queue.</span>
+		<span class="summary">往队列的首部添加一个或者多个元素.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="qpush_back">
@@ -823,7 +823,7 @@
 			name item1 item2 ...
 			</span>
 		</span>
-		<span class="summary">Adds an or more than one element to the end of the queue.</span>
+		<span class="summary">往队列的尾部添加一个或者多个元素.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="qpop_front">
@@ -834,7 +834,7 @@
 			name size
 			</span>
 		</span>
-		<span class="summary">Pop out one or more elements from the head of a queue.</span>
+		<span class="summary">从队列首部弹出最后一个或者多个元素.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="qpop_back">
@@ -845,7 +845,7 @@
 			name size
 			</span>
 		</span>
-		<span class="summary">Pop out one or more elements from the tail of a queue.</span>
+		<span class="summary">从队列尾部弹出最后一个或者多个元素.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="qpush">
@@ -856,7 +856,7 @@
 				name item1 item2 ...
 			</span>
 		</span>
-		<span class="summary">Alias of `qpush_back`. </span>
+		<span class="summary">是 `qpush_back` 的别名.. </span>
 		</a>
 	</li>
 	<li data-group="string" data-name="qpop">
@@ -867,7 +867,7 @@
 			name size
 			</span>
 		</span>
-		<span class="summary">Alias of `qpop_front`. </span>
+		<span class="summary">是 `qpop_front` 的别名.. </span>
 		</a>
 	</li>
 	<li data-group="string" data-name="qfront">
@@ -878,7 +878,7 @@
 			name
 			</span>
 		</span>
-		<span class="summary">Returns the first element of a queue.</span>
+		<span class="summary">返回队列的第一个元素.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="qback">
@@ -889,7 +889,7 @@
 			name
 			</span>
 		</span>
-		<span class="summary">Returns the last element of a queue.</span>
+		<span class="summary">返回队列的最后一个元素.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="qsize">
@@ -900,7 +900,7 @@
 			name
 			</span>
 		</span>
-		<span class="summary">Returns the number of items in the queue.</span>
+		<span class="summary">返回队列的长度.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="qclear">
@@ -911,7 +911,7 @@
 			name
 			</span>
 		</span>
-		<span class="summary">Clear the queue.</span>
+		<span class="summary">清空一个队列.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="qget">
@@ -922,7 +922,7 @@
 			name index
 			</span>
 		</span>
-		<span class="summary">Returns the element a the specified index(position).</span>
+		<span class="summary">返回指定位置的元素.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="qset">
@@ -933,7 +933,7 @@
 				name index val
 			</span>
 		</span>
-		<span class="summary">Description</span>
+		<span class="summary">更新位于 index 位置的元素.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="qrange">
@@ -944,7 +944,7 @@
 			name offset limit
 			</span>
 		</span>
-		<span class="summary">Returns a portion of elements from the queue at the specified range [offset, offset + limit].</span>
+		<span class="summary">返回下标处于区域 [offset, offset + limit] 的元素.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="qslice">
@@ -955,7 +955,7 @@
 			name begin end
 			</span>
 		</span>
-		<span class="summary">Returns a portion of elements from the queue at the specified range [begin, end].</span>
+		<span class="summary">返回下标处于区域 [begin, end] 的元素. begin 和 end 可以是负数</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="qtrim_front">
@@ -966,7 +966,7 @@
 			name size
 			</span>
 		</span>
-		<span class="summary">Remove multi elements from the head of a queue.</span>
+		<span class="summary">从队列头部删除多个元素.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="qtrim_back">
@@ -977,7 +977,7 @@
 			name size
 			</span>
 		</span>
-		<span class="summary">Remove multi elements from the tail of a queue.</span>
+		<span class="summary">从队列头部删除多个元素.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="qlist">
@@ -988,7 +988,7 @@
 				name_start name_end limit
 			</span>
 		</span>
-		<span class="summary">List list/queue names in range (name_start, name_end].</span>
+		<span class="summary">列出名字处于区间 (name_start, name_end] 的 queue/list.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="qrlist">
@@ -999,7 +999,7 @@
 				name_start name_end limit
 			</span>
 		</span>
-		<span class="summary">List list/queue names in range (name_start, name_end], in reverse order.</span>
+		<span class="summary">像 qlist, 逆序.</span>
 		</a>
 	</li>
 

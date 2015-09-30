@@ -1,8 +1,8 @@
 # qlist name_start name_end limit
 
-List list/queue names in range `(name_start, name_end]`.
+列出名字处于区间 (name_start, name_end] 的 queue/list.
 
-`("", ""]` means no range limit.
+("", ""] 表示整个区间.
 
 ## 参数
 

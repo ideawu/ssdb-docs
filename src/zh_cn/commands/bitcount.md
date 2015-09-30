@@ -1,12 +1,12 @@
 # bitcount key [start] [end]
 
-Count the number of set bits (population counting) in a string. Like Redis's [bitcount](http://redis.io/commands/bitcount).
+计算字符串的子串所包含的位值为 1 的个数. 若 start 是负数, 则从字符串末尾算起. 若 end 是负数, 则表示从字符串末尾算起(包含). 类似 Redis 的 [bitcount](http://redis.io/commands/bitcount).
 
 ## 参数
 
 * `key` - 
-* `start` - Optional, inclusive, if start is negative, count from start'th character from the end of string.
-* `end` - Optional, inclusive.
+* `start` - 可选, 子串的字节偏移
+* `end` - 可选 
 
 ## 返回值
 

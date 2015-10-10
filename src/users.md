@@ -212,3 +212,11 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 [Sunshine Insurance](http://www.sinosig.com/) uses SSDB database.
 
+---
+
+## <a href="#ustack" name="ustack">UnitedStack</a>
+
+![](http://ssdb.io/img/ssdb-users/ustack.com.jpg)
+
+[UnitedStack](https://www.ustack.com) is the first Cloud Computing company using OpenStack. UnitedStack uses SSDB to store OpenStack monitoring data.
+

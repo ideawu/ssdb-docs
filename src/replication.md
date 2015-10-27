@@ -122,7 +122,7 @@ About status:
 
 ### To determine the replication status
 
-The `binlogs.max_seq` tells the seq of the latest one write(set/update/delete) operation on this instance, and `replication.client.last_seq` tells the seq of the last one opteration that had been sent to the slave.
+__For a master node__, the `binlogs.max_seq` tells the seq of the latest one write(set/update/delete) operation on this instance, and `replication.client.last_seq` tells the seq of the last one opteration that had been sent to the slave.
 
 So, if you want to know whether the replication between master and slave is up to date, check out if `binlogs.max_seq` is equal to `replication.client.last_seq`.
 

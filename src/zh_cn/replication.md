@@ -82,13 +82,13 @@ replication:
 	    client 127.0.0.1:55479
 	        type     : sync
 	        status   : SYNC
-	        last_seq : 73
+	        last_seq : 74
 	replication
 	    slaveof 127.0.0.1:8888
 	        id         : svc_2
 	        type       : sync
 	        status     : SYNC
-	        last_seq   : 73
+	        last_seq   : 10023
 	        copy_count : 0
 	        sync_count : 44
 

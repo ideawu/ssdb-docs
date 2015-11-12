@@ -220,3 +220,11 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 [UnitedStack](https://www.ustack.com) is the first Cloud Computing company using OpenStack. UnitedStack uses SSDB to store OpenStack monitoring data.
 
+---
+
+## <a href="#pandatv" name="pandatv">Panda TV</a>
+
+![](http://ssdb.io/img/ssdb-users/panda.tv.png)
+
+[Panda TV](https://panda.tv) is a Video Streaming website, they use SSDB to replace all Redis servers.
+

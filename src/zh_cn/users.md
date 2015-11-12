@@ -217,3 +217,11 @@ SSDB 在 [百度](http://www.baidu.com/) 的一些服务中用作缓存服务.
 ![](http://ssdb.io/img/ssdb-users/ustack.com.jpg)
 
 [UnitedStack 有云](https://www.ustack.com) 是中国最早的 OpenStack 开源云计算公司, 也是中国云计算领域第一个提供公有云和托管私有云区域节点完全一致的高可靠云服务的云公司. UnitedStack 是第一家使用 SSDB 的知名云计算平台, 使用 SSDB 来保存 OpenStack 服务的监控数据.
+
+---
+
+## <a href="#pandatv" name="pandatv">熊猫 TV</a>
+
+![](http://ssdb.io/img/ssdb-users/panda.tv.png)
+
+[熊猫 TV](https://panda.tv) 是一个视频直播网站, 其使用 SSDB 来完全替代 Redis.

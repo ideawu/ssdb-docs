@@ -5,7 +5,7 @@ Changes a single bit of a string. The string is auto expanded.
 ## Parameters
 
 * `key` - 
-* `offset` - bit offset.
+* `offset` - bit offset, must in range of [0, 1073741824].
 * `val` - 0 or 1.
 
 ## Return Value

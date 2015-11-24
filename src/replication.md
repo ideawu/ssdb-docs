@@ -1,6 +1,11 @@
 # Replication Configuration and Monitoring
 
 ## Configuration
+
+<div class="alert alert-info">
+	For older versions, you are required to specify the IP address of the master in <code>slaveof.ip</code>, but for newer versions(1.9.2+), you are able to specify the hostname of the master in <code>slaveof.host</code>.
+</div>
+
 ### Master-Slave
 
 __#server 1__
@@ -18,7 +23,10 @@ replication:
 		id: svc_1
 		# sync|mirror, default is sync
 		type: sync
-		ip: 127.0.0.1
+		# use ip for older version
+		#ip: 127.0.0.1
+		# use host since 1.9.2
+		host: localhost
 		port: 8888
 ```
 
@@ -32,7 +40,10 @@ replication:
 		id: svc_2
 		# sync|mirror, default is sync
 		type: mirror
-		ip: 127.0.0.1
+		# use ip for older version
+		#ip: 127.0.0.1
+		# use host since 1.9.2
+		host: localhost
 		port: 8889
 ```
 
@@ -44,7 +55,10 @@ replication:
 		id: svc_1
 		# sync|mirror, default is sync
 		type: mirror
-		ip: 127.0.0.1
+		# use ip for older version
+		#ip: 127.0.0.1
+		# use host since 1.9.2
+		host: localhost
 		port: 8888
 ```
 
@@ -58,13 +72,19 @@ replication:
 		id: svc_1
 		# sync|mirror, default is sync
 		type: mirror
-		ip: 127.0.0.1
+		# use ip for older version
+		#ip: 127.0.0.1
+		# use host since 1.9.2
+		host: localhost
 		port: 8888
 	slaveof:
 		id: svc_2
 		# sync|mirror, default is sync
 		type: mirror
-		ip: 127.0.0.1
+		# use ip for older version
+		#ip: 127.0.0.1
+		# use host since 1.9.2
+		host: localhost
 		port: 8889
 	# ... more slaveof
 ```
@@ -104,7 +124,7 @@ __replication__
 
 There could be multiple `replication` sections. Each describes a connected slave(*client*) or connecting to a master(*slaveof*).
 
-* slaveof|client ip:port, the remote master/slave's ip:port.
+* slaveof|client host:port, the remote master/slave's host:port.
 * type: `sync|mirror`.
 * status: replication status, `DISCONNECTED|INIT|OUT_OF_SYNC|COPY|SYNC`.
 * last_seq: seq of the last binlog sent or received.

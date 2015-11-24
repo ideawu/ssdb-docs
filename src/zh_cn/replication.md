@@ -1,6 +1,11 @@
 # 同步和复制的配置与监控
 
 ## 配置
+
+<div class="alert alert-info">
+	对于老版本, 你必须通过 <code>slaveof.ip</code> 指定 master 的 IP 地址, 但对于新版本(1.9.2+), 你可以通过 <code>slaveof.host</code> 指定 master 的主机名(域名).
+</div>
+
 ### 主-从
 
 __#server 1__
@@ -18,7 +23,10 @@ replication:
 		id: svc_1
 		# sync|mirror, default is sync
 		type: sync
-		ip: 127.0.0.1
+		# use ip for older version
+		#ip: 127.0.0.1
+		# use host since 1.9.2
+		host: localhost
 		port: 8888
 ```
 
@@ -32,7 +40,10 @@ replication:
 		id: svc_2
 		# sync|mirror, default is sync
 		type: mirror
-		ip: 127.0.0.1
+		# use ip for older version
+		#ip: 127.0.0.1
+		# use host since 1.9.2
+		host: localhost
 		port: 8889
 ```
 
@@ -44,7 +55,10 @@ replication:
 		id: svc_1
 		# sync|mirror, default is sync
 		type: mirror
-		ip: 127.0.0.1
+		# use ip for older version
+		#ip: 127.0.0.1
+		# use host since 1.9.2
+		host: localhost
 		port: 8888
 ```
 
@@ -58,13 +72,19 @@ replication:
 		id: svc_1
 		# sync|mirror, default is sync
 		type: mirror
-		ip: 127.0.0.1
+		# use ip for older version
+		#ip: 127.0.0.1
+		# use host since 1.9.2
+		host: localhost
 		port: 8888
 	slaveof:
 		id: svc_2
 		# sync|mirror, default is sync
 		type: mirror
-		ip: 127.0.0.1
+		# use ip for older version
+		#ip: 127.0.0.1
+		# use host since 1.9.2
+		host: localhost
 		port: 8889
 	# ... more slaveof
 ```
@@ -104,7 +124,7 @@ __replication__
 
 可以有多条 `replication` 记录. 每一条表示一个连接进来的 slave(*client*), 或者一个当前服务器所连接的 master(*slaveof*).
 
-* slaveof|client ip:port, 远端 master/slave 的 ip:port.
+* slaveof|client host:port, 远端 master/slave 的 host:port.
 * type: 类型, `sync|mirror`.
 * status: 当前同步状态, `DISCONNECTED|INIT|OUT_OF_SYNC|COPY|SYNC`.
 * last_seq: 上一条发送或者收到的 binlog 的序号.

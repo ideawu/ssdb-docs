@@ -228,3 +228,11 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 [Panda TV](https://panda.tv) is a Video Streaming website, they use SSDB to replace all Redis servers.
 
+---
+
+## <a href="#zbird" name="zbird">zbird</a>
+
+![](http://ssdb.io/img/ssdb-users/zbird.com.png)
+
+[zbird](http://www.zbird.com/) is a diamond B2C platform in China, it uses SSDB to store product list, and as cache server. SSDB highly improve its web site's performance, now it serves requests in ms level.
+

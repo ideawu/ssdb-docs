@@ -225,3 +225,11 @@ SSDB 在 [百度](http://www.baidu.com/) 的一些服务中用作缓存服务.
 ![](http://ssdb.io/img/ssdb-users/panda.tv.png)
 
 [熊猫 TV](https://panda.tv) 是一个视频直播网站, 其使用 SSDB 来完全替代 Redis.
+
+---
+
+## <a href="#zbird" name="zbird">钻石小鸟</a>
+
+![](http://ssdb.io/img/ssdb-users/zbird.com.png)
+
+[钻石小鸟](http://www.zbird.com/) 是中国领先的B2C钻石婚戒领导平台, 使用SSDB作为存储商品列表访问量大得信息, 同时作为缓存数据库使用, 使用后将网站的访问时间缩短到ms级别加快了页面访问速度.

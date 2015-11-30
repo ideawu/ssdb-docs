@@ -10,7 +10,7 @@
 	DO remember to configure your Linux kernel parameters about <code>max open files</code>, refer to <a href="http://www.cyberciti.biz/faq/linux-increase-the-maximum-number-of-open-files/">[1]</a> and <a href="http://www.lognormal.com/blog/2012/09/27/linux-tcpip-tuning/">[2]</a>. Or you will see error messages like <code>Too many open files</code> in log.txt, or <code>Connection reset by peer</code> on client side.
 </div>
 
-PS: Use [c100k](https://github.com/ideawu/c1000k) to test how many concurrent connections your system supports.
+PS: Use [c1000k](https://github.com/ideawu/c1000k) to test how many concurrent connections your system supports.
 
 
 ## Listen Network

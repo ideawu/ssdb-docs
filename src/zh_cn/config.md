@@ -10,7 +10,7 @@
 	一定要记得修改你的 Linux 内核参数, 关于 <code>max open files(最大文件描述符数)</code>的内容, 请参考 <a href="http://www.ideawu.net/blog/archives/740.html">[1]</a>. 否则, 你会在 log.txt 看到 <code>Too many open files</code> 类似的错误, 或者在客户端看到 <code>Connection reset by peer</code> 错误.
 </div>
 
-PS: 使用这个 [c100k](https://github.com/ideawu/c1000k) 工具来测试你的系统最多支持多少并发连接.
+PS: 使用这个 [c1000k](https://github.com/ideawu/c1000k) 工具来测试你的系统最多支持多少并发连接.
 
 ## 监听网络端口
 

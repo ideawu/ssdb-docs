@@ -170,7 +170,7 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 			<a href="https://github.com/yiding-he/hydrogen-ssdb">Repository</a>
 		</td>
 		<td>
-			
+			A total new ssdb client
 		</td>
 	</tr>
 </table>

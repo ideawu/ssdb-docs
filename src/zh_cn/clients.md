@@ -166,6 +166,16 @@ SSDB 源码仓库中, 内置了许多语言的客户端, 这些便是所谓的__
 			
 		</td>
 	</tr>
+	<tr>
+		<td width="21%">hydrogen-ssdb</td>
+		<td width="15%">yiding-he</td>
+		<td width="20%">
+			<a href="https://github.com/yiding-he/hydrogen-ssdb">Repository</a>
+		</td>
+		<td>
+			支持多线程并发请求和多服务器的负载均衡(客户端分发请求)
+		</td>
+	</tr>
 </table>
 
 ### <a href="#lua" name="lua">Lua</a>

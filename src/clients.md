@@ -162,6 +162,16 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 		<td>
 			
 		</td>
+	<tr>
+		<td width="21%">hydrogen-ssdb</td>
+		<td width="15%">yiding-he</td>
+		<td width="20%">
+			<a href="https://github.com/yiding-he/hydrogen-ssdb">Repository</a>
+		</td>
+		<td>
+			Supports client-side load-balance
+		</td>
+	</tr>
 	</tr>
 </table>
 

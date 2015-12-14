@@ -60,7 +60,7 @@ SSDB runs as cache server in [Gongchang.com](http://www.gongchang.com/).
 
 ![](http://ssdb.io/img/ssdb-users/baidu.com.png)
 
-SSDB runs as cache server in [Baidu](http://www.baidu.com/) for some service.
+[Baidu](http://www.baidu.com/) uses SSDB for their most important service - Web Search.
 
 ---
 

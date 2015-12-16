@@ -6,6 +6,7 @@ SSDB 是稳定的, 生产环境使用的, 已经在[许多互联网公司得到�
 
 ## 开始
 
+* [FAQ](./faq.html): FAQ - 常见问题
 * [下载和安装](./install.html)
 * [配置](./config.html)
 * [命令列表](./commands/index.html)

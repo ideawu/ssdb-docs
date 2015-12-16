@@ -31,6 +31,7 @@
 					<ul class="dropdown-menu">
 						<li><a href="<?php echo $base_url?>/zh_cn/index.html">文档首页</a></li>
 						<li class="divider"></li>
+						<li><a href="<?php echo $base_url?>/zh_cn/faq.html">FAQ - 常见问题</a></li>
 						<li><a href="<?php echo $base_url?>/zh_cn/install.html">安装</a></li>
 						<li><a href="<?php echo $base_url?>/zh_cn/commands/index.html">命令</a></li>
 						<li><a href="<?php echo $base_url?>/zh_cn/config.html">配置</a></li>

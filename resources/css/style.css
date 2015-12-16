@@ -1,7 +1,7 @@
 body{
 	padding-top: 40px;
 	padding-bottom: 10px;
-	font-size: 14px;
+	font-size: 15px;
 	font-family: arial;
 	background: #fff;
 }
@@ -76,7 +76,17 @@ h4{
 	font-weight: bold;
 	font-size: 105%;
 }
-
+ul{
+	padding-left: 18px;
+}
+blockquote{
+	margin-left: 20px;
+	padding: 0 15px;
+	font-size: 100%;
+}
+blockquote p{
+	font-size: 100%;
+}
 
 /** Styles for commands list. */
 

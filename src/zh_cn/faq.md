@@ -14,7 +14,7 @@
 
 * __问: 为什么并发数上不去? 服务器报错 Too many open files, 客户端报错 Connection reset by peer.__
 
- > __答:__ 请参考文档 http://ssdb.io/docs/zh_cn/config.html 进行配置.
+ > __答:__ 请参考文档 [http://ssdb.io/docs/zh_cn/config.html](http://ssdb.io/docs/zh_cn/config.html) 进行配置.
 
 * __问: 我把所有的 key 都删除了, 为什么 SSDB 占用的内存和磁盘空间并没有释放?__
 
@@ -30,7 +30,7 @@
 
 * __问: 为什么 SSDB 偶尔会使用较多内存空间, 然后又降下来?__
 
- > __答:__ SSDB 使用的内存空间是变动的, 可能忽高忽低. 使用的内存空间的上限在文档 http://ssdb.io/docs/zh_cn/config.html 中有描述.
+ > __答:__ SSDB 使用的内存空间是变动的, 可能忽高忽低. 使用的内存空间的上限在文档 [http://ssdb.io/docs/zh_cn/config.html](http://ssdb.io/docs/zh_cn/config.html) 中有描述.
 
 * __问: Compaction 时服务会有稍微变慢, 我能设定 Compaction 执行的时间吗?__
 

@@ -236,3 +236,11 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 [zbird](http://www.zbird.com/) is a diamond B2C platform in China, it uses SSDB to store product list, and as cache server. SSDB highly improve its web site's performance, now it serves requests in ms level.
 
+---
+
+## <a href="#dingdancar" name="dingdangcar">DingDangCar</a>
+
+![](http://ssdb.io/img/ssdb-users/dingdangcar.com.png)
+
+[DingDangCar](http://www.dingdangcar.com/) a China car-service information and socializing online service, it uses SSDB to store feed data, co-operated with [icomet](https://github.com/ideawu/icomet), it provider feed push service.
+

@@ -238,7 +238,7 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 ---
 
-## <a href="#dingdancar" name="dingdangcar">DingDangCar</a>
+## <a href="#dingdangcar" name="dingdangcar">DingDangCar</a>
 
 ![](http://ssdb.io/img/ssdb-users/dingdangcar.com.png)
 

@@ -236,7 +236,7 @@ SSDB 在 [百度](http://www.baidu.com/) 核心的网页搜索中得到广泛应
 
 ---
 
-## <a href="#dingdancar" name="dingdangcar">叮当汽车</a>
+## <a href="#dingdangcar" name="dingdangcar">叮当汽车</a>
 
 ![](http://ssdb.io/img/ssdb-users/dingdangcar.com.png)
 

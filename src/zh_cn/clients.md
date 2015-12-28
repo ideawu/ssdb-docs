@@ -200,7 +200,7 @@ SSDB 源码仓库中, 内置了许多语言的客户端, 这些便是所谓的__
 			<a href="https://github.com/reficull/dbss">Repository</a>
 		</td>
 		<td>
-			Luajit ssdb client driver based on the cpp API
+			Luajit 使用的客户端，我用在C++游戏服中，lua直接连ssdb 
 		</td>
 	</tr>
 </table>

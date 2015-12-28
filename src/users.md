@@ -238,6 +238,14 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 ---
 
+## <a href="#dingdangcar" name="dingdangcar">DingDangCar</a>
+
+![](http://ssdb.io/img/ssdb-users/dingdangcar.com.png)
+
+[DingDangCar](http://www.dingdangcar.com/) a China car-service information and socializing online service, it uses SSDB to store feed data, co-operated with [icomet](https://github.com/ideawu/icomet), it provider feed push service.
+
+---
+
 ## <a href="#changba" name="changba">ChangBa</a>
 
 ![](http://ssdb.io/img/ssdb-users/changba.com.png)

@@ -236,6 +236,13 @@ SSDB 在 [百度](http://www.baidu.com/) 核心的网页搜索中得到广泛应
 
 ---
 
+## <a href="#dingdangcar" name="dingdangcar">叮当汽车</a>
+
+![](http://ssdb.io/img/ssdb-users/dingdangcar.com.png)
+
+[叮当汽车](http://www.dingdangcar.com/) 是中国一家汽车服务后市场资讯分类和行业社交平台, 其使用 SSDB 作为 feed 服务存储, 同时结合 [icomet](https://github.com/ideawu/icomet) 实现 feed 推送服务.
+
+---
 ## <a href="#changba" name="changba">唱吧</a>
 
 ![](http://ssdb.io/img/ssdb-users/changba.com.png)

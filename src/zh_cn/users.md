@@ -233,3 +233,11 @@ SSDB 在 [百度](http://www.baidu.com/) 核心的网页搜索中得到广泛应
 ![](http://ssdb.io/img/ssdb-users/zbird.com.png)
 
 [钻石小鸟](http://www.zbird.com/) 是中国领先的B2C钻石婚戒领导平台, 使用SSDB作为存储商品列表访问量大得信息, 同时作为缓存数据库使用, 使用后将网站的访问时间缩短到ms级别加快了页面访问速度.
+
+---
+
+## <a href="#changba" name="changba">唱吧</a>
+
+![](http://ssdb.io/img/ssdb-users/changba.com.png)
+
+[唱吧](http://changba.com/) 唱吧使用 SSDB 来存储其数十亿的评论数据.

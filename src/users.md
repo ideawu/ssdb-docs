@@ -236,3 +236,11 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 [zbird](http://www.zbird.com/) is a diamond B2C platform in China, it uses SSDB to store product list, and as cache server. SSDB highly improve its web site's performance, now it serves requests in ms level.
 
+---
+
+## <a href="#changba" name="changba">ChangBa</a>
+
+![](http://ssdb.io/img/ssdb-users/changba.com.png)
+
+[ChangBa](http://changba.com/) ChangBa uses SSDB to store billions of comments.
+

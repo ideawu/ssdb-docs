@@ -52,6 +52,10 @@
 
  > __答:__ SSDB 不支持 sets, 以后也不太可能支持, 因为有替代方案. 你可以用 hash 来替代 sets, 因为一个 hash 的 key 是唯一的, 可以实现集合的特性. 至于交集, 并集等操作, 你只能自己实现. 例如, 求交集, 你可以遍历第一个 hash 的 key, 然后和第二个 hash 对比, 把结果存入第三个 hash.
 
+* __问: __ 我用 Twemproxy 配置 SSDB 做负载均衡和集群, 但是当我用 ssdb-cli 连接 Twemproxy 时, 会报错, 为什么?
+
+ > __答:__ 因为 Twemproxy 不支持 SSDB 网络协议, 所以, 你只能使用 redis-cli 连接 Twemproxy. 注意, 你可以用 ssdb-cli 或者 redis-cli 连接 SSDB, 那是因为 SSDB 支持两种协议, 而 Twemproxy 只支持一种.
+
 * __问: __
 
  > __答:__ 

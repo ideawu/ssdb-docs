@@ -190,6 +190,16 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 			Lua ssdb client driver for the ngx_lua based on the cosocket API
 		</td>
 	</tr>
+	<tr>
+		<td width="21%">DBSS</td>
+		<td width="15%">reficull</td>
+		<td width="20%">
+			<a href="https://github.com/reficull/dbss">Repository</a>
+		</td>
+		<td>
+			Luajit ssdb client driver based on the cpp API
+		</td>
+	</tr>
 </table>
 
 ### <a href="#nodejs" name="nodejs">NodeJS</a>

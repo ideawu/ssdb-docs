@@ -193,6 +193,16 @@ SSDB 源码仓库中, 内置了许多语言的客户端, 这些便是所谓的__
 			Lua ssdb client driver for the ngx_lua based on the cosocket API
 		</td>
 	</tr>
+	<tr>
+		<td width="21%">DBSS</td>
+		<td width="15%">reficull</td>
+		<td width="20%">
+			<a href="https://github.com/reficull/dbss">Repository</a>
+		</td>
+		<td>
+			Luajit 使用的客户端，我用在C++游戏服中，lua直接连ssdb 
+		</td>
+	</tr>
 </table>
 
 ### <a href="#nodejs" name="nodejs">NodeJS</a>

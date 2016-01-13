@@ -11,8 +11,8 @@ Return list of keys.
 ## Example
 
 	ssdb 127.0.0.1:8888> keys "" "" 10
-	              key
+	key
 	-----------------
-	                a
-	                b
+	  a
+	  b
 	2 result(s) (0.000 sec)

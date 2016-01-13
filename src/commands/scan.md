@@ -18,3 +18,25 @@ false on error, otherwise an associative array containing the key-value pairs.
 
 ## Example
 
+	ssdb 127.0.0.1:8888> scan "" "" 10
+	key             value
+	-------------------------
+	  a               : 1
+	  b               : 1
+	2 result(s) (0.000 sec)
+	ssdb 127.0.0.1:8888> scan "a" "" 10
+	key             value
+	-------------------------
+	  aa              : 1
+	  b               : 2
+	  c               : 3
+	2 result(s) (0.000 sec)
+	# because key_end is not set, 'b', 'c' are returned!
+	ssdb 127.0.0.1:8888> scan "a" "b" 10
+	key             value
+	-------------------------
+	  aa              : 1
+	  b               : 2
+	2 result(s) (0.000 sec)
+	# set key_end as 'b'(inclusive), so 'b' is returned! 'c' is not.
+

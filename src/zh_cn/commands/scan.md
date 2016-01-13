@@ -1,8 +1,8 @@
 # scan key_start key_end limit
 
-列出处于区间 `(key_start, key_end]` 的 key-value 列表.
+列出处于区间 `(key_start, key_end]` 的 key-value 列表. `("", ""]` 表示整个区间.
 
-`("", ""]` 表示整个区间.
+这个命令可实现类似通配符 `*` 号的查找, 但是, 仅支持前缀查找, 而且, `*` 必须被省略 - 不要在查询参数里输入 `*` 号!
 
 ## 参数
 

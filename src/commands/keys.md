@@ -1,5 +1,7 @@
 # keys key_start key_end limit
 
+Refer to [scan](./scan.html) command for more information about how it work.
+
 ## Parameters
 
 ## Return Value

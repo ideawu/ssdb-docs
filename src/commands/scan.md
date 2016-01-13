@@ -4,6 +4,8 @@ List key-value pairs with keys in range `(key_start, key_end]`.
 
 `("", ""]` means no range limit.
 
+This command can do wildchar `*` like search, but only prefix search, and the `*` char must never occur in `key_start` and `key_end`!
+
 ## Parameters
 
 * `key_start` - The lower bound(not included) of keys to be returned, empty string means -inf(no limit).

@@ -4,6 +4,8 @@ List key-value pairs of a hashmap with keys in range `(key_start, key_end]`.
 
 `("", ""]` means no range limit.
 
+Refer to [scan](./scan.html) command for more information about how it work.
+
 ## Parameters
 
 * `name` - The name of the hashmap

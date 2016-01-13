@@ -25,7 +25,8 @@ Key-value List reply.
 	-------------------------
 	  a               : 1
 	  aa              : 1
-	  b               : 1
+	  b               : 2
+	  c               : 3
 	2 result(s) (0.000 sec)
 	ssdb 127.0.0.1:8888> scan "a" "" 10
 	key             value

@@ -12,6 +12,8 @@
 
 PS: 使用这个 [c1000k](https://github.com/ideawu/c1000k) 工具来测试你的系统最多支持多少并发连接.
 
+---
+
 ## 监听网络端口
 
     server:
@@ -27,20 +29,29 @@ PS: 使用这个 [c1000k](https://github.com/ideawu/c1000k) 工具来测试你�
     如果不做网络限制便监听 <code>0.0.0.0</code> IP 可能导致被任意机器访问到你的数据, 这很可能是一个安全问题! 你可以结合操作系统的 iptables 来限制网络访问.
 </div>
 
+---
+
+## 同步和复制
+
+* 参见 [同步和复制](./replication.html)
+
+---
 
 ## 日志配置
 
 另外参见 [日志分析](./logs.html).
 
-### 日志级别
+* __`logger.level` 日志级别__
 
 支持的日志级别有: `debug, warn, error, fatal`.
 
 一般, 建议你将 `logger.level` 设置为 `debug` 级别.
 
-### 输出日志到终端屏幕
+* __`logger.output` 日志输出__
 
-编辑 ssdb.conf, 将
+可直接写相对路径或者绝对路径, 如果相对路径, 则是相对配置文件所在的目录.
+
+如果你想输出日志到终端屏幕, 编辑 ssdb.conf, 将
 
 	logger:
 		output: log.txt
@@ -50,12 +61,14 @@ PS: 使用这个 [c1000k](https://github.com/ideawu/c1000k) 工具来测试你�
 	logger:
 		output: stdout
 
-### 日志循环和清理
+* __`logger.rorate.size` 日志循环和清理__
 
-按照默认的配置, 日志会按 1000MB 大小进行切分, 切分后的文件名格式如: `log.txt.20150723-230422`.
+设置日志拆分时的大小, 单位为字节数. 按照默认的配置, 日志会按 1000MB 大小进行切分, 切分后的文件名格式如: `log.txt.20150723-230422`.
 
 __切分后的日志文件不会自动被清理, 你需要自己写 crontab 脚本来清理.__
 
+
+---
 
 ## 内存占用
 
@@ -68,9 +81,3 @@ __切分后的日志文件不会自动被清理, 你需要自己写 crontab 脚�
 	cache_size + 10 * write_buffer_size * 66 + 32
 
 你可以调整配置参数, 限制 ssdb-server 的内存占用.
-
----
-
-## 同步和复制
-
-* 参见 [同步和复制](./replication.html)

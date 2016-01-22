@@ -2,7 +2,7 @@
 
 <span class="label label-success" style="font-size: 120%;">注意</span>
 <div class="alert alert-info">
-    SSDB 的配置文件使用一个 TAB 来表示一级缩进, 不要使用空格来缩进, 无论你用2个, 3个, 4个, 或者无数个空格都不行!
+    SSDB 的配置文件使用一个 TAB 来表示一级缩进, 不要使用空格来缩进, 无论你用1个, 2个, 3个, 4个, 5个, 6个, 7个, 8个或者无数个空格都不行!
 </div>
 
 <span class="label label-warning" style="font-size: 120%;">重要</span>

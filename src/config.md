@@ -2,7 +2,7 @@
 
 <span class="label label-info" style="font-size: 120%;">Notice</span>
 <div class="alert alert-info">
-    SSDB configuration file uses exactly one TAB to indent for one level, do not use any number of spaces to indent!
+    SSDB configuration file uses exactly one TAB to indent for one level, do not use 2, 3, 4, 5, 6, 7, 8 or any other number of spaces to indent!
 </div>
 
 <span class="label label-warning" style="font-size: 120%;">Important</span>

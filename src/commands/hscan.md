@@ -1,4 +1,4 @@
-# hscan key_start key_end limit
+# hscan name key_start key_end limit
 
 List key-value pairs of a hashmap with keys in range `(key_start, key_end]`.
 

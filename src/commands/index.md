@@ -439,7 +439,7 @@
 		<span class="command">
 			hscan
 			<span class="args">
-				key_start key_end limit
+				name key_start key_end limit
 			</span>
 		</span>
 		<span class="summary">List key-value pairs of a hashmap with keys in range (key_start, key_end].</span>
@@ -450,7 +450,7 @@
 		<span class="command">
 			hrscan
 			<span class="args">
-				key_start key_end limit
+				name key_start key_end limit
 			</span>
 		</span>
 		<span class="summary">List key-value pairs with keys in range (key_start, key_end], in reverse order.</span>

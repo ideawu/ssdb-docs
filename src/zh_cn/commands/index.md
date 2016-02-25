@@ -439,7 +439,7 @@
 		<span class="command">
 			hscan
 			<span class="args">
-				key_start key_end limit
+				name key_start key_end limit
 			</span>
 		</span>
 		<span class="summary">列出 hashmap 中处于区间 (key_start, key_end] 的 key-value 列表.</span>
@@ -450,7 +450,7 @@
 		<span class="command">
 			hrscan
 			<span class="args">
-				key_start key_end limit
+				name key_start key_end limit
 			</span>
 		</span>
 		<span class="summary">像 hscan, 逆序.</span>

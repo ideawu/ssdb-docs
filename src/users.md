@@ -251,3 +251,10 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 ![](http://ssdb.io/img/ssdb-users/changba.com.png)
 
 [ChangBa](http://changba.com/) ChangBa uses SSDB to store billions of comments.
+
+---
+## <a href="#7po" name="7po">7Po</a>
+
+![](http://ssdb.io/img/ssdb-users/app.7po.com.png)
+
+[7Po app market](http://app.7po.com/) is a app market for TV box, it uses SSDB as its primary database.

@@ -248,3 +248,10 @@ SSDB 在 [百度](http://www.baidu.com/) 核心的网页搜索中得到广泛应
 ![](http://ssdb.io/img/ssdb-users/changba.com.png)
 
 [唱吧](http://changba.com/) 唱吧使用 SSDB 来存储其数十亿的评论数据.
+
+---
+## <a href="#7po" name="7po">奇珀应用市场</a>
+
+![](http://ssdb.io/img/ssdb-users/app.7po.com.png)
+
+[奇珀应用市场](http://app.7po.com/) 奇珀市场是一款专为智能电视和安卓电视盒开发的电视应用市场, 收录了影视, 游戏, 教育, 生活, 工具等近2000多款精选电视应用. 奇珀市场使用SSDB作为主要数据库, 提高了总体性能, 节约了成本, 特别适合经常变化的业务需求.

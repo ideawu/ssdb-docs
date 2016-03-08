@@ -68,6 +68,10 @@
 
  > __答:__ 因为 Twemproxy 不支持 SSDB 网络协议, 所以, 你只能使用 redis-cli 连接 Twemproxy. 注意, 你可以用 ssdb-cli 或者 redis-cli 连接 SSDB, 那是因为 SSDB 支持两种协议, 而 Twemproxy 只支持一种.
 
+* __问: __ 如何在一台机器上部署多个 SSDB 实例?
+
+ > __答:__ 每一个实例使用不同的配置文件进行启动, 而且, 配置文件里的 `work_dir` `server.port` 不能相同, 也就是每个实例的数据库存储路径, 以及监听端口. 如果 `pidfile` `logger.output` 使用的是绝对路径, 也要保证不能相同, 如果是相对路径, 由不需要, 因为默认跟随 `work_dir` 而不同了.
+
 * __问: __
 
  > __答:__ 

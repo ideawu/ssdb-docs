@@ -1,4 +1,4 @@
-# hscan key_start key_end limit
+# hscan name key_start key_end limit
 
 列出 hashmap 中处于区间 (key_start, key_end] 的 key-value 列表.
 

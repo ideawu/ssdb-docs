@@ -37,6 +37,7 @@
 						<li><a href="<?php echo $base_url?>/zh_cn/config.html">配置</a></li>
 						<li><a href="<?php echo $base_url?>/zh_cn/clients.html">客户端 SDK</a></li>
 						<li><a href="<?php echo $base_url?>/zh_cn/protocol.html">SSDB 网络协议</a></li>
+						<li><a href="<?php echo $base_url?>/zh_cn/index.html">更多...</a></li>
 						<li class="divider"></li>
 						<li><a href="<?php echo $base_url?>/zh_cn/php/index.html">PHP API 文档</a></li>
 						<li><a href="<?php echo $base_url?>/cpp/index.html">C++ API 文档(英文)</a></li>

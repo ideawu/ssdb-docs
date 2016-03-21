@@ -35,6 +35,7 @@
 						<li><a href="<?php echo $base_url?>/config.html">Configuration</a></li>
 						<li><a href="<?php echo $base_url?>/clients.html">Clients</a></li>
 						<li><a href="<?php echo $base_url?>/protocol.html">SSDB Network Protocol</a></li>
+						<li><a href="<?php echo $base_url?>/index.html">More...</a></li>
 						<li class="divider"></li>
 						<li><a href="<?php echo $base_url?>/php/index.html">PHP API Doc</a></li>
 						<li><a href="<?php echo $base_url?>/cpp/index.html">C++ API Doc</a></li>

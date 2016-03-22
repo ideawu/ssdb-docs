@@ -247,27 +247,6 @@ SSDB 源码仓库中, 内置了许多语言的客户端, 这些便是所谓的__
 			官方客户端
 		</td>
 	</tr>
-	<tr>
-		<td width="21%">官方 <span style="color: #cc3;">★</span></td>
-		<td width="15%">ideawu, shen2</td>
-		<td width="20%">
-			<a href="https://packagist.org/packages/ssdb/phpssdb">Packagist</a>
-			<a href="https://github.com/ssdb/phpssdb">Repository</a>
-		</td>
-		<td>
-			由 @shen2 维护于 Packagist.
-		</td>
-	</tr>
-	<tr>
-		<td width="21%">phpssdb(PHP 模块)<span style="color: #cc3;">★</span></td>
-		<td width="15%">jonnywang</td>
-		<td width="20%">
-			<a href="https://github.com/jonnywang/phpssdb">Repository</a>
-		</td>
-		<td>
-			SSDB 的 PHP 模块.
-		</td>
-	</tr>
 </table>
 
 ### <a href="#python" name="python">Python</a>

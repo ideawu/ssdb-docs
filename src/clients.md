@@ -244,27 +244,6 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 			This is the official client
 		</td>
 	</tr>
-	<tr>
-		<td width="21%">official <span style="color: #cc3;">★</span></td>
-		<td width="15%">ideawu, shen2</td>
-		<td width="20%">
-			<a href="https://packagist.org/packages/ssdb/phpssdb">Packagist</a>
-			<a href="https://github.com/ssdb/phpssdb">Repository</a>
-		</td>
-		<td>
-			Maintained by @shen2 in Packagist.
-		</td>
-	</tr>
-	<tr>
-		<td width="21%">phpssdb(PHP module)<span style="color: #cc3;">★</span></td>
-		<td width="15%">jonnywang</td>
-		<td width="20%">
-			<a href="https://github.com/jonnywang/phpssdb">Repository</a>
-		</td>
-		<td>
-			The SSDB PHP module.
-		</td>
-	</tr>
 </table>
 
 ### <a href="#python" name="python">Python</a>

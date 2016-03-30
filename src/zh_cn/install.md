@@ -70,7 +70,7 @@
 	# each config file for one instance
 	configs=/data/ssdb_data/test/ssdb.conf
 
-将 ```/data/ssdb_data/test/ssdb.conf``` 修改为你的 SSDB 配置文件的路径. 如果你有多个 SSDB 实例, 那么把它们写在一行, 用空格来分隔:
+将 ```/data/ssdb_data/test/ssdb.conf``` 修改为你的 SSDB 配置文件的路径. 如果你有多个 SSDB 实例, 那么把它们写在一行, 用空格来分隔, 例如:
 
 	# each config file for one instance
 	configs=/data/ssdb_data/test/ssdb.conf /data/ssdb_data/demo/ssdb.conf

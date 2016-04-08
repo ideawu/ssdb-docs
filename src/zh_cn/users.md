@@ -255,3 +255,11 @@ SSDB 在 [百度](http://www.baidu.com/) 核心的网页搜索中得到广泛应
 ![](http://ssdb.io/img/ssdb-users/app.7po.com.png)
 
 [奇珀应用市场](http://app.7po.com/) 奇珀市场是一款专为智能电视和安卓电视盒开发的电视应用市场, 收录了影视, 游戏, 教育, 生活, 工具等近2000多款精选电视应用. 奇珀市场使用SSDB作为主要数据库, 提高了总体性能, 节约了成本, 特别适合经常变化的业务需求.
+
+---
+## <a href="#xunlei" name="xunlei">迅雷草莓直播</a>
+
+![](http://ssdb.io/img/ssdb-users/xunlei.com.png)
+
+[迅雷草莓直播](#) 是一款主打校园直播的手机APP. 该产品中所的数据缓存/锁/查询等都是基于SSDB开发的, 以前是使用Redis, 基于效率/扩展的运维需求, 全搬迁到了SSDB, 修改极小.
+ 

@@ -21,7 +21,7 @@ SSDB 源码仓库中, 内置了许多语言的客户端, 这些便是所谓的__
 		<td width="21%">内置 <span style="color: #cc3;">★</span></td>
 		<td width="15%">ideawu</td>
 		<td width="20%">
-			<a href="https://github.com/ideawu/ssdb">Repository</a>
+			<a href="https://github.com/ideawu/ssdb/tree/master/api/cpp">Repository</a>
 		</td>
 		<td>
 			官方客户端
@@ -48,7 +48,7 @@ SSDB 源码仓库中, 内置了许多语言的客户端, 这些便是所谓的__
 		<td width="21%">内置 <span style="color: #cc3;">★</span></td>
 		<td width="15%">ideawu</td>
 		<td width="20%">
-			<a href="https://github.com/ideawu/ssdb">Repository</a>
+			<a href="https://github.com/ideawu/ssdb/tree/master/api/cpy">Repository</a>
 		</td>
 		<td>
 			官方客户端. see [Cpy](https://github.com/ideawu/cpy).
@@ -241,7 +241,7 @@ SSDB 源码仓库中, 内置了许多语言的客户端, 这些便是所谓的__
 		<td width="21%">内置 <span style="color: #cc3;">★</span></td>
 		<td width="15%">ideawu</td>
 		<td width="20%">
-			<a href="https://github.com/ideawu/ssdb">Repository</a>
+			<a href="https://github.com/ideawu/ssdb/tree/master/api/php">Repository</a>
 		</td>
 		<td>
 			官方客户端
@@ -258,7 +258,7 @@ SSDB 源码仓库中, 内置了许多语言的客户端, 这些便是所谓的__
 		<td width="21%">内置 <span style="color: #cc3;">★</span></td>
 		<td width="15%">ideawu</td>
 		<td width="20%">
-			<a href="https://github.com/ideawu/ssdb">Repository</a>
+			<a href="https://github.com/ideawu/ssdb/tree/master/api/python">Repository</a>
 		</td>
 		<td>
 			官方客户端

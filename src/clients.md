@@ -21,7 +21,7 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 		<td width="21%">built-in <span style="color: #cc3;">★</span></td>
 		<td width="15%">ideawu</td>
 		<td width="20%">
-			<a href="https://github.com/ideawu/ssdb">Repository</a>
+			<a href="https://github.com/ideawu/ssdb/tree/master/api/cpp">Repository</a>
 		</td>
 		<td>
 			This is the official client
@@ -48,7 +48,7 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 		<td width="21%">built-in <span style="color: #cc3;">★</span></td>
 		<td width="15%">ideawu</td>
 		<td width="20%">
-			<a href="https://github.com/ideawu/ssdb">Repository</a>
+			<a href="https://github.com/ideawu/ssdb/tree/master/api/cpy">Repository</a>
 		</td>
 		<td>
 			This is the official client. see [Cpy](https://github.com/ideawu/cpy).
@@ -238,7 +238,7 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 		<td width="21%">built-in <span style="color: #cc3;">★</span></td>
 		<td width="15%">ideawu</td>
 		<td width="20%">
-			<a href="https://github.com/ideawu/ssdb">Repository</a>
+			<a href="https://github.com/ideawu/ssdb/tree/master/api/php">Repository</a>
 		</td>
 		<td>
 			This is the official client
@@ -255,7 +255,7 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 		<td width="21%">built-in <span style="color: #cc3;">★</span></td>
 		<td width="15%">ideawu</td>
 		<td width="20%">
-			<a href="https://github.com/ideawu/ssdb">Repository</a>
+			<a href="https://github.com/ideawu/ssdb/tree/master/api/python">Repository</a>
 		</td>
 		<td>
 			This is the official client

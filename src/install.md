@@ -30,12 +30,14 @@ or
 It is because Snappy or Jemalloc is not compiled successfully, maybe your system clock is wrong. Solve it by doing this:
 
     cd deps/snappy-1.1.0;
+	autoreconf --force --install
 	./configure
 	make
 
 or
 
     cd deps/jemalloc-3.3.1;
+	autoreconf --force --install
 	./configure
 	make
 

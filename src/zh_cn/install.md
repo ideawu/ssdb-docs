@@ -29,13 +29,15 @@
 
 这是因为 Snappy 或者 Jemalloc 没有编译成功, 这一般是因为你的系统时钟有问题. 可以这样解决:
 
-    cd deps/snappy-1.1.0;
+    cd deps/snappy-1.1.0
+	autoreconf --force --install
 	./configure
 	make
 
 或者
 
-    cd deps/jemalloc-3.3.1;
+    cd deps/jemalloc-3.3.1
+	autoreconf --force --install
 	./configure
 	make
 

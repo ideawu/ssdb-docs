@@ -4,7 +4,7 @@ If you are using SSDB in production, please send me a email(ssdb#udpwork.com), I
 
 <div class="alert alert-info">
 	<ul>
-	<li>Company name</li>
+	<li>App/Product/Team/Company name</li>
 	<li>LOGO(as attachment)</li>
 	<li>Website link</li>
 	<li>Company/production description</li>

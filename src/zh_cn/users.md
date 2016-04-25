@@ -4,7 +4,7 @@
 
 <div class="alert alert-info">
 	<ul>
-	<li>公司/团队名称</li>
+	<li>产品/公司/团队名称</li>
 	<li>LOGO(作为附件)</li>
 	<li>网站链接</li>
 	<li>公司/产品介绍</li>

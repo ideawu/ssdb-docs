@@ -1,6 +1,6 @@
 # flushdb [type]
 
-__This command is not a real command, it is provided by `ssdb-cli`, not on the server side.__
+__This command is not a real command until 1.9.2, before that, it is provided by `ssdb-cli`, not on the server side.__
 
 Delete all data in ssdb server. if type is provided, delete all data of specific type.
 

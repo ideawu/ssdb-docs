@@ -48,31 +48,31 @@
 
 -----
 
-* __问: __ 有命令可以知道 SSDB 中存储的 key 总数吗?
+* __问: 有命令可以知道 SSDB 中存储的 key 总数吗?__
 
  > __答:__ 如果你想统计的是 KV 的数量, 那么, 在一开始时, 你就要把所有 KV 都放在同一个 HASH 中, 然后通过 [hsize](./commands/hsize.html) 命令就可以得到 key 的数量了. 如果一开始你没有这么做, 或者你想统计 KV 以外的数量, 那么答案很简单 - 没有这样的单个命令(除非你自己写脚本遍历统计).
 
-* __问: __ SSDB 支持 key 查找吗? 支持通配符 * 模糊查找吗?
+* __问: SSDB 支持 key 查找吗? 支持通配符 * 模糊查找吗?__
 
  > __答:__ SSDB 支持, 且__仅__支持前缀查找, 也就是类似`a*`这样的查找, 而不支持 `*a`, `*a*` 或者其它的模糊查找. 具体用法请参见命令: [scan](./commands/scan.html), [hlist](./commands/hlist.html), [keys](./commands/keys.html), [hkeys](./commands/hkeys.html), [hscan](./commands/hscan.html), [zlist](./commands/zlist.html), [zkeys](./commands/zkeys.html), [zscan](./commands/zscan.html), [qlist](./commands/qlist.html) 的文档.
  
  > __注意, 这些命令都要求你省略 `*` 号!__
 
-* __问: __ SSDB 不支持 sets 集合吗? Redis 的 sadd, sdiff 等求交集, 并集命令我都用不了了?
+* __问: SSDB 不支持 sets 集合吗? Redis 的 sadd, sdiff 等求交集, 并集命令我都用不了了?__
 
  > __答:__ SSDB 不支持 sets, 以后也不太可能支持, 因为有替代方案. 你可以用 hash 来替代 sets, 因为一个 hash 的 key 是唯一的, 可以实现集合的特性. 至于交集, 并集等操作, 你只能自己实现. 例如, 求交集, 你可以遍历第一个 hash 的 key, 然后和第二个 hash 对比, 把结果存入第三个 hash.
 
 -----
 
-* __问: __ 我用 Twemproxy 配置 SSDB 做负载均衡和集群, 但是当我用 ssdb-cli 连接 Twemproxy 时, 会报错, 为什么?
+* __问: 我用 Twemproxy 配置 SSDB 做负载均衡和集群, 但是当我用 ssdb-cli 连接 Twemproxy 时, 会报错, 为什么?__
 
  > __答:__ 因为 Twemproxy 不支持 SSDB 网络协议, 所以, 你只能使用 redis-cli 连接 Twemproxy. 注意, 你可以用 ssdb-cli 或者 redis-cli 连接 SSDB, 那是因为 SSDB 支持两种协议, 而 Twemproxy 只支持一种.
 
-* __问: __ 如何在一台机器上部署多个 SSDB 实例?
+* __问: 如何在一台机器上部署多个 SSDB 实例?__
 
  > __答:__ 每一个实例使用不同的配置文件进行启动, 而且, 配置文件里的 `work_dir` `server.port` 不能相同, 也就是每个实例的数据库存储路径, 以及监听端口. 如果 `pidfile` `logger.output` 使用的是绝对路径, 也要保证不能相同, 如果是相对路径, 由不需要, 因为默认跟随 `work_dir` 而不同了.
 
-* __问: __ 对于多主, 或者主从集群, 如何恢复数据?
+* __问: 对于多主, 或者主从集群, 如何恢复数据?__
 
  > __答:__ 对于多主, 或者主从集群, 恢复数据时以及集群的维度来恢复. 具体步骤是:
  

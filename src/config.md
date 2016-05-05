@@ -68,16 +68,41 @@ Sets the max size of log file in bytes. Log files will be cut into 1000MB size f
 
 __The rotated files will not be deleted automatically, you need to write a crontab script to deleted unused files yourself.__
 
+
 ---
+
+## LevelDB Configurations
+
+* __`leveldb.cache_size` Max memory usage for caching data__
+
+Set this item to a large number will normally give better performance. If your server has less memory, set it to a smaller number, the minimum number is 16.
+
+* __`leveldb.block_size` Don't bother with this number__
+
+* __`leveldb.write_buffer_size` Write buffer size__
+
+If your server has less memory, set it to a smaller number, vice verse. It should be between `[4, 128]`;
+
+* __`leveldb.compaction_speed`__
+
+Normally, you should not change this. If you have a slower disk and most of your data will never be updated and new data barely be inserted, set it to a smaller number(better to be greater than 50).
+
+* __`leveldb.compression` Compress data before they are written to disk__
+
+You SHOULD let it be `yes`! Normally you will be able to store 10 times disk space of data, and have better performance, if you set it to `yes`.
+
+
+---
+
 
 ## Memory Usage
 
 A ssdb-server may temporarily(only last for short time) consume up to this many memory(in MB):
 
-	cache_size + write_buffer_size * 66 + 32
+	cache_size * 2 + write_buffer_size * 66 + 32
 
 This is for `compression` is set to `no`, if `compression` is set to `yes`, it would be:
 
-	cache_size + 10 * write_buffer_size * 66 + 32
+	cache_size * 2 + 10 * write_buffer_size * 66 + 32
 
 You can tune the configuration to limit the memory usage of a ssdb-server instance.

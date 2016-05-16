@@ -76,7 +76,7 @@ __切分后的日志文件不会自动被清理, 你需要自己写 crontab 脚�
 
 一般地, 这个数字越大, 性能越好. 如果你的机器内存较小, 那就把它改小, 最小值是 16.
 
-* __`leveldb.cache_size` 不用关心__
+* __`leveldb.block_size` 不用关心__
 
 * __`leveldb.write_buffer_size` 写缓冲区大小__
 

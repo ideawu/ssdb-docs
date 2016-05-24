@@ -8,6 +8,8 @@
 <span class="label label-warning" style="font-size: 120%;">重要</span>
 <div class="alert alert-danger">
 	一定要记得修改你的 Linux 内核参数, 关于 <code>max open files(最大文件描述符数)</code>的内容, 请参考 <a href="http://www.ideawu.net/blog/archives/740.html">[1]</a>. 否则, 你会在 log.txt 看到 <code>Too many open files</code> 类似的错误, 或者在客户端看到 <code>Connection reset by peer</code> 错误.
+	<br/><br/>
+	禁止使用 CentOS 7, 除非你确保自己完全理解 CentOS 7 相对于 CentOS 6 或者其它 Linux 发行版做了哪些不合理的改变, 否则, 你将无法正确配置 max open files 相关的选项, 相信我, 你无法搞定 CentOS 7(也许是 <code>/etc/security/limits.d/90-nproc.conf</code> 相关).
 </div>
 
 PS: 使用这个 [c1000k](https://github.com/ideawu/c1000k) 工具来测试你的系统最多支持多少并发连接.

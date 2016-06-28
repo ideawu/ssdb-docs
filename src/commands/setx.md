@@ -2,6 +2,8 @@
 
 Set the value of the key, with a time to live.
 
+__Unlike Redis, the ttl will not be remove when later set the same key!__
+
 ## Parameters
 
 * `key` - 

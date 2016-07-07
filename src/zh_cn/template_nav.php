@@ -44,7 +44,7 @@
 						<li><a href="<?php echo $base_url?>/java/index.html">Java API 文档(英文)</a></li>
 						<li><a href="<?php echo $base_url?>/go/index.html">Go API 文档(英文)</a></li>
 						<li class="divider"></li>
-						<li><a href="http://vdisk.weibo.com/s/dWpk2caREXGf" target="_blank">SSDB 入门基础</a></li>
+						<li><a href="https://github.com/ideawu/ssdb-docs/tree/master/pdf" target="_blank">SSDB 入门基础</a></li>
 					</ul>
 				</li>
 				<li class="divider-vertical"></li>

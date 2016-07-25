@@ -45,7 +45,7 @@ PS: 使用这个 [c1000k](https://github.com/ideawu/c1000k) 工具来测试你�
 
 * __`logger.level` 日志级别__
 
-支持的日志级别有: `debug, warn, error, fatal`.
+支持的日志级别有: `debug, info, warn, error, fatal`.
 
 一般, 建议你将 `logger.level` 设置为 `debug` 级别.
 

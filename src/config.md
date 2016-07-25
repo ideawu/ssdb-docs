@@ -45,7 +45,7 @@ See also [Log Analytics](./logs.html).
 
 * __`logger.level` Log Levels__
 
-The log levels are: `debug, warn, error, fatal`.
+The log levels are: `debug, info, warn, error, fatal`.
 
 Generally, I recommend you set `logger.level` to `debug`.
 

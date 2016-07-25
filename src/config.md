@@ -49,7 +49,7 @@ The log levels are: `debug, info, warn, error, fatal`.
 
 Generally, I recommend you set `logger.level` to `debug`.
 
-* __`logger.output` 日志输出__
+* __`logger.output` Log Output Destination__
 
 Can be relative path or absolute path, if relative path is set, it is relative to the directory of the ssdb.conf file.
 

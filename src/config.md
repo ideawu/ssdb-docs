@@ -53,7 +53,7 @@ Generally, I recommend you set `logger.level` to `debug`.
 
 Can be relative path or absolute path, if relative path is set, it is relative to the directory of the ssdb.conf file.
 
-If you want to writing logs to console, edit ssdb.conf, modify
+If you want to write logs to console, edit ssdb.conf, modify
 
 	logger:
 		output: log.txt

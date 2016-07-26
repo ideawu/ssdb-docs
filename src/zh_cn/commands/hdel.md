@@ -1,6 +1,6 @@
 # hdel name key
 
-获取 hashmap 中的指定 key.
+删除 hashmap 中的指定 key.
 
 ## 参数
 

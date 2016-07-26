@@ -1,6 +1,6 @@
 # hdel name key
 
-删除 hashmap 中的指定 key.
+删除 hashmap 中的指定 key. 如果要删除整个 hashmap, 请使用 [`hclear`](./hclear.html).
 
 ## 参数
 

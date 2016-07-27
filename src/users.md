@@ -265,3 +265,11 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 ![](http://ssdb.io/img/ssdb-users/xunlei.com.png)
 
 [Xunlei Live](#) is a video streaming app, which focus on compus.
+
+---
+## <a href="#yeahworld" name="yeahworld">YEAHWORLD</a>
+
+![](http://ssdb.io/img/ssdb-users/yeahworld.com.png)
+
+[GuangZhou YEAHWORLD](http://www.yeahworld.com/), is a game development company aims to develop games to amuse people. It uses SSDB to store images, chat history, user sessions and user profiles in hashmaps.
+

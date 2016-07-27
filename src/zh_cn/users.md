@@ -262,4 +262,11 @@ SSDB 在 [百度](http://www.baidu.com/) 核心的网页搜索中得到广泛应
 ![](http://ssdb.io/img/ssdb-users/xunlei.com.png)
 
 [迅雷草莓直播](#) 是一款主打校园直播的手机APP. 该产品中所的数据缓存/锁/查询等都是基于SSDB开发的, 以前是使用Redis, 基于效率/扩展的运维需求, 全搬迁到了SSDB, 修改极小.
- 
+
+---
+## <a href="#yeahworld" name="yeahworld">悦世界</a>
+
+![](http://ssdb.io/img/ssdb-users/yeahworld.com.png)
+
+[广州悦世界信息科技有限公司](http://www.yeahworld.com/), 以打造能带给玩家喜悦的全球一流游戏为目标, 以高端自主研发技术为依托, 专注进行新型手游研发. SSDB实例以hashmap数据类型, 保存静态图片, 客服系统的会话日志, 用户登录日志以及持久化保存所有用户信息.
+

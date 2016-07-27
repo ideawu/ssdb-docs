@@ -1,5 +1,7 @@
 # Documentation
 
+![SSDB logo](http://ssdb.io/img/ssdb.io-h50.png)
+
 SSDB is a fast NoSQL database for storing big list of billions of elements, it supports data structures including KV, list, map(hash), zset(sorted set), it is an alternative to Redis, or works with Redis.
 
 SSDB is stable, production-ready and is widely used by [many Internet companies](./users.html), such as QIHU 360, TOPGAME.

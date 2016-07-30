@@ -15,6 +15,10 @@ Do not run SSDB server on Windows system for a production environment. If you wi
 	# optional, install ssdb in /usr/local/ssdb
 	sudo make install
 
+If you want to install ssdb in some other directory other than `/usr/local`, run like
+
+	sudo make install PREFIX=/your/directory
+
 ### Trouble Shooting
 
 If you see error messages like this:

@@ -15,6 +15,10 @@
 	# 将安装在 /usr/local/ssdb 目录下
 	sudo make install
 
+如果你想安装 ssdb 在其它的目录, 不在 `/usr/local` 目录下, 可以这样
+
+	sudo make install PREFIX=/your/direcotry
+
 ### 问题解决
 
 如果出现如下错误:

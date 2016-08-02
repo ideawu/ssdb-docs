@@ -14,7 +14,7 @@
 	
 ## 返回值
 
-List replay.
+List reply.
 
 返回 key 的列表.
 

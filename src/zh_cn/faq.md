@@ -118,8 +118,6 @@
  > __答:__ 确定主从是否同步的__唯一__方法是:
  
  > [http://ssdb.io/docs/zh_cn/replication.html](http://ssdb.io/docs/zh_cn/replication.html) 执行 info 命令, 判断 binlogs.max_seq 和 replication.client.last_seq 是否相等.
- 
- > 如果你用其它的方法来判断, 那就别废话了! 滚蛋!
 
 * __问: 我有双主: A 和 B, 如果我同时往 A 和 B 上更新同一个 key...__ 
 

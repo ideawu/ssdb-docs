@@ -270,3 +270,10 @@ SSDB 在 [百度](http://www.baidu.com/) 核心的网页搜索中得到广泛应
 
 [广州悦世界信息科技有限公司](http://www.yeahworld.com/), 以打造能带给玩家喜悦的全球一流游戏为目标, 以高端自主研发技术为依托, 专注进行新型手游研发. SSDB实例以hashmap数据类型, 保存静态图片, 客服系统的会话日志, 用户登录日志以及持久化保存所有用户信息.
 
+---
+## <a href="#youmi" name="youmi">有米科技</a>
+
+![](http://ssdb.io/img/ssdb-users/youmi.net.png)
+
+[有米科技](https://www.youmi.net) 成立于2010年4月, 是中国头一批综合性移动广告平台. 有米广告将SSDB用于移动广告DSP的实时会话数据存储, 用于实时竞价.
+

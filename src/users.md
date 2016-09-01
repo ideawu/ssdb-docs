@@ -273,3 +273,11 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 [GuangZhou YEAHWORLD](http://www.yeahworld.com/), is a game development company aims to develop games to amuse people. It uses SSDB to store images, chat history, user sessions and user profiles in hashmaps.
 
+---
+## <a href="#youmi" name="youmi">Youmi</a>
+
+![](http://ssdb.io/img/ssdb-users/youmi.net.png)
+
+[Youmi](https://www.youmi.net) is the one of the pioneers of mobile Ad Network platform in China. Youmi uses SSDB in it's DSP+Ad Network, to store realtime Ad sessions for Real Time Bidding.
+
+

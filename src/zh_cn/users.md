@@ -278,7 +278,7 @@ SSDB 在 [百度](http://www.baidu.com/) 核心的网页搜索中得到广泛应
 [有米科技](https://www.youmi.net) 成立于2010年4月, 是中国头一批综合性移动广告平台. 有米广告将SSDB用于移动广告DSP的实时会话数据存储, 用于实时竞价.
 
 ---
-## <a href="#youmi" name="youmi">YY 直播</a>
+## <a href="#yy" name="yy">YY 直播</a>
 
 ![](http://ssdb.io/img/ssdb-users/yy.com.png)
 

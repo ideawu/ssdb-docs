@@ -281,7 +281,7 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 [Youmi](https://www.youmi.net) is the one of the pioneers of mobile Ad Network platform in China. Youmi uses SSDB in it's DSP+Ad Network, to store realtime Ad sessions for Real Time Bidding.
 
 ---
-## <a href="#youmi" name="youmi">YY 直播</a>
+## <a href="#yy" name="yy">YY 直播</a>
 
 ![](http://ssdb.io/img/ssdb-users/yy.com.png)
 

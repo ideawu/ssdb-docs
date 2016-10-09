@@ -53,13 +53,14 @@ or
 	# or start as daemon
 	./ssdb-server -d ssdb.conf
 	
-	# ssdb command line
-	./tools/ssdb-cli -p 8888
-	
 	# stop ssdb-server
 	./ssdb-server ssdb.conf -s stop
 	# for older version
 	kill `cat ./var/ssdb.pid`
+	
+	# restart
+	./ssdb-server ssdb.conf -s restart
+
 
 By now, you will have to manage the ```ssdb-server``` process(es) manually, if you want to set it to start and stop along with the system, follow the instructions below.
 

@@ -18,7 +18,7 @@ PS: Use [c1000k](https://github.com/ideawu/c1000k) to test how many concurrent c
 
 ## Listen Network
 
-    server:
+	server:
     	ip: 127.0.0.1
     	port: 8888
 
@@ -30,6 +30,21 @@ Meanwhile, specify with `deny, allow` instructions to only allow connections fro
 <div class="alert alert-danger">
     Listen to <code>0.0.0.0</code> without network restriction is often a security issue, any one can access to your data! You can use iptables as well.
 </div>
+
+---
+
+## Readonly mode
+
+	server:
+    	readonly: yes|no
+
+SSDB server can be configured as readonly mode, if SSDB is running in readonly mode, any write operation command will rejected by the server:
+
+	ssdb 127.0.0.1:8888> set a 2
+	client_error: Forbidden Command: set
+	(0.000 sec)
+
+The default option is not set, that is SSDB server works in readwrite mode.
 
 ---
 

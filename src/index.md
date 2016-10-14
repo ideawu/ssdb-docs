@@ -24,6 +24,7 @@ SSDB is stable, production-ready and is widely used by [many Internet companies]
 * [Logs Analytics](./logs.html)
 * [Replication](./replication.html): Replication Configuration and Monitoring.
 * [Clustering](./cluster.html): SSDB clustering and auto sharding.
+* [High Availability/HA](./ha.html): SSDB High Availability/HA solution.
 
 ## Specification
 

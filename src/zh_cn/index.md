@@ -25,6 +25,7 @@ SSDB 是稳定的, 生产环境使用的, 已经在[许多互联网公司得到�
 * [日志解读](./logs.html)
 * [同步和复制](./replication.html): 同步和复制的配置与监控.
 * [集群和分布式](./cluster.html): SSDB 集群和分布式.
+* [高可用性/HA](./ha.html): SSDB 高可用性/HA方案
 
 ## 定义
 

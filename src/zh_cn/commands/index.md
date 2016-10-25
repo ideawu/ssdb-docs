@@ -354,7 +354,7 @@
 			name key
 			</span>
 		</span>
-		<span class="summary">获取 hashmap 中的指定 key.</span>
+		<span class="summary">删除 hashmap 中的指定 key(删除整个 hashmap 用 hclear).</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="hincr">

@@ -354,7 +354,7 @@
 			name key
 			</span>
 		</span>
-		<span class="summary">Delete specified key of a hashmap.</span>
+		<span class="summary">Delete specified key in a hashmap.</span>
 		</a>
 	</li>
 	<li data-group="string" data-name="hincr">

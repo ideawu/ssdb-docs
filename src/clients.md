@@ -291,16 +291,6 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 			SSDB Python Client Library by hit9
 		</td>
 	</tr>
-	<tr>
-		<td width="21%">cssdbpy</td>
-		<td width="15%">deslum</td>
-		<td width="20%">
-			<a href="https://github.com/deslum/cssdbpy">Repository</a>
-		</td>
-		<td>
-			Fast and simple SSDB client written on cython.
-		</td>
-	</tr>
 </table>
 
 ### <a href="#ruby" name="ruby">Ruby</a>

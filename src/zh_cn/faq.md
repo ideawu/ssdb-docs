@@ -72,9 +72,11 @@
 
 * __问: SSDB 支持 key 查找吗? 支持通配符 * 模糊查找吗?__
 
- > __答:__ SSDB 支持, 且__仅__支持前缀查找, 也就是类似`a*`这样的查找, 而不支持 `*a`, `*a*` 或者其它的模糊查找. 具体用法请参见命令: [scan](./commands/scan.html), [hlist](./commands/hlist.html), [keys](./commands/keys.html), [hkeys](./commands/hkeys.html), [hscan](./commands/hscan.html), [zlist](./commands/zlist.html), [zkeys](./commands/zkeys.html), [zscan](./commands/zscan.html), [qlist](./commands/qlist.html) 的文档.
+ > __答:__ SSDB 支持, 且__仅__支持__前缀区间__查找, 也就是类似`a*`这样的查找, 而不支持 `*a`, `*a*` 或者其它的模糊查找. 具体用法请参见命令: [scan](./commands/scan.html), [hlist](./commands/hlist.html), [keys](./commands/keys.html), [hkeys](./commands/hkeys.html), [hscan](./commands/hscan.html), [zlist](./commands/zlist.html), [zkeys](./commands/zkeys.html), [zscan](./commands/zscan.html), [qlist](./commands/qlist.html) 的文档.
  
  > __注意, 这些命令都要求你省略 `*` 号!__
+ 
+ > __注意, 区间搜索的意思是, 只要把指定参数大(小), 不是指定前缀, 也会返回!__
 
 * __问: SSDB 不支持 sets 集合吗? Redis 的 sadd, sdiff 等求交集, 并集命令我都用不了了?__
 

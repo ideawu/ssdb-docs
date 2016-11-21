@@ -56,7 +56,7 @@
 </ul>
 </div>
 
-## Connection IP Filter
+## IP Filter
 
 ---
 

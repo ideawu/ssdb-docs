@@ -56,6 +56,81 @@
 </ul>
 </div>
 
+## IP 连接过滤
+
+---
+
+<div class="commands">
+<ul>
+	<li data-group="string" data-name="list_allow_ip">
+		<a href="list_allow_ip.html">
+		<span class="command">
+			list_allow_ip
+			<span class="args">
+			rule
+			</span>
+		</span>
+		<span class="summary">显示允许连接的IP规则.</span>
+		</a>
+	</li>
+	<li data-group="string" data-name="add_allow_ip">
+		<a href="add_allow_ip.html">
+		<span class="command">
+			add_allow_ip
+			<span class="args">
+			rule
+			</span>
+		</span>
+		<span class="summary">新增一条允许连接的IP规则.</span>
+		</a>
+	</li>
+	<li data-group="string" data-name="del_allow_ip">
+		<a href="del_allow_ip.html">
+		<span class="command">
+			del_allow_ip
+			<span class="args">
+			rule
+			</span>
+		</span>
+		<span class="summary">删除指定的一条允许连接的IP规则.</span>
+		</a>
+	</li>
+	<li data-group="string" data-name="list_deny_ip">
+		<a href="list_deny_ip.html">
+		<span class="command">
+			list_deny_ip
+			<span class="args">
+			rule
+			</span>
+		</span>
+		<span class="summary">显示拒绝连接的IP规则.</span>
+		</a>
+	</li>
+	<li data-group="string" data-name="add_deny_ip">
+		<a href="add_deny_ip.html">
+		<span class="command">
+			add_deny_ip
+			<span class="args">
+			rule
+			</span>
+		</span>
+		<span class="summary">新增一条拒绝连接的IP规则.</span>
+		</a>
+	</li>
+	<li data-group="string" data-name="del_deny_ip">
+		<a href="del_deny_ip.html">
+		<span class="command">
+			del_deny_ip
+			<span class="args">
+			rule
+			</span>
+		</span>
+		<span class="summary">删除指定的一条拒绝连接的IP规则.</span>
+		</a>
+	</li>
+</ul>
+</div>
+
 ## Key Value
 
 ---

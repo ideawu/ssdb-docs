@@ -56,6 +56,81 @@
 </ul>
 </div>
 
+## Connection IP Filter
+
+---
+
+<div class="commands">
+<ul>
+	<li data-group="string" data-name="list_allow_ip">
+		<a href="list_allow_ip.html">
+		<span class="command">
+			list_allow_ip
+			<span class="args">
+			ip_rule
+			</span>
+		</span>
+		<span class="summary">List allow ip rules.</span>
+		</a>
+	</li>
+	<li data-group="string" data-name="add_allow_ip">
+		<a href="add_allow_ip.html">
+		<span class="command">
+			add_allow_ip
+			<span class="args">
+			ip_rule
+			</span>
+		</span>
+		<span class="summary">add allow ip rules.</span>
+		</a>
+	</li>
+	<li data-group="string" data-name="del_allow_ip">
+		<a href="del_allow_ip.html">
+		<span class="command">
+			del_allow_ip
+			<span class="args">
+			ip_rule
+			</span>
+		</span>
+		<span class="summary">del allow ip rules.</span>
+		</a>
+	</li>
+	<li data-group="string" data-name="list_deny_ip">
+		<a href="list_deny_ip.html">
+		<span class="command">
+			list_deny_ip
+			<span class="args">
+			ip_rule
+			</span>
+		</span>
+		<span class="summary">list deny ip rules.</span>
+		</a>
+	</li>
+	<li data-group="string" data-name="add_deny_ip">
+		<a href="add_deny_ip.html">
+		<span class="command">
+			add_deny_ip
+			<span class="args">
+			ip_rule
+			</span>
+		</span>
+		<span class="summary">add deny ip rules.</span>
+		</a>
+	</li>
+	<li data-group="string" data-name="del_deny_ip">
+		<a href="del_deny_ip.html">
+		<span class="command">
+			del_deny_ip
+			<span class="args">
+			ip_rule
+			</span>
+		</span>
+		<span class="summary">del deny ip rules.</span>
+		</a>
+	</li>
+</ul>
+</div>
+
 ## Key Value
 
 ---

@@ -116,10 +116,10 @@ You SHOULD let it be `yes`! Normally you will be able to store 10 times disk spa
 
 A ssdb-server may temporarily(only last for short time) consume up to this many memory(in MB):
 
-	cache_size * 2 + write_buffer_size * 66 + 32
+	cache_size + write_buffer_size * 66 + 32
 
 This is for `compression` is set to `no`, if `compression` is set to `yes`, it would be:
 
-	cache_size * 2 + 10 * write_buffer_size * 66 + 32
+	cache_size + 10 * write_buffer_size * 66 + 32
 
 You can tune the configuration to limit the memory usage of a ssdb-server instance.

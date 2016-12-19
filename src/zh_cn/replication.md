@@ -144,4 +144,4 @@ __replication__
 
 __对于 master__, `binlogs.max_seq` 是指当前实例上的最新一次的写(写/更新/删除)操作的序号, `replication.client.last_seq` 是指已发送给 slave 的最新一条 binlog 的序号.
 
-所以, 如果你想判断主从同步是否已经同步到位(实时更新), 那么就判断 `binlogs.max_seq` 和 `replication.client.last_seq` 是否相等.
+所以, 如果你想判断主从同步是否已经同步到位(实时更新), 那么就判断 `binlogs.max_seq` 和 `replication.client.last_seq` 是否相等, 同时 status 是 `SYNC`.

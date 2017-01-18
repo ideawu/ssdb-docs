@@ -123,3 +123,6 @@ This is for `compression` is set to `no`, if `compression` is set to `yes`, it w
 	cache_size + 10 * write_buffer_size * 66 + 32
 
 You can tune the configuration to limit the memory usage of a ssdb-server instance.
+
+Users reports that with default configuration, the memory usage is about 1GB, you can refer to this.
+

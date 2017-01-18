@@ -88,6 +88,14 @@
  
  > 为了达到你想要的效果, 你可以给数字加上 0 作为前缀, 补齐为固定长度的字符串, 例如把 2 变为 002, 那么 002 就小于 100, 符合你的预期. 一般来说, 要根据你的具体情况选择要补齐的最终长度.
 
+* __问: 我知道一个 key, 怎么知道这个 key 的类型? 也就是说, 有没有 Redis 那样的 type 命令?__ 
+
+ > __答:__ 注意, 这是 SSDB 和 Redis 的关键区别. 对于 SSDB 来说, 需要先区分数据类型, 然后再取名字(key). 也就是说, 不同类型的 key 是可以相同的. 所以, 你必须先知道类型, 才能知道 key. 如果你知道 key 而不知道类型, 说明你弄错了.
+
+* __问: 如何遍历整个 SSDB 数据库?__
+
+ > __答: 见 [https://github.com/ideawu/ssdb/blob/dev/tools/ssdb-iterate.php](https://github.com/ideawu/ssdb/blob/dev/tools/ssdb-iterate.php)__ 
+
 
 ## 配置
 -----

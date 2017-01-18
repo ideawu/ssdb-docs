@@ -124,5 +124,5 @@ This is for `compression` is set to `no`, if `compression` is set to `yes`, it w
 
 You can tune the configuration to limit the memory usage of a ssdb-server instance.
 
-Users reports that with default configuration, the memory usage is about 1GB, you can refer to this.
+Users reported that with default configuration, the memory usage is about 1GB, you can refer to this.
 

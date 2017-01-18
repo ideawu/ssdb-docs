@@ -124,7 +124,7 @@ __切分后的日志文件不会自动被清理, 你需要自己写 crontab 脚�
 
 对于一般负载的实例来说, 物理内存的__持续__占用是:
 
-	cache_size + write_buffer_size * 16 + 32
+	cache_size + write_buffer_size * 4 + 32
 
 根据实际经验, 使用默认配置的实例, 会占用约 1GB 的内存. 这个经验你可以参考.
 

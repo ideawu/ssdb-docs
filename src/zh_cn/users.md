@@ -284,3 +284,9 @@ SSDB 在 [百度](http://www.baidu.com/) 核心的网页搜索中得到广泛应
 
 [YY 直播](https://www.yy.com) 是中国最受欢迎的直播平台之一. YY 使用 SSDB 来存储粉丝关注, 在线人数等等数据, SSDB 在 YY 的应用非常广泛.
 
+---
+## <a href="#yuncaijing" name="yuncaijing">云财经</a>
+
+![](http://ssdb.io/img/ssdb-users/yuncaijing.com.png)
+
+[云财经](https://www.yuncaijing.com) 是一家专注于股市情报及数据挖掘技术, 设计创新的金融分析工具的厂商. SSDB主要用来存储高速证券行情快照, 高并发写入, 并且实时提供给前端系统.

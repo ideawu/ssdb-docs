@@ -287,5 +287,12 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 [YY Live](https://www.yy.com) is one of the most popular online video platform. SSDB is widely used in YY.
 
+---
+## <a href="#yuncaijing" name="yuncaijing">云财经</a>
+
+![](http://ssdb.io/img/ssdb-users/yuncaijing.com.png)
+
+[YunCaiJing](https://www.yuncaijing.com) provides stock market information and data mining technology. It uses SSDB to store realtime market data.
+
 
 

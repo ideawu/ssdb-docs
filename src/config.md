@@ -90,13 +90,13 @@ __The rotated files will not be deleted automatically, you need to write a cront
 
 ## LevelDB Configurations
 
-* __`leveldb.cache_size` Max memory usage for caching data__
+* __`leveldb.cache_size` Max memory usage for caching data, in MB__
 
-Set this item to a large number will normally give better performance. If your server has less memory, set it to a smaller number, the minimum number is 16.
+Set this item to a large number will normally give better performance, usually half of the physical memory. If your server has less memory, set it to a smaller number, the minimum number is 16.
 
 * __`leveldb.block_size` Don't bother with this number__
 
-* __`leveldb.write_buffer_size` Write buffer size__
+* __`leveldb.write_buffer_size` Write buffer size, in MB__
 
 If your server has less memory, set it to a smaller number, vice verse. It should be between `[4, 128]`;
 
@@ -126,3 +126,13 @@ You can tune the configuration to limit the memory usage of a ssdb-server instan
 
 Users reported that with default configuration, the memory usage is about 1GB, you can refer to this.
 
+### Memory Usage Limitation?
+
+Sorry, you cannot set the maximum memory usage of SSDB. SSDB may use memory according to these facts:
+
+1. `cache_size` configuration, the most important fact.
+2. the number of client connections. Usually each connection will use 2MB memory, but busy connections will use even more.
+3. system file cache. Although the memory usage is count on ssdb-server, but the OS may cut it off if neccessary. The memory usage may count to several tens GB.
+4. the more busy SSDB is, the more memory it will use.
+
+`cache_size` is what you can control, but you can not control others. With a SSDB instance running on a 16G physical memory machine, you set `cache_size` to 8000(8G), then you may find the process ssdb-server may use 12G RES memory with top command. If the instance is very busy, it may use 15G RES memory as well.

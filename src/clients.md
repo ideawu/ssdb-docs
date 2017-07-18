@@ -320,5 +320,21 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 	</tr>
 </table>
 
+### <a href="#swift" name="swift">Swift</a>
+
+---
+
+<table width="100%">
+	<tr>
+		<td width="21%">SwiftSSDB</td>
+		<td width="15%">kirilltitov</td>
+		<td width="20%">
+			<a href="https://github.com/kirilltitov/SwiftSSDB">Repository</a>
+		</td>
+		<td>
+			Swift client library for SSDB
+		</td>
+	</tr>
+</table>
 
 

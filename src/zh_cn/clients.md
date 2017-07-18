@@ -176,6 +176,16 @@ SSDB 源码仓库中, 内置了许多语言的客户端, 这些便是所谓的__
 			支持多线程并发请求和多服务器的负载均衡(客户端分发请求)
 		</td>
 	</tr>
+	<tr>
+		<td width="21%">vertx-ssdb</td>
+		<td width="15%">DavidQuan</td>
+		<td width="20%">
+			<a href="https://github.com/DavidQuan/vertx-ssdb">Repository</a>
+		</td>
+		<td>
+			Vert.x ssdb client
+		</td>
+	</tr>
 </table>
 
 ### <a href="#lua" name="lua">Lua</a>
@@ -312,5 +322,23 @@ SSDB 源码仓库中, 内置了许多语言的客户端, 这些便是所谓的__
 		</td>
 	</tr>
 </table>
+
+### <a href="#swift" name="swift">Swift</a>
+
+---
+
+<table width="100%">
+	<tr>
+		<td width="21%">SwiftSSDB</td>
+		<td width="15%">kirilltitov</td>
+		<td width="20%">
+			<a href="https://github.com/kirilltitov/SwiftSSDB">Repository</a>
+		</td>
+		<td>
+			Swift client library for SSDB
+		</td>
+	</tr>
+</table>
+
 
 

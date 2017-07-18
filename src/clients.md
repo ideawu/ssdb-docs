@@ -162,6 +162,7 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 		<td>
 			
 		</td>
+	</tr>
 	<tr>
 		<td width="21%">hydrogen-ssdb</td>
 		<td width="15%">yiding-he</td>
@@ -172,6 +173,15 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 			Supports client-side load-balance
 		</td>
 	</tr>
+	<tr>
+		<td width="21%">vertx-ssdb</td>
+		<td width="15%">DavidQuan</td>
+		<td width="20%">
+			<a href="https://github.com/DavidQuan/vertx-ssdb">Repository</a>
+		</td>
+		<td>
+			Vert.x ssdb client
+		</td>
 	</tr>
 </table>
 

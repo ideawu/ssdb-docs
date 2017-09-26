@@ -257,6 +257,16 @@ SSDB 源码仓库中, 内置了许多语言的客户端, 这些便是所谓的__
 			官方客户端
 		</td>
 	</tr>
+	<tr>
+		<td width="21%">phpssdb</td>
+		<td width="15%">jonnywang</td>
+		<td width="20%">
+			<a href="https://github.com/jonnywang/phpssdb">Repository</a>
+		</td>
+		<td>
+			用 C 写的 PHP 模块.
+		</td>
+	</tr>
 </table>
 
 ### <a href="#python" name="python">Python</a>

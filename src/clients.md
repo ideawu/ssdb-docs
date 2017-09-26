@@ -254,6 +254,16 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 			This is the official client
 		</td>
 	</tr>
+	<tr>
+		<td width="21%">phpssdb</td>
+		<td width="15%">jonnywang</td>
+		<td width="20%">
+			<a href="https://github.com/jonnywang/phpssdb">Repository</a>
+		</td>
+		<td>
+			This is a client written in C as a PHP module for ssdb.
+		</td>
+	</tr>
 </table>
 
 ### <a href="#python" name="python">Python</a>

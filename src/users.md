@@ -18,7 +18,7 @@ If you are using SSDB in production, please send me a email(ssdb#udpwork.com), I
 
 ![](http://ssdb.io/img/ssdb-users/lantouzi.com.png)
 
-[Lantouzi.com](http://lantouzi.com/) Lantouzi stores user sessions and cache.
+[Lantouzi.com](http://lantouzi.com/) Lantouzi stores user sessions and cache in SSDB, also uses SSDB as message queue.
 
 ---
 

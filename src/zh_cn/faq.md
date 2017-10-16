@@ -61,7 +61,7 @@
 
  > __答:__ 进程莫名退出, 一般是如下原因:
  
- > 1. max open files配置
+ > 1. max open files配置, 参见[配置相关文档](http://ssdb.io/docs/zh_cn/config.html)
  > 2. 硬件内存不足, 操作系统内核kill掉进程, `cat /var/log/messages | grep 'Out of'`
  > 3. 程序bug
  > 4. 其它的

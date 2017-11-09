@@ -17,19 +17,19 @@ Generally, I recommend you set `logger.level` to `debug`.
 
 The Shell commands to find out slow queries:
 
-	tail -f log.txt | grep resp | grep '[wp]:[1-9][0-9]\{0,\}\.'
+	tail -f log.txt | grep -w resp | grep '[wp]:[1-9][0-9]\{0,\}\.'
 	# or
-	cat log.txt | grep resp | grep '[wp]:[1-9][0-9]\{0,\}\.'
+	cat log.txt | grep -w resp | grep '[wp]:[1-9][0-9]\{0,\}\.'
 
 These commands find out requests with wait time or process time greater than 1ms.
 
 __Find out requests slower than 10ms:__
 
-	cat log.txt | grep resp | grep '[wp]:[1-9][0-9]\{1,\}\.'
+	cat log.txt | grep -w resp | grep '[wp]:[1-9][0-9]\{1,\}\.'
 
 __Find out requests slower than 100ms:__
 
-	cat log.txt | grep resp | grep '[wp]:[1-9][0-9]\{2,\}\.'
+	cat log.txt | grep -w resp | grep '[wp]:[1-9][0-9]\{2,\}\.'
 
 ## SSDB is Working
 

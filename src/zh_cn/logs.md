@@ -17,19 +17,19 @@
 
 找出慢请求的命令是:
 
-	tail -f log.txt | grep resp | grep '[wp]:[1-9][0-9]\{0,\}\.'
+	tail -f log.txt | grep -w resp | grep '[wp]:[1-9][0-9]\{0,\}\.'
 	# 或者
-	cat log.txt | grep resp | grep '[wp]:[1-9][0-9]\{0,\}\.'
+	cat log.txt | grep -w resp | grep '[wp]:[1-9][0-9]\{0,\}\.'
 
 这些命令用于找出排队时间, 或者处理时间大于等于 1 毫秒的请求.
 
 __找出大于 10 毫秒的请求:__
 
-	cat log.txt | grep resp | grep '[wp]:[1-9][0-9]\{1,\}\.'
+	cat log.txt | grep -w resp | grep '[wp]:[1-9][0-9]\{1,\}\.'
 
 __找出大于 100 毫秒的请求:__
 
-	cat log.txt | grep resp | grep '[wp]:[1-9][0-9]\{2,\}\.'
+	cat log.txt | grep -w resp | grep '[wp]:[1-9][0-9]\{2,\}\.'
 
 ## SSDB 在工作中
 

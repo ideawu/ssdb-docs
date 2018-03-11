@@ -237,6 +237,14 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 			node-ssdb by @hit9
 		</td>
 	</tr>
+	<tr>
+		<td width="21%">ssdb-node</td>
+		<td width="15%"><a href="http://www.reanote.com">卡卡截图</a></td>
+		<td width="20%">
+			<a href="https://github.com/reanote/ssdb-node">Repository</a>
+		</td>
+		<td>1. 基于https://github.com/eleme/node-ssdb 改写；</br>2. 主要是修复了上述客户端的请求和应答对应错误的问题；</br>3. 添加自动重连机制，可通过autoReconnect关闭;</br></td>
+	</tr>
 </table>
 
 ### <a href="#php" name="php">PHP</a>

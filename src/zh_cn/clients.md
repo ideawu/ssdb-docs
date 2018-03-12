@@ -246,7 +246,7 @@ SSDB 源码仓库中, 内置了许多语言的客户端, 这些便是所谓的__
 		<td width="20%">
 			<a href="https://github.com/reanote/ssdb-node">Repository</a>
 		</td>
-		<td>1. 基于https://github.com/eleme/node-ssdb 改写；</br>2. 主要是修复了上述客户端的请求和应答对应错误的问题；</br>3. 添加自动重连机制，可通过autoReconnect关闭;</br></td>
+		<td>1. 基于https://github.com/eleme/node-ssdb 改写；</br>2. 主要是修复了上述客户端的请求和应答对应错误的问题；</br>3. 添加自动重连机制，可通过autoReconnect关闭;</td>
 	</tr>
 </table>
 

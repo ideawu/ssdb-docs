@@ -87,6 +87,10 @@ __links__
 
 The number of currently connected connections(links).
 
+__total_calls__
+
+The number total request handled since server startup.
+
 __dbsize__
 
 The __approximate__ size of the database, in bytes(it could be very different from disk usage). If the server enable compression, the size will be of the compressed data.

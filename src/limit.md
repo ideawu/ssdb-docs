@@ -7,11 +7,11 @@
 	</tr>
 	<tr>
 		<td>Max value length</td>
-		<td>31MB</td>
+		<td>127MB</td>
 	</tr>
 	<tr>
 		<td>Max request/response size</td>
-		<td>31MB</td>
+		<td>127MB</td>
 	</tr>
 	<tr>
 		<td>Max elements in a HASH</td>
@@ -27,6 +27,6 @@
 	</tr>
 	<tr>
 		<td>Max number of command arguments</td>
-		<td>all arguments do not exceed 31MB total size</td>
+		<td>all arguments do not exceed 127MB total size</td>
 	</tr>
 </table>

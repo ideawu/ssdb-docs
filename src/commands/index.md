@@ -53,6 +53,17 @@
 		<span class="summary">Return the information of server.</span>
 		</a>
 	</li>
+	<li data-group="string" data-name="slaveof">
+		<a href="slaveof.html">
+		<span class="command">
+			slaveof
+			<span class="args">
+			id host port [auth last_seq last_key]
+			</span>
+		</span>
+		<span class="summary">Start a replication slave.</span>
+		</a>
+	</li>
 </ul>
 </div>
 

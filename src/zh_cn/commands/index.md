@@ -53,6 +53,17 @@
 		<span class="summary">返回服务器的信息.</span>
 		</a>
 	</li>
+	<li data-group="string" data-name="slaveof">
+		<a href="slaveof.html">
+		<span class="command">
+			slaveof
+			<span class="args">
+			id host port [auth last_seq last_key]
+			</span>
+		</span>
+		<span class="summary">启动一个从库同步进程.</span>
+		</a>
+	</li>
 </ul>
 </div>
 

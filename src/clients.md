@@ -126,6 +126,16 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 			From the official client derived from the client, supports the connection pool and set|get, habits and most client consistent.
 		</td>
 	</tr>
+	<tr>
+		<td width="21%">ssdb</td>
+		<td width="15%">wzshiming</td>
+		<td width="20%">
+			<a href="https://github.com/wzshiming/ssdb">Repository</a>
+		</td>
+		<td>
+			Clients that derive from the client have a consistent style and support for connection pooling.
+		</td>
+	</tr>
 </table>
 
 ### <a href="#java" name="java">Java</a>

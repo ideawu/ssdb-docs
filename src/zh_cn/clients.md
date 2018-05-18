@@ -129,6 +129,16 @@ SSDB 源码仓库中, 内置了许多语言的客户端, 这些便是所谓的__
 			从官方客户端派生出来的客户端，支持连接池，使用习惯与大多数客户端保持一致。
 		</td>
 	</tr>
+	<tr>
+		<td width="21%">ssdb</td>
+		<td width="15%">wzshiming</td>
+		<td width="20%">
+			<a href="https://github.com/wzshiming/ssdb">Repository</a>
+		</td>
+		<td>
+			从客户端派生的客户端具有一致的风格和对连接池的支持。
+		</td>
+	</tr>
 </table>
 
 ### <a href="#java" name="java">Java</a>

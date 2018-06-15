@@ -33,7 +33,14 @@ false on error, otherwise an associative array containing the key-value pairs.
 	  b               : 2
 	  c               : 3
 	2 result(s) (0.000 sec)
-	# because key_end is not set, 'b', 'c' are returned!
+	# 'a' is not returned. while key_end is not set, 'b', 'c' are returned!
+	ssdb 127.0.0.1:8888> scan a a} 10
+	key             value
+	-------------------------
+	  aa             : 1
+	1 result(s) (0.000 sec)
+	(0.000 sec)
+	# "real" prefix search
 	ssdb 127.0.0.1:8888> scan "a" "b" 10
 	key             value
 	-------------------------

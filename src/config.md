@@ -8,8 +8,6 @@
 <span class="label label-warning" style="font-size: 120%;">Important</span>
 <div class="alert alert-danger">
 	DO remember to configure your Linux kernel parameters about <code>max open files</code>, refer to <a href="http://www.cyberciti.biz/faq/linux-increase-the-maximum-number-of-open-files/">[1]</a> and <a href="http://www.lognormal.com/blog/2012/09/27/linux-tcpip-tuning/">[2]</a>. Or you will see error messages like <code>Too many open files</code> in log.txt, or <code>Connection reset by peer</code> on client side.
-	<br/><br/>
-	MUST NOT use CentOS 7, because CentOS 7 is quite different from CentOS 6 and any other Linux distibution. Believe me, you can not handle with CentOS 7, so NOT using it(maybe something related to <code>/etc/security/limits.d/90-nproc.conf</code>).
 </div>
 
 PS: Use [c1000k](https://github.com/ideawu/c1000k) to test how many concurrent connections your system supports.

@@ -92,6 +92,6 @@ sudo chkconfig ssdb on
 __Ubuntu__
 
 <pre>
-sudo chmod a+x /etc/init.d/ssdb
-sudo update-rc.d ssdb defaults
+sudo chmod a+x /etc/init.d/ssdb.sh
+sudo update-rc.d ssdb.sh defaults
 </pre>

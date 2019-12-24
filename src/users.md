@@ -14,14 +14,6 @@ If you are using SSDB in production, please send me a email(ssdb#udpwork.com), I
 
 ---
 
-## <a href="#lantouzi" name="lantouzi">Lantouzi.com</a>
-
-![](http://ssdb.io/img/ssdb-users/lantouzi.com.png)
-
-[Lantouzi.com](http://lantouzi.com/) Lantouzi stores user sessions and cache in SSDB, also uses SSDB as message queue.
-
----
-
 ## <a href="#360" name="360">QIHU 360 Online Game</a>
 
 ![](http://ssdb.io/img/ssdb-users/wan.360.cn.png)

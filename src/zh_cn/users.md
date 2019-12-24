@@ -14,14 +14,6 @@
 
 ---
 
-## <a href="#lantouzi" name="lantouzi">懒投资</a>
-
-![](http://ssdb.io/img/ssdb-users/lantouzi.com.png)
-
-[懒投资](http://lantouzi.com/) 是由源码资本及中国福布斯富豪夏佐全先生联手投资的优质理财平台. 懒投资使用 SSDB 存储会话 Session, 网站定制, 缓存等数据, 并作为消息队列.
-
----
-
 ## <a href="#360" name="360">QIHU 360 在线游戏</a>
 
 ![](http://ssdb.io/img/ssdb-users/wan.360.cn.png)

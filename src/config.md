@@ -36,7 +36,7 @@ Meanwhile, specify with `deny, allow` instructions to only allow connections fro
 	server:
     	readonly: yes|no
 
-SSDB server can be configured as readonly mode, if SSDB is running in readonly mode, any write operation command will rejected by the server:
+SSDB server can be configured as readonly mode, if SSDB is running in readonly mode, any write operation command will be rejected by the server:
 
 	ssdb 127.0.0.1:8888> set a 2
 	client_error: Forbidden Command: set

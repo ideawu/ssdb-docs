@@ -37,6 +37,16 @@ If you want your client be listed here, please fork the [ssdb-docs repository](h
 			C++ 11 async API client
 		</td>
 	</tr>
+	<tr>
+		<td width="21%">FastoNoSQL</span></td>
+		<td width="15%">topilski</td>
+		<td width="20%">
+			<a href="https://github.com/fasto/fastonosql">Repository</a>
+		</td>
+		<td>
+			FastoNoSQL is a crossplatform SSDB GUI management tool.
+		</td>
+	</tr>
 </table>
 
 ### <a href="#cpy" name="cpy">Cpy</a>

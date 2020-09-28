@@ -1,7 +1,7 @@
 ssdb-docs
 =========
 
-SSDB documentation source code.
+[SSDB](https://github.com/ideawu/ssdb) documentation source code.
 
 ## How to build?
 

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>SSDB - 命令行工具 ssdb-cli</title>
+	<meta name="keywords" content="SSDB, SSDB 文档, LevelDB, Redis, LevelDB Server, zset" />
+	<meta name="description" content="SSDB 是一个高性能 NoSQL 数据库, 使用 LevelDB 作为存储引擎, 支持 Redis 协议." />
+	<link href="./../css/bootstrap.min.css" rel="stylesheet" />
+	<link href="./../css/style.css" rel="stylesheet" />
+</head>
+<body>
+
+
+
+
+<!-- Fixed navbar -->
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="http://ssdb.io/zh_cn/">SSDB</a>
+		</div>
+		<div class="navbar-collapse collapse">
+			<ul class="nav navbar-nav">
+				<li class="divider-vertical"></li>
+				<li>
+					<a href="http://ssdb.io/zh_cn/">
+						<i class="glyphicon glyphicon-home"></i> 首页
+					</a>
+				</li>
+				<li class="divider-vertical"></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="glyphicon glyphicon-share-alt"></i> GitHub <b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a target="_blank" href="https://github.com/ideawu/ssdb">源码</a></li>
+						<li><a target="_blank" href="https://github.com/ideawu/ssdb-docs">文档</a></li>
+					</ul>
+				</li>
+				<li class="divider-vertical"></li>
+				<li class="dropdown active">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="glyphicon glyphicon-list"></i> 文档 <b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="./../zh_cn/index.html">文档首页</a></li>
+						<li class="divider"></li>
+						<li><a href="./../zh_cn/faq.html">FAQ - 常见问题</a></li>
+						<li><a href="./../zh_cn/ssdb-cli.html">ssdb-cli命令行</a></li>
+						<li><a href="./../zh_cn/install.html">安装</a></li>
+						<li><a href="./../zh_cn/commands/index.html">命令</a></li>
+						<li><a href="./../zh_cn/config.html">配置</a></li>
+						<li><a href="./../zh_cn/clients.html">客户端 SDK</a></li>
+						<li><a href="./../zh_cn/protocol.html">SSDB 网络协议</a></li>
+						<li><a href="./../zh_cn/index.html">更多...</a></li>
+						<li class="divider"></li>
+						<li><a href="./../zh_cn/php/index.html">PHP API 文档</a></li>
+						<li><a href="./../cpp/index.html">C++ API 文档(英文)</a></li>
+						<li><a href="./../java/index.html">Java API 文档(英文)</a></li>
+						<li><a href="./../go/index.html">Go API 文档(英文)</a></li>
+						<li class="divider"></li>
+						<li><a href="https://github.com/ideawu/ssdb-docs/tree/master/pdf" target="_blank">SSDB 入门基础</a></li>
+					</ul>
+				</li>
+				<li class="divider-vertical"></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="glyphicon glyphicon-user"></i> 讨论 <b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="https://github.com/ideawu/ssdb/issues">Issue Tracker</a></li>
+						<li><a href="http://www.ideawu.net/blog/category/ssdb">博客</a></li>
+						<li><a href="./../zh_cn/users.html">用户案例</a></li>
+					</ul>
+				</li>
+			</ul>
+
+
+			<ul class="nav navbar-nav navbar-right" style="margin-top: 9px;">
+				<div class="btn-group">
+					<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+						当前语言: 简体中文
+						<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu">
+						<li><a href="#" onclick="set_lang('en');">English</a></li>
+						<li><a href="#" onclick="set_lang('zh_cn');">简体中文</a></li>
+					</ul>
+				</div>
+			</ul>
+			<script>
+			function set_lang(lang){
+				var url = location.href.replace(/lang=\w+&?/g, '').replace(/\?+$/, '');
+				var ps = url.split('/');
+				var index = ps.indexOf('docs');
+				if(lang == 'en' && ps[index + 1] == 'zh_cn'){
+					ps.splice(index + 1, 1);
+				}else if(lang == 'zh_cn' && ps[index + 1] != 'zh_cn'){
+					ps.splice(index + 1, 0, 'zh_cn');
+				}else{
+					return false;
+				}
+				url = ps.join('/');
+				location.href = url;
+				return false;
+			}
+			</script>
+
+		</div><!--/.nav-collapse -->
+	</div>
+</div>
+
+
+
+<div class="container">
+
+<h1 id="ssdb-cli">命令行工具 ssdb-cli</h1>
+<p>SSDB 的命令行工具 <code>ssdb-cli</code> 对于 SSDB 的管理非常有用, 你可以用它来执行所有的命令, 监控服务的状态, 清除整个数据库, 等等.</p>
+<h2 id="ssdb">连接到 SSDB 服务器</h2>
+<pre><code>$ /usr/local/ssdb/ssdb-cli -h 127.0.0.1 -p 8888
+ssdb (cli) - ssdb command line tool.
+Copyright (c) 2012-2013 ideawu.com
+
+'h' or 'help' for help, 'q' to quit.
+
+ssdb 127.0.0.1:8888&gt;
+</code></pre>
+<p>输入 'h', 然后按<code>回车</code>查看帮助信息. 下面是操作的演示:</p>
+<pre><code>ssdb 127.0.0.1:8888&gt; set k 1
+ok
+(0.000 sec)
+ssdb 127.0.0.1:8888&gt; get k
+1
+(0.000 sec)
+ssdb 127.0.0.1:8888&gt; del k
+ok
+(0.000 sec)
+ssdb 127.0.0.1:8888&gt; get k
+error: not_found
+(0.000 sec)
+ssdb 127.0.0.1:8888&gt;
+</code></pre>
+<h3 id="wzxhzdk0windowswzxhzdk1">对于 <span class="label label-info">Windows</span> 用户:</h3>
+<p>在 ssdb-master 源码的目录时运行</p>
+<pre><code>tools\ssdb-cli.bat
+</code></pre>
+<p>需要安装 Python 2.x, 同时, 你需要将 Python 的目录加入到环境变量中的 Path 变量.</p>
+<h2 id="_1">转义响应中的中文和二进制数据</h2>
+<p>如果你执行完命令后发现有乱码或者屏幕输出异常, 可以把下面这行命令拷贝进 ssdb-cli 然后按<code>回车</code>键:</p>
+<pre><code>: escape
+</code></pre>
+<h2 id="ssdb_1">监控 SSDB 实例的状态</h2>
+<h3 id="info">info</h3>
+<p>命令 <code>info</code> 显示了数据在 SSDB 中的分布情况, 还有 LevelDB 的健康程度.</p>
+<pre><code>ssdb 127.0.0.1:8899&gt; info
+version
+	1.8.0
+links
+	1
+total_calls
+	4
+dbsize
+	1829
+binlogs
+	capacity : 10000000
+	min_seq  : 1
+	max_seq  : 74
+replication
+	client 127.0.0.1:55479
+		type     : sync
+		status   : SYNC
+		last_seq : 73
+replication
+	slaveof 127.0.0.1:8888
+		id         : svc_2
+		type       : sync
+		status     : SYNC
+		last_seq   : 73
+		copy_count : 0
+		sync_count : 44
+leveldb.stats
+					 Compactions
+	Level  Files Size(MB) Time(sec) Read(MB) Write(MB)
+	--------------------------------------------------
+	  0        0        0         0        0         0
+	  1        1        0         0        0         0
+
+25 result(s) (0.001 sec)
+</code></pre>
+<p><strong>links</strong></p>
+<p>当前服务器的连接数.</p>
+<p><strong>total_calls</strong></p>
+<p>从服务器启动至今处理的请求数.</p>
+<p><strong>dbsize</strong></p>
+<p>数据库<strong>估计</strong>的大小(可能和硬盘占用差异非常大, 以 du 命令显示的为准), 字节数. 如果服务器开启了压缩, 这个大小是压缩后的大小.</p>
+<p><strong>binlogs</strong></p>
+<ul>
+<li>参见 <a href="./replication.html">同步和复制</a></li>
+</ul>
+<p><strong>replication</strong></p>
+<ul>
+<li>参见 <a href="./replication.html">同步和复制</a></li>
+</ul>
+<p><strong>key_range.*</strong></p>
+<p>不同数据类型的 key 在 SSDB 中是排序的, 所以这个信息表示不同数据类型的最小 key 和最大 key.</p>
+<p><strong>leveldb.stats</strong></p>
+<p>这个信息显示了 LevelDB 每一层级的文件数量和文件总大小. 越小的层级如果文件越少, 那么数据库就越健康(查询更快速).</p>
+<h3 id="info-cmd">info cmd</h3>
+<pre><code>ssdb 127.0.0.1:8899&gt; info cmd
+version
+	1.6.7
+cmd.get
+	calls: 20000    time_wait: 27   time_proc: 472
+cmd.set
+	calls: 267045   time_wait: 7431 time_proc: 7573
+cmd.setx
+	calls: 111100   time_wait: 3663 time_proc: 6456
+cmd.del
+	calls: 0    time_wait: 0    time_proc: 0
+</code></pre>
+<p><strong>cmd.*</strong></p>
+<ul>
+<li>calls: 该命令总共处理了多少次.</li>
+<li>time_wait: 命令在被处理前等待的总共时间(单位毫秒).</li>
+<li>time_proc: 命令处理总共消耗的时间(单位毫秒).</li>
+</ul>
+<h3 id="compact">compact</h3>
+<p>这个命令强制 SSDB 服务器对数据进行收缩(compaction), 收缩之后, 操作通常会变得更快.</p>
+<p>注意, <code>compact</code> 的过程可能会拖慢正常服务, 特别是当数据库比较大时. 所以, 建议在空闲时使用.</p>
+<h3 id="ssdb_2">SSDB 图形界面工具</h3>
+<p>你可以尝试下图形界面(GUI)的 SSDB 管理工具:</p>
+<ul>
+<li><a href="https://github.com/ssdb/phpssdbadmin">phpssdbadmin</a> - PHP 开发的 SSDB GUI 管理工具, 类似 phpmyadmin.</li>
+<li><a href="https://github.com/fasto/fastonosql">FastoNoSQL</a> - 跨平台的 SSDB, Redis, Memcached GUI 管理工具.</li>
+</ul>
+<!-- #############  -->
+<hr>
+
+
+<div class="footer">
+	Copyright &copy; 2013 - 2020 <a href="http://ssdb.io/">ssdb.io</a>. All rights reserved.
+	Updated: 2020-09-28 09:43:27 +0000	</div>
+
+</div> <!-- /container -->
+
+<script src="./../js/jquery-1.9.1.min.js"></script>
+<script src="./../js/bootstrap.min.js"></script>
+
+</body>
+</html>

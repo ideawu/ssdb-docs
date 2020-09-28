@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>SSDB - SSDB 网络协议定义</title>
+	<meta name="keywords" content="SSDB, SSDB 文档, LevelDB, Redis, LevelDB Server, zset" />
+	<meta name="description" content="SSDB 是一个高性能 NoSQL 数据库, 使用 LevelDB 作为存储引擎, 支持 Redis 协议." />
+	<link href="./../css/bootstrap.min.css" rel="stylesheet" />
+	<link href="./../css/style.css" rel="stylesheet" />
+</head>
+<body>
+
+
+
+
+<!-- Fixed navbar -->
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="http://ssdb.io/zh_cn/">SSDB</a>
+		</div>
+		<div class="navbar-collapse collapse">
+			<ul class="nav navbar-nav">
+				<li class="divider-vertical"></li>
+				<li>
+					<a href="http://ssdb.io/zh_cn/">
+						<i class="glyphicon glyphicon-home"></i> 首页
+					</a>
+				</li>
+				<li class="divider-vertical"></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="glyphicon glyphicon-share-alt"></i> GitHub <b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a target="_blank" href="https://github.com/ideawu/ssdb">源码</a></li>
+						<li><a target="_blank" href="https://github.com/ideawu/ssdb-docs">文档</a></li>
+					</ul>
+				</li>
+				<li class="divider-vertical"></li>
+				<li class="dropdown active">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="glyphicon glyphicon-list"></i> 文档 <b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="./../zh_cn/index.html">文档首页</a></li>
+						<li class="divider"></li>
+						<li><a href="./../zh_cn/faq.html">FAQ - 常见问题</a></li>
+						<li><a href="./../zh_cn/ssdb-cli.html">ssdb-cli命令行</a></li>
+						<li><a href="./../zh_cn/install.html">安装</a></li>
+						<li><a href="./../zh_cn/commands/index.html">命令</a></li>
+						<li><a href="./../zh_cn/config.html">配置</a></li>
+						<li><a href="./../zh_cn/clients.html">客户端 SDK</a></li>
+						<li><a href="./../zh_cn/protocol.html">SSDB 网络协议</a></li>
+						<li><a href="./../zh_cn/index.html">更多...</a></li>
+						<li class="divider"></li>
+						<li><a href="./../zh_cn/php/index.html">PHP API 文档</a></li>
+						<li><a href="./../cpp/index.html">C++ API 文档(英文)</a></li>
+						<li><a href="./../java/index.html">Java API 文档(英文)</a></li>
+						<li><a href="./../go/index.html">Go API 文档(英文)</a></li>
+						<li class="divider"></li>
+						<li><a href="https://github.com/ideawu/ssdb-docs/tree/master/pdf" target="_blank">SSDB 入门基础</a></li>
+					</ul>
+				</li>
+				<li class="divider-vertical"></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="glyphicon glyphicon-user"></i> 讨论 <b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="https://github.com/ideawu/ssdb/issues">Issue Tracker</a></li>
+						<li><a href="http://www.ideawu.net/blog/category/ssdb">博客</a></li>
+						<li><a href="./../zh_cn/users.html">用户案例</a></li>
+					</ul>
+				</li>
+			</ul>
+
+
+			<ul class="nav navbar-nav navbar-right" style="margin-top: 9px;">
+				<div class="btn-group">
+					<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+						当前语言: 简体中文
+						<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu">
+						<li><a href="#" onclick="set_lang('en');">English</a></li>
+						<li><a href="#" onclick="set_lang('zh_cn');">简体中文</a></li>
+					</ul>
+				</div>
+			</ul>
+			<script>
+			function set_lang(lang){
+				var url = location.href.replace(/lang=\w+&?/g, '').replace(/\?+$/, '');
+				var ps = url.split('/');
+				var index = ps.indexOf('docs');
+				if(lang == 'en' && ps[index + 1] == 'zh_cn'){
+					ps.splice(index + 1, 1);
+				}else if(lang == 'zh_cn' && ps[index + 1] != 'zh_cn'){
+					ps.splice(index + 1, 0, 'zh_cn');
+				}else{
+					return false;
+				}
+				url = ps.join('/');
+				location.href = url;
+				return false;
+			}
+			</script>
+
+		</div><!--/.nav-collapse -->
+	</div>
+</div>
+
+
+
+<div class="container">
+
+<h1 id="ssdb">SSDB 网络协议定义</h1>
+<p>SSDB 的网络协议超级简单!</p>
+<h2 id="_1">报文</h2>
+<pre><code>Packet := Block+ '\n'
+Block  := Size '\n' Data '\n'
+Size   := literal_integer
+Data   := size_bytes_of_data
+</code></pre>
+
+<h2 id="_2">请求</h2>
+<pre><code>Request := Cmd Blocks*
+Cmd     := Block
+</code></pre>
+
+<p>请求命令包括: <code>get, set, del, ...</code></p>
+<h2 id="_3">响应</h2>
+<pre><code>Response := Status Block*
+Status   := Block
+</code></pre>
+
+<p>响应状态码包括: <code>ok, not_found, error, fail, client_error</code></p>
+<h2 id="_4">示例</h2>
+<p>用 telnet 或者 nc 命令连接到 SSDB 服务器, 然后输入下面的代码(用最后一行空行结束):</p>
+<pre><code>3
+get
+3
+key
+
+</code></pre>
+
+<p>你将看到类似这样的响应:</p>
+<pre><code>2
+ok
+3
+val
+
+</code></pre>
+
+<h2 id="ssdb_1">高性能的 SSDB 协议解析器</h2>
+<pre><code>#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+
+int len = buffer-&gt;size();
+char *ptr = buffer-&gt;data();
+while(len &gt; 0){
+	char *data = (char *)memchr(ptr, '\n', len);
+	if(data == NULL){
+		break;
+	}
+	data += 1;
+	int num = data - ptr;
+	if(num == 1 || (num == 2 &amp;&amp; ptr[0] == '\r')){
+		// Packet received.
+		return OK;
+	}
+	// Size received
+	int size = (int)strtol(ptr, NULL, 10);
+
+	len -= num + size;
+	ptr += num + size;
+	if(len &gt;= 1 &amp;&amp; ptr[0] = '\n'){
+		len -= 1;
+		ptr += 1;
+	}else if(len &gt;= 2 &amp;&amp; ptr[0] == '\r' &amp;&amp; ptr[1] == '\n'){
+		len -= 2;
+		ptr += 2;
+	}else{
+		break;
+	}
+	// Data received
+}
+</code></pre>
+<p>给 SDK 开发者的建议: <code>Data</code> 可以包含任意字符, 包括 <code>\r, \n, \0...</code>, 所以你<strong>不要</strong>认为 <code>Data</code> 里面不会出现这些字符.</p>
+<!-- #############  -->
+<hr>
+
+
+<div class="footer">
+	Copyright &copy; 2013 - 2020 <a href="http://ssdb.io/">ssdb.io</a>. All rights reserved.
+	Updated: 2020-09-28 09:43:26 +0000	</div>
+
+</div> <!-- /container -->
+
+<script src="./../js/jquery-1.9.1.min.js"></script>
+<script src="./../js/bootstrap.min.js"></script>
+
+</body>
+</html>

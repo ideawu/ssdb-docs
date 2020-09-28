@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>SSDB - hsize name</title>
+	<meta name="keywords" content="SSDB, LevelDB, Redis, LevelDB Server, zset" />
+	<meta name="description" content="SSDB is a NoSQL database server written in C/C++, it is fast, supports online backup and master-slave replication." />
+	<link href="./../css/bootstrap.min.css" rel="stylesheet" />
+	<link href="./../css/style.css" rel="stylesheet" />
+	<!--
+	<link href="./../css/bootstrap-theme.min.css" rel="stylesheet" />
+	-->
+</head>
+<body>
+
+
+<!-- Fixed navbar -->
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="http://ssdb.io/">SSDB</a>
+		</div>
+		<div class="navbar-collapse collapse">
+			<ul class="nav navbar-nav">
+				<li class="divider-vertical"></li>
+				<li>
+					<a href="http://ssdb.io/">
+						<i class="glyphicon glyphicon-home"></i> Home
+					</a>
+				</li>
+				<li class="divider-vertical"></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="glyphicon glyphicon-share-alt"></i> GitHub <b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a target="_blank" href="https://github.com/ideawu/ssdb">Source Code</a></li>
+						<li><a target="_blank" href="https://github.com/ideawu/ssdb-docs">Documentation</a></li>
+					</ul>
+				</li>
+				<li class="divider-vertical"></li>
+				<li class="dropdown active">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="glyphicon glyphicon-list"></i> Docs <b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="./../index.html">Docs Home</a></li>
+						<li class="divider"></li>
+						<li><a href="http://ssdb.io/docs/zh_cn/faq.html">FAQ(zh_cn)</a></li>
+						<li><a href="./../ssdb-cli.html">ssdb-cli Command Line Tool</a></li>
+						<li><a href="./../install.html">Installation</a></li>
+						<li><a href="./../commands/index.html">Commands</a></li>
+						<li><a href="./../config.html">Configuration</a></li>
+						<li><a href="./../clients.html">Clients</a></li>
+						<li><a href="./../protocol.html">SSDB Network Protocol</a></li>
+						<li><a href="./../index.html">More...</a></li>
+						<li class="divider"></li>
+						<li><a href="./../php/index.html">PHP API Doc</a></li>
+						<li><a href="./../cpp/index.html">C++ API Doc</a></li>
+						<li><a href="./../java/index.html">Java API Doc</a></li>
+						<li><a href="./../go/index.html">Go API Doc</a></li>
+					</ul>
+				</li>
+				<li class="divider-vertical"></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="glyphicon glyphicon-user"></i> Discuss <b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="https://github.com/ideawu/ssdb/issues">Issue Tracker</a></li>
+						<li><a href="http://www.ideawu.com/blog/category/ssdb">Blog</a></li>
+						<li><a href="./../users.html">User Cases</a></li>
+					</ul>
+				</li>
+			</ul>
+
+
+			<ul class="nav navbar-nav navbar-right" style="margin-top: 9px;">
+				<div class="btn-group">
+					<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+						Language: English
+						<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu">
+						<li><a href="#" onclick="set_lang('en');">English</a></li>
+						<li><a href="#" onclick="set_lang('zh_cn');">简体中文</a></li>
+					</ul>
+				</div>
+			</ul>
+			<script>
+			function set_lang(lang){
+				var url = location.href.replace(/lang=\w+&?/g, '').replace(/\?+$/, '');
+				var ps = url.split('/');
+				var index = ps.indexOf('docs');
+				if(lang == 'en' && ps[index + 1] == 'zh_cn'){
+					ps.splice(index + 1, 1);
+				}else if(lang == 'zh_cn' && ps[index + 1] != 'zh_cn'){
+					ps.splice(index + 1, 0, 'zh_cn');
+				}else{
+					return false;
+				}
+				url = ps.join('/');
+				location.href = url;
+				return false;
+			}
+			</script>
+
+		</div><!--/.nav-collapse -->
+	</div>
+</div>
+
+
+<div class="container">
+
+<h1 id="hsize-name">hsize name</h1>
+<p>Return the number of key-value pairs in the hashmap.</p>
+<h2 id="parameters">Parameters</h2>
+<ul>
+<li><code>name</code> - The name of the hashmap</li>
+</ul>
+<h2 id="return-value">Return Value</h2>
+<p>Integer reply.</p>
+<h2 id="example">Example</h2>
+<pre><code>ssdb 127.0.0.1:8888&gt; hsize h
+7
+(0.000 sec)
+ssdb 127.0.0.1:8888&gt; hclear h
+7
+(0.000 sec)
+ssdb 127.0.0.1:8888&gt; hsize h
+0
+(0.000 sec)
+ssdb 127.0.0.1:8888&gt;
+</code></pre>
+<!-- #############  -->
+<hr>
+
+
+<div class="footer">
+	Copyright &copy; 2013 - 2020 <a href="http://ssdb.io/">ssdb.io</a>. All rights reserved.
+	Updated: 2020-09-28 09:42:56 +0000	</div>
+
+</div> <!-- /container -->
+
+<script src="./../js/jquery-1.9.1.min.js"></script>
+<script src="./../js/bootstrap.min.js"></script>
+
+</body>
+</html>

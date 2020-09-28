@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>SSDB - 从 Redis 迁移到 SSDB</title>
+	<meta name="keywords" content="SSDB, SSDB 文档, LevelDB, Redis, LevelDB Server, zset" />
+	<meta name="description" content="SSDB 是一个高性能 NoSQL 数据库, 使用 LevelDB 作为存储引擎, 支持 Redis 协议." />
+	<link href="./../css/bootstrap.min.css" rel="stylesheet" />
+	<link href="./../css/style.css" rel="stylesheet" />
+</head>
+<body>
+
+
+
+
+<!-- Fixed navbar -->
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="http://ssdb.io/zh_cn/">SSDB</a>
+		</div>
+		<div class="navbar-collapse collapse">
+			<ul class="nav navbar-nav">
+				<li class="divider-vertical"></li>
+				<li>
+					<a href="http://ssdb.io/zh_cn/">
+						<i class="glyphicon glyphicon-home"></i> 首页
+					</a>
+				</li>
+				<li class="divider-vertical"></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="glyphicon glyphicon-share-alt"></i> GitHub <b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a target="_blank" href="https://github.com/ideawu/ssdb">源码</a></li>
+						<li><a target="_blank" href="https://github.com/ideawu/ssdb-docs">文档</a></li>
+					</ul>
+				</li>
+				<li class="divider-vertical"></li>
+				<li class="dropdown active">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="glyphicon glyphicon-list"></i> 文档 <b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="./../zh_cn/index.html">文档首页</a></li>
+						<li class="divider"></li>
+						<li><a href="./../zh_cn/faq.html">FAQ - 常见问题</a></li>
+						<li><a href="./../zh_cn/ssdb-cli.html">ssdb-cli命令行</a></li>
+						<li><a href="./../zh_cn/install.html">安装</a></li>
+						<li><a href="./../zh_cn/commands/index.html">命令</a></li>
+						<li><a href="./../zh_cn/config.html">配置</a></li>
+						<li><a href="./../zh_cn/clients.html">客户端 SDK</a></li>
+						<li><a href="./../zh_cn/protocol.html">SSDB 网络协议</a></li>
+						<li><a href="./../zh_cn/index.html">更多...</a></li>
+						<li class="divider"></li>
+						<li><a href="./../zh_cn/php/index.html">PHP API 文档</a></li>
+						<li><a href="./../cpp/index.html">C++ API 文档(英文)</a></li>
+						<li><a href="./../java/index.html">Java API 文档(英文)</a></li>
+						<li><a href="./../go/index.html">Go API 文档(英文)</a></li>
+						<li class="divider"></li>
+						<li><a href="https://github.com/ideawu/ssdb-docs/tree/master/pdf" target="_blank">SSDB 入门基础</a></li>
+					</ul>
+				</li>
+				<li class="divider-vertical"></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="glyphicon glyphicon-user"></i> 讨论 <b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="https://github.com/ideawu/ssdb/issues">Issue Tracker</a></li>
+						<li><a href="http://www.ideawu.net/blog/category/ssdb">博客</a></li>
+						<li><a href="./../zh_cn/users.html">用户案例</a></li>
+					</ul>
+				</li>
+			</ul>
+
+
+			<ul class="nav navbar-nav navbar-right" style="margin-top: 9px;">
+				<div class="btn-group">
+					<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+						当前语言: 简体中文
+						<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu">
+						<li><a href="#" onclick="set_lang('en');">English</a></li>
+						<li><a href="#" onclick="set_lang('zh_cn');">简体中文</a></li>
+					</ul>
+				</div>
+			</ul>
+			<script>
+			function set_lang(lang){
+				var url = location.href.replace(/lang=\w+&?/g, '').replace(/\?+$/, '');
+				var ps = url.split('/');
+				var index = ps.indexOf('docs');
+				if(lang == 'en' && ps[index + 1] == 'zh_cn'){
+					ps.splice(index + 1, 1);
+				}else if(lang == 'zh_cn' && ps[index + 1] != 'zh_cn'){
+					ps.splice(index + 1, 0, 'zh_cn');
+				}else{
+					return false;
+				}
+				url = ps.join('/');
+				location.href = url;
+				return false;
+			}
+			</script>
+
+		</div><!--/.nav-collapse -->
+	</div>
+</div>
+
+
+
+<div class="container">
+
+<h1 id="redis-ssdb">从 Redis 迁移到 SSDB</h1>
+<h2 id="_1">工具</h2>
+<p>在 <code>tools</code> 目录中的 <code>redis-import.php</code> PHP 脚本可以用来将 Redis 服务器上的数据, 拷贝到 SSDB 服务器上.</p>
+<p><strong>用法:</strong></p>
+<pre><code>php redis-import.php redis_host redis_port redis_db ssdb_host ssdb_port
+</code></pre>
+
+<p><strong>参数:</strong></p>
+<ul>
+<li>redis_host: Redis 运行所在的 IP 或者主机名</li>
+<li>redis_port: Redis 监听的端口</li>
+<li>redis_db: Redis 的 DB 编号</li>
+<li>ssdb_host: SSDB 运行所在的 IP 或者主机名</li>
+<li>ssdb_port: SSDB 监听的端口</li>
+</ul>
+<p>请确保你的 PHP Redis 模块 <a href="https://github.com/nicolasff/phpredis">https://github.com/nicolasff/phpredis</a> 已经安装.</p>
+<p><a name="redis-tools"></a></p>
+<h2 id="redis">Redis 工具的支持</h2>
+<table class="table">
+<thead>
+	<tr>
+		<th width="200">Tool</th>
+		<th>Supported</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td>redis-cli</td>
+		<td><span class="label label-success">支持</span></td>
+	</tr>
+	<tr>
+		<td>Twemproxy</td>
+		<td><span class="label label-success">支持</span></td>
+	</tr>
+	<tr>
+		<td>Sentinel</td>
+		<td><span class="label label-default">不支持</span></td>
+	</tr>
+</tbody>
+</table>
+
+<h2 id="ssdb-redis">SSDB 和 Redis 命令对照表</h2>
+<p>SSDB 支持 Redis 协议和客户端, 所以你可以使用 Redis 的客户端来连接 SSDB 进行操作.</p>
+<p>但是, 如果你想使用 SSDB 的客户端, 你可能需要下面的命令对照表.</p>
+<h3 id="key-value">Key-Value</h3>
+<table class="table table-striped">
+<thead>
+	<tr>
+		<th width="200">Redis</th>
+		<th>SSDB</th>
+	</tr>
+</thead>
+<tbody>
+	<tr><td>get</td><td>get</td></tr>
+	<tr><td>set</td><td>set</td></tr>
+	<tr><td>setex</td><td>setx(for kv type only)</td></tr>
+	<tr><td>del</td><td>del</td></tr>
+	<tr><td>incr/incrBy</td><td>incr</td></tr>
+	<tr><td>decr/decrBy</td><td>decr</td></tr>
+	<tr><td>mget/getMultiple</td><td>multi_get</td></tr>
+	<tr><td>setMultiple</td><td>multi_set</td></tr>
+	<tr><td>del(multiple)</td><td>multi_del</td></tr>
+	<tr><td>keys</td><td>keys(for kv type only)</td></tr>
+	<tr><td>getset</td><td>getset</td></tr>
+	<tr><td>setnx</td><td>setnx</td></tr>
+	<tr><td>exists</td><td>exists</td></tr>
+	<tr><td>ttl</td><td>ttl</td></tr>
+	<tr><td>expire</td><td>expire</td></tr>
+	<tr><td>getbit</td><td>getbit</td></tr>
+	<tr><td>setbit</td><td>setbit</td></tr>
+	<tr><td>bitcount</td><td>redis_bitcount, countbit</td></tr>
+	<tr><td>strlen</td><td>strlen</td></tr>
+	<tr><td>getrange</td><td>getrange</td></tr>
+</tbody>
+</table>
+
+<p><strong>请非常细心地阅读此处的说明:</strong></p>
+<ul>
+<li>对于 Redis, <code>substr</code> 命令早已经被废弃, 所以你不要使用 <code>substr</code> 命令在 Redis 客户端(当然, 你<strong>可以</strong>这么做, 但你<strong>必须不</strong>这么做)</li>
+<li>如果你还想着 Redis, 那么就用 <code>getrange</code> 命令</li>
+<li>注意这两者的区别: <code>substr(start, size)</code>, <code>getrange(start, end)</code></li>
+<li>当 size 是负数时, 如果你不熟悉 PHP 语言, 那么你会觉得有些奇怪</li>
+<li>SSDB 的 <code>substr</code> 命令的描述这 <a href="http://ssdb.io/docs/zh_cn/php/content.html#m-substr">这里</a></li>
+</ul>
+<h3 id="key-maphash">Key-Map(Hash)</h3>
+<table class="table table-striped">
+<thead>
+	<tr>
+		<th width="200">Redis</th>
+		<th>SSDB</th>
+	</tr>
+</thead>
+<tbody>
+	<tr><td>del(<b>not supported</b>)</td><td>hclear</td></tr>
+	<tr><td>hget</td><td>hget</td></tr>
+	<tr><td>hset</td><td>hset</td></tr>
+	<tr><td>hdel, hmdel</td><td>hdel, multi_hdel</td></tr>
+	<tr><td>hIncrBy</td><td>hincr</td></tr>
+	<tr><td>hDecrBy</td><td>hdecr</td></tr>
+	<tr><td>hKeys</td><td>hkeys</td></tr>
+	<tr><td>hVals</td><td>hscan</td></tr>
+	<tr><td>hMGet</td><td>multi_hget</td></tr>
+	<tr><td>hMSet</td><td>multi_hset</td></tr>
+	<tr><td>hLen</td><td>hsize</td></tr>
+	<tr><td>hExists</td><td>hexists</td></tr>
+	<tr><td>keys</td><td>hlist(for hash type only)</td></tr>
+</tbody>
+</table>
+
+<p><strong>如果你想删除整个 hash, 那么你就必须使用 SSDB 的客户端来执行 <code>hclear</code> 命令, 用 Redis 的客户端是删除不了整个 hash 的.</strong></p>
+<h3 id="key-zset">Key-Zset</h3>
+<table class="table table-striped">
+<thead>
+	<tr>
+		<th width="200">Redis</th>
+		<th>SSDB</th>
+	</tr>
+</thead>
+<tbody>
+	<tr><td>del(<b>not supported</b>)</td><td>zclear</td></tr>
+	<tr><td>zScore</td><td>zget</td></tr>
+	<tr><td>zAdd</td><td>zset</td></tr>
+	<tr><td>zRem</td><td>zdel</td></tr>
+	<tr><td>zRange</td><td>zrange</td></tr>
+	<tr><td>zRevRange</td><td>zrrange</td></tr>
+	<tr><td>zRangeByScore</td><td>zscan</td></tr>
+	<tr><td>zRevRangeByScore</td><td>zrscan</td></tr>
+	<tr><td>zIncrBy</td><td>zincr</td></tr>
+	<tr><td>zDecrBy</td><td>zdecr</td></tr>
+	<tr><td>zCount</td><td>zcount</td></tr>
+	<tr><td>zSum</td><td>zsum</td></tr>
+	<tr><td>zAvg</td><td>zavg</td></tr>
+	<tr><td>zCard</td><td>zsize</td></tr>
+	<tr><td>zRank</td><td>zrank</td></tr>
+	<tr><td>zRemRangeByRank</td><td>zremrangebyrank</td></tr>
+	<tr><td>zRemRangeByScore</td><td>zremrangebyscore</td></tr>
+	<tr><td>keys</td><td>zlist(for zset type only)</td></tr>
+</tbody>
+</table>
+
+<p><strong>如果你想删除整个 zset, 那么你就必须使用 SSDB 的客户端来执行 <code>zclear</code> 命令, 用 Redis 的客户端是删除不了整个 zset 的.</strong></p>
+<h3 id="key-listqueue">Key-List(Queue)</h3>
+<table class="table table-striped">
+<thead>
+	<tr>
+		<th width="200">Redis</th>
+		<th>SSDB</th>
+	</tr>
+</thead>
+<tbody>
+	<tr><td>del(<b>not supported</b>)</td><td>qclear</td></tr>
+	<tr><td>llen/lsize</td><td>qsize</td></tr>
+	<tr><td>lpush</td><td>qpush_front</td></tr>
+	<tr><td>rpush</td><td>qpush_back</td></tr>
+	<tr><td>lpop</td><td>qpop_front</td></tr>
+	<tr><td>rpop</td><td>qpop_back</td></tr>
+	<tr><td>lrange</td><td>qslice</td></tr>
+	<tr><td>lindex, lget</td><td>qget</td></tr>
+	<tr><td>lset</td><td>qset</td></tr>
+	<tr><td>keys</td><td>qlist(for queue/list type only)</td></tr>
+</tbody>
+</table>
+
+<p><strong>如果你想删除整个 list, 那么你就必须使用 SSDB 的客户端来执行 <code>qclear</code> 命令, 用 Redis 的客户端是删除不了整个 list 的.</strong></p>
+<!-- #############  -->
+<hr>
+
+
+<div class="footer">
+	Copyright &copy; 2013 - 2020 <a href="http://ssdb.io/">ssdb.io</a>. All rights reserved.
+	Updated: 2020-09-28 09:43:27 +0000	</div>
+
+</div> <!-- /container -->
+
+<script src="./../js/jquery-1.9.1.min.js"></script>
+<script src="./../js/bootstrap.min.js"></script>
+
+</body>
+</html>

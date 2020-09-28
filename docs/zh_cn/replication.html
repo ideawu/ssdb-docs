@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>SSDB - 同步和复制的配置与监控</title>
+	<meta name="keywords" content="SSDB, SSDB 文档, LevelDB, Redis, LevelDB Server, zset" />
+	<meta name="description" content="SSDB 是一个高性能 NoSQL 数据库, 使用 LevelDB 作为存储引擎, 支持 Redis 协议." />
+	<link href="./../css/bootstrap.min.css" rel="stylesheet" />
+	<link href="./../css/style.css" rel="stylesheet" />
+</head>
+<body>
+
+
+
+
+<!-- Fixed navbar -->
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="http://ssdb.io/zh_cn/">SSDB</a>
+		</div>
+		<div class="navbar-collapse collapse">
+			<ul class="nav navbar-nav">
+				<li class="divider-vertical"></li>
+				<li>
+					<a href="http://ssdb.io/zh_cn/">
+						<i class="glyphicon glyphicon-home"></i> 首页
+					</a>
+				</li>
+				<li class="divider-vertical"></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="glyphicon glyphicon-share-alt"></i> GitHub <b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a target="_blank" href="https://github.com/ideawu/ssdb">源码</a></li>
+						<li><a target="_blank" href="https://github.com/ideawu/ssdb-docs">文档</a></li>
+					</ul>
+				</li>
+				<li class="divider-vertical"></li>
+				<li class="dropdown active">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="glyphicon glyphicon-list"></i> 文档 <b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="./../zh_cn/index.html">文档首页</a></li>
+						<li class="divider"></li>
+						<li><a href="./../zh_cn/faq.html">FAQ - 常见问题</a></li>
+						<li><a href="./../zh_cn/ssdb-cli.html">ssdb-cli命令行</a></li>
+						<li><a href="./../zh_cn/install.html">安装</a></li>
+						<li><a href="./../zh_cn/commands/index.html">命令</a></li>
+						<li><a href="./../zh_cn/config.html">配置</a></li>
+						<li><a href="./../zh_cn/clients.html">客户端 SDK</a></li>
+						<li><a href="./../zh_cn/protocol.html">SSDB 网络协议</a></li>
+						<li><a href="./../zh_cn/index.html">更多...</a></li>
+						<li class="divider"></li>
+						<li><a href="./../zh_cn/php/index.html">PHP API 文档</a></li>
+						<li><a href="./../cpp/index.html">C++ API 文档(英文)</a></li>
+						<li><a href="./../java/index.html">Java API 文档(英文)</a></li>
+						<li><a href="./../go/index.html">Go API 文档(英文)</a></li>
+						<li class="divider"></li>
+						<li><a href="https://github.com/ideawu/ssdb-docs/tree/master/pdf" target="_blank">SSDB 入门基础</a></li>
+					</ul>
+				</li>
+				<li class="divider-vertical"></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="glyphicon glyphicon-user"></i> 讨论 <b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="https://github.com/ideawu/ssdb/issues">Issue Tracker</a></li>
+						<li><a href="http://www.ideawu.net/blog/category/ssdb">博客</a></li>
+						<li><a href="./../zh_cn/users.html">用户案例</a></li>
+					</ul>
+				</li>
+			</ul>
+
+
+			<ul class="nav navbar-nav navbar-right" style="margin-top: 9px;">
+				<div class="btn-group">
+					<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+						当前语言: 简体中文
+						<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu">
+						<li><a href="#" onclick="set_lang('en');">English</a></li>
+						<li><a href="#" onclick="set_lang('zh_cn');">简体中文</a></li>
+					</ul>
+				</div>
+			</ul>
+			<script>
+			function set_lang(lang){
+				var url = location.href.replace(/lang=\w+&?/g, '').replace(/\?+$/, '');
+				var ps = url.split('/');
+				var index = ps.indexOf('docs');
+				if(lang == 'en' && ps[index + 1] == 'zh_cn'){
+					ps.splice(index + 1, 1);
+				}else if(lang == 'zh_cn' && ps[index + 1] != 'zh_cn'){
+					ps.splice(index + 1, 0, 'zh_cn');
+				}else{
+					return false;
+				}
+				url = ps.join('/');
+				location.href = url;
+				return false;
+			}
+			</script>
+
+		</div><!--/.nav-collapse -->
+	</div>
+</div>
+
+
+
+<div class="container">
+
+<h1 id="_1">同步和复制的配置与监控</h1>
+<h2 id="_2">配置</h2>
+<div class="alert alert-info">
+	对于老版本, 你必须通过 <code>slaveof.ip</code> 指定 master 的 IP 地址, 但对于新版本(1.9.2+), 你可以通过 <code>slaveof.host</code> 指定 master 的主机名(域名).
+</div>
+
+<h3 id="-">主-从</h3>
+<p><strong>#server 1</strong></p>
+<pre><code>replication:
+	slaveof:
+</code></pre>
+
+<p><strong>#server 2</strong></p>
+<pre><code>replication:
+	slaveof:
+		id: svc_1
+		# sync|mirror, default is sync
+		type: sync
+		# use ip for older version
+		#ip: 127.0.0.1
+		# use host since 1.9.2
+		host: localhost
+		port: 8888
+</code></pre>
+
+<h3 id="-_1">主-主</h3>
+<p><strong>#server 1</strong></p>
+<pre><code>replication:
+	slaveof:
+		id: svc_2
+		# sync|mirror, default is sync
+		type: mirror
+		# use ip for older version
+		#ip: 127.0.0.1
+		# use host since 1.9.2
+		host: localhost
+		port: 8889
+</code></pre>
+
+<p><strong>#server 2</strong></p>
+<pre><code>replication:
+	slaveof:
+		id: svc_1
+		# sync|mirror, default is sync
+		type: mirror
+		# use ip for older version
+		#ip: 127.0.0.1
+		# use host since 1.9.2
+		host: localhost
+		port: 8888
+</code></pre>
+
+<h3 id="_3">多主</h3>
+<p>在一组一共包含 n 个实例的 SSDB 实例群中, 每一个实例必须 slaveof 其余的 n-1 个实例.</p>
+<pre><code>replication:
+	slaveof:
+		id: svc_1
+		# sync|mirror, default is sync
+		type: mirror
+		# use ip for older version
+		#ip: 127.0.0.1
+		# use host since 1.9.2
+		host: localhost
+		port: 8888
+	slaveof:
+		id: svc_2
+		# sync|mirror, default is sync
+		type: mirror
+		# use ip for older version
+		#ip: 127.0.0.1
+		# use host since 1.9.2
+		host: localhost
+		port: 8889
+	# ... more slaveof
+</code></pre>
+
+<h2 id="_4">监控同步状态</h2>
+<h3 id="info">info 命令返回的信息</h3>
+<pre><code>ssdb 127.0.0.1:8899&gt; info
+binlogs
+	capacity : 10000000
+	min_seq  : 1
+	max_seq  : 74
+replication
+	client 127.0.0.1:55479
+		type     : sync
+		status   : SYNC
+		last_seq : 74
+replication
+	slaveof 127.0.0.1:8888
+		id         : svc_2
+		type       : sync
+		status     : SYNC
+		last_seq   : 10023
+		copy_count : 0
+		sync_count : 44
+</code></pre>
+<p><strong>binlogs</strong></p>
+<p>当前实例的写操作状态.</p>
+<ul>
+<li>capacity: binlog 队列的最大长度</li>
+<li>min_seq: 当前队列中的最小 binlog 序号</li>
+<li>max_seq: 当前队列中的最大 binlog 序号</li>
+</ul>
+<p><strong>replication</strong></p>
+<p>可以有多条 <code>replication</code> 记录. 每一条表示一个连接进来的 slave(<em>client</em>), 或者一个当前服务器所连接的 master(<em>slaveof</em>).</p>
+<ul>
+<li>slaveof|client host:port, 远端 master/slave 的 host:port.</li>
+<li>type: 类型, <code>sync|mirror</code>.</li>
+<li>status: 当前同步状态, <code>DISCONNECTED|INIT|OUT_OF_SYNC|COPY|SYNC</code>.</li>
+<li>last_seq: 上一条发送或者收到的 binlog 的序号.</li>
+<li>slaveof.id: master 的 id(这是从 slave's 角度来看的, 你永远不需要在 master 上配置它自己的 id).</li>
+<li>slaveof.copy_count: 在全量同步时, 已经复制的 key 的数量.</li>
+<li>slaveof.sync_count: 发送或者收到的 binlog 的数量.</li>
+</ul>
+<p>关于 status:</p>
+<ul>
+<li>DISCONNECTED: 与 master 断开了连接, 一般是网络中断.</li>
+<li>INIT: 初始化状态.</li>
+<li>OUT_OF_SYNC: 由于短时间内在 master 有大量写操作, 导致 binlog 队列淘汰, slave 丢失同步点, 只好重新复制全部的数据.</li>
+<li>COPY: 正在复制基准数据的过程中, 新的写操作可能无法及时地同步.</li>
+<li>SYNC: 同步状态是健康的.</li>
+</ul>
+<h3 id="_5">判断同步状态</h3>
+<p><strong>对于 master</strong>, <code>binlogs.max_seq</code> 是指当前实例上的最新一次的写(写/更新/删除)操作的序号, <code>replication.client.last_seq</code> 是指已发送给 slave 的最新一条 binlog 的序号.</p>
+<p>所以, 如果你想判断主从同步是否已经同步到位(实时更新), 那么就判断 <code>binlogs.max_seq</code> 和 <code>replication.client.last_seq</code> 是否相等, 同时 status 是 <code>SYNC</code>.</p>
+<!-- #############  -->
+<hr>
+
+
+<div class="footer">
+	Copyright &copy; 2013 - 2020 <a href="http://ssdb.io/">ssdb.io</a>. All rights reserved.
+	Updated: 2020-09-28 09:43:27 +0000	</div>
+
+</div> <!-- /container -->
+
+<script src="./../js/jquery-1.9.1.min.js"></script>
+<script src="./../js/bootstrap.min.js"></script>
+
+</body>
+</html>

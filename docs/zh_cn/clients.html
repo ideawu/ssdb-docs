@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>SSDB - 客户端</title>
+	<meta name="keywords" content="SSDB, SSDB 文档, LevelDB, Redis, LevelDB Server, zset" />
+	<meta name="description" content="SSDB 是一个高性能 NoSQL 数据库, 使用 LevelDB 作为存储引擎, 支持 Redis 协议." />
+	<link href="./../css/bootstrap.min.css" rel="stylesheet" />
+	<link href="./../css/style.css" rel="stylesheet" />
+</head>
+<body>
+
+
+
+
+<!-- Fixed navbar -->
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="http://ssdb.io/zh_cn/">SSDB</a>
+		</div>
+		<div class="navbar-collapse collapse">
+			<ul class="nav navbar-nav">
+				<li class="divider-vertical"></li>
+				<li>
+					<a href="http://ssdb.io/zh_cn/">
+						<i class="glyphicon glyphicon-home"></i> 首页
+					</a>
+				</li>
+				<li class="divider-vertical"></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="glyphicon glyphicon-share-alt"></i> GitHub <b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a target="_blank" href="https://github.com/ideawu/ssdb">源码</a></li>
+						<li><a target="_blank" href="https://github.com/ideawu/ssdb-docs">文档</a></li>
+					</ul>
+				</li>
+				<li class="divider-vertical"></li>
+				<li class="dropdown active">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="glyphicon glyphicon-list"></i> 文档 <b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="./../zh_cn/index.html">文档首页</a></li>
+						<li class="divider"></li>
+						<li><a href="./../zh_cn/faq.html">FAQ - 常见问题</a></li>
+						<li><a href="./../zh_cn/ssdb-cli.html">ssdb-cli命令行</a></li>
+						<li><a href="./../zh_cn/install.html">安装</a></li>
+						<li><a href="./../zh_cn/commands/index.html">命令</a></li>
+						<li><a href="./../zh_cn/config.html">配置</a></li>
+						<li><a href="./../zh_cn/clients.html">客户端 SDK</a></li>
+						<li><a href="./../zh_cn/protocol.html">SSDB 网络协议</a></li>
+						<li><a href="./../zh_cn/index.html">更多...</a></li>
+						<li class="divider"></li>
+						<li><a href="./../zh_cn/php/index.html">PHP API 文档</a></li>
+						<li><a href="./../cpp/index.html">C++ API 文档(英文)</a></li>
+						<li><a href="./../java/index.html">Java API 文档(英文)</a></li>
+						<li><a href="./../go/index.html">Go API 文档(英文)</a></li>
+						<li class="divider"></li>
+						<li><a href="https://github.com/ideawu/ssdb-docs/tree/master/pdf" target="_blank">SSDB 入门基础</a></li>
+					</ul>
+				</li>
+				<li class="divider-vertical"></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="glyphicon glyphicon-user"></i> 讨论 <b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="https://github.com/ideawu/ssdb/issues">Issue Tracker</a></li>
+						<li><a href="http://www.ideawu.net/blog/category/ssdb">博客</a></li>
+						<li><a href="./../zh_cn/users.html">用户案例</a></li>
+					</ul>
+				</li>
+			</ul>
+
+
+			<ul class="nav navbar-nav navbar-right" style="margin-top: 9px;">
+				<div class="btn-group">
+					<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+						当前语言: 简体中文
+						<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu">
+						<li><a href="#" onclick="set_lang('en');">English</a></li>
+						<li><a href="#" onclick="set_lang('zh_cn');">简体中文</a></li>
+					</ul>
+				</div>
+			</ul>
+			<script>
+			function set_lang(lang){
+				var url = location.href.replace(/lang=\w+&?/g, '').replace(/\?+$/, '');
+				var ps = url.split('/');
+				var index = ps.indexOf('docs');
+				if(lang == 'en' && ps[index + 1] == 'zh_cn'){
+					ps.splice(index + 1, 1);
+				}else if(lang == 'zh_cn' && ps[index + 1] != 'zh_cn'){
+					ps.splice(index + 1, 0, 'zh_cn');
+				}else{
+					return false;
+				}
+				url = ps.join('/');
+				location.href = url;
+				return false;
+			}
+			</script>
+
+		</div><!--/.nav-collapse -->
+	</div>
+</div>
+
+
+
+<div class="container">
+
+<h1 id="_1">客户端</h1>
+<div class="alert alert-info">
+	SSDB 支持 Redis 网络协议, 所以你可以用 Redis 的客户端来连接 SSDB 服务器. 但是, 使用 SSDB 客户端是最高效的方式.
+	<br/><br/>
+	所有的 SSDB 客户端 API 都是支持二进制数据的, 二进制数据即是字符串, 字符串就是二进制数据.
+</div>
+
+<p>SSDB 源码仓库中, 内置了许多语言的客户端, 这些便是所谓的<strong>官方客户端</strong>. 另外, 还有许多开发者开发的客户端, 也列在这里.</p>
+<p>推荐的客户端会被打上星号标记 <span style="color: #cc3;">★</span>.</p>
+<p>如果你开发了一个客户端, 希望列在这个页面的话, 请在 GitHub 上 fork <a href="https://github.com/ideawu/ssdb-docs">ssdb-docs 项目</a>, 编辑 <code>clients.md</code>, 然后提交一个 Pull Request.</p>
+<h3 id="wzxhzdk16cwzxhzdk17"><a href="#cpp" name="cpp">C++</a></h3>
+<hr />
+<table width="100%">
+	<tr>
+		<td width="21%">内置 <span style="color: #cc3;">★</span></td>
+		<td width="15%">ideawu</td>
+		<td width="20%">
+			<a href="https://github.com/ideawu/ssdb/tree/master/api/cpp">Repository</a>
+		</td>
+		<td>
+			官方客户端
+		</td>
+	</tr>
+	<tr>
+		<td width="21%">cppssdb</span></td>
+		<td width="15%">ironsdu</td>
+		<td width="20%">
+			<a href="https://github.com/IronsDu/ssdb-cpp-api">Repository</a>
+		</td>
+		<td>
+			C++ 11 异步 API 客户端
+		</td>
+	</tr>
+</table>
+
+<h3 id="wzxhzdk18cpywzxhzdk19"><a href="#cpy" name="cpy">Cpy</a></h3>
+<hr />
+<table width="100%">
+	<tr>
+		<td width="21%">内置 <span style="color: #cc3;">★</span></td>
+		<td width="15%">ideawu</td>
+		<td width="20%">
+			<a href="https://github.com/ideawu/ssdb/tree/master/api/cpy">Repository</a>
+		</td>
+		<td>
+			官方客户端. see [Cpy](https://github.com/ideawu/cpy).
+		</td>
+	</tr>
+</table>
+
+<h3><a href="#cs" name="cs">C# .Net</a></h3>
+
+<hr />
+<table width="100%">
+	<tr>
+		<td width="21%">官方 <span style="color: #cc3;">★</span></td>
+		<td width="15%">ideawu</td>
+		<td width="20%">
+			<a href="https://github.com/ssdb/dotnetssdb">Repository</a>
+		</td>
+		<td>
+			官方客户端
+		</td>
+	</tr>
+</table>
+
+<h3 id="wzxhzdk20erlangwzxhzdk21"><a href="#erlang" name="erlang">Erlang</a></h3>
+<hr />
+<table width="100%">
+	<tr>
+		<td width="21%">ssdb-erlang</td>
+		<td width="15%">kqqsysu</td>
+		<td width="20%">
+			<a href="https://github.com/kqqsysu/ssdb-erlang">Repository</a>
+		</td>
+		<td>
+			Erlang client library for SSDB
+		</td>
+	</tr>
+</table>
+
+<h3 id="wzxhzdk22gowzxhzdk23"><a href="#go" name="go">Go</a></h3>
+<hr />
+<table width="100%">
+	<tr>
+		<td width="21%">官方 <span style="color: #cc3;">★</span></td>
+		<td width="15%">ideawu</td>
+		<td width="20%">
+			<a href="https://github.com/ssdb/gossdb">Repository</a>
+		</td>
+		<td>
+			官方客户端
+		</td>
+	</tr>
+	<tr>
+		<td width="21%">hissdb</td>
+		<td width="15%">Eryx</td>
+		<td width="20%">
+			<a href="https://github.com/lessos/lessgo/tree/master/data/hissdb">Repository</a>
+		</td>
+		<td>
+			在 lessos/lessgo 项目中的 hissdb, 支持连接池.
+		</td>
+	</tr>
+	<tr>
+		<td width="21%">gossdb</td>
+		<td width="15%">seefan</td>
+		<td width="20%">
+			<a href="https://github.com/seefan/gossdb">Repository</a>
+		</td>
+		<td>
+			从官方客户端派生出来的客户端，支持连接池，使用习惯与大多数客户端保持一致。
+		</td>
+	</tr>
+	<tr>
+		<td width="21%">ssdb</td>
+		<td width="15%">wzshiming</td>
+		<td width="20%">
+			<a href="https://github.com/wzshiming/ssdb">Repository</a>
+		</td>
+		<td>
+			从客户端派生的客户端具有一致的风格和对连接池的支持。
+		</td>
+	</tr>
+</table>
+
+<h3 id="wzxhzdk24javawzxhzdk25"><a href="#java" name="java">Java</a></h3>
+<hr />
+<table width="100%">
+	<tr>
+		<td width="21%">官方 <span style="color: #cc3;">★</span></td>
+		<td width="15%">ideawu</td>
+		<td width="20%">
+			<a href="https://github.com/ssdb/javassdb">Repository</a>
+		</td>
+		<td>
+			官方客户端
+		</td>
+	</tr>
+	<tr>
+		<td width="21%">ssdb4j</td>
+		<td width="15%">nutzam</td>
+		<td width="20%">
+			<a href="https://github.com/nutzam/ssdb4j">Repository</a>
+		</td>
+		<td>
+			又一个SSDB的Java驱动
+		</td>
+	</tr>
+	<tr>
+		<td width="21%">another ssdb4j</td>
+		<td width="15%">jbakwd</td>
+		<td width="20%">
+			<a href="http://git.oschina.net/jbakwd/ssdbj">Repository</a>
+		</td>
+		<td>
+
+		</td>
+	</tr>
+	<tr>
+		<td width="21%">hydrogen-ssdb</td>
+		<td width="15%">yiding-he</td>
+		<td width="20%">
+			<a href="https://github.com/yiding-he/hydrogen-ssdb">Repository</a>
+		</td>
+		<td>
+			支持多线程并发请求和多服务器的负载均衡(客户端分发请求)
+		</td>
+	</tr>
+	<tr>
+		<td width="21%">vertx-ssdb</td>
+		<td width="15%">DavidQuan</td>
+		<td width="20%">
+			<a href="https://github.com/DavidQuan/vertx-ssdb">Repository</a>
+		</td>
+		<td>
+			Vert.x ssdb client
+		</td>
+	</tr>
+</table>
+
+<h3 id="wzxhzdk26luawzxhzdk27"><a href="#lua" name="lua">Lua</a></h3>
+<hr />
+<table width="100%">
+	<tr>
+		<td width="21%">lua-resty-ssdb</td>
+		<td width="15%">LazyZhu</td>
+		<td width="20%">
+			<a href="https://github.com/LazyZhu/lua-resty-ssdb">Repository</a>
+		</td>
+		<td>
+			Lua ssdb client driver for the ngx_lua based on the cosocket API
+		</td>
+	</tr>
+	<tr>
+		<td width="21%">DBSS</td>
+		<td width="15%">reficull</td>
+		<td width="20%">
+			<a href="https://github.com/reficull/dbss">Repository</a>
+		</td>
+		<td>
+			Luajit 使用的客户端，我用在C++游戏服中，lua直接连ssdb
+		</td>
+	</tr>
+</table>
+
+<h3 id="wzxhzdk28nodejswzxhzdk29"><a href="#nodejs" name="nodejs">NodeJS</a></h3>
+<hr />
+<table width="100%">
+	<tr>
+		<td width="21%">官方 <span style="color: #cc3;">★</span></td>
+		<td width="15%">ideawu</td>
+		<td width="20%">
+			<a href="https://github.com/ssdb/nodessdb">Repository</a>
+		</td>
+		<td>
+			官方客户端
+		</td>
+	</tr>
+	<tr>
+		<td width="21%">node-ssdb by @hit9</td>
+		<td width="15%">hit9</td>
+		<td width="20%">
+			<a href="https://github.com/eleme/node-ssdb">Repository</a>
+		</td>
+		<td>
+			node-ssdb by @hit9
+		</td>
+	</tr>
+	<tr>
+		<td width="21%">ssdb-node</td>
+		<td width="15%"><a href="http://www.reanote.com">卡卡截图</a></td>
+		<td width="20%">
+			<a href="https://github.com/reanote/ssdb-node">Repository</a>
+		</td>
+		<td>1. 基于https://github.com/eleme/node-ssdb 改写；</br>2. 主要是修复了上述客户端的请求和应答对应错误的问题；</br>3. 添加自动重连机制，可通过autoReconnect关闭;</td>
+	</tr>
+</table>
+
+<h3 id="wzxhzdk30phpwzxhzdk31"><a href="#php" name="php">PHP</a></h3>
+<hr />
+<table width="100%">
+	<tr>
+		<td width="21%">内置 <span style="color: #cc3;">★</span></td>
+		<td width="15%">ideawu</td>
+		<td width="20%">
+			<a href="https://github.com/ideawu/ssdb/tree/master/api/php">Repository</a>
+		</td>
+		<td>
+			官方客户端
+		</td>
+	</tr>
+	<tr>
+		<td width="21%">phpssdb</td>
+		<td width="15%">jonnywang</td>
+		<td width="20%">
+			<a href="https://github.com/jonnywang/phpssdb">Repository</a>
+		</td>
+		<td>
+			用 C 写的 PHP 模块.
+		</td>
+	</tr>
+</table>
+
+<h3 id="wzxhzdk32pythonwzxhzdk33"><a href="#python" name="python">Python</a></h3>
+<hr />
+<table width="100%">
+	<tr>
+		<td width="21%">内置 <span style="color: #cc3;">★</span></td>
+		<td width="15%">ideawu</td>
+		<td width="20%">
+			<a href="https://github.com/ideawu/ssdb/tree/master/api/python">Repository</a>
+		</td>
+		<td>
+			官方客户端
+		</td>
+	</tr>
+	<tr>
+		<td width="21%">pyssdb</td>
+		<td width="15%">ifduyue</td>
+		<td width="20%">
+			<a href="https://github.com/ifduyue/pyssdb">Repository</a>
+		</td>
+		<td>
+			A SSDB Client Library for Python
+		</td>
+	</tr>
+	<tr>
+		<td width="21%">ssdb-py</td>
+		<td width="15%">wrongwaycn</td>
+		<td width="20%">
+			<a href="https://github.com/wrongwaycn/ssdb-py">Repository</a>
+		</td>
+		<td>
+			SSDB Python Client like Redis-Py
+		</td>
+	</tr>
+	<tr>
+		<td width="21%">ssdb.py</td>
+		<td width="15%">hit9</td>
+		<td width="20%">
+			<a href="https://github.com/hit9/ssdb.py">Repository</a>
+		</td>
+		<td>
+			SSDB Python Client Library by hit9
+		</td>
+	</tr>
+</table>
+
+<h3 id="wzxhzdk34rubywzxhzdk35"><a href="#ruby" name="ruby">Ruby</a></h3>
+<hr />
+<table width="100%">
+	<tr>
+		<td width="21%">ssdb-rb</td>
+		<td width="15%">bsm</td>
+		<td width="20%">
+			<a href="https://github.com/bsm/ssdb-rb">Repository</a>
+		</td>
+		<td>
+			Ruby client library for SSDB
+		</td>
+	</tr>
+</table>
+
+<h3 id="wzxhzdk36swiftwzxhzdk37"><a href="#swift" name="swift">Swift</a></h3>
+<hr />
+<table width="100%">
+	<tr>
+		<td width="21%">SwiftSSDB</td>
+		<td width="15%">kirilltitov</td>
+		<td width="20%">
+			<a href="https://github.com/kirilltitov/SwiftSSDB">Repository</a>
+		</td>
+		<td>
+			Swift client library for SSDB
+		</td>
+	</tr>
+</table>
+<!-- #############  -->
+<hr>
+
+
+<div class="footer">
+	Copyright &copy; 2013 - 2020 <a href="http://ssdb.io/">ssdb.io</a>. All rights reserved.
+	Updated: 2020-09-28 09:43:10 +0000	</div>
+
+</div> <!-- /container -->
+
+<script src="./../js/jquery-1.9.1.min.js"></script>
+<script src="./../js/bootstrap.min.js"></script>
+
+</body>
+</html>

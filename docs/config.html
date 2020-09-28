@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>SSDB - Configuration</title>
+	<meta name="keywords" content="SSDB, LevelDB, Redis, LevelDB Server, zset" />
+	<meta name="description" content="SSDB is a NoSQL database server written in C/C++, it is fast, supports online backup and master-slave replication." />
+	<link href="./css/bootstrap.min.css" rel="stylesheet" />
+	<link href="./css/style.css" rel="stylesheet" />
+	<!--
+	<link href="./css/bootstrap-theme.min.css" rel="stylesheet" />
+	-->
+</head>
+<body>
+
+
+<!-- Fixed navbar -->
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="http://ssdb.io/">SSDB</a>
+		</div>
+		<div class="navbar-collapse collapse">
+			<ul class="nav navbar-nav">
+				<li class="divider-vertical"></li>
+				<li>
+					<a href="http://ssdb.io/">
+						<i class="glyphicon glyphicon-home"></i> Home
+					</a>
+				</li>
+				<li class="divider-vertical"></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="glyphicon glyphicon-share-alt"></i> GitHub <b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a target="_blank" href="https://github.com/ideawu/ssdb">Source Code</a></li>
+						<li><a target="_blank" href="https://github.com/ideawu/ssdb-docs">Documentation</a></li>
+					</ul>
+				</li>
+				<li class="divider-vertical"></li>
+				<li class="dropdown active">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="glyphicon glyphicon-list"></i> Docs <b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="./index.html">Docs Home</a></li>
+						<li class="divider"></li>
+						<li><a href="http://ssdb.io/docs/zh_cn/faq.html">FAQ(zh_cn)</a></li>
+						<li><a href="./ssdb-cli.html">ssdb-cli Command Line Tool</a></li>
+						<li><a href="./install.html">Installation</a></li>
+						<li><a href="./commands/index.html">Commands</a></li>
+						<li><a href="./config.html">Configuration</a></li>
+						<li><a href="./clients.html">Clients</a></li>
+						<li><a href="./protocol.html">SSDB Network Protocol</a></li>
+						<li><a href="./index.html">More...</a></li>
+						<li class="divider"></li>
+						<li><a href="./php/index.html">PHP API Doc</a></li>
+						<li><a href="./cpp/index.html">C++ API Doc</a></li>
+						<li><a href="./java/index.html">Java API Doc</a></li>
+						<li><a href="./go/index.html">Go API Doc</a></li>
+					</ul>
+				</li>
+				<li class="divider-vertical"></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="glyphicon glyphicon-user"></i> Discuss <b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="https://github.com/ideawu/ssdb/issues">Issue Tracker</a></li>
+						<li><a href="http://www.ideawu.com/blog/category/ssdb">Blog</a></li>
+						<li><a href="./users.html">User Cases</a></li>
+					</ul>
+				</li>
+			</ul>
+
+
+			<ul class="nav navbar-nav navbar-right" style="margin-top: 9px;">
+				<div class="btn-group">
+					<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+						Language: English
+						<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu">
+						<li><a href="#" onclick="set_lang('en');">English</a></li>
+						<li><a href="#" onclick="set_lang('zh_cn');">简体中文</a></li>
+					</ul>
+				</div>
+			</ul>
+			<script>
+			function set_lang(lang){
+				var url = location.href.replace(/lang=\w+&?/g, '').replace(/\?+$/, '');
+				var ps = url.split('/');
+				var index = ps.indexOf('docs');
+				if(lang == 'en' && ps[index + 1] == 'zh_cn'){
+					ps.splice(index + 1, 1);
+				}else if(lang == 'zh_cn' && ps[index + 1] != 'zh_cn'){
+					ps.splice(index + 1, 0, 'zh_cn');
+				}else{
+					return false;
+				}
+				url = ps.join('/');
+				location.href = url;
+				return false;
+			}
+			</script>
+
+		</div><!--/.nav-collapse -->
+	</div>
+</div>
+
+
+<div class="container">
+
+<h1 id="configuration">Configuration</h1>
+<p><span class="label label-info" style="font-size: 120%;">Notice</span>
+<div class="alert alert-info">
+	SSDB configuration file uses exactly one TAB to indent for one level, do not use 2, 3, 4, 5, 6, 7, 8 or any other number of spaces to indent!
+</div></p>
+<p><span class="label label-warning" style="font-size: 120%;">Important</span>
+<div class="alert alert-danger">
+	DO remember to configure your Linux kernel parameters about <code>max open files</code>, refer to <a href="http://www.cyberciti.biz/faq/linux-increase-the-maximum-number-of-open-files/">[1]</a> and <a href="http://www.lognormal.com/blog/2012/09/27/linux-tcpip-tuning/">[2]</a>. Or you will see error messages like <code>Too many open files</code> in log.txt, or <code>Connection reset by peer</code> on client side.
+</div></p>
+<p>PS: Use <a href="https://github.com/ideawu/c1000k">c1000k</a> to test how many concurrent connections your system supports.</p>
+<hr />
+<h2 id="listen-network">Listen Network</h2>
+<pre><code>server:
+	ip: 127.0.0.1
+	port: 8888
+</code></pre>
+<p>The default configuration listen to the <code>127.0.0.1</code> local loopback network interface, so other machine will not be able to connect to that ssdb server. If you want to connect to ssdb server from other machine, change <code>127.0.0.1</code> to <code>0.0.0.0</code>.</p>
+<p>Meanwhile, specify with <code>deny, allow</code> instructions to only allow connections from reliable IP.</p>
+<p><span class="label label-danger" style="font-size: 120%;">WARNING!</span>
+<div class="alert alert-danger">
+	Listen to <code>0.0.0.0</code> without network restriction is often a security issue, any one can access to your data! You can use iptables as well.
+</div></p>
+<hr />
+<h2 id="readonly-mode">Readonly mode</h2>
+<pre><code>server:
+	readonly: yes|no
+</code></pre>
+<p>SSDB server can be configured as readonly mode, if SSDB is running in readonly mode, any write operation command will be rejected by the server:</p>
+<pre><code>ssdb 127.0.0.1:8888&gt; set a 2
+client_error: Forbidden Command: set
+(0.000 sec)
+</code></pre>
+<p>The default option is not set, that is SSDB server works in readwrite mode.</p>
+<hr />
+<h2 id="replication">Replication</h2>
+<ul>
+<li>See also <a href="./replication.html">Replication</a></li>
+</ul>
+<hr />
+<h2 id="log-configuration">Log Configuration</h2>
+<p>See also <a href="./logs.html">Log Analytics</a>.</p>
+<ul>
+<li><strong><code>logger.level</code> Log Levels</strong></li>
+</ul>
+<p>The log levels are: <code>debug, info, warn, error, fatal</code>.</p>
+<p>Generally, I recommend you set <code>logger.level</code> to <code>debug</code>.</p>
+<ul>
+<li><strong><code>logger.output</code> Log Output Destination</strong></li>
+</ul>
+<p>Can be relative path or absolute path, if relative path is set, it is relative to the directory of the ssdb.conf file.</p>
+<p>If you want to write logs to console, edit ssdb.conf, modify</p>
+<pre><code>logger:
+	output: log.txt
+</code></pre>
+<p>to</p>
+<pre><code>logger:
+	output: stdout
+</code></pre>
+<ul>
+<li><strong><code>logger.rorate.size</code> Logrotate and Cleanup</strong></li>
+</ul>
+<p>Sets the max size of log file in bytes. Log files will be cut into 1000MB size files, the names are in the form of: <code>log.txt.20150723-230422</code>.</p>
+<p><strong>The rotated files will not be deleted automatically, you need to write a crontab script to deleted unused files yourself.</strong></p>
+<hr />
+<h2 id="leveldb-configurations">LevelDB Configurations</h2>
+<ul>
+<li><strong><code>leveldb.cache_size</code> Max memory usage for caching data, in MB</strong></li>
+</ul>
+<p>Set this item to a large number will normally give better performance, usually half of the physical memory. If your server has less memory, set it to a smaller number, the minimum number is 16.</p>
+<ul>
+<li>
+<p><strong><code>leveldb.block_size</code> Don't bother with this number</strong></p>
+</li>
+<li>
+<p><strong><code>leveldb.write_buffer_size</code> Write buffer size, in MB</strong></p>
+</li>
+</ul>
+<p>If your server has less memory, set it to a smaller number, vice verse. It should be between <code>[4, 128]</code>;</p>
+<ul>
+<li><strong><code>leveldb.compaction_speed</code></strong></li>
+</ul>
+<p>Normally, you should not change this. If you have a slower disk and most of your data will never be updated and new data barely be inserted, set it to a smaller number(better to be greater than 50).</p>
+<ul>
+<li><strong><code>leveldb.compression</code> Compress data before they are written to disk</strong></li>
+</ul>
+<p>You SHOULD let it be <code>yes</code>! Normally you will be able to store 10 times disk space of data, and have better performance, if you set it to <code>yes</code>.</p>
+<hr />
+<h2 id="memory-usage">Memory Usage</h2>
+<p>A ssdb-server may temporarily(only last for short time) consume up to this many memory(in MB):</p>
+<pre><code>cache_size + write_buffer_size * 66 + 32
+</code></pre>
+<p>This is for <code>compression</code> is set to <code>no</code>, if <code>compression</code> is set to <code>yes</code>, it would be:</p>
+<pre><code>cache_size + 10 * write_buffer_size * 66 + 32
+</code></pre>
+<p>You can tune the configuration to limit the memory usage of a ssdb-server instance.</p>
+<p>Users reported that with default configuration, the memory usage is about 1GB, you can refer to this.</p>
+<h3 id="memory-usage-limitation">Memory Usage Limitation?</h3>
+<p>Sorry, you cannot set the maximum memory usage of SSDB. SSDB may use memory according to these facts:</p>
+<ol>
+<li><code>cache_size</code> configuration, the most important fact.</li>
+<li>the number of client connections. Usually each connection will use 2MB memory, but busy connections will use even more.</li>
+<li>system file cache. Although the memory usage is count on ssdb-server, but the OS may cut it off if neccessary. The memory usage may count to several tens GB.</li>
+<li>the more busy SSDB is, the more memory it will use.</li>
+</ol>
+<p><code>cache_size</code> is what you can control, but you can not control others. With a SSDB instance running on a 16G physical memory machine, you set <code>cache_size</code> to 8000(8G), then you may find the process ssdb-server may use 12G RES memory with top command. If the instance is very busy, it may use 15G RES memory as well.</p>
+<!-- #############  -->
+<hr>
+
+
+<div class="footer">
+	Copyright &copy; 2013 - 2020 <a href="http://ssdb.io/">ssdb.io</a>. All rights reserved.
+	Updated: 2020-09-28 09:43:08 +0000	</div>
+
+</div> <!-- /container -->
+
+<script src="./js/jquery-1.9.1.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+
+</body>
+</html>

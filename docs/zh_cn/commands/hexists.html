@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>SSDB - hexists name key</title>
+	<meta name="keywords" content="SSDB, SSDB 文档, LevelDB, Redis, LevelDB Server, zset" />
+	<meta name="description" content="SSDB 是一个高性能 NoSQL 数据库, 使用 LevelDB 作为存储引擎, 支持 Redis 协议." />
+	<link href="./../../css/bootstrap.min.css" rel="stylesheet" />
+	<link href="./../../css/style.css" rel="stylesheet" />
+</head>
+<body>
+
+
+
+
+<!-- Fixed navbar -->
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="http://ssdb.io/zh_cn/">SSDB</a>
+		</div>
+		<div class="navbar-collapse collapse">
+			<ul class="nav navbar-nav">
+				<li class="divider-vertical"></li>
+				<li>
+					<a href="http://ssdb.io/zh_cn/">
+						<i class="glyphicon glyphicon-home"></i> 首页
+					</a>
+				</li>
+				<li class="divider-vertical"></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="glyphicon glyphicon-share-alt"></i> GitHub <b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a target="_blank" href="https://github.com/ideawu/ssdb">源码</a></li>
+						<li><a target="_blank" href="https://github.com/ideawu/ssdb-docs">文档</a></li>
+					</ul>
+				</li>
+				<li class="divider-vertical"></li>
+				<li class="dropdown active">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="glyphicon glyphicon-list"></i> 文档 <b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="./../../zh_cn/index.html">文档首页</a></li>
+						<li class="divider"></li>
+						<li><a href="./../../zh_cn/faq.html">FAQ - 常见问题</a></li>
+						<li><a href="./../../zh_cn/ssdb-cli.html">ssdb-cli命令行</a></li>
+						<li><a href="./../../zh_cn/install.html">安装</a></li>
+						<li><a href="./../../zh_cn/commands/index.html">命令</a></li>
+						<li><a href="./../../zh_cn/config.html">配置</a></li>
+						<li><a href="./../../zh_cn/clients.html">客户端 SDK</a></li>
+						<li><a href="./../../zh_cn/protocol.html">SSDB 网络协议</a></li>
+						<li><a href="./../../zh_cn/index.html">更多...</a></li>
+						<li class="divider"></li>
+						<li><a href="./../../zh_cn/php/index.html">PHP API 文档</a></li>
+						<li><a href="./../../cpp/index.html">C++ API 文档(英文)</a></li>
+						<li><a href="./../../java/index.html">Java API 文档(英文)</a></li>
+						<li><a href="./../../go/index.html">Go API 文档(英文)</a></li>
+						<li class="divider"></li>
+						<li><a href="https://github.com/ideawu/ssdb-docs/tree/master/pdf" target="_blank">SSDB 入门基础</a></li>
+					</ul>
+				</li>
+				<li class="divider-vertical"></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="glyphicon glyphicon-user"></i> 讨论 <b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="https://github.com/ideawu/ssdb/issues">Issue Tracker</a></li>
+						<li><a href="http://www.ideawu.net/blog/category/ssdb">博客</a></li>
+						<li><a href="./../../zh_cn/users.html">用户案例</a></li>
+					</ul>
+				</li>
+			</ul>
+
+
+			<ul class="nav navbar-nav navbar-right" style="margin-top: 9px;">
+				<div class="btn-group">
+					<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+						当前语言: 简体中文
+						<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu">
+						<li><a href="#" onclick="set_lang('en');">English</a></li>
+						<li><a href="#" onclick="set_lang('zh_cn');">简体中文</a></li>
+					</ul>
+				</div>
+			</ul>
+			<script>
+			function set_lang(lang){
+				var url = location.href.replace(/lang=\w+&?/g, '').replace(/\?+$/, '');
+				var ps = url.split('/');
+				var index = ps.indexOf('docs');
+				if(lang == 'en' && ps[index + 1] == 'zh_cn'){
+					ps.splice(index + 1, 1);
+				}else if(lang == 'zh_cn' && ps[index + 1] != 'zh_cn'){
+					ps.splice(index + 1, 0, 'zh_cn');
+				}else{
+					return false;
+				}
+				url = ps.join('/');
+				location.href = url;
+				return false;
+			}
+			</script>
+
+		</div><!--/.nav-collapse -->
+	</div>
+</div>
+
+
+
+<div class="container">
+
+<h1 id="hexists-name-key">hexists name key</h1>
+<p>判断指定的 key 是否存在于 hashmap 中.</p>
+<h2 id="_1">参数</h2>
+<ul>
+<li><code>name</code> - hashmap 的名字.</li>
+<li><code>key</code> - </li>
+</ul>
+<h2 id="_2">返回值</h2>
+<p>If the key exists, return <code>1</code>, otherwise return <code>0</code>.</p>
+<h2 id="_3">示例</h2>
+<pre><code>ssdb 127.0.0.1:8888&gt; hset h k v
+ok
+(0.000 sec)
+ssdb 127.0.0.1:8888&gt; hexists h k
+1
+(0.000 sec)
+ssdb 127.0.0.1:8888&gt; hdel h k
+1
+(0.000 sec)
+ssdb 127.0.0.1:8888&gt; hexists h k
+0
+(0.000 sec)
+ssdb 127.0.0.1:8888&gt;
+</code></pre>
+<!-- #############  -->
+<hr>
+
+
+<div class="footer">
+	Copyright &copy; 2013 - 2020 <a href="http://ssdb.io/">ssdb.io</a>. All rights reserved.
+	Updated: 2020-09-28 09:43:13 +0000	</div>
+
+</div> <!-- /container -->
+
+<script src="./../../js/jquery-1.9.1.min.js"></script>
+<script src="./../../js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -30,7 +30,7 @@
 					<ul class="dropdown-menu">
 						<li><a href="<?php echo $base_url?>/index.html">Docs Home</a></li>
 						<li class="divider"></li>
-						<li><a href="http://ssdb.io/docs/zh_cn/faq.html">FAQ(zh_cn)</a></li>
+						<li><a href="<?php echo $base_url?>/faq.html">FAQ(zh_cn)</a></li>
 						<li><a href="<?php echo $base_url?>/ssdb-cli.html">ssdb-cli Command Line Tool</a></li>
 						<li><a href="<?php echo $base_url?>/install.html">Installation</a></li>
 						<li><a href="<?php echo $base_url?>/commands/index.html">Commands</a></li>

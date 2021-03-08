@@ -138,7 +138,7 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 ![](http://ssdb.io/docs/img/ssdb-users/duoshuo.com.png)
 
-[Duoshuo](http://duoshuo.com/) is the No. 1 comment hosting service in China. Duoshuo store data about commented objects in SSDB.
+[Duoshuo](http://duoshuo.com/) is the No. 1 comment hosting service in China. Duoshuo stores data about commented objects in SSDB.
 
 ---
 
@@ -154,7 +154,7 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 ![](http://ssdb.io/docs/img/ssdb-users/toutiao.com.png)
 
-[Toutiao](http://toutiao.com/) is a information recommend service based on Data Mining technology, it serves more than 90 million users. Toutiao uses SSDB on its most important online service.
+[Toutiao](http://toutiao.com/) is an information recommend service based on Data Mining technology, it serves more than 90 million users. Toutiao uses SSDB on its most important online service.
 
 ---
 
@@ -170,7 +170,7 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 ![](http://ssdb.io/docs/img/ssdb-users/9game.cn.png)
 
-[MengHuanShengXiao](http://www.9game.cn/mhsx/) is a MMO game, it implements its battle system using SSDB as storage. Players' and pets' info are stored in SSDB, read or write directly everytime the game screen needs to show, or needs to save.
+[MengHuanShengXiao](http://www.9game.cn/mhsx/) is an MMO game, it implements its battle system using SSDB as storage. Players' and pets' info are stored in SSDB, read or write directly everytime the game screen needs to show, or needs to save.
 
 ---
 
@@ -178,7 +178,7 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 ![](http://ssdb.io/docs/img/ssdb-users/kuwo.cn.png)
 
-[Kuwo.cn](http://www.kuwo.cn/) is online music website, it stores album and music meta data in SSDB database.
+[Kuwo.cn](http://www.kuwo.cn/) is online music website, it stores albums and music meta data in SSDB database.
 
 ---
 
@@ -234,7 +234,7 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 ![](http://ssdb.io/docs/img/ssdb-users/dingdangcar.com.png)
 
-[DingDangCar](http://www.dingdangcar.com/) a China car-service information and socializing online service, it uses SSDB to store feed data, co-operated with [icomet](https://github.com/ideawu/icomet), it provider feed push service.
+[DingDangCar](http://www.dingdangcar.com/) a China car-service information and socializing online service, it uses SSDB to store feed data, co-operated with [icomet](https://github.com/ideawu/icomet), it provides feed push service.
 
 ---
 
@@ -249,7 +249,7 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 ![](http://ssdb.io/docs/img/ssdb-users/app.7po.com.png)
 
-[7Po app market](http://app.7po.com/) is a app market for TV box, it uses SSDB as its primary database.
+[7Po app market](http://app.7po.com/) is an app market for TV box, it uses SSDB as its primary database.
 
 ---
 ## <a href="#xunlei" name="xunlei">Xunlei Live</a>
@@ -277,7 +277,7 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 ![](http://ssdb.io/docs/img/ssdb-users/yy.com.png)
 
-[YY Live](https://www.yy.com) is one of the most popular online video platform. SSDB is widely used in YY.
+[YY Live](https://www.yy.com) is one of the most popular online video platforms. SSDB is widely used in YY.
 
 ---
 ## <a href="#yuncaijing" name="yuncaijing">云财经</a>
@@ -291,6 +291,6 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 ![](http://ssdb.io/docs/img/ssdb-users/wakatime.com.png)
 
-[WakaTime](https://www.wakatime.com) is a dashboards for developers, using open source IDE plugins. Using a 500GB SSDB instance to cache reads from a multi-terabyte AWS S3 bucket. [Article](https://wakatime.com/blog/45-using-a-diskbased-redis-clone-to-reduce-aws-s3-bill)
+[WakaTime](https://www.wakatime.com) is a dashboard for developers, using open source IDE plugins. Using a 500GB SSDB instance to cache reads from a multi-terabyte AWS S3 bucket. [Article](https://wakatime.com/blog/45-using-a-diskbased-redis-clone-to-reduce-aws-s3-bill)
 
 

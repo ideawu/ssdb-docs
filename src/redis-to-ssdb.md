@@ -94,7 +94,7 @@ __Please read these notes very carefully:__
 * use `getrange` instead if you are sticking your mind with Redis
 * notice the difference between `substr(start, size)` and `getrange(start, end)`
 * when `size` is negative, the behavior may be strange for those who are not familiar with PHP language
-* `substr` in SSDB works as described [here](http://ssdb.io/docs/php/content.html#m-substr)
+* `substr` in SSDB works as described [here](https://ssdb.io/docs/php/content.html#m-substr)
 
 
 ### Key-Map(Hash)

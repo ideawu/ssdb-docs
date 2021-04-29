@@ -52,7 +52,7 @@
 	<dd>@更新: 2014-11-05</dd>
 </dl>
 
-<p>SSDB 是一个高性能 NoSQL 数据库, 支持 zset 数据结构, 用于替代 Redis. 官方网站是 <a href="http://ssdb.io/" target="_blank">http://ssdb.io</a>. 本文档介绍了 SSDB 的 PHP 客户端 API.</p>
+<p>SSDB 是一个高性能 NoSQL 数据库, 支持 zset 数据结构, 用于替代 Redis. 官方网站是 <a href="https://ssdb.io/" target="_blank">http://ssdb.io</a>. 本文档介绍了 SSDB 的 PHP 客户端 API.</p>
 
 <p>注意: SSDB 所使用的名词 "hashmap", "hash", "map" 表示相同的意思.
 
@@ -523,7 +523,7 @@ $ssdb-&gt;scan('a', 'z', 10);
 
 <b>遍历 key-value 对列表</b>
 <pre>
-$start = ''; 
+$start = '';
 $limit = 1000;
 while(1){
     $kvs = $ssdb-&gt;scan($start, '', $limit);
@@ -861,7 +861,7 @@ while(1){
         break;
     }
     // do sth on kvs here
-    
+
     $keys = array_keys($kvs);
     $start = $keys[count($keys) - 1];
 }
@@ -1115,7 +1115,7 @@ $ssdb-&gt;zsize('z');
 
 <h4><em>说明</em></h4>
 <p>列出名字处于区间 (name_start, name_end] 的 zset.</p>
-	
+
 <p>("", ""] 表示整个区间.</p>
 
 <h4><em>参数</em></h4>
@@ -1187,20 +1187,20 @@ $ssdb-&gt;zscan('z', '', 1, 100, 10);
 
 <p>遍历 zset:</p>
 <pre>
-$key_start = ''; 
-$score_start = ''; 
+$key_start = '';
+$score_start = '';
 while(1){
     $items = $ssdb-&gt;zscan($zname, $key_start, $score_start, '', 10);
     if(!$items){
         break;
-    }   
+    }
     foreach($items as $key=&gt;$score){
         // process($key, $score)...
 
         // 记住最大的元素和它的权重
         $key_start = $key;
         $score_start = $score;
-    }   
+    }
 }
 </pre>
 

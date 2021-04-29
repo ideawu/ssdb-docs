@@ -5,10 +5,10 @@ Delete specified key of a zset.
 ## Parameters
 
 * `name` - Name of the zset
-* `key` - 
+* `key` -
 
 ## Return Value
 
 ## Example
 
-All SSDB commands are described by [PHP API Doc](http://ssdb.io/docs/php/).
+All SSDB commands are described by [PHP API Doc](https://ssdb.io/docs/php/).

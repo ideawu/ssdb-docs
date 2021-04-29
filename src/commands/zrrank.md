@@ -10,4 +10,4 @@ Returns the rank(index) of a given key in the specified sorted set, in reverse o
 
 ## Example
 
-All SSDB commands are described by [PHP API Doc](http://ssdb.io/docs/php/).
+All SSDB commands are described by [PHP API Doc](https://ssdb.io/docs/php/).

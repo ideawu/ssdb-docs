@@ -10,4 +10,4 @@ Returns a range of key-score pairs by index range [offset, offset + limit), in r
 
 ## Example
 
-All SSDB commands are described by [PHP API Doc](http://ssdb.io/docs/php/).
+All SSDB commands are described by [PHP API Doc](https://ssdb.io/docs/php/).

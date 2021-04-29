@@ -10,4 +10,4 @@ __注意! 本方法可能会非常慢! 请在离线环境中使用.__
 
 ## 示例
 
-All SSDB commands are described by [PHP API Doc](http://ssdb.io/docs/php/).
+All SSDB commands are described by [PHP API Doc](https://ssdb.io/docs/php/).

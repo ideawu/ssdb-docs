@@ -1,6 +1,6 @@
 # 文档
 
-![SSDB logo](http://ssdb.io/img/ssdb.io-h50.png)
+![SSDB logo](https://ssdb.io/img/ssdb.io-h50.png)
 
 SSDB 是一个 C/C++ 语言开发的高性能 NoSQL 数据库, 支持 KV, list, map(hash), zset(sorted set) 等数据结构, 用来替代或者与 Redis 配合存储十亿级别列表的数据.
 
@@ -45,7 +45,7 @@ SSDB 是稳定的, 生产环境使用的, 已经在[许多互联网公司得到�
 
 ## 幻灯片
 
-* <a href="http://ssdb.io/ssdb-get-started.pdf" target="_blank">SSDB 入门基础(Chinese)</a>
+* <a href="https://ssdb.io/ssdb-get-started.pdf" target="_blank">SSDB 入门基础(Chinese)</a>
 
 ## 作者
 

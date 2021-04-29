@@ -16,7 +16,7 @@ If you are using SSDB in production, please send me a email(ssdb#udpwork.com), I
 
 ## <a href="#360" name="360">QIHU 360 Online Game</a>
 
-![](http://ssdb.io/docs/img/ssdb-users/wan.360.cn.png)
+![](https://ssdb.io/docs/img/ssdb-users/wan.360.cn.png)
 
 [QIHU 360 Online Game](http://wan.360.cn/) is the first major user of SSDB. Whenever a user logs in the website, join a game, a pop message is received, SSDB queries are executed. QIHU 360 Online Game serves hundreds of millions of users, millions active per day.
 
@@ -26,7 +26,7 @@ QIHU migrated its Redis instances to SSDB, and it uses less servers for storage 
 
 ## <a href="#gongchang" name="gongchang">Gongchang</a>
 
-![](http://ssdb.io/docs/img/ssdb-users/gongchang.com.png)
+![](https://ssdb.io/docs/img/ssdb-users/gongchang.com.png)
 
 SSDB runs as cache server in [Gongchang.com](http://www.gongchang.com/).
 
@@ -34,7 +34,7 @@ SSDB runs as cache server in [Gongchang.com](http://www.gongchang.com/).
 
 ## <a href="#demai" name="demai">Demai</a>
 
-![](http://ssdb.io/docs/img/ssdb-users/demai.com.png)
+![](https://ssdb.io/docs/img/ssdb-users/demai.com.png)
 
 [Demai](http://demai.com/) is business social tool on mobile platform.
 
@@ -42,7 +42,7 @@ SSDB runs as cache server in [Gongchang.com](http://www.gongchang.com/).
 
 ## <a href="#topgame" name="topgame">TOPGAME</a>
 
-![](http://ssdb.io/docs/img/ssdb-users/topgame.com.png)
+![](https://ssdb.io/docs/img/ssdb-users/topgame.com.png)
 
 [TOPGAME](http://topgame.com/) is an industry leading mobile casual games developer. TOPGAME stores game combat statistics, players' logs, player archievements in SSDB.
 
@@ -50,7 +50,7 @@ SSDB runs as cache server in [Gongchang.com](http://www.gongchang.com/).
 
 ## <a href="#baidu" name="baidu">Baidu</a>
 
-![](http://ssdb.io/docs/img/ssdb-users/baidu.com.png)
+![](https://ssdb.io/docs/img/ssdb-users/baidu.com.png)
 
 [Baidu](http://www.baidu.com/) uses SSDB for their most important service - Web Search.
 
@@ -58,7 +58,7 @@ SSDB runs as cache server in [Gongchang.com](http://www.gongchang.com/).
 
 ## <a href="#mobvista" name="mobvista">Mobvista</a>
 
-![](http://ssdb.io/docs/img/ssdb-users/mobvista.com.png)
+![](https://ssdb.io/docs/img/ssdb-users/mobvista.com.png)
 
 [Mobvista](http://mobvista.com/) is a leading mobile ad platform that helps to monetize your traffic inventory and distribute your mobile applications.
 
@@ -68,7 +68,7 @@ Mobvista stores advertisement data in SSDB, the serve realtime queries.
 
 ## <a href="#autohome" name="autohome">Autohome</a>
 
-![](http://ssdb.io/docs/img/ssdb-users/autohome.com.cn.png)
+![](https://ssdb.io/docs/img/ssdb-users/autohome.com.cn.png)
 
 [Autohome Inc.](http://autohome.com.cn/) is the leading online destination for automobile consumers in China.
 
@@ -78,7 +78,7 @@ SSDB runs as cache server in Autohome website, storing 100+GB cached data.
 
 ## <a href="#byd" name="byd">BYD Auto</a>
 
-![](http://ssdb.io/docs/img/ssdb-users/bydauto.com.cn.png)
+![](https://ssdb.io/docs/img/ssdb-users/bydauto.com.cn.png)
 
 [BYD Auto](http://www.bydauto.com.cn/) is a Chinese automobile manufacturer based in Shenzhen, China.
 
@@ -88,7 +88,7 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 ## <a href="#zhangyue" name="zhangyue">iReader</a>
 
-![](http://ssdb.io/docs/img/ssdb-users/zhangyue.com.png)
+![](https://ssdb.io/docs/img/ssdb-users/zhangyue.com.png)
 
 [iReader](http://www.zhangyue.com/) is a very popular e-book reader app on mobile devices. iReader stores book readers in SSDB.
 
@@ -96,7 +96,7 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 ## <a href="#fever38" name="fever38">Fever38</a>
 
-![](http://ssdb.io/docs/img/ssdb-users/fever38.com.png)
+![](https://ssdb.io/docs/img/ssdb-users/fever38.com.png)
 
 [Fever38](http://www.fever38.com/) is one of top 100 website in Taiwan district, it helps customers to promote their brands on Facebook. Fever38 uses SSDB as cache server.
 
@@ -104,7 +104,7 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 ## <a href="#zto" name="zto">ZTO Express</a>
 
-![](http://ssdb.io/docs/img/ssdb-users/zto.cn.png)
+![](https://ssdb.io/docs/img/ssdb-users/zto.cn.png)
 
 [ZTO Express](http://www.zto.cn/) is one of the most influential express logistics company in China. ZTO stores billions of deliveries in SSDB server. SSDB supports ZTO's delivery distribution and other important operations.
 
@@ -112,7 +112,7 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 ## <a href="#youxi" name="youxi">youxi.com</a>
 
-![](http://ssdb.io/docs/img/ssdb-users/youxi.com.png)
+![](https://ssdb.io/docs/img/ssdb-users/youxi.com.png)
 
 [youxi.com](http://www.youxi.com/) uses SSDB to store sessions and application data, such as activities, user list, etc.
 
@@ -120,7 +120,7 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 ## <a href="#zuiyoudai" name="zuiyoudai">zuiyoudai.com</a>
 
-![](http://ssdb.io/docs/img/ssdb-users/zuiyoudai.com.png)
+![](https://ssdb.io/docs/img/ssdb-users/zuiyoudai.com.png)
 
 [ZUIYOUDAI](http://www.zuiyoudai.com/) is a online finance service platform. Is uses SSDB to store business data, logs, and cache data.
 
@@ -128,7 +128,7 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 ## <a href="#jd" name="jd">JD.com</a>
 
-![](http://ssdb.io/docs/img/ssdb-users/jd.com.png)
+![](https://ssdb.io/docs/img/ssdb-users/jd.com.png)
 
 [JD.com](http://jd.com/) the largest online direct sales company in China in terms of transaction volume with a market share in China. JD.com uses SSDB in many online services.
 
@@ -136,7 +136,7 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 ## <a href="#duoshuo" name="duoshuo">Duoshuo</a>
 
-![](http://ssdb.io/docs/img/ssdb-users/duoshuo.com.png)
+![](https://ssdb.io/docs/img/ssdb-users/duoshuo.com.png)
 
 [Duoshuo](http://duoshuo.com/) is the No. 1 comment hosting service in China. Duoshuo stores data about commented objects in SSDB.
 
@@ -144,7 +144,7 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 ## <a href="#dnspod" name="dnspod">DNSPOD</a>
 
-![](http://ssdb.io/docs/img/ssdb-users/dnspod.cn.png)
+![](https://ssdb.io/docs/img/ssdb-users/dnspod.cn.png)
 
 [DNSPOD](http://dnspod.cn/) is China's biggest DNS service provider, it uses SSDB with offline log analytics.
 
@@ -152,7 +152,7 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 ## <a href="#toutiao" name="toutiao">Toutiao</a>
 
-![](http://ssdb.io/docs/img/ssdb-users/toutiao.com.png)
+![](https://ssdb.io/docs/img/ssdb-users/toutiao.com.png)
 
 [Toutiao](http://toutiao.com/) is an information recommend service based on Data Mining technology, it serves more than 90 million users. Toutiao uses SSDB on its most important online service.
 
@@ -160,7 +160,7 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 ## <a href="#3wmm" name="3wmm">3WMM</a>
 
-![](http://ssdb.io/docs/img/ssdb-users/3wmm.com.png)
+![](https://ssdb.io/docs/img/ssdb-users/3wmm.com.png)
 
 [3WMM](http://www.3wmm.com/) is a Flash game website, 3wmm uses SSDB as cache service.
 
@@ -168,7 +168,7 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 ## <a href="#9game" name="9game">9game.cn</a>
 
-![](http://ssdb.io/docs/img/ssdb-users/9game.cn.png)
+![](https://ssdb.io/docs/img/ssdb-users/9game.cn.png)
 
 [MengHuanShengXiao](http://www.9game.cn/mhsx/) is an MMO game, it implements its battle system using SSDB as storage. Players' and pets' info are stored in SSDB, read or write directly everytime the game screen needs to show, or needs to save.
 
@@ -176,7 +176,7 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 ## <a href="#kuwo" name="kuwo">Kuwo.cn</a>
 
-![](http://ssdb.io/docs/img/ssdb-users/kuwo.cn.png)
+![](https://ssdb.io/docs/img/ssdb-users/kuwo.cn.png)
 
 [Kuwo.cn](http://www.kuwo.cn/) is online music website, it stores albums and music meta data in SSDB database.
 
@@ -184,7 +184,7 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 ## <a href="#qyer" name="qyer">qyer.com</a>
 
-![](http://ssdb.io/docs/img/ssdb-users/qyer.com.png)
+![](https://ssdb.io/docs/img/ssdb-users/qyer.com.png)
 
 [qyer.com](http://www.qyer.com/) a website about touring.
 
@@ -192,7 +192,7 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 ## <a href="#kugou" name="kugou">Kugou</a>
 
-![](http://ssdb.io/docs/img/ssdb-users/kugou.com.png)
+![](https://ssdb.io/docs/img/ssdb-users/kugou.com.png)
 
 [Kugou Music](http://www.kugou.com/) is a digital music provider in China. Kugou stores comments in SSDB database.
 
@@ -200,7 +200,7 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 ## <a href="#sinosig" name="sinosig">Sunshine Insurance</a>
 
-![](http://ssdb.io/docs/img/ssdb-users/sinosig.com.jpg)
+![](https://ssdb.io/docs/img/ssdb-users/sinosig.com.jpg)
 
 [Sunshine Insurance](http://www.sinosig.com/) uses SSDB database.
 
@@ -208,7 +208,7 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 ## <a href="#ustack" name="ustack">UnitedStack</a>
 
-![](http://ssdb.io/docs/img/ssdb-users/ustack.com.jpg)
+![](https://ssdb.io/docs/img/ssdb-users/ustack.com.jpg)
 
 [UnitedStack](https://www.ustack.com) is the first Cloud Computing company using OpenStack. UnitedStack uses SSDB to store OpenStack monitoring data.
 
@@ -216,7 +216,7 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 ## <a href="#pandatv" name="pandatv">Panda TV</a>
 
-![](http://ssdb.io/docs/img/ssdb-users/panda.tv.png)
+![](https://ssdb.io/docs/img/ssdb-users/panda.tv.png)
 
 [Panda TV](https://panda.tv) is a Video Streaming website, they use SSDB to replace all Redis servers.
 
@@ -224,7 +224,7 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 ## <a href="#zbird" name="zbird">zbird</a>
 
-![](http://ssdb.io/docs/img/ssdb-users/zbird.com.png)
+![](https://ssdb.io/docs/img/ssdb-users/zbird.com.png)
 
 [zbird](http://www.zbird.com/) is a diamond B2C platform in China, it uses SSDB to store product list, and as cache server. SSDB highly improve its web site's performance, now it serves requests in ms level.
 
@@ -232,7 +232,7 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 ## <a href="#dingdangcar" name="dingdangcar">DingDangCar</a>
 
-![](http://ssdb.io/docs/img/ssdb-users/dingdangcar.com.png)
+![](https://ssdb.io/docs/img/ssdb-users/dingdangcar.com.png)
 
 [DingDangCar](http://www.dingdangcar.com/) a China car-service information and socializing online service, it uses SSDB to store feed data, co-operated with [icomet](https://github.com/ideawu/icomet), it provides feed push service.
 
@@ -240,56 +240,56 @@ BYD chooses SSDB to store time based data(weather, traffic, hazardous situations
 
 ## <a href="#changba" name="changba">ChangBa</a>
 
-![](http://ssdb.io/docs/img/ssdb-users/changba.com.png)
+![](https://ssdb.io/docs/img/ssdb-users/changba.com.png)
 
 [ChangBa](http://changba.com/) ChangBa uses SSDB to store billions of comments.
 
 ---
 ## <a href="#7po" name="7po">7Po</a>
 
-![](http://ssdb.io/docs/img/ssdb-users/app.7po.com.png)
+![](https://ssdb.io/docs/img/ssdb-users/app.7po.com.png)
 
 [7Po app market](http://app.7po.com/) is an app market for TV box, it uses SSDB as its primary database.
 
 ---
 ## <a href="#xunlei" name="xunlei">Xunlei Live</a>
 
-![](http://ssdb.io/docs/img/ssdb-users/xunlei.com.png)
+![](https://ssdb.io/docs/img/ssdb-users/xunlei.com.png)
 
 [Xunlei Live](#) is a video streaming app, which focus on compus.
 
 ---
 ## <a href="#yeahworld" name="yeahworld">YEAHWORLD</a>
 
-![](http://ssdb.io/docs/img/ssdb-users/yeahworld.com.png)
+![](https://ssdb.io/docs/img/ssdb-users/yeahworld.com.png)
 
 [GuangZhou YEAHWORLD](http://www.yeahworld.com/), is a game development company aims to develop games to amuse people. It uses SSDB to store images, chat history, user sessions and user profiles in hashmaps.
 
 ---
 ## <a href="#youmi" name="youmi">Youmi</a>
 
-![](http://ssdb.io/docs/img/ssdb-users/youmi.net.png)
+![](https://ssdb.io/docs/img/ssdb-users/youmi.net.png)
 
 [Youmi](https://www.youmi.net) is the one of the pioneers of mobile Ad Network platform in China. Youmi uses SSDB in it's DSP+Ad Network, to store realtime Ad sessions for Real Time Bidding.
 
 ---
 ## <a href="#yy" name="yy">YY 直播</a>
 
-![](http://ssdb.io/docs/img/ssdb-users/yy.com.png)
+![](https://ssdb.io/docs/img/ssdb-users/yy.com.png)
 
 [YY Live](https://www.yy.com) is one of the most popular online video platforms. SSDB is widely used in YY.
 
 ---
 ## <a href="#yuncaijing" name="yuncaijing">云财经</a>
 
-![](http://ssdb.io/docs/img/ssdb-users/yuncaijing.com.png)
+![](https://ssdb.io/docs/img/ssdb-users/yuncaijing.com.png)
 
 [YunCaiJing](https://www.yuncaijing.com) provides stock market information and data mining technology. It uses SSDB to store realtime market data.
 
 ---
 ## <a href="#wakatime" name="wakatime">WakaTime</a>
 
-![](http://ssdb.io/docs/img/ssdb-users/wakatime.com.png)
+![](https://ssdb.io/docs/img/ssdb-users/wakatime.com.png)
 
 [WakaTime](https://www.wakatime.com) is a dashboard for developers, using open source IDE plugins. Using a 500GB SSDB instance to cache reads from a multi-terabyte AWS S3 bucket. [Article](https://wakatime.com/blog/45-using-a-diskbased-redis-clone-to-reduce-aws-s3-bill)
 

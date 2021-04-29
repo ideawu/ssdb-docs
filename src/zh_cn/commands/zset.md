@@ -1,4 +1,4 @@
-# zset name key score 
+# zset name key score
 
 设置 zset 中指定 key 对应的权重值.
 
@@ -8,4 +8,4 @@
 
 ## 示例
 
-All SSDB commands are described by [PHP API Doc](http://ssdb.io/docs/php/).
+All SSDB commands are described by [PHP API Doc](https://ssdb.io/docs/php/).

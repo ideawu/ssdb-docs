@@ -10,4 +10,4 @@ List key-score pairs of a zset, in reverse order. See method [zkeys()](./zkeys.h
 
 ## Example
 
-All SSDB commands are described by [PHP API Doc](http://ssdb.io/docs/php/).
+All SSDB commands are described by [PHP API Doc](https://ssdb.io/docs/php/).

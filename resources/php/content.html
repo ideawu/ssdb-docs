@@ -53,7 +53,7 @@
 	<dd>@updated: 2014-11-05</dd>
 </dl>
 
-<p>SSDB is a high performance NoSQL database, an alternative for Redis, the official website is <a href="http://ssdb.io/" target="_blank">http://ssdb.io</a>. This documentation describes the PHP client API of SSDB.</p>
+<p>SSDB is a high performance NoSQL database, an alternative for Redis, the official website is <a href="https://ssdb.io/" target="_blank">http://ssdb.io</a>. This documentation describes the PHP client API of SSDB.</p>
 
 <p>Notice: The phrases "hashmap", "hash", "map" are equivelant in SSDB.</p>
 
@@ -522,7 +522,7 @@ $ssdb-&gt;scan('a', 'z', 10);
 
 <b>Iterate over all key-value pairs</b>
 <pre>
-$start = ''; 
+$start = '';
 $limit = 1000;
 while(1){
     $kvs = $ssdb-&gt;scan($start, '', $limit);
@@ -859,7 +859,7 @@ while(1){
         break;
     }
     // do sth on kvs here
-    
+
     $keys = array_keys($kvs);
     $start = $keys[count($keys) - 1];
 }
@@ -1186,20 +1186,20 @@ $ssdb-&gt;zscan('z', '', 1, 100, 10);
 
 <p>Iterate over zset:</p>
 <pre>
-$key_start = ''; 
-$score_start = ''; 
+$key_start = '';
+$score_start = '';
 while(1){
     $items = $ssdb-&gt;zscan($zname, $key_start, $score_start, '', 10);
     if(!$items){
         break;
-    }   
+    }
     foreach($items as $key=&gt;$score){
         // process($key, $score)...
 
         // remember the currently largest key and its score
         $key_start = $key;
         $score_start = $score;
-    }   
+    }
 }
 </pre>
 

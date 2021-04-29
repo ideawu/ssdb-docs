@@ -12,4 +12,4 @@ Refer to [scan](./scan.html) command for more information about how it work.
 
 ## Example
 
-All SSDB commands are described by [PHP API Doc](http://ssdb.io/docs/php/).
+All SSDB commands are described by [PHP API Doc](https://ssdb.io/docs/php/).

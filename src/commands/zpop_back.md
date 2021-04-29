@@ -7,10 +7,10 @@ Delete and return `limit` element(s) from back of the zset.
 ## Parameters
 
 * `name` - The name of the zset
-* `limit` - 
+* `limit` -
 
 ## Return Value
 
 ## Example
 
-All SSDB commands are described by [PHP API Doc](http://ssdb.io/docs/php/).
+All SSDB commands are described by [PHP API Doc](https://ssdb.io/docs/php/).

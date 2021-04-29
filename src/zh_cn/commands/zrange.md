@@ -10,4 +10,4 @@ __注意! 本方法在 offset 越来越大时, 会越慢!__
 
 ## 示例
 
-All SSDB commands are described by [PHP API Doc](http://ssdb.io/docs/php/).
+All SSDB commands are described by [PHP API Doc](https://ssdb.io/docs/php/).

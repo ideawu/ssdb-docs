@@ -7,6 +7,6 @@ __Since 1.9.0__
 ## 参数
 
 * `name` - zset 的名字
-* `limit` - 
+* `limit` -
 
-All SSDB commands are described by [PHP API Doc](http://ssdb.io/docs/php/).
+All SSDB commands are described by [PHP API Doc](https://ssdb.io/docs/php/).

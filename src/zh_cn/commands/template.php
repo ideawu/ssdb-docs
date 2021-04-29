@@ -31,7 +31,7 @@ echo $markdown['html'];
 
 
 <div class="footer">
-	Copyright &copy; 2013 - <?=date('Y')?> <a href="http://ssdb.io/">ssdb.io</a>. All rights reserved.
+	Copyright &copy; 2013 - <?=date('Y')?> <a href="https://ssdb.io/">ssdb.io</a>. All rights reserved.
 	<?php echo 'Updated: ' . date('Y-m-d H:i:s O'); ?>
 	<?php
 	$hostname = @exec('hostname');

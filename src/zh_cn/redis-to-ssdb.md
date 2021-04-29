@@ -95,7 +95,7 @@ __请非常细心地阅读此处的说明:__
 * 如果你还想着 Redis, 那么就用 `getrange` 命令
 * 注意这两者的区别: `substr(start, size)`, `getrange(start, end)`
 * 当 size 是负数时, 如果你不熟悉 PHP 语言, 那么你会觉得有些奇怪
-* SSDB 的 `substr` 命令的描述这 [这里](http://ssdb.io/docs/zh_cn/php/content.html#m-substr)
+* SSDB 的 `substr` 命令的描述这 [这里](https://ssdb.io/docs/zh_cn/php/content.html#m-substr)
 
 
 ### Key-Map(Hash)

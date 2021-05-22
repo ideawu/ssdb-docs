@@ -8,6 +8,8 @@ Do not run SSDB server on Windows system for a production environment. If you wi
 
 ## Compile and Install
 
+Dependency: gcc, gcc-c++, autotool, autoconf, automake.
+
 	wget --no-check-certificate https://github.com/ideawu/ssdb/archive/master.zip
 	unzip master
 	cd ssdb-master

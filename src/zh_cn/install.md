@@ -8,6 +8,8 @@
 
 ## 编译和安装
 
+依赖: gcc, gcc-c++, autotool, autoconf, automake.
+
 	wget --no-check-certificate https://github.com/ideawu/ssdb/archive/master.zip
 	unzip master
 	cd ssdb-master
